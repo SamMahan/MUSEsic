@@ -1,4 +1,9 @@
 this is another test file
 it has been changed
+<<<<<<< HEAD
 
 matt was here
+=======
+it has been changed again
+
+>>>>>>> cc4d3fddfd1ff558415cc15cb3485067019d9610
