@@ -145,6 +145,7 @@ registration page -->
                             </div>
                         </fieldset>
                         <button type="submit" class="btn btn-primary">Login</button>
+                        <button href = "../User/profile.html">temp login access</button>
                          </form>
                 </div>
 
