@@ -7,7 +7,7 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- Slate Theme -->
     <link rel="stylesheet" type="text/css" href="../../assets/css/bootswatch.css" />
     <link rel="stylesheet" type="text/css" href="New_UpdateSongPage_EditProfilePage.css" />
@@ -21,11 +21,11 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
                 <a class="navbar-brand " href="#">MUSEsic</a>
             </div>
 
@@ -34,15 +34,13 @@
 
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
+                        <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="../songs/song_list.html">Song List</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
+                            <li><a href="../visitor/registration.php">Log Out</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -55,9 +53,12 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a data-toggle="modal" data-target="#login" href="#">Login</a></li>
                 </ul>
+                <img src="../../assets/Images/NoProfilePic.jpg" height="40" />
+                <a href="../User/profile.html">Matthew Bromley</a>
             </div>
         </div>
     </nav>
+
     <div class="container">
         <div class="row justify-content-center">
 
@@ -75,22 +76,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-lg-7">
                             <label class="control-label" for="Name">Name</label>
                             <input class="form-control" id="Name" type="text">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group col-lg-7">
                             <label class="control-label" for="Birthday">Birthday</label>
                             <input class="form-control" id="Birthday" type="text">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group col-lg-7">
                             <label class="control-label" for="FavoriteGenre">Favorite Genre</label>
                             <input class="form-control" id="FavoriteGenre" type="text">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group col-lg-7">
                             <label class="control-label" for="FavoriteArtist">Favorite Artist</label>
                             <input class="form-control" id="FavoriteArtist" type="text">
                         </div>
@@ -101,14 +102,14 @@
                             <button type="submit" class="btn btn-default" id="upload">Submit changes</button>
                         </div>
                         <div class="col-lg-2">
-                            <a data-toggle="modal" data-target="#change-password"></a><button class="btn btn-default">Update Password</button></a>
+                            <a data-toggle="modal" data-target=".modal"><button class="btn btn-default">Update Password</button></a>
                         </div>
                     </fieldset>
                 </form>
             </div>
         </div>
     </div>
-    <div class="modal" id="change-password">
+    <div class="modal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
