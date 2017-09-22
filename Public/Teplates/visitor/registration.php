@@ -145,9 +145,9 @@ registration page -->
                             </div>
                         </fieldset>
                         <button type="submit" class="btn btn-primary">Login</button>
-                        <button href = "../User/profile.html">temp login access</button>
+                        
                          </form>
-                </div>
+                         <a href ="../User/profile.html"><button >temp login access</button></a>                </div>
 
                 <div class="modal-footer">
                     
