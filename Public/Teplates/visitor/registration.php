@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html>
+<?php
+$successArray=array();
+$populateArray=array();
+if ($_POST == null){
+    echo "has-warning";
+}else echo "has-success";
+if ($_POST != null){
+    foreach($_POST as $value){
+        
+        if($value===""){
+            array_push($successArray, "has-warning");
+        }
+        
+        elseif($value != ""){
+            array_push($successArray, "has-success");
+            array_push($populateArray, "value=".$value);
+   
+        }
+}
+}
+if($_POST["login-email"]!=null || $_POST["login-password"] !=null){
+    $modal = "data-modalpost = 'active'";
+}
+?>
+
 
 
 <!-- Created by Samuel Mahan
@@ -10,6 +35,8 @@ registration page -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="../../assets/js/navbar.js"></script>
+    <script src="../../assets/js/modals.js"></script>
+    
 </head>
 
 <body>
@@ -64,33 +91,33 @@ registration page -->
                 <h3>Lorem ipsum dolor sit amet</h3>
             </div>
             <div class="well col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <form type="text" method="post" action="">
+                <form type="text" method="post" action="registration.php">
                     <fieldset>
-                        <div class="col-lg-12">
+                        <?php echo "<div class='col-lg-12 ". $successArray[0]."'>"?>
                             <label for="first_name">First Name</label>
-                            <input id="first_name" class="form-control" name="first_name" type="text" />
+                            <?php echo "<input id='first_name' class='form-control' name='first_name' type='text'".$populateArray[0]."/>"?>
                         </div>
-                        <div class="col-lg-12">
+                         <?php echo "<div class='col-lg-12 ". $successArray[1]."'>"?>
                             <label for="last_name">Last Name</label>
-                            <input id="last_name" class="form-control" name="last_name" type="text/">
+                           <?php echo '<input id="last_name" class="form-control" name="last_name" type="text"'.$populateArray[1]."/>"?>
                         </div>
-                        <div class="col-lg-12">
+                         <?php echo "<div class='col-lg-12 ". $successArray[2]."'>"?>
                             <label for="email">Email</label>
-                            <input id="email" class="form-control" name="email" type="text/">
+                           <?php echo '<input id="email" class="form-control" name="email" type="text"'.$populateArray[2]."/>"?>
                         </div>
-                        <div class="col-lg-12">
+                         <?php echo "<div class='col-lg-12 ". $successArray[3]."'>"?>
                             <label for="password">Password</label>
-                            <input id="password" class="form-control" name="password" type="password" />
+                            <?php echo'<input id="password" class="form-control" name="password" type="password"'.$populateArray[3]."/>"?>
                         </div>
-                        <div class="col-lg-12">
+                         <?php echo "<div class='col-lg-12 ". $successArray[4]."'>"?>
                             <label for="confirm_password">Confirm Password</label>
-                            <input id="confirm_password" class="form-control" name="confirm_password" type="password" />
+                            <?php echo'<input id="confirm_password" class="form-control" name="confirm_password" type="password"'.$populateArray[4]."/>"?>
                         </div>
 
                     </fieldset>
                     <div class="col-lg-12">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button submit="submit" type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
+                        <button type="submit" type="button" class="btn btn-primary">submit</button>
                     </div>
 
                 </form>
@@ -98,7 +125,7 @@ registration page -->
             </div>
         </div>
     </div>
-    <div class="modal" id="login">
+    <div class="modal"<?php echo $modal?> id="login">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -106,25 +133,26 @@ registration page -->
                     <h4 class="modal-title">Welcome back!</h4>
                 </div>
                 <div class="modal-body">
-                    <form type="text" method="post" action="">
+                    <form type = "text" method="post" action="registration.php">
                         <fieldset>
-                            <div class="col-lg-12">
+                            <?php echo "<div class='col-lg-12 ". $successArray[0]."'>"?>
                                 <label for="login-email">email</label>
-                                <input id="ligin-email" class="form-control" name="login-email" type="text" />
+                                <?php echo'<input id="login-email" class="form-control" name="login-email" type="text"'.$populateArray[0].' />' ?>
                             </div>
-                            <div class="col-lg-12">
-                                <label for="password">Password</label>
-                                <input id="password" class="form-control" name="password" type="password" />
+                            <?php echo "<div class='col-lg-12 ". $successArray[1]."'>"?>
+                                <label for="login-password">Password</label>
+                                <?php echo'<input id="login-password" class="form-control" name="login-password" type="password"'.$populateArray[1].' />' ?>
                             </div>
                         </fieldset>
-
+                        <button type="submit" class="btn btn-primary">Login</button>
+                         </form>
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" submit="submit" class="btn btn-primary">Login</button>
+                    
 
                 </div>
-                </form>
+               
             </div>
         </div>
 
