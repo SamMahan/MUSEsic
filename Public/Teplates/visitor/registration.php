@@ -4,7 +4,7 @@
 $successArray=array();
 $populateArray=array();
 if ($_POST == null){
-    echo "has-warning";
+    
 }else echo "has-success";
 if ($_POST != null){
     foreach($_POST as $value){
@@ -88,7 +88,7 @@ registration page -->
                 <h3>amazing music for your amusement</h3>
             </div>
             <div class="col-lg-6">
-                <h3>Lorem ipsum dolor sit amet</h3>
+                <h3>easy to use, one-stop source for your entertainment</h3>
             </div>
             <div class="well col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <form type="text" method="post" action="registration.php">
