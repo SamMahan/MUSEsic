@@ -53,7 +53,7 @@ unset($tmp[count($tmp) - 1]);
 define('BASE_PATH', implode(DIRECTORY_SEPARATOR, $tmp) . DIRECTORY_SEPARATOR);
 
 define('PUBLIC_PATH', BASE_PATH . "public_html".DIRECTORY_SEPARATOR);
-define('WEB_URL', webRoot()."/public_html");
+define('WEB_URL', webRoot()."public_html");
 
 #
 # Set PHP configuration options
