@@ -8,7 +8,7 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Slate Theme -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/bootswatch.css"/>
+    <link rel="stylesheet" type="text/css" href="{$WEB_PATH}./assets/css/bootswatch.css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -73,6 +73,7 @@
     <tr>
         <th>#</th>
         <th>Name</th>
+        <th>Artist Name</th>
         <th>Number of Songs</th>
         <th>Total Play Time</th>
     </tr>
@@ -80,64 +81,34 @@
     <tbody>
     <tr>
         <td>1</td>
-        <td><a href="Playlists/ViewPlaylist.html">My First Playlist</a></td>
+        <td><a href="Playlists/ViewPlaylist.html">Album</a></td>
+        <td>Artist</td>
         <td>10</td>
         <td>00:30:00</td>
     </tr>
     <tr>
         <td>2</td>
-        <td>My Second Playlist</td>
+        <td>My Second Album</td>
+        <td>Artist</td>
         <td>7</td>
         <td>00:24:00</td>
     </tr>
-    <tr>
-        <td>3</td>
-        <td>---</td>
-        <td>---</td>
-        <td>---</td>
-    </tr>
-    <tr>
-        <td>4</td>
-        <td>---</td>
-        <td>---</td>
-        <td>---</td>
-    </tr>
-    <tr>
-        <td>5</td>
-        <td>---</td>
-        <td>---</td>
-        <td>---</td>
-    </tr>
+
     <tr>
         <td>6</td>
         <td>---</td>
         <td>---</td>
         <td>---</td>
+        <td>---</td>
     </tr>
     <tr>
         <td>7</td>
         <td>---</td>
         <td>---</td>
         <td>---</td>
-    </tr>
-    <tr>
-        <td>8</td>
-        <td>---</td>
-        <td>---</td>
         <td>---</td>
     </tr>
-    <tr>
-        <td>9</td>
-        <td>---</td>
-        <td>---</td>
-        <td>---</td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>---</td>
-        <td>---</td>
-        <td>---</td>
-    </tr>
+
     </tbody>
 </table>
 </body>

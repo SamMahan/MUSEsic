@@ -64,9 +64,9 @@ define('PRIVATE_PATH', BASE_PATH . 'private_html/');
 #
 # Set Smarty constants
 define('SMARTY_ROOT', PUBLIC_PATH . 'Smarty/');
-define('SMARTY_TEMPLATES', PUBLIC_PATH . 'Templates/');
+define('SMARTY_TEMPLATES', PUBLIC_PATH . 'templates/');
 define('SMARTY', SMARTY_ROOT . 'libs/Smarty.class.php');
-define('CSS', PUBLIC_PATH."/css");
+define('CSS', PUBLIC_PATH."css");
 
 /*
  * The following has been added to resolve the problem of relying on the system's timezone settings.
