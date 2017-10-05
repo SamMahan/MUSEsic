@@ -1,0 +1,47 @@
+.top {
+    margin: 20px;
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+
+.stylish-input-group .form-control{
+    border-right:0;
+    box-shadow:0 0 0;
+    border-color:#ccc;
+}
+
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.list div {
+    padding: 0;
+}
+
+.section {
+    color: gray;
+    font-weight: 700;
+}
+
+.artistul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.artistul li {
+    border: 1px solid lightgray;
+    padding: 8px;
+}
+
+.buttonul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 22%;
+    padding-top: 22%;
+    padding-left: 4%;
+}
