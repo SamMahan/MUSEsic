@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-20 13:36:04
+<?php /* Smarty version 3.1.27, created on 2017-10-20 13:38:50
          compiled from "/home/ubuntu/workspace/public_html/templates/artists/artist_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:113422972159ea3404492eb9_83848688%%*/
+/*%%SmartyHeaderCode:113317466459ea34aa1aa0b1_02751834%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '31e39cb0fa594140b7582f4058b1e1af7851a94d' => 
     array (
       0 => '/home/ubuntu/workspace/public_html/templates/artists/artist_list.tpl',
-      1 => 1508520839,
+      1 => 1508521093,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '113422972159ea3404492eb9_83848688',
+  'nocache_hash' => '113317466459ea34aa1aa0b1_02751834',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59ea34044fef71_30175757',
+  'unifunc' => 'content_59ea34aa210257_18617154',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59ea34044fef71_30175757')) {
-function content_59ea34044fef71_30175757 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59ea34aa210257_18617154')) {
+function content_59ea34aa210257_18617154 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '113422972159ea3404492eb9_83848688';
+$_smarty_tpl->properties['nocache_hash'] = '113317466459ea34aa1aa0b1_02751834';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +44,7 @@ $_smarty_tpl->properties['nocache_hash'] = '113422972159ea3404492eb9_83848688';
             <div class="titles col-md-4">
                 <ul class="artistul">
                     <li class="section">Artist</li>
-                    <li><a href="view_artist.html">The Piano Guys</a></li>
+                    <li><a href="view_artist.php">The Piano Guys</a></li>
                     <li>Trapet</li>
                     <li>Walk Off the Earth</li>
                     <li>Disturbed</li>
