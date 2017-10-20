@@ -28,7 +28,7 @@ registration page -->
                 <h3>easy to use, one-stop source for your entertainment</h3>
             </div>
             <div class="well col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <form type="text" method="post" action="{$smarty.const.WEB_URL}registration.php">
+                <form type="text" method="post" action="registration.php">
                     <fieldset>
                         <div class='col-lg-12 . {$successArray[0]}'>
                             <label for="first_name">First Name</label>
@@ -84,7 +84,7 @@ registration page -->
                         <button type="submit" class="btn btn-primary">Login</button>
                         
                          </form>
-                         <a href ="{$smarty.const.WEB_URL}Controllers/User/home.php"><button >temp login access</button></a>                </div>
+                         <a href ="../../../Controllers/Logic/User/home.php"><button >temp login access</button></a>                </div>
 
                 <div class="modal-footer">
                     

@@ -5,7 +5,7 @@
     <title>ViewProfile</title>
     {$smarty.const.RESOURCES}
 
-    <style>
+   <!-- <style>
         #userName {
             margin-left: 6%;
         }
@@ -13,12 +13,12 @@
         #userNameLink{
             margin-left: 5%;
         }
-    </style>
+    </style> -->
 
 </head>
 <body>
 
- {include file = "Componants/navbar.tpl"}
+{include file="Componants/navbar.tpl"}
 
 
 <div class="col-lg-3">
@@ -28,7 +28,7 @@
     <div class="col-lg-offset-3">
         <h3 id="userName">Matthew Bromley</h3>
         <div class="col-lg-offset-1">
-            <a id="userNameLink" href="user_settings.php" id="editLink">Edit Profile</a>
+            <a id="userNameLink" href="settings.php" id="editLink">Edit Profile</a>
         </div>
     </div>
 </div>
@@ -210,7 +210,7 @@
                 <tbody>
                 <tr>
                     <td>1</td>
-                    <td><a href="{$smarty.const.WEB_URL}Controllers/Logic/playlists/playlist.php">My First Playlist</a></td>
+                    <td><a href="../../../Controllers/Logic/playlists/playlist.php">My First Playlist</a></td>
                     <td>10</td>
                     <td>00:30:00</td>
                 </tr>
@@ -467,9 +467,6 @@
             </div>
         </div>
     </div>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+
 </body>
 </html>

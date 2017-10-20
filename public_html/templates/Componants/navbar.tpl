@@ -20,12 +20,12 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{$smarty.const.WEB_URL}Controllers/Logic/User/home.php">Profile</a></li>
-                            <li><a href="{$smarty.const.WEB_URL}Controllers/Logic/songs/home.php">Song List</a></li>
-                            <li><a href="{$smarty.const.WEB_URL}Controllers/Logic/artists/home.php">Artist List</a></li>
-                            <li><a href="{$smarty.const.WEB_URL}Controllers/Logic/Albums/home.php">Album List</a></li>
+                            <li><a href="../../../Controllers/Logic/User/home.php">Profile</a></li>
+                            <li><a href="../../../Controllers/Logic/songs/home.php">Song List</a></li>
+                            <li><a href="../../../Controllers/Logic/artists/home.php">Artist List</a></li>
+                            <li><a href="../../../Controllers/Logic/Albums/home.php">Album List</a></li>
                             <li class="divider"></li>
-                            <li><a href="{$smarty.const.WEB_URL}registration.php">Log Out</a></li>
+                            <li><a href="../../../Controllers/Logic/visitor/registration.php">Log Out</a></li>
                         </ul>
                     </li>
                 </ul>

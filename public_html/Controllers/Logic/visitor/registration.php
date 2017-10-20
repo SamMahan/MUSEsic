@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-require_once "../private_html/config.inc.php";
+require_once "../../../../private_html/config.inc.php";
 $successArray=array();
 $populateArray=array();
 

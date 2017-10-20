@@ -3,15 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Artist List</title>
-    <style type="text/css" media="all">@import "../../assets/css/artist_list.css";</style>
-    <link href="../../assets/css/bootswatch.css" type="text/css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified CSS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
+    {$smarty.const.RESOURCES}
 </head>
 <body>
 
