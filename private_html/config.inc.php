@@ -12,9 +12,6 @@
 
 Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
-$global = "";
-
-
 $local = true;
 
 
@@ -28,7 +25,7 @@ function webRoot() {
     $ssl = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? true : false;
     $sp = strtolower($_SERVER['SERVER_PROTOCOL']);
     $protocol = substr($sp, 0, strpos($sp, '/')) . (($ssl) ? 's' : '');
-    $port = $_SERVER['SERVER_PORT'];
+    //$port = $_SERVER['SERVER_PORT'];
     $port = ((!$ssl && $port == '80') || ($ssl && $port == '443')) ? '' : ':' . $port;
     $host = isset($host) ? $host : $_SERVER['SERVER_NAME'] . $port;
     $url_origin = $protocol . '://' . $host . $_SERVER['REQUEST_URI'];
@@ -56,8 +53,7 @@ unset($tmp[count($tmp) - 1]);
 define('BASE_PATH', implode(DIRECTORY_SEPARATOR, $tmp) . DIRECTORY_SEPARATOR);
 
 define('PUBLIC_PATH', BASE_PATH . "public_html".DIRECTORY_SEPARATOR);
-define('WEB_URL', webRoot()."");
-
+define('WEB_URL', webRoot()."public_html");
 
 #
 # Set PHP configuration options
@@ -71,7 +67,6 @@ define('SMARTY_ROOT', PUBLIC_PATH . 'Smarty/');
 define('SMARTY_TEMPLATES', PUBLIC_PATH . 'templates/');
 define('SMARTY', SMARTY_ROOT . 'libs/Smarty.class.php');
 
-#Set Global access constant
 
 /*
  * The following has been added to resolve the problem of relying on the system's timezone settings.
@@ -89,12 +84,11 @@ $smarty->setTemplateDir(SMARTY_TEMPLATES);
 $smarty->setCompileDir(SMARTY_ROOT . 'templates_c');
 $smarty->setCacheDir(SMARTY_ROOT . 'cache');
 $smarty->setConfigDir(SMARTY_ROOT . 'configs');
-$smarty->assign('GLOBAL', WEB_URL);
+$smarty->assign('WEB_URL', WEB_URL);
 
 function myAutoload($class) {
     require CLASS_ROOT . $class . '.class.php';
 }
 require_once "constants.php";
 
-//$smarty->assign("GLOBAL", GLOBAL);
 spl_autoload_register('myAutoload');
