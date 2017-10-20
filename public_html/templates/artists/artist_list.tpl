@@ -15,7 +15,7 @@
             <div class="titles col-md-4">
                 <ul class="artistul">
                     <li class="section">Artist</li>
-                    <li><a href="view_artist.html">The Piano Guys</a></li>
+                    <li><a href="view_artist.php">The Piano Guys</a></li>
                     <li>Trapet</li>
                     <li>Walk Off the Earth</li>
                     <li>Disturbed</li>
