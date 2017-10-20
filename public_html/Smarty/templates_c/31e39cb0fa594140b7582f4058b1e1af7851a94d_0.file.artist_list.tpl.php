@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-20 12:43:10
+<?php /* Smarty version 3.1.27, created on 2017-10-20 13:36:04
          compiled from "/home/ubuntu/workspace/public_html/templates/artists/artist_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:149301048959ea279ee60da1_51181185%%*/
+/*%%SmartyHeaderCode:113422972159ea3404492eb9_83848688%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '31e39cb0fa594140b7582f4058b1e1af7851a94d' => 
     array (
       0 => '/home/ubuntu/workspace/public_html/templates/artists/artist_list.tpl',
-      1 => 1508517787,
+      1 => 1508520839,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '149301048959ea279ee60da1_51181185',
+  'nocache_hash' => '113422972159ea3404492eb9_83848688',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59ea279ee71dd2_92425750',
+  'unifunc' => 'content_59ea34044fef71_30175757',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59ea279ee71dd2_92425750')) {
-function content_59ea279ee71dd2_92425750 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59ea34044fef71_30175757')) {
+function content_59ea34044fef71_30175757 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '149301048959ea279ee60da1_51181185';
+$_smarty_tpl->properties['nocache_hash'] = '113422972159ea3404492eb9_83848688';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +33,9 @@ $_smarty_tpl->properties['nocache_hash'] = '149301048959ea279ee60da1_51181185';
 
 </head>
 <body>
+
 <?php echo $_smarty_tpl->getSubTemplate ("Componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
-
 
 
     <div class="container">
@@ -44,7 +44,7 @@ $_smarty_tpl->properties['nocache_hash'] = '149301048959ea279ee60da1_51181185';
             <div class="titles col-md-4">
                 <ul class="artistul">
                     <li class="section">Artist</li>
-                    <li><a href="view_artist.php">The Piano Guys</a></li>
+                    <li><a href="view_artist.html">The Piano Guys</a></li>
                     <li>Trapet</li>
                     <li>Walk Off the Earth</li>
                     <li>Disturbed</li>
