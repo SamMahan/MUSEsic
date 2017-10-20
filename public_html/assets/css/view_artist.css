@@ -1,0 +1,27 @@
+.artistpic {
+    margin-top: 2%;
+}
+
+.artistpic img {
+    margin-left: 7%;
+    border: 1px solid black;
+}
+
+.artistpic h2{
+    text-align: center;
+    font-weight: 700;
+}
+
+.artistpic h4{
+    text-align: center;
+    font-weight: 700;
+}
+
+.info {
+    margin-top: 5%;
+}
+
+.info p {
+    font-size: 110%;
+    line-height: 2;
+}
