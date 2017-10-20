@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>View Artist</title>
     <style type="text/css" media="all">
-        @import "../../assets/css/view_artist.css";
+        @import "../../../assets/css/view_artist.css";
     </style>
     <link href="../../assets/css/bootswatch.css" type="text/css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
