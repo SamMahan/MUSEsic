@@ -12,6 +12,9 @@
 
 Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
+$global = "";
+
+
 $local = true;
 
 
@@ -53,7 +56,8 @@ unset($tmp[count($tmp) - 1]);
 define('BASE_PATH', implode(DIRECTORY_SEPARATOR, $tmp) . DIRECTORY_SEPARATOR);
 
 define('PUBLIC_PATH', BASE_PATH . "public_html".DIRECTORY_SEPARATOR);
-define('WEB_URL', webRoot()."public_html");
+define('WEB_URL', webRoot()."");
+
 
 #
 # Set PHP configuration options
@@ -66,7 +70,8 @@ define('PRIVATE_PATH', BASE_PATH . 'private_html/');
 define('SMARTY_ROOT', PUBLIC_PATH . 'Smarty/');
 define('SMARTY_TEMPLATES', PUBLIC_PATH . 'templates/');
 define('SMARTY', SMARTY_ROOT . 'libs/Smarty.class.php');
-define('CSS', PUBLIC_PATH."css");
+
+#Set Global access constant
 
 /*
  * The following has been added to resolve the problem of relying on the system's timezone settings.
@@ -84,10 +89,12 @@ $smarty->setTemplateDir(SMARTY_TEMPLATES);
 $smarty->setCompileDir(SMARTY_ROOT . 'templates_c');
 $smarty->setCacheDir(SMARTY_ROOT . 'cache');
 $smarty->setConfigDir(SMARTY_ROOT . 'configs');
-$smarty->assign('WEB_URL', WEB_URL);
+$smarty->assign('GLOBAL', WEB_URL);
 
 function myAutoload($class) {
     require CLASS_ROOT . $class . '.class.php';
 }
+require_once "constants.php";
 
+//$smarty->assign("GLOBAL", GLOBAL);
 spl_autoload_register('myAutoload');
