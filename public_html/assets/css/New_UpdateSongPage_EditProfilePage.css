@@ -1,0 +1,80 @@
+body{
+    background-color: #2C3539;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/** Form style **/
+
+legend{
+    color: #d3d3d3;
+    font-size: 400%;
+}
+
+.control-label{
+    color: #d3d3d3;
+}
+
+.form-group{
+    padding-right: 75%;
+}
+
+#genreInput{
+    padding-right: 85%;
+}
+
+.control-group{
+    margin-left: -1%;
+}
+
+.control-label{
+    font-size: 150%;
+}
+
+#fileUpload{
+    font-size: 110%;
+}
+
+#textArea{
+    margin-left: -5%;
+}
+
+#buttons{
+    margin-left: -1%;
+    margin-top: 1%;
+}
+
+.btn-default{
+    font-size: 125%;
+}
+
+#upload{
+    background-color: #0c0d0e;
+    color: #ffffff;
+}
+
+.glyphicon-pencil{
+    font-size: 170%;
+    padding: 1%;
+}
+
+a:link{
+    color: #000000;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #000000;
+    text-decoration: none;
+}
+
+a:active{
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
