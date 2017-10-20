@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-20 10:04:13
+<?php /* Smarty version 3.1.27, created on 2017-10-20 12:43:10
          compiled from "/home/ubuntu/workspace/public_html/templates/artists/artist_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:99141517959ea025db6a7f1_73211128%%*/
+/*%%SmartyHeaderCode:149301048959ea279ee60da1_51181185%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '31e39cb0fa594140b7582f4058b1e1af7851a94d' => 
     array (
       0 => '/home/ubuntu/workspace/public_html/templates/artists/artist_list.tpl',
-      1 => 1508508251,
+      1 => 1508517787,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '99141517959ea025db6a7f1_73211128',
+  'nocache_hash' => '149301048959ea279ee60da1_51181185',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59ea025db7da63_01616318',
+  'unifunc' => 'content_59ea279ee71dd2_92425750',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59ea025db7da63_01616318')) {
-function content_59ea025db7da63_01616318 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59ea279ee71dd2_92425750')) {
+function content_59ea279ee71dd2_92425750 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '99141517959ea025db6a7f1_73211128';
+$_smarty_tpl->properties['nocache_hash'] = '149301048959ea279ee60da1_51181185';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,51 +33,10 @@ $_smarty_tpl->properties['nocache_hash'] = '99141517959ea025db6a7f1_73211128';
 
 </head>
 <body>
-
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand " href="#">MUSEsic</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
+<?php echo $_smarty_tpl->getSubTemplate ("Componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
 
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="../User/profile.html">Profile</a></li>
-                        <li><a href="../songs/song_list.html">Song List</a></li>
-                        <li><a href="../artists/artist_list.html">Artist List</a></li>
-                        <li><a href="../Albums/Album-list.html">Album List</a></li>
-                        <li class="divider"></li>
-                        <li><a href="../visitor/registration.php">Log Out</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a data-toggle="modal" data-target="#login" href="#">Login</a></li>
-            </ul>
-            <img src="../../assets/Images/NoProfilePic.jpg" height="40"/>
-            <a href="../User/profile.html">Matthew Bromley</a>
-        </div>
-    </div>
-</nav>
 
     <div class="container">
         
@@ -85,7 +44,7 @@ $_smarty_tpl->properties['nocache_hash'] = '99141517959ea025db6a7f1_73211128';
             <div class="titles col-md-4">
                 <ul class="artistul">
                     <li class="section">Artist</li>
-                    <li><a href="view_artist.html">The Piano Guys</a></li>
+                    <li><a href="view_artist.php">The Piano Guys</a></li>
                     <li>Trapet</li>
                     <li>Walk Off the Earth</li>
                     <li>Disturbed</li>

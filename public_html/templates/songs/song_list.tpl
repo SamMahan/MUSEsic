@@ -31,7 +31,7 @@
             </thead>
             <tbody>
             <tr>
-                <td><a href="view_song.html">Head Strong</a></td>
+                <td><a href="view_song.php">Head Strong</a></td>
                 <td>Trapet</td>
                 <td>Fun</td>
                 <td>4:46</td>

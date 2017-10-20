@@ -21,9 +21,9 @@
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="../../../Controllers/Logic/User/home.php">Profile</a></li>
-                            <li><a href="../../../Controllers/Logic/songs/home.php">Song List</a></li>
+                            <li><a href="../../../Controllers/Logic/songs/song_list.php">Song List</a></li>
                             <li><a href="../../../Controllers/Logic/artists/artist_list.php">Artist List</a></li>
-                            <li><a href="../../../Controllers/Logic/Albums/home.php">Album List</a></li>
+                            <li><a href="../../../Controllers/Logic/Albums/album-list.php">Album List</a></li>
                             <li class="divider"></li>
                             <li><a href="../../../Controllers/Logic/visitor/registration.php">Log Out</a></li>
                         </ul>
