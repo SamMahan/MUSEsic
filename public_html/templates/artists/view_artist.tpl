@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>View Artist</title>
+    
     {$smarty.const.RESOURCES}
     
 </head>
@@ -84,6 +85,14 @@
                 </tr>
         </table>
 
+        {include file = "Albums/TEMP_addalbum.tpl"}
+        <div class="row">
+        <div class="col-lg-11"></div>
+        <div class="col-lg-1">
+            <a href="#" data-target="#add-album" data-toggle="modal"><button class="btn btn-info">Add Album</button></a>
+        </div>
+        </div>
+        
         <div class="row">
             <div class="col-md-12">
                 <div class="page-header">
@@ -91,6 +100,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="row">
             <div class="col-md-4">
                 <h2>
@@ -204,12 +214,6 @@
                 </form>
             </div>
         </div>
-
-{include file = "Albums/TEMP_addalbum.tpl"}
-
-<a href="#" data-target="#add-album" data-toggle="modal"><button class="button">Add Album</button></a>
-    
-
+        
 </body>
-
 </html>

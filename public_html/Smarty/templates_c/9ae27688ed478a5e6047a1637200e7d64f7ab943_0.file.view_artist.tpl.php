@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-21 20:39:41
+<?php /* Smarty version 3.1.27, created on 2017-10-21 20:51:37
          compiled from "/home/ubuntu/workspace/public_html/templates/artists/view_artist.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:168713739159ebe8cd14a863_27415163%%*/
+/*%%SmartyHeaderCode:21723122359ebeb9999dd43_67314259%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9ae27688ed478a5e6047a1637200e7d64f7ab943' => 
     array (
       0 => '/home/ubuntu/workspace/public_html/templates/artists/view_artist.tpl',
-      1 => 1508632749,
+      1 => 1508633493,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '168713739159ebe8cd14a863_27415163',
+  'nocache_hash' => '21723122359ebeb9999dd43_67314259',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59ebe8cd1cd017_44145342',
+  'unifunc' => 'content_59ebeb999be049_68356142',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59ebe8cd1cd017_44145342')) {
-function content_59ebe8cd1cd017_44145342 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59ebeb999be049_68356142')) {
+function content_59ebeb999be049_68356142 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '168713739159ebe8cd14a863_27415163';
+$_smarty_tpl->properties['nocache_hash'] = '21723122359ebeb9999dd43_67314259';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +30,7 @@ $_smarty_tpl->properties['nocache_hash'] = '168713739159ebe8cd14a863_27415163';
 <head>
     <meta charset="UTF-8">
     <title>View Artist</title>
+    
     <?php echo @constant('RESOURCES');?>
 
     
@@ -113,6 +114,16 @@ $_smarty_tpl->properties['nocache_hash'] = '168713739159ebe8cd14a863_27415163';
                 </tr>
         </table>
 
+        <?php echo $_smarty_tpl->getSubTemplate ("Albums/TEMP_addalbum.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+        <div class="row">
+        <div class="col-lg-11"></div>
+        <div class="col-lg-1">
+            <a href="#" data-target="#add-album" data-toggle="modal"><button class="btn btn-info">Add Album</button></a>
+        </div>
+        </div>
+        
         <div class="row">
             <div class="col-md-12">
                 <div class="page-header">
@@ -120,6 +131,7 @@ $_smarty_tpl->properties['nocache_hash'] = '168713739159ebe8cd14a863_27415163';
                 </div>
             </div>
         </div>
+        
         <div class="row">
             <div class="col-md-4">
                 <h2>
@@ -233,16 +245,8 @@ $_smarty_tpl->properties['nocache_hash'] = '168713739159ebe8cd14a863_27415163';
                 </form>
             </div>
         </div>
-
-<?php echo $_smarty_tpl->getSubTemplate ("Albums/TEMP_addalbum.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
-?>
-
-
-<a href="#" data-target="#add-album" data-toggle="modal"><button class="button">Add Album</button></a>
-    
-
+        
 </body>
-
 </html><?php }
 }
 ?>
