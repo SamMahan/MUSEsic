@@ -1,3 +1,4 @@
+<<<<<<< HEAD:public_html/templates/Albums/TEMP_addalbum.tpl
 <!DOCTYPE html>
 <!--
 <html lang="en">
@@ -115,6 +116,9 @@
         </form> -->
         
 <div class="modal fade" id="add-album" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+=======
+<div class="modal fade" id="add_album" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+>>>>>>> f0d66f81968a4864f602d050aa1aaf8bff7c4eb8:public_html/templates/modals/add_album.tpl
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
