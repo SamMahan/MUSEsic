@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-19 11:32:22
+<?php /* Smarty version 3.1.27, created on 2017-10-21 20:35:26
          compiled from "/home/ubuntu/workspace/public_html/templates/visitor/registration.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:42414150159e8c586a8a668_29407442%%*/
+/*%%SmartyHeaderCode:179486000859ebe7ce3e01a1_10828908%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3b54251011c06752bf3d554c1e16378ae7d37924' => 
     array (
       0 => '/home/ubuntu/workspace/public_html/templates/visitor/registration.tpl',
-      1 => 1508427094,
+      1 => 1508518061,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '42414150159e8c586a8a668_29407442',
+  'nocache_hash' => '179486000859ebe7ce3e01a1_10828908',
   'variables' => 
   array (
     'successArray' => 0,
@@ -22,13 +22,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59e8c586ae1e11_00426611',
+  'unifunc' => 'content_59ebe7ce417a76_43444364',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59e8c586ae1e11_00426611')) {
-function content_59e8c586ae1e11_00426611 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59ebe7ce417a76_43444364')) {
+function content_59ebe7ce417a76_43444364 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '42414150159e8c586a8a668_29407442';
+$_smarty_tpl->properties['nocache_hash'] = '179486000859ebe7ce3e01a1_10828908';
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,8 +43,10 @@ registration page -->
     
 </head>
 
-<body>
-    
+<body class = "visitor">
+    <?php echo $_smarty_tpl->getSubTemplate ("Componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
     <div class="container">
 
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -132,7 +134,7 @@ registration page -->
                         <button type="submit" class="btn btn-primary">Login</button>
                         
                          </form>
-                         <a href ="../User/profile.html"><button >temp login access</button></a>                </div>
+                         <a href ="../../../Controllers/Logic/User/home.php"><button >temp login access</button></a>                </div>
 
                 <div class="modal-footer">
                     

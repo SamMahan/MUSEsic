@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-20 09:54:27
+<?php /* Smarty version 3.1.27, created on 2017-10-21 20:35:39
          compiled from "/home/ubuntu/workspace/public_html/templates/User/user_settings.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:201620798359ea0013386168_63488800%%*/
+/*%%SmartyHeaderCode:85289721959ebe7dbbac311_56405763%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bff3dae3ef65ecaffc7d345b3b591c1cfaa8788b' => 
     array (
       0 => '/home/ubuntu/workspace/public_html/templates/User/user_settings.tpl',
-      1 => 1508507665,
+      1 => 1508518269,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '201620798359ea0013386168_63488800',
+  'nocache_hash' => '85289721959ebe7dbbac311_56405763',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59ea0013399af3_25614209',
+  'unifunc' => 'content_59ebe7dbbc2939_91915905',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59ea0013399af3_25614209')) {
-function content_59ea0013399af3_25614209 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59ebe7dbbc2939_91915905')) {
+function content_59ebe7dbbc2939_91915905 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '201620798359ea0013386168_63488800';
+$_smarty_tpl->properties['nocache_hash'] = '85289721959ebe7dbbac311_56405763';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,9 +36,50 @@ $_smarty_tpl->properties['nocache_hash'] = '201620798359ea0013386168_63488800';
 </head>
 
 <body>
-   <?php echo $_smarty_tpl->getSubTemplate ("Componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
-?>
+   <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand " href="#">MUSEsic</a>
+        </div>
 
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="../User/profile.html">Profile</a></li>
+                        <li><a href="../songs/song_list.html">Song List</a></li>
+                        <li><a href="../artists/artist_list.html">Artist List</a></li>
+                        <li><a href="../Albums/Album-list.html">Album List</a></li>
+                        <li class="divider"></li>
+                        <li><a href="../visitor/registration.php">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a data-toggle="modal" data-target="#login" href="#">Login</a></li>
+            </ul>
+            <img src="../../assets/Images/NoProfilePic.jpg" height="40"/>
+            <a href="../User/profile.html">Matthew Bromley</a>
+        </div>
+    </div>
+</nav>
 
     <div class="container">
         <div class="row justify-content-center">
@@ -121,10 +162,7 @@ $_smarty_tpl->properties['nocache_hash'] = '201620798359ea0013386168_63488800';
 
 
 
-    <?php echo '<script'; ?>
- src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"><?php echo '</script'; ?>
->
-
+    
 </body>
 
 </html><?php }

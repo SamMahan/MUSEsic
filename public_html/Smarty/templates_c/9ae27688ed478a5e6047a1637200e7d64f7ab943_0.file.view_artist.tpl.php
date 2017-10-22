@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-20 13:42:55
+<?php /* Smarty version 3.1.27, created on 2017-10-21 20:39:41
          compiled from "/home/ubuntu/workspace/public_html/templates/artists/view_artist.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:203585234259ea359fa06746_45904071%%*/
+/*%%SmartyHeaderCode:168713739159ebe8cd14a863_27415163%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9ae27688ed478a5e6047a1637200e7d64f7ab943' => 
     array (
       0 => '/home/ubuntu/workspace/public_html/templates/artists/view_artist.tpl',
-      1 => 1508521370,
+      1 => 1508632749,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '203585234259ea359fa06746_45904071',
+  'nocache_hash' => '168713739159ebe8cd14a863_27415163',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59ea359fb98a21_25637500',
+  'unifunc' => 'content_59ebe8cd1cd017_44145342',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59ea359fb98a21_25637500')) {
-function content_59ea359fb98a21_25637500 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59ebe8cd1cd017_44145342')) {
+function content_59ebe8cd1cd017_44145342 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '203585234259ea359fa06746_45904071';
+$_smarty_tpl->properties['nocache_hash'] = '168713739159ebe8cd14a863_27415163';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,78 +30,19 @@ $_smarty_tpl->properties['nocache_hash'] = '203585234259ea359fa06746_45904071';
 <head>
     <meta charset="UTF-8">
     <title>View Artist</title>
-    <style type="text/css" media="all">
-        @import "../../../assets/css/view_artist.css";
-    </style>
-    <link href="../../assets/css/bootswatch.css" type="text/css" rel="stylesheet" />
-    <?php echo '<script'; ?>
- src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"><?php echo '</script'; ?>
->
-    <!-- Latest compiled and minified CSS -->
-    <?php echo '<script'; ?>
- src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    <?php echo '</script'; ?>
->
-    <!--link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-          crossorigin="anonymous">
+    <?php echo @constant('RESOURCES');?>
 
-    <!-- Optional theme 
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-          crossorigin="anonymous">-->
+    
 </head>
 
 <body>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-                <a class="navbar-brand " href="#">MUSEsic</a>
-            </div>
+   
+   
+   <?php echo $_smarty_tpl->getSubTemplate ("Componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="../User/profile.html">Profile</a></li>
-                            <li><a href="../songs/song_list.html">Song List</a></li>
-                            <li><a href="../artists/artist_list.html">Artist List</a></li>
-                            <li><a href="../Albums/Album-list.html">Album List</a></li>
-                            <li class="divider"></li>
-                            <li><a href="../visitor/registration.php">Log Out</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="modal" data-target="#login" href="#">Login</a></li>
-                </ul>
-                <img src="../../assets/Images/NoProfilePic.jpg" height="40" />
-                <a href="../User/profile.html">Matthew Bromley</a>
-            </div>
-        </div>
-    </nav>
+   
     <div class="row">
         <div class="col-lg-11"></div>
         <div class="col-lg-1">
@@ -112,7 +53,7 @@ $_smarty_tpl->properties['nocache_hash'] = '203585234259ea359fa06746_45904071';
 
         <div class="container-fluid">
             <div class="artistpic col-md-5 col-md-offset-1">
-                <img src="../../assets/Images/artistpicture.jpg" alt="artist picture" height="auto" width="auto">
+                <img src="../../../assets/Images/artistpicture.jpg" alt="artist picture" height="auto" width="auto">
                 <h2>The Piano Guys</h2>
                 <h4>Added By: User</h4>
             </div>
@@ -293,6 +234,11 @@ $_smarty_tpl->properties['nocache_hash'] = '203585234259ea359fa06746_45904071';
             </div>
         </div>
 
+<?php echo $_smarty_tpl->getSubTemplate ("Albums/TEMP_addalbum.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+
+<a href="#" data-target="#add-album" data-toggle="modal"><button class="button">Add Album</button></a>
     
 
 </body>
