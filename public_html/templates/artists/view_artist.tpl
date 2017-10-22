@@ -85,11 +85,11 @@
                 </tr>
         </table>
 
-        {include file = "Albums/TEMP_addalbum.tpl"}
+        {include file = "modals/add_album.tpl"}
         <div class="row">
         <div class="col-lg-11"></div>
         <div class="col-lg-1">
-            <a href="#" data-target="#add-album" data-toggle="modal"><button class="btn btn-info">Add Album</button></a>
+            <a href="#" data-target="#add_album" data-toggle="modal"><button class="btn btn-info">Add Album</button></a>
         </div>
         </div>
         
