@@ -13,19 +13,29 @@
     <div class="container">
         
         <div class="list col-md-11 col-sm-12">
+            <table class = "table">
+                <tr>
+                    <th>Artist</th>
+                    <th>Most Popular Song</th>
+                    <th>Songs</th>
+                    <th>Albums</th>
+                    <th>actions</th>
+                </tr>
+                <tr>
+                    <td><a href="view_artist.php">the Piano Guys</a></td>
+                    <td>What makes you beautiful</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td><a href="#" class="btn btn-danger">Delete</a></td>
+                </tr>
+            </table>
             <div class="titles col-md-4">
                 <ul class="artistul">
                     <li class="section">Artist</li>
                     <li><a href="view_artist.php">The Piano Guys</a></li>
                     <li>Trapet</li>
                     <li>Walk Off the Earth</li>
-                    <li>Disturbed</li>
-                    <li>Bowling For Soup</li>
-                    <li>Gym Class Heroes</li>
-                    <li>Shawn Mendes</li>
-                    <li>Walk Off the Earth</li>
-                    <li>Ed Sheeran</li>
-                    <li>Panic! At The Disco</li>
+                    
                 </ul>
             </div>
 
@@ -35,13 +45,7 @@
                     <li>What Makes You Beautiful</li>
                     <li>Walk Off the Earth</li>
                     <li>Disturbed</li>
-                    <li>Bowling For Soup</li>
-                    <li>Gym Class Heroes</li>
-                    <li>Shawn Mendes</li>
-                    <li>Walk Off the Earth</li>
-                    <li>Neil Diamond</li>
-                    <li>Ed Sheeran</li>
-                    <li>Panic! At The Disco</li>
+                    
                 </ul>
             </div>
 
@@ -51,13 +55,7 @@
                     <li>5</li>
                     <li>9</li>
                     <li>12</li>
-                    <li>16</li>
-                    <li>14</li>
-                    <li>24</li>
-                    <li>16</li>
-                    <li>12</li>
-                    <li>8</li>
-                    <li>14</li>
+                    
                 </ul>
             </div>
 
