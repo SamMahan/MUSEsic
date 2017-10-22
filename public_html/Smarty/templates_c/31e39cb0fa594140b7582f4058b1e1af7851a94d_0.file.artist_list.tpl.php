@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-20 13:38:50
+<?php /* Smarty version 3.1.27, created on 2017-10-21 21:12:02
          compiled from "/home/ubuntu/workspace/public_html/templates/artists/artist_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:113317466459ea34aa1aa0b1_02751834%%*/
+/*%%SmartyHeaderCode:108551908959ebf062302859_79574971%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '31e39cb0fa594140b7582f4058b1e1af7851a94d' => 
     array (
       0 => '/home/ubuntu/workspace/public_html/templates/artists/artist_list.tpl',
-      1 => 1508521093,
+      1 => 1508634711,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '113317466459ea34aa1aa0b1_02751834',
+  'nocache_hash' => '108551908959ebf062302859_79574971',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59ea34aa210257_18617154',
+  'unifunc' => 'content_59ebf062378067_57971246',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59ea34aa210257_18617154')) {
-function content_59ea34aa210257_18617154 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59ebf062378067_57971246')) {
+function content_59ebf062378067_57971246 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '113317466459ea34aa1aa0b1_02751834';
+$_smarty_tpl->properties['nocache_hash'] = '108551908959ebf062302859_79574971';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +31,7 @@ $_smarty_tpl->properties['nocache_hash'] = '113317466459ea34aa1aa0b1_02751834';
     <title>Artist List</title>
     <?php echo @constant('RESOURCES');?>
 
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/artist_list.css" />
 </head>
 <body>
 
@@ -38,6 +39,42 @@ $_smarty_tpl->properties['nocache_hash'] = '113317466459ea34aa1aa0b1_02751834';
 ?>
 
 
+    <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Number of Songs</th>
+                    <th>Total Play Time</th>
+                    <th>Release-date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="../Albums/Album-home.html">First Album</a></td>
+                    <td>10</td>
+                    <td>00:30:00</td>
+                    <td>10/20/06</td>
+                    <td><button type="button" class="btn btn-danger">Delete Album</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>My Second Playlist</td>
+                    <td>7</td>
+                    <td>00:24:00</td>
+                    <td>10/20/06</td>
+                    <td><button type="button" class="btn btn-danger">Delete Album</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>---</td>
+                    <td>10/20/06</td>
+                    <td><button type="button" class="btn btn-danger">Delete Album</button></td>
+                </tr>
+        </table>
     <div class="container">
         
         <div class="list col-md-11 col-sm-12">

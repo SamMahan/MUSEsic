@@ -59,6 +59,7 @@
                     <th>Number of Songs</th>
                     <th>Total Play Time</th>
                     <th>Release-date</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

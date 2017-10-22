@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Artist List</title>
     {$smarty.const.RESOURCES}
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/artist_list.css" />
 </head>
 <body>
 
