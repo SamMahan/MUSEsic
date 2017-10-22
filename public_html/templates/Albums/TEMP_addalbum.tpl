@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--
 <html lang="en">
 
 <head>
@@ -10,7 +11,7 @@
     <link href="../../assets/css/bootswatch.css" type="text/css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS --
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
 </head>
@@ -62,10 +63,10 @@
     <form class="form-horizontal">
         <fieldset>
 
-        <!-- Form Name -->
+        <!-- Form Name --
         <legend>Add an Album to the Artist</legend>
 
-        <!-- Text input-->
+        <!-- Text input--
         <div class="form-group">
           <label class="col-md-4 control-label" for="albumname">Album Name:</label>  
           <div class="col-md-4">
@@ -74,7 +75,7 @@
           </div>
         </div>
 
-        <!-- Text input-->
+        <!-- Text input--
         <div class="form-group">
           <label class="col-md-4 control-label" for="numbersongs">Number of Songs:</label>  
           <div class="col-md-4">
@@ -83,7 +84,7 @@
           </div>
         </div>
 
-        <!-- Text input-->
+        <!-- Text input--
         <div class="form-group">
           <label class="col-md-4 control-label" for="totaltime">Total Play Time:</label>  
           <div class="col-md-4">
@@ -92,7 +93,7 @@
           </div>
         </div>
 
-        <!-- Text input-->
+        <!-- Text input--
         <div class="form-group">
           <label class="col-md-4 control-label" for="released">Release Date:</label>  
           <div class="col-md-4">
@@ -101,7 +102,7 @@
           </div>
         </div>
         
-        <!-- Button (Double) -->
+        <!-- Button (Double) --
         <div class="form-group">
           <label class="col-md-4 control-label" for="confirm"></label>
           <div class="col-md-8">
@@ -111,6 +112,25 @@
         </div>
 
         </fieldset>
-        </form>
+        </form> -->
+        
+<div class="modal fade" id="add-album" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-</body>
