@@ -1,13 +1,38 @@
+<?php /* Smarty version 3.1.27, created on 2017-10-21 21:05:11
+         compiled from "/home/ubuntu/workspace/public_html/templates/artists/view_artist.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:66330083659ebeec7c6eec4_27824292%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '9ae27688ed478a5e6047a1637200e7d64f7ab943' => 
+    array (
+      0 => '/home/ubuntu/workspace/public_html/templates/artists/view_artist.tpl',
+      1 => 1508634306,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '66330083659ebeec7c6eec4_27824292',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_59ebeec7c8d332_69297229',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_59ebeec7c8d332_69297229')) {
+function content_59ebeec7c8d332_69297229 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '66330083659ebeec7c6eec4_27824292';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>View Artist</title>
-
     
+    <?php echo @constant('RESOURCES');?>
 
-    {$smarty.const.RESOURCES}
     
 </head>
 
@@ -15,7 +40,9 @@
 
    
    
-   {include file = "Componants/navbar.tpl"}
+   <?php echo $_smarty_tpl->getSubTemplate ("Componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
    
     <div class="row">
         <div class="col-lg-11"></div>
@@ -61,13 +88,12 @@
                     <th>Number of Songs</th>
                     <th>Total Play Time</th>
                     <th>Release-date</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td><a href="../Albums/album-home.php">First Album</a></td>
+                    <td><a href="../Albums/Album-home.html">First Album</a></td>
                     <td>10</td>
                     <td>00:30:00</td>
                     <td>10/20/06</td>
@@ -90,9 +116,10 @@
                     <td><button type="button" class="btn btn-danger">Delete Album</button></td>
                 </tr>
         </table>
-        
-    
-        {include file = "modals/add_album.tpl"}
+
+        <?php echo $_smarty_tpl->getSubTemplate ("modals/add_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
         <div class="row">
         <div class="col-lg-11"></div>
         <div class="col-lg-1">
@@ -221,10 +248,8 @@
                 </form>
             </div>
         </div>
-
-
-
-
-
+        
 </body>
-</html>
+</html><?php }
+}
+?>
