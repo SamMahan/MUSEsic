@@ -21,7 +21,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.inc.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="163">
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbconfig.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dbconfig.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/private_html/dbconfig.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="102">
+              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -91,9 +91,9 @@
         <option value="$PROJECT_DIR$/public_html/templates/Album-list.tpl" />
         <option value="$PROJECT_DIR$/public_html/templates/User/profile.html" />
         <option value="$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php" />
-        <option value="$PROJECT_DIR$/private_html/dbconfig.php" />
         <option value="$PROJECT_DIR$/public_html/controllers/Logic/visitor/registration.php" />
         <option value="$PROJECT_DIR$/private_html/config.inc.php" />
+        <option value="$PROJECT_DIR$/private_html/dbconfig.php" />
       </list>
     </option>
   </component>
@@ -105,8 +105,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="721" />
-    <option name="width" value="652" />
+    <option name="x" value="237" />
+    <option name="width" value="1136" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
@@ -197,18 +197,18 @@
       <workItem from="1509124021883" duration="69000" />
       <workItem from="1509385192379" duration="1396000" />
       <workItem from="1509480919043" duration="59000" />
-      <workItem from="1509481601081" duration="1243000" />
+      <workItem from="1509481601081" duration="1424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7700000" />
+    <option name="totallyTimeSpent" value="7881000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="721" y="0" width="652" height="735" extended-state="0" />
+    <frame x="237" y="0" width="1136" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38006756" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2091078" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -412,14 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private_html/dbconfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/visitor/registration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -451,6 +443,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private_html/dbconfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>

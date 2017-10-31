@@ -7,7 +7,7 @@
 # Set database constants
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
-define('DB_NAME', 'StudentCourse');
+define('DB_NAME', 'musicdb');
 #
 #  Begin the session
 session_start();
