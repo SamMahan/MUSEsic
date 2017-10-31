@@ -90,5 +90,6 @@ function myAutoload($class) {
     require CLASS_ROOT . $class . '.class.php';
 }
 require_once "constants.php";
+require_once "dbconfig.php";
 
 spl_autoload_register('myAutoload');
