@@ -7,7 +7,7 @@ $populateArray=array();
 
 if ($_POST == null){
 
-}else echo "has-success";
+}
 if ($_POST != null){
     foreach($_POST as $value){
         

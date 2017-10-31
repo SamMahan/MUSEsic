@@ -25,7 +25,7 @@ function webRoot() {
     $ssl = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? true : false;
     $sp = strtolower($_SERVER['SERVER_PROTOCOL']);
     $protocol = substr($sp, 0, strpos($sp, '/')) . (($ssl) ? 's' : '');
-    //$port = $_SERVER['SERVER_PORT'];
+    $port = $_SERVER['SERVER_PORT'];
     $port = ((!$ssl && $port == '80') || ($ssl && $port == '443')) ? '' : ':' . $port;
     $host = isset($host) ? $host : $_SERVER['SERVER_NAME'] . $port;
     $url_origin = $protocol . '://' . $host . $_SERVER['REQUEST_URI'];
@@ -63,9 +63,9 @@ define('CLASS_ROOT', BASE_PATH . 'public_html/class/');
 define('PRIVATE_PATH', BASE_PATH . 'private_html/');
 #
 # Set Smarty constants
-define('SMARTY_ROOT', PUBLIC_PATH . 'Smarty/');
+define('SMARTY_ROOT', PUBLIC_PATH . "Smarty".DIRECTORY_SEPARATOR);
 define('SMARTY_TEMPLATES', PUBLIC_PATH . 'templates/');
-define('SMARTY', SMARTY_ROOT . 'libs/Smarty.class.php');
+define('SMARTY', SMARTY_ROOT . "libs". DIRECTORY_SEPARATOR ."Smarty.class.php");
 
 
 /*
@@ -78,6 +78,9 @@ date_default_timezone_set('America/New_York');
  * This application uses Smarty, a template/presentation framework which can be
  * downloaded from www.Smarty.net
  */
+echo "base path: ".BASE_PATH."</br>";
+echo "public path: ".PUBLIC_PATH."</br>";
+echo "Smarty path: ".SMARTY."</br>";
 require_once SMARTY;
 $smarty = new Smarty();
 $smarty->setTemplateDir(SMARTY_TEMPLATES);

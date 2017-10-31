@@ -12,7 +12,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="album-home.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php">
+        <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/Albums/album-home.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
@@ -21,14 +21,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.inc.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="92" column="28" lean-forward="true" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
-              <folding>
-                <marker date="1509461075685" expanded="true" signature="921:1133" ph="..." />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="83" column="20" lean-forward="false" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.math.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public_html/Smarty/libs/plugins/function.math.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/visitor/registration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="289">
+                <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -61,6 +92,7 @@
         <option value="$PROJECT_DIR$/public_html/templates/User/profile.html" />
         <option value="$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php" />
         <option value="$PROJECT_DIR$/private_html/dbconfig.php" />
+        <option value="$PROJECT_DIR$/public_html/controllers/Logic/visitor/registration.php" />
         <option value="$PROJECT_DIR$/private_html/config.inc.php" />
       </list>
     </option>
@@ -72,11 +104,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="120" />
-    <option name="y" value="273" />
-    <option name="width" value="1086" />
-    <option name="height" value="687" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -93,6 +124,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,33 +146,26 @@
               <item name="MUSEsic" type="b2602c69:ProjectViewProjectNode" />
               <item name="MUSEsic" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="MUSEsic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MUSEsic" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="visitor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Smarty" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Examples/DBconnect example" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\MUSEsic\public_html\Smarty" />
+      <recent name="C:\MAMP\htdocs\MuseSic\MUSEsic\Public\Controllers\Logic" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\MAMP\htdocs\MuseSic\MUSEsic\public_html\Teplates" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\MAMP\htdocs\MuseSic\MUSEsic\Public\Controllers\Logic" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -172,16 +197,17 @@
       <workItem from="1509124021883" duration="69000" />
       <workItem from="1509385192379" duration="1396000" />
       <workItem from="1509480919043" duration="59000" />
+      <workItem from="1509481601081" duration="1138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6457000" />
+    <option name="totallyTimeSpent" value="7595000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="676" y="0" width="697" height="735" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16792738" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3532182" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -211,7 +237,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php">
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/Albums/album-home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
@@ -231,143 +257,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
           <caret line="92" column="28" lean-forward="true" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
-          <folding>
-            <marker date="1509461075685" expanded="true" signature="921:1133" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <marker date="1509461075685" expanded="true" signature="921:1133" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <marker date="1509461075685" expanded="true" signature="921:1133" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test2" />
-    <entry file="file://$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="27" lean-forward="false" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
-          <folding>
-            <marker date="1509461075685" expanded="true" signature="921:1133" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/templates/User/profile.html" />
-    <entry file="file://$PROJECT_DIR$/test2" />
-    <entry file="file://$PROJECT_DIR$/public_html/templates/User/profile.html" />
-    <entry file="file://$PROJECT_DIR$/public_html/templates/Album-list.tpl" />
-    <entry file="file://$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-          <folding>
-            <marker date="1509461075685" expanded="true" signature="921:1133" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test2" />
-    <entry file="file://$PROJECT_DIR$/test2" />
-    <entry file="file://$PROJECT_DIR$/public_html/templates/User/profile.html" />
-    <entry file="file://$PROJECT_DIR$/Public/Controllers/Logic/Albums/Album-list.tpl" />
-    <entry file="file://$PROJECT_DIR$/public_html/Smarty-3.1.15/libs/Smarty.class.php" />
-    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="68" column="27" lean-forward="false" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
-          <folding>
-            <marker date="1509461075685" expanded="true" signature="921:1133" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/Smarty/libs/Smarty.class.php" />
-    <entry file="file://$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/templates/Album-list.tpl" />
-    <entry file="file://$PROJECT_DIR$/test2" />
-    <entry file="file://$PROJECT_DIR$/public_html/templates/User/profile.html" />
-    <entry file="file://$PROJECT_DIR$/public_html/templates/Album-list.tpl" />
-    <entry file="file://$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-          <folding>
-            <marker date="1509461075685" expanded="true" signature="921:1133" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test2" />
-    <entry file="file://$PROJECT_DIR$/test2" />
-    <entry file="file://$PROJECT_DIR$/public_html/templates/User/profile.html" />
-    <entry file="file://$PROJECT_DIR$/Public/Controllers/Logic/Albums/Album-list.tpl" />
-    <entry file="file://$PROJECT_DIR$/public_html/Smarty-3.1.15/libs/Smarty.class.php" />
-    <entry file="file://$PROJECT_DIR$/public_html/Smarty/libs/Smarty.class.php" />
-    <entry file="file://$PROJECT_DIR$/public_html/templates/Album-list.tpl" />
-    <entry file="file://$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php">
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/Albums/album-home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
@@ -385,11 +279,178 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
+        <state relative-caret-position="1564">
           <caret line="92" column="28" lean-forward="true" selection-start-line="92" selection-start-column="28" selection-end-line="92" selection-end-column="28" />
-          <folding>
-            <marker date="1509461075685" expanded="true" signature="921:1133" ph="..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/Albums/album-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/Albums/album-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2" />
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/Albums/album-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="27" lean-forward="false" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/templates/User/profile.html" />
+    <entry file="file://$PROJECT_DIR$/test2" />
+    <entry file="file://$PROJECT_DIR$/public_html/templates/User/profile.html" />
+    <entry file="file://$PROJECT_DIR$/public_html/templates/Album-list.tpl" />
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/Albums/album-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2" />
+    <entry file="file://$PROJECT_DIR$/test2" />
+    <entry file="file://$PROJECT_DIR$/public_html/templates/User/profile.html" />
+    <entry file="file://$PROJECT_DIR$/Public/Controllers/Logic/Albums/Album-list.tpl" />
+    <entry file="file://$PROJECT_DIR$/public_html/Smarty-3.1.15/libs/Smarty.class.php" />
+    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="68" column="27" lean-forward="false" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/Smarty/libs/Smarty.class.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/Albums/album-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/templates/Album-list.tpl" />
+    <entry file="file://$PROJECT_DIR$/test2" />
+    <entry file="file://$PROJECT_DIR$/public_html/templates/User/profile.html" />
+    <entry file="file://$PROJECT_DIR$/public_html/templates/Album-list.tpl" />
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/Albums/album-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2" />
+    <entry file="file://$PROJECT_DIR$/test2" />
+    <entry file="file://$PROJECT_DIR$/public_html/templates/User/profile.html" />
+    <entry file="file://$PROJECT_DIR$/Public/Controllers/Logic/Albums/Album-list.tpl" />
+    <entry file="file://$PROJECT_DIR$/public_html/Smarty-3.1.15/libs/Smarty.class.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/Smarty/libs/Smarty.class.php" />
+    <entry file="file://$PROJECT_DIR$/public_html/templates/Album-list.tpl" />
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/Albums/album-home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private_html/dbconfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/visitor/registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="289">
+            <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="83" column="20" lean-forward="false" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/Smarty/libs/plugins/function.math.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
