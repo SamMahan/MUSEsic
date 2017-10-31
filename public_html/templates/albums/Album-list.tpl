@@ -17,7 +17,7 @@
 </head>
 <body>
 
-{include file = "Componants/navbar.tpl"}
+{include file = "componants/navbar.tpl"}
 
 <table class="table">
     <thead>

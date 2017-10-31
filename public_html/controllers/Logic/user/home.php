@@ -1,7 +1,8 @@
 <?PHP
 
+
 require_once "../../../../private_html/config.inc.php";
 
+$smarty->display("user/profile.tpl");
 
-$smarty->display("Albums/Album-home.tpl");
 ?>

@@ -39,7 +39,7 @@
                     <li><a data-toggle="modal" data-target="#login" href="#">Login</a></li>
                 </ul>
                 <img src="../../../assets/Images/NoProfilePic.jpg" height="40"/>
-                <a href="../User/profile.html">Matthew Bromley</a>
+                <a href="../user/profile.html">Matthew Bromley</a>
             </div>
         </div>
     </nav>

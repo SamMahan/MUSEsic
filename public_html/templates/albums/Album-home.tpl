@@ -12,7 +12,7 @@
 
 <body>
 
-   {include file = "Componants/navbar.tpl"}
+   {include file = "componants/navbar.tpl"}
    
     <div class="container-fluid">
         <div class="row">
