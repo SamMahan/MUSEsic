@@ -18,7 +18,7 @@
 </head>
 <body>
 
-{include file="Componants/navbar.tpl"}
+{include file="componants/navbar.tpl"}
 
 
 <div class="col-lg-3">

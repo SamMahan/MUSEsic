@@ -15,7 +15,7 @@
 
    
    
-   {include file = "Componants/navbar.tpl"}
+   {include file = "componants/navbar.tpl"}
    
     <div class="row">
         <div class="col-lg-11"></div>
@@ -67,7 +67,7 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td><a href="../Albums/album-home.php">First Album</a></td>
+                    <td><a href="../albums/album-home.php">First Album</a></td>
                     <td>10</td>
                     <td>00:30:00</td>
                     <td>10/20/06</td>
