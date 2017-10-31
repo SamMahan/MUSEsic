@@ -3,5 +3,5 @@
 require_once "../../../../private_html/config.inc.php";
 
 
-$smarty->display("albums/Album-home.tpl");
+$smarty->display("albums/album-home.tpl");
 ?>
