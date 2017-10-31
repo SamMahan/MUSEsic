@@ -71,7 +71,7 @@
                     <td>10</td>
                     <td>00:30:00</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Delete Album</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -79,7 +79,7 @@
                     <td>7</td>
                     <td>00:24:00</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Delete Album</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -87,7 +87,7 @@
                     <td>---</td>
                     <td>---</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Delete Album</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
                 </tr>
         </table>
         
