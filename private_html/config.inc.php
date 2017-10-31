@@ -13,7 +13,7 @@
 Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
 $local = true;
-
+error_reporting(E_ALL);
 
 /**
  * Compose the URL that originated this script. This function was procured from
@@ -25,7 +25,7 @@ function webRoot() {
     $ssl = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? true : false;
     $sp = strtolower($_SERVER['SERVER_PROTOCOL']);
     $protocol = substr($sp, 0, strpos($sp, '/')) . (($ssl) ? 's' : '');
-    $port = $_SERVER['SERVER_PORT'];
+    //$port = $_SERVER['SERVER_PORT'];
     $port = ((!$ssl && $port == '80') || ($ssl && $port == '443')) ? '' : ':' . $port;
     $host = isset($host) ? $host : $_SERVER['SERVER_NAME'] . $port;
     $url_origin = $protocol . '://' . $host . $_SERVER['REQUEST_URI'];
@@ -66,7 +66,7 @@ define('PRIVATE_PATH', BASE_PATH . 'private_html/');
 define('SMARTY_ROOT', PUBLIC_PATH . 'Smarty/');
 define('SMARTY_TEMPLATES', PUBLIC_PATH . 'templates/');
 define('SMARTY', SMARTY_ROOT . 'libs/Smarty.class.php');
-define('CSS', PUBLIC_PATH."css");
+
 
 /*
  * The following has been added to resolve the problem of relying on the system's timezone settings.
@@ -89,5 +89,7 @@ $smarty->assign('WEB_URL', WEB_URL);
 function myAutoload($class) {
     require CLASS_ROOT . $class . '.class.php';
 }
+require_once "constants.php";
+require_once "dbconfig.php";
 
 spl_autoload_register('myAutoload');
