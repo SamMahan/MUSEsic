@@ -13,7 +13,7 @@
 Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
 $local = true;
-
+error_reporting(E_ALL);
 
 /**
  * Compose the URL that originated this script. This function was procured from
