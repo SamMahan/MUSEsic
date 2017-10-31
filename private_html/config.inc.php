@@ -78,9 +78,7 @@ date_default_timezone_set('America/New_York');
  * This application uses Smarty, a template/presentation framework which can be
  * downloaded from www.Smarty.net
  */
-echo "base path: ".BASE_PATH."</br>";
-echo "public path: ".PUBLIC_PATH."</br>";
-echo "Smarty path: ".SMARTY."</br>";
+
 require_once SMARTY;
 $smarty = new Smarty();
 $smarty->setTemplateDir(SMARTY_TEMPLATES);
