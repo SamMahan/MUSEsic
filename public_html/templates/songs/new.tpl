@@ -14,25 +14,25 @@
     <div class="row">
 
 
-        <form class="form-horizontal" method="post" action="#">
+        <form class="form-horizontal" method="post" action="{$smarty.const.WEB_PATH}new.php">
             <fieldset>
                 <legend>
                     <h1>+Add A New Song</h1>
                 </legend>
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 ">
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 {$successArray[0]}">
                         <label class="control-label" for="inputLarge">Title</label>
-                        <input class="form-control input-lg" id="inputLarge" type="text" placeholder="Enter Title">
+                        <input class="form-control input-lg" id="inputLarge" type="text" name="title"   {$populateArray[0]} />
                     </div>
 
-                    <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                    <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11 . {$successArray[1]}">
                         <label class="control-label" for="inputDefault">Artist</label>
-                        <input class="form-control" id="inputDefault" type="text" placeholder="Enter Artists Name">
+                        <input class="form-control" id="inputDefault" type="text" name="artist_name"  {$populateArray[1]} />
                     </div>
 
-                    <div class="form-group col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    <div class="form-group col-lg-10 col-md-10 col-sm-10 col-xs-10 . {$successArray[2]}">
                         <label class="control-label" for="inputSmall">Genre</label>
-                        <input class="form-control input-sm" id="inputSmall" type="text" placeholder="Enter Genre">
+                        <input class="form-control input-sm" id="inputSmall" type="text" name="genre"  {$populateArray[2]} />
                     </div>
 
                     <div class="control-group col-lg-10 col-md-10 col-sm-10 col-xs-10">
@@ -45,12 +45,12 @@
                     <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <label for="textArea" class="control-label">Uploader's Comments</label>
 
-                        <textarea class="form-control" rows="3" id="textArea"></textarea>
+                        <textarea class="form-control" rows="3" id="textArea" name="comment"></textarea>
 
                     </div>
 
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <button type="reset" class="btn btn-default">Cancel</button>
+                        <a class="btn btn-default" href="{$smarty.const.WEB_PATH}list.php">Cancle</a>
                         <button type="submit" class="btn btn-primary">Upload</button>
                     </div>
                 </div>
