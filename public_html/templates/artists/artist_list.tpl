@@ -26,13 +26,14 @@
                     <td>What makes you beautiful</td>
                     <td>5</td>
                     <td>3</td>
-                    <td><a href="#" class="btn btn-danger">Delete</a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+                    <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                 </tr>
             </table>
         </div>
 
         {include file = "modals/add_artist.tpl"}
         {include file = "modals/update_artist.tpl"}
+        {include file = "modals/delete_general.tpl"}
 
         <div class="row">
             <div class="col-lg-11"></div>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-01 18:24:41
+<?php /* Smarty version 3.1.27, created on 2017-11-01 18:47:39
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/artists/artist_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:142726849759fa49a96eb007_36605305%%*/
+/*%%SmartyHeaderCode:170174725859fa4f0b0805a5_77567235%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e9788eba43e6d5addf738aea063c9b0a3c6a6f7b' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/artists/artist_list.tpl',
-      1 => 1509575070,
+      1 => 1509576439,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '142726849759fa49a96eb007_36605305',
+  'nocache_hash' => '170174725859fa4f0b0805a5_77567235',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fa49a97402b4_05830179',
+  'unifunc' => 'content_59fa4f0b0cadb6_29649797',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fa49a97402b4_05830179')) {
-function content_59fa49a97402b4_05830179 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fa4f0b0cadb6_29649797')) {
+function content_59fa4f0b0cadb6_29649797 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '142726849759fa49a96eb007_36605305';
+$_smarty_tpl->properties['nocache_hash'] = '170174725859fa4f0b0805a5_77567235';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +55,7 @@ $_smarty_tpl->properties['nocache_hash'] = '142726849759fa49a96eb007_36605305';
                     <td>What makes you beautiful</td>
                     <td>5</td>
                     <td>3</td>
-                    <td><a href="#" class="btn btn-danger">Delete</a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+                    <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                 </tr>
             </table>
         </div>
@@ -64,6 +64,9 @@ $_smarty_tpl->properties['nocache_hash'] = '142726849759fa49a96eb007_36605305';
 ?>
 
         <?php echo $_smarty_tpl->getSubTemplate ("modals/update_artist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+        <?php echo $_smarty_tpl->getSubTemplate ("modals/delete_general.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
 
