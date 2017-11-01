@@ -8,7 +8,7 @@
 </head>
 <body>
 
-{include file ="componants/navbar.tpl"}
+{include file="componants/navbar.tpl"}
 
     <div class="container">
         
@@ -26,12 +26,14 @@
                     <td>What makes you beautiful</td>
                     <td>5</td>
                     <td>3</td>
-                    <td><a href="#" class="btn btn-danger">Delete</a><a href="#" class="btn btn-default">Update</a></td>
+                    <td><a href="#" class="btn btn-danger">Delete</a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                 </tr>
             </table>
         </div>
 
         {include file = "modals/add_artist.tpl"}
+        {include file = "modals/update_artist.tpl"}
+        
         <div class="row">
             <div class="col-lg-11"></div>
             <div class="col-lg-1">

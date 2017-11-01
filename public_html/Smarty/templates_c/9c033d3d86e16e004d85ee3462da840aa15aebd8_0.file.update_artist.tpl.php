@@ -1,34 +1,34 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-01 18:12:28
-         compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/modals/add_artist.tpl" */ ?>
+<?php /* Smarty version 3.1.27, created on 2017-11-01 18:13:30
+         compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/modals/update_artist.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:48731302859fa46ccd2ca16_19240893%%*/
+/*%%SmartyHeaderCode:114732838659fa470a372875_33684206%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'be97276f6069577a040a3b68ef2771a42abfedd7' => 
+    '9c033d3d86e16e004d85ee3462da840aa15aebd8' => 
     array (
-      0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/modals/add_artist.tpl',
-      1 => 1509574030,
+      0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/modals/update_artist.tpl',
+      1 => 1509574334,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '48731302859fa46ccd2ca16_19240893',
+  'nocache_hash' => '114732838659fa470a372875_33684206',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fa46ccd2dd45_19108679',
+  'unifunc' => 'content_59fa470a373ba6_64919333',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fa46ccd2dd45_19108679')) {
-function content_59fa46ccd2dd45_19108679 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fa470a373ba6_64919333')) {
+function content_59fa470a373ba6_64919333 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '48731302859fa46ccd2ca16_19240893';
+$_smarty_tpl->properties['nocache_hash'] = '114732838659fa470a372875_33684206';
 ?>
-<div class="modal fade" id="add_artist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="update_artist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="exampleModalLabel">Create a New Artist:</h2>
+                <h2 class="modal-title" id="exampleModalLabel">Update Artist:</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -42,7 +42,7 @@ $_smarty_tpl->properties['nocache_hash'] = '48731302859fa46ccd2ca16_19240893';
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="artist_name">Artist Name:</label>
                             <div class="col-md-4">
-                                <input id="artist_name" name="artist_name" type="text" placeholder="name" class="form-control input-md">
+                                <input id="artist_name" name="artist_name" type="text" placeholder="old name" class="form-control input-md">
 
                             </div>
                         </div>
@@ -51,7 +51,7 @@ $_smarty_tpl->properties['nocache_hash'] = '48731302859fa46ccd2ca16_19240893';
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="popular_song">Most Popular Song:</label>
                             <div class="col-md-4">
-                                <input id="popular_song" name="popular_song" type="text" placeholder="song name" class="form-control input-md">
+                                <input id="popular_song" name="popular_song" type="text" placeholder="old song name" class="form-control input-md">
 
                             </div>
                         </div>
@@ -60,7 +60,7 @@ $_smarty_tpl->properties['nocache_hash'] = '48731302859fa46ccd2ca16_19240893';
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="number_songs">Number of Songs:</label>
                             <div class="col-md-4">
-                                <input id="number_songs" name="number_songs" type="text" placeholder="number" class="form-control input-md">
+                                <input id="number_songs" name="number_songs" type="text" placeholder="old number" class="form-control input-md">
 
                             </div>
                         </div>
@@ -69,7 +69,7 @@ $_smarty_tpl->properties['nocache_hash'] = '48731302859fa46ccd2ca16_19240893';
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="number_albums">Number of Albums:</label>
                             <div class="col-md-4">
-                                <input id="number_albums" name="number_albums" type="text" placeholder="number" class="form-control input-md">
+                                <input id="number_albums" name="number_albums" type="text" placeholder="old number" class="form-control input-md">
 
                             </div>
                         </div>
