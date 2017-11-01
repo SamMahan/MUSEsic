@@ -1,5 +1,5 @@
 <?php /* Smarty version 3.1.27, created on 2017-11-01 18:40:03
-         compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album-list.tpl" */ ?>
+         compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl" */ ?>
 <?php
 /*%%SmartyHeaderCode:56842668059fa4d43702c69_28006807%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
@@ -8,7 +8,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     '277d2960e5803bf014284a40dc8d9ccbc5e7704c' => 
     array (
-      0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album-list.tpl',
+      0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl',
       1 => 1509576002,
       2 => 'file',
     ),
