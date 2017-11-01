@@ -35,7 +35,7 @@
     <tbody>
     <tr>
         <td>1</td>
-        <td><a href="Album-home.html">Album</a></td>
+        <td><a href="view_album.tpl">Album</a></td>
         <td>Artist</td>
         <td>10</td>
         <td>00:30:00</td>
