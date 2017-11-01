@@ -19,6 +19,7 @@
 
 {include file = "componants/navbar.tpl"}
 {include file = "modals/update_album.tpl"}
+{incluse file = "modals/delete_general.tpl"}
 
 <table class="table">
     <thead>
@@ -38,7 +39,7 @@
         <td>Artist</td>
         <td>10</td>
         <td>00:30:00</td>
-        <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+        <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
     </tr>
     <tr>
         <td>2</td>
@@ -46,7 +47,7 @@
         <td>Artist</td>
         <td>7</td>
         <td>00:24:00</td>
-        <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+        <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
     </tr>
 
     <tr>
@@ -55,7 +56,7 @@
         <td>---</td>
         <td>---</td>
         <td>---</td>
-        <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+        <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
     </tr>
     <tr>
         <td>7</td>
@@ -63,7 +64,7 @@
         <td>---</td>
         <td>---</td>
         <td>---</td>
-        <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+        <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
     </tr>
 
     </tbody>
