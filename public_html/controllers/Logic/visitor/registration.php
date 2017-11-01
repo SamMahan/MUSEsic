@@ -13,7 +13,7 @@ if ($_POST != null){
         
         if($value===""){
             array_push($successArray, "has-warning");
-            array_push($populateArray, "whale hoy thur");
+            array_push($populateArray, "this has nothing");
         }
         
         elseif($value != ""){
@@ -27,6 +27,7 @@ if ($_POST != null){
 if($_POST["login-email"]!=null || $_POST["login-password"] !=null){
     $modal = "data-modalpost = 'active'";
 }
+
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
 $smarty->assign('modal', $modal);

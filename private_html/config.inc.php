@@ -13,7 +13,7 @@
 Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
 $local = true;
-error_reporting(E_ALL);
+error_reporting(E_COMPILE_ERROR);
 
 /**
  * Compose the URL that originated this script. This function was procured from
@@ -42,6 +42,7 @@ function webRoot() {
     $ending = strpos($url_origin, "/", $ending + 1);
     //}
     return substr($url_origin, 0, $ending + 1);
+
 }
 
 #
