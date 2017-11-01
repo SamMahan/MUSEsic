@@ -28,27 +28,27 @@ registration page -->
                 <h3>easy to use, one-stop source for your entertainment</h3>
             </div>
             <div class="well col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <form type="text" method="post" action="registration.php">
+                <form class ="user_form user_registration" type="text" method="post" action="registration.php">
                     <fieldset>
                         <div class='col-lg-12 . {$successArray[0]}'>
                             <label for="first_name">First Name</label>
-                            <input id='first_name' class='form-control' name='first_name' type='text'.{$populateArray[0]} />
+                            <input required = "required" id='first_name' class='form-control' name='first_name' type='text'.{$populateArray[0]} />
                         </div>
                          <div class='col-lg-12 {$successArray[1]}'>
                             <label for="last_name">Last Name</label>
-                            <input id="last_name" class="form-control" name="last_name" type="text" {$populateArray[1]} />
+                            <input required = "required" id="last_name" class="form-control" name="last_name" type="text" {$populateArray[1]} />
                         </div>
                          <div class='col-lg-12 {$successArray[2]}'>
                             <label for="email">Email</label>
-                           <input id="email" class="form-control" name="email" type="text" {$populateArray[2]}/>
+                           <input required = "required" id="email" class="form-control" name="email" type="text" {$populateArray[2]}/>
                         </div>
                          <div class='col-lg-12  {$successArray[3]}'>
                             <label for="password">Password</label>
-                            <input id="password" class="form-control" name="password" type="password" {$populateArray[3]} />
+                            <input required = "required" id="password" class="form-control" name="password" type="password" {$populateArray[3]} />
                         </div>
                          <div class='col-lg-12 {$successArray[4]}'>
                             <label for="confirm_password">Confirm Password</label>
-                            <input id="confirm_password" class="form-control" name="confirm_password" type="password" {$populateArray[4]} />
+                            <input required = "required" id="confirm_password" class="form-control" name="confirm_password" type="password" {$populateArray[4]} />
                         </div>
 
                     </fieldset>

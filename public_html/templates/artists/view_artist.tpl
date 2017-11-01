@@ -52,6 +52,8 @@
                 </h2>
             </div>
         </div>
+
+        {include file = "modals/update_album.tpl"}
         <!--added by Samuel Mahan to include popular albums in the artist table-->
         <table class="table">
             <thead>
@@ -71,7 +73,7 @@
                     <td>10</td>
                     <td>00:30:00</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -79,7 +81,7 @@
                     <td>7</td>
                     <td>00:24:00</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -87,7 +89,7 @@
                     <td>---</td>
                     <td>---</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                 </tr>
         </table>
         
