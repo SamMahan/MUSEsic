@@ -26,7 +26,7 @@
                     <td>What makes you beautiful</td>
                     <td>5</td>
                     <td>3</td>
-                    <td><a href="#" class="btn btn-danger">Delete</a></td>
+                    <td><a href="#" class="btn btn-danger">Delete</a><a href="#" class="btn btn-default">Update</a></td>
                 </tr>
             </table>
            
