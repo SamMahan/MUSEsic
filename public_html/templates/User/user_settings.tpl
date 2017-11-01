@@ -59,7 +59,7 @@
 
 
             <div class="well col-lg 5">
-                <form class="form-horizontal" method="post" action="#">
+                <form class="form-horizontal user_form user_settings" method="post" action="#">
                     <fieldset>
                         <legend>Edit Profile</legend>
                         <div class="row justify-content-center">

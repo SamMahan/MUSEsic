@@ -13,7 +13,7 @@ if ($_POST != null){
         
         if($value===""){
             array_push($successArray, "has-warning");
-            array_push($populateArray, "whale hoy thur");
+            array_push($populateArray, "this is nothing");
         }
         
         elseif($value != ""){

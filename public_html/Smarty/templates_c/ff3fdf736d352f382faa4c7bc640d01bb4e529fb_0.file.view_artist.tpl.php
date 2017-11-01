@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-31 16:45:46
+<?php /* Smarty version 3.1.27, created on 2017-10-31 17:23:45
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\artists\view_artist.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:102782826259f8e0fa464857_22214268%%*/
+/*%%SmartyHeaderCode:179599836959f8e9e114f612_29798959%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff3fdf736d352f382faa4c7bc640d01bb4e529fb' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\artists\\view_artist.tpl',
-      1 => 1509481591,
+      1 => 1509482759,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '102782826259f8e0fa464857_22214268',
+  'nocache_hash' => '179599836959f8e9e114f612_29798959',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59f8e0fa621f85_21651523',
+  'unifunc' => 'content_59f8e9e11d0933_96136933',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59f8e0fa621f85_21651523')) {
-function content_59f8e0fa621f85_21651523 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59f8e9e11d0933_96136933')) {
+function content_59f8e9e11d0933_96136933 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '102782826259f8e0fa464857_22214268';
+$_smarty_tpl->properties['nocache_hash'] = '179599836959f8e9e114f612_29798959';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,7 +100,7 @@ $_smarty_tpl->properties['nocache_hash'] = '102782826259f8e0fa464857_22214268';
                     <td>10</td>
                     <td>00:30:00</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Delete Album</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -108,7 +108,7 @@ $_smarty_tpl->properties['nocache_hash'] = '102782826259f8e0fa464857_22214268';
                     <td>7</td>
                     <td>00:24:00</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Delete Album</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -116,7 +116,7 @@ $_smarty_tpl->properties['nocache_hash'] = '102782826259f8e0fa464857_22214268';
                     <td>---</td>
                     <td>---</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Delete Album</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button></td>
                 </tr>
         </table>
         
