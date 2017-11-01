@@ -19,7 +19,7 @@
 
 {include file = "componants/navbar.tpl"}
 {include file = "modals/update_album.tpl"}
-{incluse file = "modals/delete_general.tpl"}
+{include file = "modals/delete_general.tpl"}
 
 <table class="table">
     <thead>
