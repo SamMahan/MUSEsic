@@ -33,7 +33,7 @@
 
         {include file = "modals/add_artist.tpl"}
         {include file = "modals/update_artist.tpl"}
-        
+
         <div class="row">
             <div class="col-lg-11"></div>
             <div class="col-lg-1">

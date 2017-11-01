@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-31 16:46:42
+<?php /* Smarty version 3.1.27, created on 2017-11-01 18:25:24
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/artists/view_artist.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:144512712459f8e132dfa1a8_12861030%%*/
+/*%%SmartyHeaderCode:182555064459fa49d48781b5_15068275%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '67058be04922b733f290674eafa837b38725cb26' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/artists/view_artist.tpl',
-      1 => 1509481884,
+      1 => 1509575113,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '144512712459f8e132dfa1a8_12861030',
+  'nocache_hash' => '182555064459fa49d48781b5_15068275',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59f8e132ecb694_16842433',
+  'unifunc' => 'content_59fa49d48cace6_64061761',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59f8e132ecb694_16842433')) {
-function content_59f8e132ecb694_16842433 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fa49d48cace6_64061761')) {
+function content_59fa49d48cace6_64061761 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '144512712459f8e132dfa1a8_12861030';
+$_smarty_tpl->properties['nocache_hash'] = '182555064459fa49d48781b5_15068275';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,6 +81,10 @@ $_smarty_tpl->properties['nocache_hash'] = '144512712459f8e132dfa1a8_12861030';
                 </h2>
             </div>
         </div>
+
+        <?php echo $_smarty_tpl->getSubTemplate ("modals/update_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
         <!--added by Samuel Mahan to include popular albums in the artist table-->
         <table class="table">
             <thead>
@@ -100,7 +104,7 @@ $_smarty_tpl->properties['nocache_hash'] = '144512712459f8e132dfa1a8_12861030';
                     <td>10</td>
                     <td>00:30:00</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -108,7 +112,7 @@ $_smarty_tpl->properties['nocache_hash'] = '144512712459f8e132dfa1a8_12861030';
                     <td>7</td>
                     <td>00:24:00</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -116,7 +120,7 @@ $_smarty_tpl->properties['nocache_hash'] = '144512712459f8e132dfa1a8_12861030';
                     <td>---</td>
                     <td>---</td>
                     <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button></td>
+                    <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                 </tr>
         </table>
         
