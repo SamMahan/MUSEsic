@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-01 20:09:42
+<?php /* Smarty version 3.1.27, created on 2017-11-01 20:12:18
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:74837754559fa624619e0a7_10742434%%*/
+/*%%SmartyHeaderCode:46227787959fa62e2b0b1e8_42335721%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '956c6b27dfe102c6e6c318612c8a137629f600f5' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl',
-      1 => 1509577147,
+      1 => 1509581488,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '74837754559fa624619e0a7_10742434',
+  'nocache_hash' => '46227787959fa62e2b0b1e8_42335721',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fa62461fc2b1_85260752',
+  'unifunc' => 'content_59fa62e2b5b4f0_50043206',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fa62461fc2b1_85260752')) {
-function content_59fa62461fc2b1_85260752 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fa62e2b5b4f0_50043206')) {
+function content_59fa62e2b5b4f0_50043206 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '74837754559fa624619e0a7_10742434';
+$_smarty_tpl->properties['nocache_hash'] = '46227787959fa62e2b0b1e8_42335721';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -110,7 +110,6 @@ $_smarty_tpl->properties['nocache_hash'] = '74837754559fa624619e0a7_10742434';
     <div class="col-lg-11"></div>
     <div class="col-lg-1">
         <a href="#" data-target="#create_album" data-toggle="modal"><button class="btn btn-info">Add Album</button></a>
-        <a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a>
     </div>
 </div>
 
