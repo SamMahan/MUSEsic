@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-01 21:54:18
+<?php /* Smarty version 3.1.27, created on 2017-11-01 21:58:15
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/songs/list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:64149205659fa7aca8c1ea1_59981104%%*/
+/*%%SmartyHeaderCode:136112372159fa7bb7493d50_49821920%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '54e24d91ef45307ed7ea4c50b00b425426b0c9af' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/songs/list.tpl',
-      1 => 1509587656,
+      1 => 1509587881,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '64149205659fa7aca8c1ea1_59981104',
+  'nocache_hash' => '136112372159fa7bb7493d50_49821920',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fa7aca917093_04305334',
+  'unifunc' => 'content_59fa7bb74dca74_36142079',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fa7aca917093_04305334')) {
-function content_59fa7aca917093_04305334 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fa7bb74dca74_36142079')) {
+function content_59fa7bb74dca74_36142079 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '64149205659fa7aca8c1ea1_59981104';
+$_smarty_tpl->properties['nocache_hash'] = '136112372159fa7bb7493d50_49821920';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,16 +34,10 @@ $_smarty_tpl->properties['nocache_hash'] = '64149205659fa7aca8c1ea1_59981104';
     </style>
 
     <?php echo '<script'; ?>
- src="../../assets/js/test.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
  src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="../../assets/js/jquery.tablednd.js"><?php echo '</script'; ?>
 >
 
     <?php echo @constant('RESOURCES');?>
@@ -106,17 +100,6 @@ song.php">Head Strong</a></td>
                 <td></td>
             </tr>
     </table>
-    </div>
-
-    <?php echo '<script'; ?>
- type="text/javascript">
-    $(document).ready(function() {
-    $("#tblData").tableDnD();
-    });
-    <?php echo '</script'; ?>
->
-
-
     </div>
 
 
