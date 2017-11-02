@@ -6,7 +6,10 @@
     <style type="text/css" media="all">
         @import "../../assets/css/song_list.css";
     </style>
-    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+
     {$smarty.const.RESOURCES}
     
 </head>
@@ -17,9 +20,9 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-lg-11">
-        <table class="table">
-            <thead>
+
+    <table class="table tblData">
+        <thead>
             <tr>
                 <th>Title</th>
                 <th>Artist</th>
@@ -28,27 +31,41 @@
                 <th></th>
                 <th></th>
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
             <tr>
                 <td><a href="{$smarty.const.WEB_PATH}song.php">Head Strong</a></td>
                 <td>Trapet</td>
                 <td>Fun</td>
                 <td>4:46</td>
                 <td></td>
+                <td></td>
             </tr>
-            </tbody>
-        </table>
-    </div>
-        <div class="col-lg-1">
-        </br>
-            </br>
-            <a href="#" data-toggle="dropdown"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu">
-           <li><a href="#" data-target="#add-to-album" data-toggle="modal">+Add to album</a></li>
-                <li><a href="#" data-target="#add-to-playlist" data-toggle="modal">+Add to playlist</a></li>
-            </ul>
-        </div>
+            <tr>
+                <td>Test 1</td>
+                <td>Trapet</td>
+                <td>Fun</td>
+                <td>4:46</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Test 2</td>
+                <td>Trapet</td>
+                <td>Fun</td>
+                <td>4:46</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Test 3</td>
+                <td>Trapet</td>
+                <td>Fun</td>
+                <td>4:46</td>
+                <td></td>
+                <td></td>
+            </tr>
+    </table>
     </div>
 
 

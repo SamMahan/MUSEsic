@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-01 18:15:28
+<?php /* Smarty version 3.1.27, created on 2017-11-01 21:54:18
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/songs/list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:200623168359fa4780cfe675_30725942%%*/
+/*%%SmartyHeaderCode:64149205659fa7aca8c1ea1_59981104%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '54e24d91ef45307ed7ea4c50b00b425426b0c9af' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/songs/list.tpl',
-      1 => 1509481166,
+      1 => 1509587656,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '200623168359fa4780cfe675_30725942',
+  'nocache_hash' => '64149205659fa7aca8c1ea1_59981104',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fa4780d4b0e0_36181794',
+  'unifunc' => 'content_59fa7aca917093_04305334',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fa4780d4b0e0_36181794')) {
-function content_59fa4780d4b0e0_36181794 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fa7aca917093_04305334')) {
+function content_59fa7aca917093_04305334 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '200623168359fa4780cfe675_30725942';
+$_smarty_tpl->properties['nocache_hash'] = '64149205659fa7aca8c1ea1_59981104';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,20 @@ $_smarty_tpl->properties['nocache_hash'] = '200623168359fa4780cfe675_30725942';
     <style type="text/css" media="all">
         @import "../../assets/css/song_list.css";
     </style>
-    
+
+    <?php echo '<script'; ?>
+ src="../../assets/js/test.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="../../assets/js/jquery.tablednd.js"><?php echo '</script'; ?>
+>
+
     <?php echo @constant('RESOURCES');?>
 
     
@@ -46,9 +59,9 @@ $_smarty_tpl->properties['nocache_hash'] = '200623168359fa4780cfe675_30725942';
 
 <div class="container">
     <div class="row">
-    <div class="col-lg-11">
-        <table class="table">
-            <thead>
+
+    <table class="table tblData">
+        <thead>
             <tr>
                 <th>Title</th>
                 <th>Artist</th>
@@ -57,27 +70,53 @@ $_smarty_tpl->properties['nocache_hash'] = '200623168359fa4780cfe675_30725942';
                 <th></th>
                 <th></th>
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
             <tr>
-                <td><a href="song.php">Head Strong</a></td>
+                <td><a href="<?php echo @constant('WEB_PATH');?>
+song.php">Head Strong</a></td>
                 <td>Trapet</td>
                 <td>Fun</td>
                 <td>4:46</td>
                 <td></td>
+                <td></td>
             </tr>
-            </tbody>
-        </table>
+            <tr>
+                <td>Test 1</td>
+                <td>Trapet</td>
+                <td>Fun</td>
+                <td>4:46</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Test 2</td>
+                <td>Trapet</td>
+                <td>Fun</td>
+                <td>4:46</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Test 3</td>
+                <td>Trapet</td>
+                <td>Fun</td>
+                <td>4:46</td>
+                <td></td>
+                <td></td>
+            </tr>
+    </table>
     </div>
-        <div class="col-lg-1">
-        </br>
-            </br>
-            <a href="#" data-toggle="dropdown"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu">
-           <li><a href="#" data-target="#add-to-album" data-toggle="modal">+Add to album</a></li>
-                <li><a href="#" data-target="#add-to-playlist" data-toggle="modal">+Add to playlist</a></li>
-            </ul>
-        </div>
+
+    <?php echo '<script'; ?>
+ type="text/javascript">
+    $(document).ready(function() {
+    $("#tblData").tableDnD();
+    });
+    <?php echo '</script'; ?>
+>
+
+
     </div>
 
 
