@@ -1,8 +1,35 @@
+<?php /* Smarty version 3.1.27, created on 2017-11-01 20:09:42
+         compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:74837754559fa624619e0a7_10742434%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '956c6b27dfe102c6e6c318612c8a137629f600f5' => 
+    array (
+      0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl',
+      1 => 1509577147,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '74837754559fa624619e0a7_10742434',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_59fa62461fc2b1_85260752',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_59fa62461fc2b1_85260752')) {
+function content_59fa62461fc2b1_85260752 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '74837754559fa624619e0a7_10742434';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     
-    {$smarty.const.RESOURCES}
+    <?php echo @constant('RESOURCES');?>
+
 
     <style>
         #userName {
@@ -17,9 +44,15 @@
 </head>
 <body>
 
-{include file = "componants/navbar.tpl"}
-{include file = "modals/update_album.tpl"}
-{include file = "modals/delete_general.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+<?php echo $_smarty_tpl->getSubTemplate ("modals/update_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+<?php echo $_smarty_tpl->getSubTemplate ("modals/delete_general.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 
 <table class="table">
     <thead>
@@ -70,12 +103,18 @@
     </tbody>
 </table>
 
-{include file = "modals/create_album.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("modals/create_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 <div class="row">
     <div class="col-lg-11"></div>
     <div class="col-lg-1">
         <a href="#" data-target="#create_album" data-toggle="modal"><button class="btn btn-info">Add Album</button></a>
+        <a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a>
     </div>
 </div>
 
 </body>
+<?php }
+}
+?>
