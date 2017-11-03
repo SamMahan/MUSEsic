@@ -18,7 +18,6 @@
 <table class="table">
     <thead>
     <tr>
-        <th>#</th>
         <th>Name</th>
         <th>Artist Name</th>
         <th>Number of Songs</th>
@@ -27,39 +26,16 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>1</td>
-        <td><a href="view_album.php">Album</a></td>
-        <td>Artist</td>
-        <td>10</td>
-        <td>00:30:00</td>
-        <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>My Second Album</td>
-        <td>Artist</td>
-        <td>7</td>
-        <td>00:24:00</td>
-        <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
-    </tr>
 
-    <tr>
-        <td>6</td>
-        <td>---</td>
-        <td>---</td>
-        <td>---</td>
-        <td>---</td>
-        <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
-    </tr>
-    <tr>
-        <td>7</td>
-        <td>---</td>
-        <td>---</td>
-        <td>---</td>
-        <td>---</td>
-        <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
-    </tr>
+    {foreach $listOfAlbums as $key => $value}
+        <tr>
+            <td><a href="{$smarty.const.WEB_PATH}view_album.php?key={$value["Album_Name"]}">{$value["Album_Name"]}</a></td>
+            <td>--</td>
+            <td>--</td>
+            <td>--</td>
+            <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+        </tr>
+    {/foreach}
 
     </tbody>
 </table>

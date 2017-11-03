@@ -29,10 +29,11 @@ if (isset($_POST)){
     }
 
 }
-
+$listOfArtists= getArtists();
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
 $smarty->assign('modal', $modal);
+$smarty->assign("listOfArtists", $listOfArtists);
 
 $smarty->display("artists/artist_list.tpl");
 ?>
