@@ -14,7 +14,7 @@ Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
 $local = true;
 error_reporting(E_ERROR);
-
+echo "1";
 /**
  * Compose the URL that originated this script. This function was procured from
  * http://stackoverflow.com/questions/6768793/get-the-full-url-in-php and was reduced
@@ -55,7 +55,7 @@ define('BASE_PATH', implode(DIRECTORY_SEPARATOR, $tmp) . DIRECTORY_SEPARATOR);
 
 define('PUBLIC_PATH', BASE_PATH . "public_html".DIRECTORY_SEPARATOR);
 define('WEB_URL', webRoot()."public_html");
-
+echo "1";
 #
 # Set PHP configuration options
 define('CLASS_ROOT', BASE_PATH . 'public_html/class/');
@@ -68,7 +68,7 @@ define('SMARTY_ROOT', PUBLIC_PATH . "Smarty".DIRECTORY_SEPARATOR);
 define('SMARTY_TEMPLATES', PUBLIC_PATH . 'templates/');
 define('SMARTY', SMARTY_ROOT . "libs". DIRECTORY_SEPARATOR ."Smarty.class.php");
 
-
+echo "1";
 /*
  * The following has been added to resolve the problem of relying on the system's timezone settings.
  */
@@ -91,7 +91,9 @@ $smarty->assign('WEB_URL', WEB_URL);
 function myAutoload($class) {
     require CLASS_ROOT . $class . '.class.php';
 }
+
 require_once "constants.php";
 require_once "dbconfig.php";
 require_once "functions.php";
+
 spl_autoload_register('myAutoload');

@@ -1,5 +1,5 @@
 <?php
-require_once "dbconfig.php";
+
 /**
  * Created by PhpStorm.
  * User: sfmah
