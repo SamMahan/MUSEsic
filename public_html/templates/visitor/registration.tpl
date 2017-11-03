@@ -32,21 +32,21 @@ registration page -->
                     <fieldset>
                         <div class='col-lg-12 . {$successArray[0]}'>
                             <label for="first_name">First Name</label>
-                            <input required = "required" id='first_name' class='form-control' name='first_name' type='text'.{$populateArray[0]} />
+                            <input required = "required" id='first_name' class='form-control' name='first_name' type='text' {$populateArray[0]} />
                         </div>
-                         <div class='col-lg-12 {$successArray[1]}'>
+                         <div class='required col-lg-12 {$successArray[1]}'>
                             <label for="last_name">Last Name</label>
                             <input required = "required" id="last_name" class="form-control" name="last_name" type="text" {$populateArray[1]} />
                         </div>
-                         <div class='col-lg-12 {$successArray[2]}'>
+                         <div class='required col-lg-12 {$successArray[2]}'>
                             <label for="email">Email</label>
                            <input required = "required" id="email" class="form-control" name="email" type="text" {$populateArray[2]}/>
                         </div>
-                         <div class='col-lg-12  {$successArray[3]}'>
+                         <div class='required col-lg-12  {$successArray[3]}'>
                             <label for="password">Password</label>
                             <input required = "required" id="password" class="form-control" name="password" type="password" {$populateArray[3]} />
                         </div>
-                         <div class='col-lg-12 {$successArray[4]}'>
+                         <div class='required col-lg-12 {$successArray[4]}'>
                             <label for="confirm_password">Confirm Password</label>
                             <input required = "required" id="confirm_password" class="form-control" name="confirm_password" type="password" {$populateArray[4]} />
                         </div>

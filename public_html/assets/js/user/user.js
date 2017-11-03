@@ -2,21 +2,24 @@
 
 function getForm(form){
     if (form.hasClass("user_registration")){
-        registrationCheck();
+        registrationCheck(form);
     }else if(form.hasClass("user_login")){
         loginCheck();
     }else if (form.hasclass("user_settings")){
-        
+
     }
 
 }
 
 
 $('.user_form').change(function(){
-getform(this);
+getForm(this);
 });
 
 
-function registrationCheck(){
-    foreach $("input")
+function registrationCheck(form){
+   foreach( form.children(".required").val() == ""){
+       this.addClass("has-warning")
+    }
+
 }

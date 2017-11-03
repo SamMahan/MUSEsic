@@ -93,5 +93,5 @@ function myAutoload($class) {
 }
 require_once "constants.php";
 require_once "dbconfig.php";
-
+require_once "functions.php";
 spl_autoload_register('myAutoload');
