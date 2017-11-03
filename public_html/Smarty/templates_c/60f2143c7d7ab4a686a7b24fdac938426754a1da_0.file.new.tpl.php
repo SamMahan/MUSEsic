@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 19:04:21
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:30:42
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\songs\new.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:19527700259fba4758fb146_48023808%%*/
+/*%%SmartyHeaderCode:105592022959fbb8b2262fa0_07670850%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '60f2143c7d7ab4a686a7b24fdac938426754a1da' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\songs\\new.tpl',
-      1 => 1509663741,
+      1 => 1509668947,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19527700259fba4758fb146_48023808',
+  'nocache_hash' => '105592022959fbb8b2262fa0_07670850',
   'variables' => 
   array (
     'successArray' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fba4766d3704_14808846',
+  'unifunc' => 'content_59fbb8b2332424_84343463',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fba4766d3704_14808846')) {
-function content_59fba4766d3704_14808846 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbb8b2332424_84343463')) {
+function content_59fbb8b2332424_84343463 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '19527700259fba4758fb146_48023808';
+$_smarty_tpl->properties['nocache_hash'] = '105592022959fbb8b2262fa0_07670850';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +92,7 @@ new.php">
 
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                         <a class="btn btn-default" href="<?php echo @constant('WEB_PATH');?>
-list.php">Cancle</a>
+list.php">Cancel</a>
                         <button type="submit" class="btn btn-primary">Upload</button>
                     </div>
                 </div>
