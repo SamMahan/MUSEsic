@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <a class="btn btn-default" href="{$smarty.const.WEB_PATH}list.php">Cancle</a>
+                        <a class="btn btn-default" href="{$smarty.const.WEB_PATH}list.php">Cancel</a>
                         <button type="submit" class="btn btn-primary">Upload</button>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
     </div>
 
 </div>
-</div>
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"

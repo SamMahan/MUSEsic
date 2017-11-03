@@ -1,3 +1,29 @@
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:33:41
+         compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\user\user_settings.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:43069002059fbb965366bb4_77742934%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'cef534e916173f7d8bdc30ab4ecafb37f00fd0c9' => 
+    array (
+      0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\user\\user_settings.tpl',
+      1 => 1509669220,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '43069002059fbb965366bb4_77742934',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_59fbb96542e504_40898770',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_59fbb96542e504_40898770')) {
+function content_59fbb96542e504_40898770 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '43069002059fbb965366bb4_77742934';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +31,15 @@
     <meta charset="UTF-8">
     <title>EditProfile</title>
 
-   {$smarty.const.RESOURCES}
+   <?php echo @constant('RESOURCES');?>
+
 </head>
 
 <body>
 
-{include file = "componants/navbar.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 
     <div class="container">
         <div class="row justify-content-center">
@@ -96,4 +125,6 @@
     
 </body>
 
-</html>
+</html><?php }
+}
+?>
