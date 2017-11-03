@@ -1,5 +1,5 @@
 
-
+/*
 function getForm(form){
     if (form.hasClass("user_registration")){
         registrationCheck(form);

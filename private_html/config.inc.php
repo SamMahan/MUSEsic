@@ -14,7 +14,7 @@ Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
 $local = true;
 error_reporting(E_ERROR);
-echo "1";
+
 /**
  * Compose the URL that originated this script. This function was procured from
  * http://stackoverflow.com/questions/6768793/get-the-full-url-in-php and was reduced
@@ -55,7 +55,7 @@ define('BASE_PATH', implode(DIRECTORY_SEPARATOR, $tmp) . DIRECTORY_SEPARATOR);
 
 define('PUBLIC_PATH', BASE_PATH . "public_html".DIRECTORY_SEPARATOR);
 define('WEB_URL', webRoot()."public_html");
-echo "1";
+
 #
 # Set PHP configuration options
 define('CLASS_ROOT', BASE_PATH . 'public_html/class/');
@@ -97,3 +97,4 @@ require_once "dbconfig.php";
 require_once "functions.php";
 
 spl_autoload_register('myAutoload');
+
