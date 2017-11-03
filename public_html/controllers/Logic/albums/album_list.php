@@ -6,6 +6,10 @@ $populateArray=array();
 $modal = "";
 
 if ($_POST == null){
+for($i=0; $i<12; $i++){
+    array_push($successArray, "");
+    array_push($populateArray, "placeholder='enter info'");
+}
 
 }
 

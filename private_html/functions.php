@@ -34,5 +34,23 @@ function getSongs() {
     return $list_of_songs;
 
 }
+function register($password, $firstName, $lastName, $email, $isAdmin){
+    global $pdo;
+    $q = "INSERT INTO User (Password, First_Name, Last_Name, Email, Is_Admin)
+      VALUES(:p,:fn,:ln,:e,:ia)";
+
+    // $st = $pdo;
+    $st = $pdo->prepare($q);
+    $st->bindParam(":p", $password);
+    $st->bindParam(":fn", $firstName);
+    $st->bindParam(":ln", $lastName);
+    $st->bindParam(":e", $email);
+    $st->bindParam(":ia", $isAdmin);
+    if($st->execute()){
+        echo "true!!";
+    }else{
+        echo "nope!";
+    }
+}
 
  ?>

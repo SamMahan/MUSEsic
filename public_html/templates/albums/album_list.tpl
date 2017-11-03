@@ -4,22 +4,16 @@
     
     {$smarty.const.RESOURCES}
 
-    <style>
-        #userName {
-            margin-left: 6%;
-        }
-
-        #userNameLink{
-            margin-left: 5%;
-        }
-    </style>
 
 </head>
 <body>
 
 {include file = "componants/navbar.tpl"}
+
 {include file = "modals/update_album.tpl"}
+
 {include file = "modals/delete_general.tpl"}
+
 
 <table class="table">
     <thead>

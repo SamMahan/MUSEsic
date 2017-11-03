@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 20:50:45
+<?php /* Smarty version 3.1.27, created on 2017-11-02 21:53:44
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\albums\album_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:32472412559fbbd657c5109_09897642%%*/
+/*%%SmartyHeaderCode:73988621359fbcc2863b5d5_33035677%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b904debb82ff52157a752c6b157db87ff6c4aef' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\albums\\album_list.tpl',
-      1 => 1509670240,
+      1 => 1509674021,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '32472412559fbbd657c5109_09897642',
+  'nocache_hash' => '73988621359fbcc2863b5d5_33035677',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbbd658749a2_31316654',
+  'unifunc' => 'content_59fbcc286a10d7_62778630',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbbd658749a2_31316654')) {
-function content_59fbbd658749a2_31316654 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbcc286a10d7_62778630')) {
+function content_59fbcc286a10d7_62778630 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '32472412559fbbd657c5109_09897642';
+$_smarty_tpl->properties['nocache_hash'] = '73988621359fbcc2863b5d5_33035677';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,15 +31,6 @@ $_smarty_tpl->properties['nocache_hash'] = '32472412559fbbd657c5109_09897642';
     <?php echo @constant('RESOURCES');?>
 
 
-    <style>
-        #userName {
-            margin-left: 6%;
-        }
-
-        #userNameLink{
-            margin-left: 5%;
-        }
-    </style>
 
 </head>
 <body>
@@ -47,11 +38,14 @@ $_smarty_tpl->properties['nocache_hash'] = '32472412559fbbd657c5109_09897642';
 <?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
+
 <?php echo $_smarty_tpl->getSubTemplate ("modals/update_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
+
 <?php echo $_smarty_tpl->getSubTemplate ("modals/delete_general.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
+
 
 
 <table class="table">

@@ -32,29 +32,29 @@ registration page -->
                     <fieldset>
                         <div class='col-lg-12 . {$successArray[0]}'>
                             <label for="first_name">First Name</label>
-                            <input required = "required" id='first_name' class='form-control' name='first_name' type='text' {$populateArray[0]} />
+                            <input  id='first_name' class='required form-control' name='first_name' type='text' {$populateArray[0]} />
                         </div>
                          <div class='required col-lg-12 {$successArray[1]}'>
                             <label for="last_name">Last Name</label>
-                            <input required = "required" id="last_name" class="form-control" name="last_name" type="text" {$populateArray[1]} />
+                            <input  id="last_name" class="required form-control" name="last_name" type="text" {$populateArray[1]} />
                         </div>
                          <div class='required col-lg-12 {$successArray[2]}'>
                             <label for="email">Email</label>
-                           <input required = "required" id="email" class="form-control" name="email" type="text" {$populateArray[2]}/>
+                           <input  id="email" class="required form-control" name="email" type="text" {$populateArray[2]}/>
                         </div>
                          <div class='required col-lg-12  {$successArray[3]}'>
                             <label for="password">Password</label>
-                            <input required = "required" id="password" class="form-control" name="password" type="password" {$populateArray[3]} />
+                            <input id="password" class="required form-control password" name="password" type="password" {$populateArray[3]} />
                         </div>
                          <div class='required col-lg-12 {$successArray[4]}'>
                             <label for="confirm_password">Confirm Password</label>
-                            <input required = "required" id="confirm_password" class="form-control" name="confirm_password" type="password" {$populateArray[4]} />
+                            <input id="confirm_password" class="required form-control confirm-password" name="confirm-password" type="password" {$populateArray[4]} />
                         </div>
 
                     </fieldset>
                     <div class="col-lg-12">
                         <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
-                        <button type="submit" type="button" class="btn btn-primary">submit</button>
+                        <button type=""  class="btn btn-primary submit-button">submit</button>
                     </div>
 
                 </form>
@@ -72,13 +72,13 @@ registration page -->
                 <div class="modal-body">
                     <form type = "text" method="post" action="registration.php">
                         <fieldset>
-                            <div class='col-lg-12 {$successArray[0]}'>
+                            <div class='col-lg-12 {$lsuccessArray[0]}'>
                                 <label for="login-email">email</label>
-                                <input id="login-email" class="form-control" name="login-email" type="text" {$populateArray[0]} />
+                                <input id="login-email" class="form-control" name="login-email" type="text" {$lpopulateArray[0]} />
                             </div>
-                            <div class='col-lg-12 {$successArray[1]}'>
+                            <div class='col-lg-12 {$lsuccessArray[1]}'>
                                 <label for="login-password">Password</label>
-                                <input id="login-password" class="form-control" name="login-password" type="password" {$populateArray[1]} />
+                                <input id="login-password" class="form-control" name="login-password" type="password" {$lpopulateArray[1]} />
                             </div>
                         </fieldset>
                         <button type="submit" class="btn btn-primary">Login</button>

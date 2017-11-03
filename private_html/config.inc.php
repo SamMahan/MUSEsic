@@ -68,7 +68,7 @@ define('SMARTY_ROOT', PUBLIC_PATH . "Smarty".DIRECTORY_SEPARATOR);
 define('SMARTY_TEMPLATES', PUBLIC_PATH . 'templates/');
 define('SMARTY', SMARTY_ROOT . "libs". DIRECTORY_SEPARATOR ."Smarty.class.php");
 
-echo "1";
+
 /*
  * The following has been added to resolve the problem of relying on the system's timezone settings.
  */
