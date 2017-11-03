@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php /* Smarty version 3.1.27, created on 2017-11-02 20:56:39
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\componants\navbar.tpl" */ ?>
 <?php
@@ -16,6 +17,12 @@
 <?php
 /*%%SmartyHeaderCode:47621397959fbba9d2c7ff3_90101540%%*/
 >>>>>>> parent of 3040f6c... stuff
+=======
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:38:53
+         compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\componants\navbar.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:47621397959fbba9d2c7ff3_90101540%%*/
+>>>>>>> parent of 3040f6c... stuff
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -23,6 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '17e797bdbe2d46899d77e89ddc88969a1065b007' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\componants\\navbar.tpl',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       1 => 1509670047,
@@ -44,6 +52,9 @@ $_smarty_tpl->properties['nocache_hash'] = '123874775459fbbec760fdf0_21483214';
 =======
       1 => 1509669359,
 >>>>>>> parent of 3040f6c... stuff
+=======
+      1 => 1509669359,
+>>>>>>> parent of 3040f6c... stuff
       2 => 'file',
     ),
   ),
@@ -57,8 +68,12 @@ if ($_valid && !is_callable('content_59fbba9d2d9cd2_71384513')) {
 function content_59fbba9d2d9cd2_71384513 ($_smarty_tpl) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $_smarty_tpl->properties['nocache_hash'] = '110702578659fbbf02287c32_41889121';
 >>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
+=======
+$_smarty_tpl->properties['nocache_hash'] = '47621397959fbba9d2c7ff3_90101540';
+>>>>>>> parent of 3040f6c... stuff
 =======
 $_smarty_tpl->properties['nocache_hash'] = '47621397959fbba9d2c7ff3_90101540';
 >>>>>>> parent of 3040f6c... stuff
