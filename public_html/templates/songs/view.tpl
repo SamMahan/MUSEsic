@@ -23,8 +23,8 @@
     <div class="songpic col-md-5 col-md-offset-1">
         <img src="../../assets/images/songpicture.jpg" alt="song picture" height="auto"
              width="auto">
-        <h2>Headstrong</h2>
-        <h4>By Trapt</h4>
+        <h2>{$songArray['Title']}</h2>
+        <h4>{$songArray['']}</h4>
         <h4>Added By: User</h4>
     </div>
 
