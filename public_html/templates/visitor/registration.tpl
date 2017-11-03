@@ -40,7 +40,7 @@ registration page -->
                         </div>
                          <div class='required col-lg-12 {$successArray[2]}'>
                             <label for="email">Email</label>
-                           <input  id="email" class="required form-control" name="email" type="text" {$populateArray[2]}/>
+                           <input  id="email" class="required form-control" name="email" type="text" {$populateArray[2]} />
                         </div>
                          <div class='required col-lg-12  {$successArray[3]}'>
                             <label for="password">Password</label>
@@ -54,7 +54,7 @@ registration page -->
                     </fieldset>
                     <div class="col-lg-12">
                         <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
-                        <button type=""  class="btn btn-primary submit-button">submit</button>
+                        <button type="submit"  class="btn btn-primary submit-button">submit</button>
                     </div>
 
                 </form>
@@ -83,8 +83,9 @@ registration page -->
                         </fieldset>
                         <button type="submit" class="btn btn-primary">Login</button>
                         
-                         </form>
-                         <a href ="../../../Controllers/Logic/User/home.php"><button >temp login access</button></a>                </div>
+                    </form>
+                    <a href ="../../../Controllers/Logic/User/home.php"><button >temp login access</button></a>
+                </div>
 
                 <div class="modal-footer">
                     

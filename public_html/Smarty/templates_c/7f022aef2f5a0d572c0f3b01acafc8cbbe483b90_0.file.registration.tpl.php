@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-03 01:25:03
+<?php /* Smarty version 3.1.27, created on 2017-11-03 03:32:03
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\visitor\registration.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:169278652059fbfdafad20d6_60333279%%*/
+/*%%SmartyHeaderCode:55009025659fc1b732e5db8_82515194%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7f022aef2f5a0d572c0f3b01acafc8cbbe483b90' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\visitor\\registration.tpl',
-      1 => 1509686653,
+      1 => 1509694289,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '169278652059fbfdafad20d6_60333279',
+  'nocache_hash' => '55009025659fc1b732e5db8_82515194',
   'variables' => 
   array (
     'successArray' => 0,
@@ -24,13 +24,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbfdafba5926_40544057',
+  'unifunc' => 'content_59fc1b7334aca5_23943588',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbfdafba5926_40544057')) {
-function content_59fbfdafba5926_40544057 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fc1b7334aca5_23943588')) {
+function content_59fc1b7334aca5_23943588 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '169278652059fbfdafad20d6_60333279';
+$_smarty_tpl->properties['nocache_hash'] = '55009025659fc1b732e5db8_82515194';
 ?>
 <!DOCTYPE html>
 <html>
@@ -83,7 +83,7 @@ registration page -->
 '>
                             <label for="email">Email</label>
                            <input  id="email" class="required form-control" name="email" type="text" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[2];?>
-/>
+ />
                         </div>
                          <div class='required col-lg-12  <?php echo $_smarty_tpl->tpl_vars['successArray']->value[3];?>
 '>
@@ -101,7 +101,7 @@ registration page -->
                     </fieldset>
                     <div class="col-lg-12">
                         <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
-                        <button type=""  class="btn btn-primary submit-button">submit</button>
+                        <button type="submit"  class="btn btn-primary submit-button">submit</button>
                     </div>
 
                 </form>
@@ -135,8 +135,9 @@ registration page -->
                         </fieldset>
                         <button type="submit" class="btn btn-primary">Login</button>
                         
-                         </form>
-                         <a href ="../../../Controllers/Logic/User/home.php"><button >temp login access</button></a>                </div>
+                    </form>
+                    <a href ="../../../Controllers/Logic/User/home.php"><button >temp login access</button></a>
+                </div>
 
                 <div class="modal-footer">
                     

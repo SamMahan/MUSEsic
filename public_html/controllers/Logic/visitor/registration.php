@@ -6,7 +6,7 @@ $successArray=array();
 $populateArray=array();
 $lsuccessArray = array();
 $lpopulateArray = array();
-
+$loginSuccess = true;
 
 
 
@@ -32,11 +32,11 @@ if ($_POST != null){
             }
         }
     }else {
-        $loginsuccess = true;
+
         foreach ($_POST as $key => $value) {
             if ($value === "") {
                 array_push($lsuccessArray, "has-warning");
-                $loginSuccess = false;
+
                 array_push($lpopulateArray, "this has nothing");
 
             } elseif ($value != "") {
@@ -54,7 +54,16 @@ if($_POST["login-email"]!=null || $_POST["login-password"] !=null){
     $modal = "data-modalpost = 'active'";
 }
 if($registerSuccess == true && $_POST["password"] == $_POST['confirm-password']){
-    register($_POST["password"], $_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['false']);
+    echo  $_POST["password"]." ".$_POST['confirm-password'];
+    register($_POST["password"], $_POST['first_name'], $_POST['last_name'], $_POST['email'], false);
+
+}
+if($loginSuccess === true){
+        if(login($_POST['login-email'], $_POST['login-password']) == true){
+        header("Location:".WEB_URL."/controllers/Logic/user/home.php");
+    }else{
+        echo "nologin";
+    }
 }
 
 
