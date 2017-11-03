@@ -18,7 +18,7 @@ getForm(this);
 
 
 function registrationCheck(form){
-   foreach( form.children(".required").val() == ""){
+   foreach( form.children.has(".required").val() == ""){
        this.addClass("has-warning")
     }
 
