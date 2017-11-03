@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-31 16:50:44
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:49:59
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\componants\navbar.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:102575300959f8e224bfcf49_12412328%%*/
+/*%%SmartyHeaderCode:137814820359fbbd37c92591_33864303%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5828574a30239720544e78cde95316d01024a7a2' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\componants\\navbar.tpl',
-      1 => 1509481430,
+      1 => 1509669923,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '102575300959f8e224bfcf49_12412328',
+  'nocache_hash' => '137814820359fbbd37c92591_33864303',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59f8e224c01bd7_69237125',
+  'unifunc' => 'content_59fbbd37c96d28_84753346',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59f8e224c01bd7_69237125')) {
-function content_59f8e224c01bd7_69237125 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbbd37c96d28_84753346')) {
+function content_59fbbd37c96d28_84753346 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '102575300959f8e224bfcf49_12412328';
+$_smarty_tpl->properties['nocache_hash'] = '137814820359fbbd37c92591_33864303';
 ?>
 
     <nav class="navbar navbar-default">
@@ -46,12 +46,12 @@ $_smarty_tpl->properties['nocache_hash'] = '102575300959f8e224bfcf49_12412328';
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="../../../Controllers/Logic/User/home.php">Profile</a></li>
-                            <li><a href="../../../Controllers/Logic/songs/list.php">Song List</a></li>
-                            <li><a href="../../../Controllers/Logic/artists/artist_list.php">Artist List</a></li>
-                            <li><a href="../../../Controllers/Logic/Albums/album-list.php">Album List</a></li>
+                            <li><a href="../../../controllers/Logic/user/home.php">Profile</a></li>
+                            <li><a href="../../../controllers/Logic/songs/list.php">Song List</a></li>
+                            <li><a href="../../../controllers/Logic/artists/artist_list.php">Artist List</a></li>
+                            <li><a href="../../../controllers/Logic/albums/album_list.php">Album List</a></li>
                             <li class="divider"></li>
-                            <li><a href="../../../Controllers/Logic/visitor/registration.php">Log Out</a></li>
+                            <li><a href="../../../controllers/Logic/visitor/registration.php">Log Out</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -65,7 +65,7 @@ $_smarty_tpl->properties['nocache_hash'] = '102575300959f8e224bfcf49_12412328';
                     <li><a data-toggle="modal" data-target="#login" href="#">Login</a></li>
                 </ul>
                 <img src="../../../assets/Images/NoProfilePic.jpg" height="40"/>
-                <a href="../user/profile.html">Matthew Bromley</a>
+                <a href="../user/home.php">Matthew Bromley</a>
             </div>
         </div>
     </nav>

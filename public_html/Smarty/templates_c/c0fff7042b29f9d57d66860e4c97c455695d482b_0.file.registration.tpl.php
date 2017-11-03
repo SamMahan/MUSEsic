@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-01 16:06:03
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:54:33
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\visitor\registration.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:188552389259fa292b1523e2_65046081%%*/
+/*%%SmartyHeaderCode:9144319259fbbe49e611f9_03166903%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c0fff7042b29f9d57d66860e4c97c455695d482b' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\visitor\\registration.tpl',
-      1 => 1509481430,
+      1 => 1509669923,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '188552389259fa292b1523e2_65046081',
+  'nocache_hash' => '9144319259fbbe49e611f9_03166903',
   'variables' => 
   array (
     'successArray' => 0,
@@ -22,13 +22,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fa292b19e9f1_96314517',
+  'unifunc' => 'content_59fbbe49e98b24_18230985',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fa292b19e9f1_96314517')) {
-function content_59fa292b19e9f1_96314517 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbbe49e98b24_18230985')) {
+function content_59fbbe49e98b24_18230985 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '188552389259fa292b1523e2_65046081';
+$_smarty_tpl->properties['nocache_hash'] = '9144319259fbbe49e611f9_03166903';
 ?>
 <!DOCTYPE html>
 <html>
@@ -63,36 +63,36 @@ registration page -->
                 <h3>easy to use, one-stop source for your entertainment</h3>
             </div>
             <div class="well col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <form type="text" method="post" action="registration.php">
+                <form class ="user_form user_registration" type="text" method="post" action="registration.php">
                     <fieldset>
                         <div class='col-lg-12 . <?php echo $_smarty_tpl->tpl_vars['successArray']->value[0];?>
 '>
                             <label for="first_name">First Name</label>
-                            <input id='first_name' class='form-control' name='first_name' type='text'.<?php echo $_smarty_tpl->tpl_vars['populateArray']->value[0];?>
+                            <input required = "required" id='first_name' class='form-control' name='first_name' type='text' <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[0];?>
  />
                         </div>
-                         <div class='col-lg-12 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[1];?>
+                         <div class='required col-lg-12 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[1];?>
 '>
                             <label for="last_name">Last Name</label>
-                            <input id="last_name" class="form-control" name="last_name" type="text" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[1];?>
+                            <input required = "required" id="last_name" class="form-control" name="last_name" type="text" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[1];?>
  />
                         </div>
-                         <div class='col-lg-12 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[2];?>
+                         <div class='required col-lg-12 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[2];?>
 '>
                             <label for="email">Email</label>
-                           <input id="email" class="form-control" name="email" type="text" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[2];?>
+                           <input required = "required" id="email" class="form-control" name="email" type="text" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[2];?>
 />
                         </div>
-                         <div class='col-lg-12  <?php echo $_smarty_tpl->tpl_vars['successArray']->value[3];?>
+                         <div class='required col-lg-12  <?php echo $_smarty_tpl->tpl_vars['successArray']->value[3];?>
 '>
                             <label for="password">Password</label>
-                            <input id="password" class="form-control" name="password" type="password" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[3];?>
+                            <input required = "required" id="password" class="form-control" name="password" type="password" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[3];?>
  />
                         </div>
-                         <div class='col-lg-12 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[4];?>
+                         <div class='required col-lg-12 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[4];?>
 '>
                             <label for="confirm_password">Confirm Password</label>
-                            <input id="confirm_password" class="form-control" name="confirm_password" type="password" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[4];?>
+                            <input required = "required" id="confirm_password" class="form-control" name="confirm_password" type="password" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[4];?>
  />
                         </div>
 

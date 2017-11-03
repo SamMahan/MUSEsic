@@ -7,6 +7,7 @@ $modal = "";
 
 if ($_POST == null){
 
+
 }
 
 if (isset($_POST)){
@@ -25,7 +26,6 @@ if (isset($_POST)){
     if($_POST["album_name"]!=null || $_POST["number_songs"] !=null || $_POST["play_time"] !=null || $_POST["release_date"] !=null){
         $modal = "data-modalpost = 'active'";
 
-
     }
 
 }
@@ -34,6 +34,6 @@ $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
 $smarty->assign('modal', $modal);
 
-
 $smarty->display("albums/album_list.tpl");
+
 ?>
