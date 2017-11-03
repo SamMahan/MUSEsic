@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:56:45
+         compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\update_album.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:2982902059fbbecd967bc5_38100119%%*/
+=======
+<<<<<<< HEAD
 <?php /* Smarty version 3.1.27, created on 2017-11-02 20:49:40
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\update_album.tpl" */ ?>
 <?php
@@ -9,6 +15,7 @@
 <?php
 /*%%SmartyHeaderCode:181256861559fbba9d327d45_23305471%%*/
 >>>>>>> 7992d1c964b7ee83d15eaf2f9a624f6089e74d79
+>>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -16,6 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e803431cca73ca888dae375ab898f2289d95a4e5' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\modals\\update_album.tpl',
+<<<<<<< HEAD
+      1 => 1509670047,
+=======
 <<<<<<< HEAD
       1 => 1509670044,
       2 => 'file',
@@ -39,20 +49,31 @@ function content_59fbbd24cc67e3_97027961 ($_smarty_tpl) {
 $_smarty_tpl->properties['nocache_hash'] = '152400073859fbbd24c1dbd9_36975181';
 =======
       1 => 1509664879,
+>>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '181256861559fbba9d327d45_23305471',
+  'nocache_hash' => '2982902059fbbecd967bc5_38100119',
+  'variables' => 
+  array (
+    'pageTarget' => 0,
+    'successArray' => 0,
+    'populateArray' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbba9d3387e8_44129955',
+  'unifunc' => 'content_59fbbecd9804e2_97611935',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbba9d3387e8_44129955')) {
-function content_59fbba9d3387e8_44129955 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbbecd9804e2_97611935')) {
+function content_59fbbecd9804e2_97611935 ($_smarty_tpl) {
 
+<<<<<<< HEAD
+$_smarty_tpl->properties['nocache_hash'] = '2982902059fbbecd967bc5_38100119';
+=======
 $_smarty_tpl->properties['nocache_hash'] = '181256861559fbba9d327d45_23305471';
 >>>>>>> 7992d1c964b7ee83d15eaf2f9a624f6089e74d79
+>>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
 ?>
 <div class="modal fade" id="update_album" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

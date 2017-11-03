@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:56:45
+         compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\artists\view_artist.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:212041265159fbbecd87a071_47783005%%*/
+=======
 <?php /* Smarty version 3.1.27, created on 2017-11-02 20:57:38
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\artists\view_artist.tpl" */ ?>
 <?php
 /*%%SmartyHeaderCode:16130382359fbbf02035300_94644729%%*/
+>>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,6 +16,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff3fdf736d352f382faa4c7bc640d01bb4e529fb' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\artists\\view_artist.tpl',
+<<<<<<< HEAD
+      1 => 1509670047,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '212041265159fbbecd87a071_47783005',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_59fbbecd9145e2_84876126',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_59fbbecd9145e2_84876126')) {
+function content_59fbbecd9145e2_84876126 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '212041265159fbbecd87a071_47783005';
+=======
       1 => 1509670044,
       2 => 'file',
     ),
@@ -23,6 +46,7 @@ if ($_valid && !is_callable('content_59fbbf02115e55_56255967')) {
 function content_59fbbf02115e55_56255967 ($_smarty_tpl) {
 
 $_smarty_tpl->properties['nocache_hash'] = '16130382359fbbf02035300_94644729';
+>>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
 ?>
 <!DOCTYPE html>
 <html lang="en">

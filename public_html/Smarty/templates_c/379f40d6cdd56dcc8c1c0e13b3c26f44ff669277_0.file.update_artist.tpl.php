@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:56:39
+         compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\update_artist.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:16976748759fbbec778eda2_73841109%%*/
+=======
+<<<<<<< HEAD
 <?php /* Smarty version 3.1.27, created on 2017-11-02 20:49:35
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\update_artist.tpl" */ ?>
 <?php
@@ -9,6 +15,7 @@
 <?php
 /*%%SmartyHeaderCode:56166229559fbbaa1df3595_39021350%%*/
 >>>>>>> 7992d1c964b7ee83d15eaf2f9a624f6089e74d79
+>>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -16,6 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '379f40d6cdd56dcc8c1c0e13b3c26f44ff669277' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\modals\\update_artist.tpl',
+<<<<<<< HEAD
+      1 => 1509670047,
+=======
 <<<<<<< HEAD
       1 => 1509670044,
       2 => 'file',
@@ -38,20 +48,30 @@ function content_59fbbd1f249e25_10116649 ($_smarty_tpl) {
 $_smarty_tpl->properties['nocache_hash'] = '111826692059fbbd1f223132_95936832';
 =======
       1 => 1509664879,
+>>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '56166229559fbbaa1df3595_39021350',
+  'nocache_hash' => '16976748759fbbec778eda2_73841109',
+  'variables' => 
+  array (
+    'successArray' => 0,
+    'populateArray' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbbaa1dfb883_53592377',
+  'unifunc' => 'content_59fbbec77a3f50_35282057',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbbaa1dfb883_53592377')) {
-function content_59fbbaa1dfb883_53592377 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbbec77a3f50_35282057')) {
+function content_59fbbec77a3f50_35282057 ($_smarty_tpl) {
 
+<<<<<<< HEAD
+$_smarty_tpl->properties['nocache_hash'] = '16976748759fbbec778eda2_73841109';
+=======
 $_smarty_tpl->properties['nocache_hash'] = '56166229559fbbaa1df3595_39021350';
 >>>>>>> 7992d1c964b7ee83d15eaf2f9a624f6089e74d79
+>>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
 ?>
 <div class="modal fade" id="update_artist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

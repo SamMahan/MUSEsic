@@ -10,7 +10,7 @@ define('DB_PASSWORD', 'root');
 define('DB_NAME', 'musicdb');
 #
 #  Begin the session
-session_start();
+//session_start();
 #
 #  Connect to the database
 $db_name = DB_NAME;
