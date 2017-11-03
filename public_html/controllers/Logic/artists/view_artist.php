@@ -37,6 +37,6 @@ $smarty->assign("populateArray", $populateArray);
 $smarty->assign('modal', $modal);
 
 
-$smarty->display("artists/artist_list.tpl");
+$smarty->display("artists/view_artist.tpl");
 echo test3;
 ?>
