@@ -1,117 +1,126 @@
-<!DOCTYPE html>
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:32:32
+         compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\albums\view_album.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:130035867459fbb920d74202_93060733%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '2c446f160bf25ad3e3cf3c50d3f41c4c238008dd' => 
+    array (
+      0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\albums\\view_album.tpl',
+      1 => 1509579414,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '130035867459fbb920d74202_93060733',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_59fbb920dcc283_28554727',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_59fbb920dcc283_28554727')) {
+function content_59fbb920dcc283_28554727 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '130035867459fbb920d74202_93060733';
+?>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>View Artist</title>
-
+   
+    <style type="text/css" media="all">
+        @import "../../assets/css/view_artist.css";
+    </style>
     
+    <?php echo @constant('RESOURCES');?>
 
-    {$smarty.const.RESOURCES}
     
 </head>
 
 <body>
 
+   <?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
    
-   
-   {include file = "componants/navbar.tpl"}
-   {include file = "modals/update_artist.tpl"}
-
-   <!-- <div class="row">
-        <div class="col-lg-11"></div>
-        <div class="col-lg-1">
-            <a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-info">Update Artist</button></a>
-        </div> -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-11"></div>
+            <div class="col-lg-1">
+                <!--<a href="update.html" class="btn btn-info">Update Album</a>-->
+            </div>
+        </div>
 
 
 
-        <div class="container-fluid">
-            <div class="artistpic col-md-5 col-md-offset-1">
-                <img src="../../../assets/Images/artistpicture.jpg" alt="artist picture" height="auto" width="auto">
-                <h2>The Piano Guys</h2>
+        <div class="row">
+            <div class="artistpic col-lg-3 col-lg-offset-4">
+                <img src="../../assets/Images/artistpicture.jpg" alt="artist picture" height="auto" width="auto">
+                <h2>The Piano Guys(album)</h2>
+                <h4>The Piano Guys</h4>
                 <h4>Added By: User</h4>
             </div>
-
-            <div class="info col-md-5">
-                <p>The Piano Guys are an American musical group consisting of pianist Jon Schmidt, cellist Steven Sharp Nelson, videographer Paul Anderson, and music producer Al van der Beek. They gained popularity through YouTube, where in 2010 they began
-                    posting piano and cello compositions combining classical, contemporary, and rock and roll music, accompanied by professional-quality videos. In August 2016 the group surpassed one billion views on their YouTube channel, which at that
-                    time had nearly 5 million subscribers. Their first five major-label albums, The Piano Guys, The Piano Guys 2, A Family Christmas, Wonders, and Uncharted each reached number one on the Billboard Classical Albums and New Age Albums charts.
-                    The four group members all belong to the Mormon church and were middle-aged family men with other careers before they started the group.
-                </p>
-            </div>
-
-            <div class="">
-
-            </div>
         </div>
-    </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-4">
-                <h2>
-                    Albums
-                </h2>
-            </div>
-        </div>
-
-        {include file = "modals/update_album.tpl"}
-        <!--added by Samuel Mahan to include popular albums in the artist table-->
         <table class="table">
             <thead>
                 <tr>
                     <th>#</th>
                     <th>Name</th>
-                    <th>Number of Songs</th>
-                    <th>Total Play Time</th>
-                    <th>Release-date</th>
+                    <th> Play Time</th>
+                    <th></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td><a href="../albums/album-home.php">First Album</a></td>
-                    <td>10</td>
+                    <td><a href="../songs/view_song.html">Headstrong</a></td>
+
                     <td>00:30:00</td>
-                    <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+                    <td><a  data-toggle="modal" data-target="#remove-song" href = "#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>My Second Playlist</td>
-                    <td>7</td>
+                    <td>My Second song</td>
                     <td>00:24:00</td>
-                    <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+                    <td><a  data-toggle="modal" data-target="#remove-song" href = "#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>10/20/06</td>
-                    <td><button type="button" class="btn btn-danger">Remove</button><a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+                    <td>My third song</td>
+                    <td>00:24:00</td>
+                    <td><a  data-toggle="modal" data-target="#remove-song" href = "#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                 </tr>
+            </tbody>
         </table>
-        
-    
-        {include file = "modals/add_album.tpl"}
-        <div class="row">
-        <div class="col-lg-11"></div>
-        <div class="col-lg-1">
-            <a href="#" data-target="#add_album" data-toggle="modal"><button class="btn btn-info">Add Album</button></a>
-        </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-12">
-                <div class="page-header">
-
+<!-- remove song modal-->
+        <div class="modal" id="remove-song">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">remove from album?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class = "row">
+                        <div class "btn-group-vertical" role = "group">
+                        <button type = "button" class="btn btn-danger col-lg-12"><h4>yes</h4></button>
+                        <button type = "button" class="btn btn-primary col-lg-12"><h4>cancel</h4></button>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="row">
+        
+    </div>
+    
+    <div class="row">
             <div class="col-md-4">
                 <h2>
                     Latest Review 1
@@ -190,7 +199,7 @@
         <div class="row">
             <div class="col-md-4">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h2>
                     Submit your own review!
                 </h2>
@@ -224,10 +233,9 @@
                 </form>
             </div>
         </div>
-
-
-
-
-
+        
 </body>
-</html>
+
+</html><?php }
+}
+?>

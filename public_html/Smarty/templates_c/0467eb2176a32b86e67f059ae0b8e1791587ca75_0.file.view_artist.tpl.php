@@ -1,3 +1,29 @@
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:17:59
+         compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\artists\view_artist.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:12964658459fbb5b71a6a28_68800756%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0467eb2176a32b86e67f059ae0b8e1791587ca75' => 
+    array (
+      0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\artists\\view_artist.tpl',
+      1 => 1509668277,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '12964658459fbb5b71a6a28_68800756',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_59fbb5b71e4614_48818995',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_59fbb5b71e4614_48818995')) {
+function content_59fbb5b71e4614_48818995 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '12964658459fbb5b71a6a28_68800756';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +33,8 @@
 
     
 
-    {$smarty.const.RESOURCES}
+    <?php echo @constant('RESOURCES');?>
+
     
 </head>
 
@@ -15,8 +42,12 @@
 
    
    
-   {include file = "componants/navbar.tpl"}
-   {include file = "modals/update_artist.tpl"}
+   <?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+   <?php echo $_smarty_tpl->getSubTemplate ("modals/update_artist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 
    <!-- <div class="row">
         <div class="col-lg-11"></div>
@@ -54,7 +85,9 @@
             </div>
         </div>
 
-        {include file = "modals/update_album.tpl"}
+        <?php echo $_smarty_tpl->getSubTemplate ("modals/update_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
         <!--added by Samuel Mahan to include popular albums in the artist table-->
         <table class="table">
             <thead>
@@ -95,7 +128,9 @@
         </table>
         
     
-        {include file = "modals/add_album.tpl"}
+        <?php echo $_smarty_tpl->getSubTemplate ("modals/add_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
         <div class="row">
         <div class="col-lg-11"></div>
         <div class="col-lg-1">
@@ -231,3 +266,6 @@
 
 </body>
 </html>
+<?php }
+}
+?>

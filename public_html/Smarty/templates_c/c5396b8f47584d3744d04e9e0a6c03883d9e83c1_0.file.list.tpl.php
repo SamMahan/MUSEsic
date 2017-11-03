@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-01 16:50:31
+<?php /* Smarty version 3.1.27, created on 2017-11-02 18:12:13
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\songs\list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:184749769159fa3397be2647_38722979%%*/
+/*%%SmartyHeaderCode:141424825759fb983d187287_69115703%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c5396b8f47584d3744d04e9e0a6c03883d9e83c1' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\songs\\list.tpl',
-      1 => 1509569426,
+      1 => 1509660731,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '184749769159fa3397be2647_38722979',
+  'nocache_hash' => '141424825759fb983d187287_69115703',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fa3397c19c69_58727530',
+  'unifunc' => 'content_59fb983d200ca1_83869247',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fa3397c19c69_58727530')) {
-function content_59fa3397c19c69_58727530 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fb983d200ca1_83869247')) {
+function content_59fb983d200ca1_83869247 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '184749769159fa3397be2647_38722979';
+$_smarty_tpl->properties['nocache_hash'] = '141424825759fb983d187287_69115703';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,14 @@ $_smarty_tpl->properties['nocache_hash'] = '184749769159fa3397be2647_38722979';
     <style type="text/css" media="all">
         @import "../../assets/css/song_list.css";
     </style>
-    
+
+    <?php echo '<script'; ?>
+ src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"><?php echo '</script'; ?>
+>
+
     <?php echo @constant('RESOURCES');?>
 
     
@@ -46,9 +53,9 @@ $_smarty_tpl->properties['nocache_hash'] = '184749769159fa3397be2647_38722979';
 
 <div class="container">
     <div class="row">
-    <div class="col-lg-11">
-        <table class="table">
-            <thead>
+
+    <table class="table tblData">
+        <thead>
             <tr>
                 <th>Title</th>
                 <th>Artist</th>
@@ -57,28 +64,42 @@ $_smarty_tpl->properties['nocache_hash'] = '184749769159fa3397be2647_38722979';
                 <th></th>
                 <th></th>
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
             <tr>
                 <td><a href="<?php echo @constant('WEB_PATH');?>
-song.php">Head Strong</a></td>
+view.php">Head Strong</a></td>
                 <td>Trapet</td>
                 <td>Fun</td>
                 <td>4:46</td>
                 <td></td>
+                <td></td>
             </tr>
-            </tbody>
-        </table>
-    </div>
-        <div class="col-lg-1">
-        </br>
-            </br>
-            <a href="#" data-toggle="dropdown"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
-            <ul class="dropdown-menu">
-           <li><a href="#" data-target="#add-to-album" data-toggle="modal">+Add to album</a></li>
-                <li><a href="#" data-target="#add-to-playlist" data-toggle="modal">+Add to playlist</a></li>
-            </ul>
-        </div>
+            <tr>
+                <td>Test 1</td>
+                <td>Trapet</td>
+                <td>Fun</td>
+                <td>4:46</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Test 2</td>
+                <td>Trapet</td>
+                <td>Fun</td>
+                <td>4:46</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Test 3</td>
+                <td>Trapet</td>
+                <td>Fun</td>
+                <td>4:46</td>
+                <td></td>
+                <td></td>
+            </tr>
+    </table>
     </div>
 
 

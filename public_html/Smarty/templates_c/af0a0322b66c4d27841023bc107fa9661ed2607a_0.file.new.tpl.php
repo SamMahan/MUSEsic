@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-01 16:54:52
+<?php /* Smarty version 3.1.27, created on 2017-11-02 18:05:52
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\songs\new.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:204619071659fa349cbbd673_24164726%%*/
+/*%%SmartyHeaderCode:42388905159fb96c04e5cd4_76441294%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'af0a0322b66c4d27841023bc107fa9661ed2607a' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\songs\\new.tpl',
-      1 => 1509569688,
+      1 => 1509660348,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '204619071659fa349cbbd673_24164726',
+  'nocache_hash' => '42388905159fb96c04e5cd4_76441294',
   'variables' => 
   array (
     'successArray' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fa349cbf5e21_35946786',
+  'unifunc' => 'content_59fb96c051d551_03885144',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fa349cbf5e21_35946786')) {
-function content_59fa349cbf5e21_35946786 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fb96c051d551_03885144')) {
+function content_59fb96c051d551_03885144 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '204619071659fa349cbbd673_24164726';
+$_smarty_tpl->properties['nocache_hash'] = '42388905159fb96c04e5cd4_76441294';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,21 +58,21 @@ new.php">
                     <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[0];?>
 ">
                         <label class="control-label" for="inputLarge">Title</label>
-                        <input class="form-control input-lg" id="inputLarge" type="text" name="title"   <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[0];?>
+                        <input class="form-control input-lg" id="inputLarge" type="text" name="title" . <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[0];?>
  />
                     </div>
 
-                    <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11 . <?php echo $_smarty_tpl->tpl_vars['successArray']->value[1];?>
+                    <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[1];?>
 ">
                         <label class="control-label" for="inputDefault">Artist</label>
-                        <input class="form-control" id="inputDefault" type="text" name="artist_name"  <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[1];?>
+                        <input class="form-control" id="inputDefault" type="text" name="artist_name" . <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[1];?>
  />
                     </div>
 
-                    <div class="form-group col-lg-10 col-md-10 col-sm-10 col-xs-10 . <?php echo $_smarty_tpl->tpl_vars['successArray']->value[2];?>
+                    <div class="form-group col-lg-10 col-md-10 col-sm-10 col-xs-10 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[2];?>
 ">
                         <label class="control-label" for="inputSmall">Genre</label>
-                        <input class="form-control input-sm" id="inputSmall" type="text" name="genre"  <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[2];?>
+                        <input class="form-control input-sm" id="inputSmall" type="text" name="genre" . <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[2];?>
  />
                     </div>
 
@@ -86,7 +86,7 @@ new.php">
                     <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <label for="textArea" class="control-label">Uploader's Comments</label>
 
-                        <textarea class="form-control" rows="3" id="textArea"></textarea>
+                        <textarea class="form-control" rows="3" id="textArea" name="comment"></textarea>
 
                     </div>
 

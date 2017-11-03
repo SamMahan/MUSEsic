@@ -13,11 +13,9 @@ if ($_POST != null){
         
         if($value===""){
             array_push($successArray, "has-warning");
-<<<<<<< HEAD
+
             array_push($populateArray, "this has nothing");
-=======
-            array_push($populateArray, "this is nothing");
->>>>>>> 07b7aa1218e9719af1eee8763b83746394a04a18
+
         }
         
         elseif($value != ""){
