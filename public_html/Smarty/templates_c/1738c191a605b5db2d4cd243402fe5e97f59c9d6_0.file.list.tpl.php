@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 20:39:55
+<?php /* Smarty version 3.1.27, created on 2017-11-02 22:12:01
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\songs\list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:83484473559fbbadbb29f70_39659260%%*/
+/*%%SmartyHeaderCode:94433285359fbd0713c8fd9_89792486%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1738c191a605b5db2d4cd243402fe5e97f59c9d6' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\songs\\list.tpl',
-      1 => 1509669269,
+      1 => 1509675120,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '83484473559fbbadbb29f70_39659260',
+  'nocache_hash' => '94433285359fbd0713c8fd9_89792486',
   'variables' => 
   array (
     'listOfSongs' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbbadbf2c096_88191421',
+  'unifunc' => 'content_59fbd0714b7145_50449635',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbbadbf2c096_88191421')) {
-function content_59fbbadbf2c096_88191421 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbd0714b7145_50449635')) {
+function content_59fbd0714b7145_50449635 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '83484473559fbbadbb29f70_39659260';
+$_smarty_tpl->properties['nocache_hash'] = '94433285359fbd0713c8fd9_89792486';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,14 +84,17 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 $foreach_value_Sav = $_smarty_tpl->tpl_vars['value'];
 ?>
             <tr>
+
                 <td> <a href="<?php echo @constant('WEB_PATH');?>
-view.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value[$_smarty_tpl->getVariable('smarty')->value['section']['Song_ID']['index']];?>
-">$value["Title"] </a></td>
-                <td>artist</td>
-                <td>album</td>
-                <td>time</td>
-                <td></td>
-                <td></td>
+view.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value["Song_ID"];?>
+"><?php echo $_smarty_tpl->tpl_vars['value']->value["Title"];?>
+</a></td>
+                <td><?php echo $_smarty_tpl->tpl_vars['value']->value["Artist_FK"];?>
+</td>
+                <td><?php echo $_smarty_tpl->tpl_vars['value']->value["Album_FK"];?>
+</td>
+                <td><?php echo $_smarty_tpl->tpl_vars['value']->value["Length"];?>
+</td>
             </tr>
         <?php
 $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;

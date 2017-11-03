@@ -29,6 +29,8 @@ if (isset($_POST)){
     }
 
 }
+$listOfAlbums= getAlbums();
+$smarty->assign("listOfAlbums", $listOfAlbums);
 $smarty->assign('pageTarget', "album_list");
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);

@@ -36,13 +36,10 @@
         {foreach $listOfSongs as $key => $value}
             <tr>
 
-                <td> <a href="{$smarty.const.WEB_PATH}view.php?key={$value[Song_ID]}">$value["Title"] </a></td>
-                <td>artist</td>
-                <td>album</td>
-                <td>time</td>
-
-                <td></td>
-                <td></td>
+                <td> <a href="{$smarty.const.WEB_PATH}view.php?key={$value["Song_ID"]}">{$value["Title"]}</a></td>
+                <td>{$value["Artist_FK"]}</td>
+                <td>{$value["Album_FK"]}</td>
+                <td>{$value["Length"]}</td>
             </tr>
         {/foreach}
 

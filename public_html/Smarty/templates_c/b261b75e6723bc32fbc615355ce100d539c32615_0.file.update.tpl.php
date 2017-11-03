@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-01 13:08:56
+<?php /* Smarty version 3.1.27, created on 2017-11-02 22:23:41
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\songs\update.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:80262490159f9ffa8df44c7_43570427%%*/
+/*%%SmartyHeaderCode:3986120859fbd32de6b119_11003864%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b261b75e6723bc32fbc615355ce100d539c32615' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\songs\\update.tpl',
-      1 => 1509482734,
+      1 => 1509670044,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '80262490159f9ffa8df44c7_43570427',
+  'nocache_hash' => '3986120859fbd32de6b119_11003864',
+  'variables' => 
+  array (
+    'successArray' => 0,
+    'populateArray' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59f9ffa9cddb15_51613126',
+  'unifunc' => 'content_59fbd32debc855_66064822',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59f9ffa9cddb15_51613126')) {
-function content_59f9ffa9cddb15_51613126 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbd32debc855_66064822')) {
+function content_59fbd32debc855_66064822 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '80262490159f9ffa8df44c7_43570427';
+$_smarty_tpl->properties['nocache_hash'] = '3986120859fbd32de6b119_11003864';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,25 +45,32 @@ $_smarty_tpl->properties['nocache_hash'] = '80262490159f9ffa8df44c7_43570427';
 
 <div class="container">
     <div class="row">
-        <form class="form-horizontal" method="post" action="#">
+        <form class="form-horizontal" method="post" action="<?php echo @constant('WEB_PATH');?>
+update.php">
             <fieldset>
                 <legend>
                     <h1>Update Song</h1>
                 </legend>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[0];?>
+">
                         <label class="control-label" for="inputLarge">Title</label>
-                        <input class="form-control input-lg" id="inputLarge" type="text" placeholder="Enter Title">
+                        <input class="form-control input-lg" id="inputLarge" type="text" name="title" . <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[0];?>
+>
                     </div>
 
-                    <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                    <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[1];?>
+" >
                         <label class="control-label" for="inputDefault">Artist</label>
-                        <input class="form-control" id="inputDefault" type="text" placeholder="Enter Artists Name">
+                        <input class="form-control" id="inputDefault" type="text" name="artist_name" . <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[1];?>
+>
                     </div>
 
-                    <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[2];?>
+" >
                         <label class="control-label" for="inputSmall">Genre</label>
-                        <input class="form-control input-sm" id="inputSmall" type="text" placeholder="Enter Genre">
+                        <input class="form-control input-sm" id="inputSmall" type="text" name="genre" . <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[2];?>
+>
                     </div>
 
                     <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11">
@@ -67,7 +79,8 @@ $_smarty_tpl->properties['nocache_hash'] = '80262490159f9ffa8df44c7_43570427';
                     </div>
 
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                        <button type="reset" class="btn btn-default">Cancel</button>
+                        <a class="btn btn-default" href="<?php echo @constant('WEB_PATH');?>
+view.php">Cancle</a>
                         <button type="submit" class="btn btn-default" id="upload">Update</button>
                     </div>
                 </div>
