@@ -11,7 +11,6 @@ if ($_POST == null){
 
 if (isset($_POST)){
     foreach($_POST as $key=>$value){
-       // echo $value."</br>";
         if($value===""){
             array_push($successArray, "has-warning");
             array_push($populateArray, "placeholder='**Information Required**'");
@@ -20,7 +19,6 @@ if (isset($_POST)){
         elseif($value != ""){
             array_push($successArray, "has-success");
             array_push($populateArray, "value='$value'");
-            echo "value=$value";
 
         }
     }
