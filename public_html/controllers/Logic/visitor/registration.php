@@ -65,15 +65,17 @@ if($loginSuccess === true){
         echo "nologin";
     }
 }
-
+echo "logic passed";
 
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
 $smarty->assign("lsuccessArray", $lsuccessArray);
 $smarty->assign("lpopulateArray", $lpopulateArray);
 $smarty->assign('modal', $modal);
-$smarty->display("visitor/registration.tpl");
+echo "assignments passed";
 
+$smarty->display("visitor/registration.tpl");
+echo "display happened";
 
 ?>
 

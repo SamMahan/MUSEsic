@@ -13,7 +13,8 @@
 Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
 $local = true;
-error_reporting(E_ERROR);
+error_reporting(E_ALL);
+ini_set('max_execution_time', 300);
 
 /**
  * Compose the URL that originated this script. This function was procured from

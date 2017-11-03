@@ -5,9 +5,17 @@
    ------------------------------------------------------------------------------- */
 #
 # Set database constants
+
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 define('DB_NAME', 'musicdb');
+// */
+
+/*
+define('DB_USER', 'musesicweb');
+define('DB_PASSWORD', 'inspir3');
+define('DB_NAME', 'musesicDB');
+// */
 #
 #  Begin the session
 session_start();
