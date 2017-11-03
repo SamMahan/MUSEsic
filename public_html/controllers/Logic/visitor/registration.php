@@ -6,7 +6,7 @@ $successArray=array();
 $populateArray=array();
 $lsuccessArray = array();
 $lpopulateArray = array();
-$loginSuccess = true;
+$loginSuccess;
 
 
 
@@ -31,12 +31,12 @@ if ($_POST != null){
 
             }
         }
-    }else {
-
+    }else{
+        $loginSuccess = true;
         foreach ($_POST as $key => $value) {
             if ($value === "") {
                 array_push($lsuccessArray, "has-warning");
-
+                $loginSuccess = false;
                 array_push($lpopulateArray, "this has nothing");
 
             } elseif ($value != "") {

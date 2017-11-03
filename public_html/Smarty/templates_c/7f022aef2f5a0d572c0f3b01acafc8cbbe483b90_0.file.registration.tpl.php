@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-03 03:32:03
+<?php /* Smarty version 3.1.27, created on 2017-11-03 08:41:06
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\visitor\registration.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:55009025659fc1b732e5db8_82515194%%*/
+/*%%SmartyHeaderCode:118744928759fc63e2c99f08_66562804%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7f022aef2f5a0d572c0f3b01acafc8cbbe483b90' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\visitor\\registration.tpl',
-      1 => 1509694289,
+      1 => 1509712855,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '55009025659fc1b732e5db8_82515194',
+  'nocache_hash' => '118744928759fc63e2c99f08_66562804',
   'variables' => 
   array (
     'successArray' => 0,
@@ -24,13 +24,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fc1b7334aca5_23943588',
+  'unifunc' => 'content_59fc63e2d37843_16725761',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fc1b7334aca5_23943588')) {
-function content_59fc1b7334aca5_23943588 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fc63e2d37843_16725761')) {
+function content_59fc63e2d37843_16725761 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '55009025659fc1b732e5db8_82515194';
+$_smarty_tpl->properties['nocache_hash'] = '118744928759fc63e2c99f08_66562804';
 ?>
 <!DOCTYPE html>
 <html>
@@ -118,18 +118,18 @@ registration page -->
                     <h4 class="modal-title">Welcome back!</h4>
                 </div>
                 <div class="modal-body">
-                    <form type = "text" method="post" action="registration.php">
+                    <form class = "user_form" type = "text" method="post" action="registration.php">
                         <fieldset>
                             <div class='col-lg-12 <?php echo $_smarty_tpl->tpl_vars['lsuccessArray']->value[0];?>
 '>
                                 <label for="login-email">email</label>
-                                <input id="login-email" class="form-control" name="login-email" type="text" <?php echo $_smarty_tpl->tpl_vars['lpopulateArray']->value[0];?>
+                                <input id="login-email" class="required form-control" name="login-email" type="text" <?php echo $_smarty_tpl->tpl_vars['lpopulateArray']->value[0];?>
  />
                             </div>
                             <div class='col-lg-12 <?php echo $_smarty_tpl->tpl_vars['lsuccessArray']->value[1];?>
 '>
                                 <label for="login-password">Password</label>
-                                <input id="login-password" class="form-control" name="login-password" type="password" <?php echo $_smarty_tpl->tpl_vars['lpopulateArray']->value[1];?>
+                                <input id="login-password" class="required form-control" name="login-password" type="password" <?php echo $_smarty_tpl->tpl_vars['lpopulateArray']->value[1];?>
  />
                             </div>
                         </fieldset>

@@ -70,15 +70,15 @@ registration page -->
                     <h4 class="modal-title">Welcome back!</h4>
                 </div>
                 <div class="modal-body">
-                    <form type = "text" method="post" action="registration.php">
+                    <form class = "user_form" type = "text" method="post" action="registration.php">
                         <fieldset>
                             <div class='col-lg-12 {$lsuccessArray[0]}'>
                                 <label for="login-email">email</label>
-                                <input id="login-email" class="form-control" name="login-email" type="text" {$lpopulateArray[0]} />
+                                <input id="login-email" class="required form-control" name="login-email" type="text" {$lpopulateArray[0]} />
                             </div>
                             <div class='col-lg-12 {$lsuccessArray[1]}'>
                                 <label for="login-password">Password</label>
-                                <input id="login-password" class="form-control" name="login-password" type="password" {$lpopulateArray[1]} />
+                                <input id="login-password" class="required form-control" name="login-password" type="password" {$lpopulateArray[1]} />
                             </div>
                         </fieldset>
                         <button type="submit" class="btn btn-primary">Login</button>

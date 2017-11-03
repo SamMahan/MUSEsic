@@ -1,5 +1,5 @@
 <?php
-
+require_once "dbconfig.php";
 //takes in a name parameter
 //send back a list of users from the query
 function selectUsers($name){
@@ -196,5 +196,18 @@ function getAlbums() {
     return $list_of_albums;
 
 }
+global $pdo;
+$statement = $pdo->prepare("INSERT INTO genre (Genre_Name) VALUES ('Rrock'); INSERT INTO album (Album_Name, Genre_FK) VALUES('TestAlbum', 1);
+INSERT INTO song (Title, Album_FK) VALUES ('test-song', 3);
+INSERT INTO song (Title, Album_FK) VALUES ('test-song2', 3);
+INSERT INTO song (Title, Album_FK) VALUES ('test-song3', 3);
+INSERT INTO song (Title, Album_FK) VALUES ('test-song4', 3);");
+if($statement->execute()){
+    echo "got it!";
+}else{
+    echo"statements failed";
+}
+
+
 
  ?>
