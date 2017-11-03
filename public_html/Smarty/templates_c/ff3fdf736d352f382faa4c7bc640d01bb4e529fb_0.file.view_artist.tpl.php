@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php /* Smarty version 3.1.27, created on 2017-11-02 20:56:45
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\artists\view_artist.tpl" */ ?>
 <?php
@@ -9,6 +10,12 @@
 <?php
 /*%%SmartyHeaderCode:16130382359fbbf02035300_94644729%%*/
 >>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
+=======
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:38:52
+         compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\artists\view_artist.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:144082628659fbba9ce5d533_93552418%%*/
+>>>>>>> parent of 3040f6c... stuff
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -16,6 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff3fdf736d352f382faa4c7bc640d01bb4e529fb' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\artists\\view_artist.tpl',
+<<<<<<< HEAD
 <<<<<<< HEAD
       1 => 1509670047,
       2 => 'file',
@@ -33,20 +41,27 @@ function content_59fbbecd9145e2_84876126 ($_smarty_tpl) {
 $_smarty_tpl->properties['nocache_hash'] = '212041265159fbbecd87a071_47783005';
 =======
       1 => 1509670044,
+=======
+      1 => 1509664879,
+>>>>>>> parent of 3040f6c... stuff
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16130382359fbbf02035300_94644729',
+  'nocache_hash' => '144082628659fbba9ce5d533_93552418',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbbf02115e55_56255967',
+  'unifunc' => 'content_59fbba9d1f9858_39777427',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbbf02115e55_56255967')) {
-function content_59fbbf02115e55_56255967 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbba9d1f9858_39777427')) {
+function content_59fbba9d1f9858_39777427 ($_smarty_tpl) {
 
+<<<<<<< HEAD
 $_smarty_tpl->properties['nocache_hash'] = '16130382359fbbf02035300_94644729';
 >>>>>>> 3040f6c0fc6ef0a7db7b0f98039e40f951dde826
+=======
+$_smarty_tpl->properties['nocache_hash'] = '144082628659fbba9ce5d533_93552418';
+>>>>>>> parent of 3040f6c... stuff
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,15 +84,12 @@ $_smarty_tpl->properties['nocache_hash'] = '16130382359fbbf02035300_94644729';
    <?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
-   <?php echo $_smarty_tpl->getSubTemplate ("modals/update_artist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
-?>
-
-
-   <!-- <div class="row">
+   
+    <div class="row">
         <div class="col-lg-11"></div>
         <div class="col-lg-1">
-            <a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-info">Update Artist</button></a>
-        </div> -->
+            <a href="update.html" class="btn btn-info">Update Artist</a>
+        </div>
 
 
 
