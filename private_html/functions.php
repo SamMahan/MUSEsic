@@ -20,4 +20,19 @@ function selectUsers($name){
     }
     return $list_of_users[1]["User_ID"];
 }
+
+function getSongs() {
+    $query = "SELECT * FROM song";
+
+    $statement = $pdo->prepare($query);
+    $statement->execute();
+
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)){
+        $list_of_songs[] = $row;
+    }
+
+    return $list_of_songs;
+
+}
+
  ?>

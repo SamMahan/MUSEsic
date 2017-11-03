@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 19:04:29
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:39:55
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\songs\list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:70849013759fba47d91c585_40559508%%*/
+/*%%SmartyHeaderCode:83484473559fbbadbb29f70_39659260%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1738c191a605b5db2d4cd243402fe5e97f59c9d6' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\songs\\list.tpl',
-      1 => 1509663741,
+      1 => 1509669269,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '70849013759fba47d91c585_40559508',
+  'nocache_hash' => '83484473559fbbadbb29f70_39659260',
+  'variables' => 
+  array (
+    'listOfSongs' => 0,
+    'value' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fba47d9da222_77940822',
+  'unifunc' => 'content_59fbbadbf2c096_88191421',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fba47d9da222_77940822')) {
-function content_59fba47d9da222_77940822 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbbadbf2c096_88191421')) {
+function content_59fbbadbf2c096_88191421 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '70849013759fba47d91c585_40559508';
+$_smarty_tpl->properties['nocache_hash'] = '83484473559fbbadbb29f70_39659260';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,39 +71,33 @@ $_smarty_tpl->properties['nocache_hash'] = '70849013759fba47d91c585_40559508';
             </tr>
         </thead>
         <tbody>
+        <?php
+$_from = $_smarty_tpl->tpl_vars['listOfSongs']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$_smarty_tpl->tpl_vars['value'] = new Smarty_Variable;
+$_smarty_tpl->tpl_vars['value']->_loop = false;
+$_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['value']->value) {
+$_smarty_tpl->tpl_vars['value']->_loop = true;
+$foreach_value_Sav = $_smarty_tpl->tpl_vars['value'];
+?>
             <tr>
-                <td><a href="<?php echo @constant('WEB_PATH');?>
-song.php">Head Strong</a></td>
-                <td>Trapet</td>
-                <td>Fun</td>
-                <td>4:46</td>
+                <td> <a href="<?php echo @constant('WEB_PATH');?>
+view.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value[$_smarty_tpl->getVariable('smarty')->value['section']['Song_ID']['index']];?>
+">$value["Title"] </a></td>
+                <td>artist</td>
+                <td>album</td>
+                <td>time</td>
                 <td></td>
                 <td></td>
             </tr>
-            <tr>
-                <td>Test 1</td>
-                <td>Trapet</td>
-                <td>Fun</td>
-                <td>4:46</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Test 2</td>
-                <td>Trapet</td>
-                <td>Fun</td>
-                <td>4:46</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Test 3</td>
-                <td>Trapet</td>
-                <td>Fun</td>
-                <td>4:46</td>
-                <td></td>
-                <td></td>
-            </tr>
+        <?php
+$_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
+}
+?>
+
     </table>
     </div>
 

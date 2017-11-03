@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 20:28:22
+<?php /* Smarty version 3.1.27, created on 2017-11-02 20:37:21
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\componants\navbar.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:123269379659fbb826878165_24057919%%*/
+/*%%SmartyHeaderCode:81994668859fbba41450954_77054425%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '17e797bdbe2d46899d77e89ddc88969a1065b007' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\componants\\navbar.tpl',
-      1 => 1509668799,
+      1 => 1509669416,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '123269379659fbb826878165_24057919',
+  'nocache_hash' => '81994668859fbba41450954_77054425',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbb8268f8160_96367780',
+  'unifunc' => 'content_59fbba414cb118_46185813',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbb8268f8160_96367780')) {
-function content_59fbb8268f8160_96367780 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fbba414cb118_46185813')) {
+function content_59fbba414cb118_46185813 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '123269379659fbb826878165_24057919';
+$_smarty_tpl->properties['nocache_hash'] = '81994668859fbba41450954_77054425';
 ?>
 
     <nav class="navbar navbar-default">
@@ -47,8 +47,8 @@ $_smarty_tpl->properties['nocache_hash'] = '123269379659fbb826878165_24057919';
                             <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="../../../controllers/Logic/user/home.php">Profile</a></li>
-                            <li><a href="../../../Controllers/Logic/songs/list.php">Song List</a></li>
-                            <li><a href="../../../Controllers/Logic/artists/artist_list.php">Artist List</a></li>
+                            <li><a href="../../../controllers/Logic/songs/list.php">Song List</a></li>
+                            <li><a href="../../../controllers/Logic/artists/artist_list.php">Artist List</a></li>
                             <li><a href="../../../controllers/Logic/albums/album_list.php">Album List</a></li>
                             <li class="divider"></li>
                             <li><a href="../../../controllers/Logic/visitor/registration.php">Log Out</a></li>
