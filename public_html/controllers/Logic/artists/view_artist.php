@@ -5,7 +5,6 @@ require_once "../../../../private_html/config.inc.php";
 $successArray=array();
 $populateArray=array();
 $modal = "";
-echo test1;
 if ($_POST == null){
 
 }
@@ -30,7 +29,6 @@ if (isset($_POST)){
     }
 
 }
-echo test2;
 $smarty->assign('pageTarget', "view_artist");
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
@@ -38,5 +36,4 @@ $smarty->assign('modal', $modal);
 
 
 $smarty->display("artists/view_artist.tpl");
-echo test3;
 ?>

@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/private_html/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1085">
-              <caret line="131" column="18" lean-forward="false" selection-start-line="131" selection-start-column="18" selection-end-line="131" selection-end-column="18" />
+            <state relative-caret-position="1806">
+              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding>
                 <marker date="1509680591958" expanded="true" signature="121:167" ph="SELECT * FRO... user" />
                 <marker date="1509680591958" expanded="true" signature="1051:1069" ph="SELECT * FRO... song" />
@@ -24,6 +24,16 @@
                 <marker date="1509680591958" expanded="true" signature="3669:3683" ph="SELECT * FRO... artist" />
                 <marker date="1509680591958" expanded="true" signature="3669:3688" ph="SELECT * FRO... album" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1449">
+              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,6 +68,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="view_artist.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/artists/view_artist.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="37" column="44" lean-forward="false" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -82,7 +102,6 @@
         <option value="$PROJECT_DIR$/public_html/templates/Album-list.tpl" />
         <option value="$PROJECT_DIR$/public_html/templates/User/profile.html" />
         <option value="$PROJECT_DIR$/public_html/Controllers/Logic/Albums/album-home.php" />
-        <option value="$PROJECT_DIR$/private_html/config.inc.php" />
         <option value="$PROJECT_DIR$/private_html/dbconfig.php" />
         <option value="$PROJECT_DIR$/public_html/assets/js/user/JQuery_3.2.1.js" />
         <option value="$PROJECT_DIR$/public_html/controllers/Logic/visitor/registration.php" />
@@ -92,7 +111,6 @@
         <option value="$PROJECT_DIR$/public_html/templates/User/user_settings.tpl" />
         <option value="$PROJECT_DIR$/public_html/templates/Componants/navbar.tpl" />
         <option value="$PROJECT_DIR$/public_html/templates/albums/view_album.tpl" />
-        <option value="$PROJECT_DIR$/public_html/controllers/Logic/artists/view_artist.php" />
         <option value="$PROJECT_DIR$/public_html/templates/songs/list.tpl" />
         <option value="$PROJECT_DIR$/public_html/controllers/Logic/songs/list.php" />
         <option value="$PROJECT_DIR$/public_html/templates/songs/view.tpl" />
@@ -102,6 +120,8 @@
         <option value="$PROJECT_DIR$/private_html/functions.php" />
         <option value="$PROJECT_DIR$/public_html/controllers/Logic/albums/album_list.php" />
         <option value="$PROJECT_DIR$/public_html/templates/albums/album_list.tpl" />
+        <option value="$PROJECT_DIR$/private_html/config.inc.php" />
+        <option value="$PROJECT_DIR$/public_html/controllers/Logic/artists/view_artist.php" />
       </list>
     </option>
   </component>
@@ -266,12 +286,12 @@
       <workItem from="1509480919043" duration="59000" />
       <workItem from="1509481601081" duration="3707000" />
       <workItem from="1509555763461" duration="3010000" />
-      <workItem from="1509672757676" duration="8643000" />
+      <workItem from="1509672757676" duration="8797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23774000" />
+    <option name="totallyTimeSpent" value="23928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="777" y="206" width="1136" height="735" extended-state="0" />
@@ -478,14 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/artists/view_artist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/assets/Images/songpicture.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -503,22 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private_html/dbconfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -581,8 +577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/private_html/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1085">
-          <caret line="131" column="18" lean-forward="false" selection-start-line="131" selection-start-column="18" selection-end-line="131" selection-end-column="18" />
+        <state relative-caret-position="1806">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
             <marker date="1509680591958" expanded="true" signature="121:167" ph="SELECT * FRO... user" />
             <marker date="1509680591958" expanded="true" signature="1051:1069" ph="SELECT * FRO... song" />
@@ -591,6 +587,30 @@
             <marker date="1509680591958" expanded="true" signature="3669:3683" ph="SELECT * FRO... artist" />
             <marker date="1509680591958" expanded="true" signature="3669:3688" ph="SELECT * FRO... album" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private_html/dbconfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private_html/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/controllers/Logic/artists/view_artist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="37" column="44" lean-forward="false" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
