@@ -5,9 +5,17 @@
    ------------------------------------------------------------------------------- */
 #
 # Set database constants
+
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 define('DB_NAME', 'musicdb');
+// */
+
+/*
+define('DB_USER', 'musesicweb');
+define('DB_PASSWORD', 'inspir3');
+define('DB_NAME', 'musesicDB');
+// */
 #
 #  Begin the session
 session_start();
@@ -16,7 +24,9 @@ session_start();
 $db_name = DB_NAME;
 $username = DB_USER;
 $password = DB_PASSWORD;
-try {
+
+
+ try {
     /* PDO Syntax
      * new PDO( dsn, username, password )
      * dsn = Data Source Name ... for MySQL:
@@ -29,4 +39,5 @@ try {
 } catch (PDOException $e) {
     echo 'ERROR: ' . $e->getMessage();
 }
+
 ?>

@@ -111,6 +111,7 @@
 </table>
 
 
+
 {include file = "modals/add_album.tpl"}
 <div class="row">
     <div class="col-lg-11"></div>
@@ -255,6 +256,24 @@
     </div>
 </div>
 
+{include file = "modals/update_album.tpl"}
+{include file = "modals/submit.tpl"}
+
+{if ($error == true)}
+    <script>
+        $(document).ready(function(){
+            $("#update_album").modal();
+        });
+    </script>
+{/if}
+
+{if ($display == true)}
+    <script>
+        $(document).ready(function(){
+            $("#submit").modal();
+        });
+    </script>
+{/if}
 
 </body>
 </html>

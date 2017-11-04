@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-10-31 17:29:50
+<?php /* Smarty version 3.1.27, created on 2017-11-03 15:59:10
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\songs\view.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:56854247259f8eb4e60ceb4_17514986%%*/
+/*%%SmartyHeaderCode:17676263659fcca8e672dc9_38461356%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ca8f8fa7623856c8e8c93048c5f30c26840296b5' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\songs\\view.tpl',
-      1 => 1509481430,
+      1 => 1509730432,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '56854247259f8eb4e60ceb4_17514986',
+  'nocache_hash' => '17676263659fcca8e672dc9_38461356',
+  'variables' => 
+  array (
+    'songArray' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59f8eb4e64a562_78416707',
+  'unifunc' => 'content_59fcca8e6a7470_20827195',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59f8eb4e64a562_78416707')) {
-function content_59f8eb4e64a562_78416707 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fcca8e6a7470_20827195')) {
+function content_59fcca8e6a7470_20827195 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '56854247259f8eb4e60ceb4_17514986';
+$_smarty_tpl->properties['nocache_hash'] = '17676263659fcca8e672dc9_38461356';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,10 +54,12 @@ $_smarty_tpl->properties['nocache_hash'] = '56854247259f8eb4e60ceb4_17514986';
 
 <div class="container-fluid">
     <div class="songpic col-md-5 col-md-offset-1">
-        <img src="../../assets/images/songpicture.jpg" alt="song picture" height="auto"
+        <img src="../../../assets/Images/songpicture.jpg" alt="song picture" height="auto"
              width="auto">
-        <h2>Headstrong</h2>
-        <h4>By Trapt</h4>
+        <h2><?php echo $_smarty_tpl->tpl_vars['songArray']->value["Title"];?>
+</h2>
+        <h4><?php echo $_smarty_tpl->tpl_vars['songArray']->value[''];?>
+</h4>
         <h4>Added By: User</h4>
     </div>
 

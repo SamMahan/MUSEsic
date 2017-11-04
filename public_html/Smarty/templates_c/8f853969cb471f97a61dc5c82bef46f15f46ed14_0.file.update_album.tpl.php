@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 20:31:40
+<?php /* Smarty version 3.1.27, created on 2017-11-03 15:49:24
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\modals\update_album.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:131514001659fbb8ece36c16_60176430%%*/
+/*%%SmartyHeaderCode:51355482859fcc84473fc12_56683376%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,27 +9,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8f853969cb471f97a61dc5c82bef46f15f46ed14' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\modals\\update_album.tpl',
-      1 => 1509669098,
+      1 => 1509738370,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '131514001659fbb8ece36c16_60176430',
+  'nocache_hash' => '51355482859fcc84473fc12_56683376',
   'variables' => 
   array (
-    'pageTarget' => 0,
     'successArray' => 0,
     'populateArray' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbb8ece61a28_69639442',
+  'unifunc' => 'content_59fcc844749bb1_70661763',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbb8ece61a28_69639442')) {
-function content_59fbb8ece61a28_69639442 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fcc844749bb1_70661763')) {
+function content_59fcc844749bb1_70661763 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '131514001659fbb8ece36c16_60176430';
+$_smarty_tpl->properties['nocache_hash'] = '51355482859fcc84473fc12_56683376';
 ?>
+
 <div class="modal fade" id="update_album" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -41,9 +41,8 @@ $_smarty_tpl->properties['nocache_hash'] = '131514001659fbb8ece36c16_60176430';
             </div>
             <div class="modal-body">
 
-                <form class="form-horizontal" method="post" action="<?php echo @constant('WEB_PATH');
-echo $_smarty_tpl->tpl_vars['pageTarget']->value;?>
-.php">
+                <form class="form-horizontal" method="post" action="<?php echo @constant('WEB_PATH');?>
+view_artist.php">
                     <fieldset>
 
                         <!-- Text input-->

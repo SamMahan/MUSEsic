@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 20:32:32
+<?php /* Smarty version 3.1.27, created on 2017-11-03 15:38:43
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\albums\view_album.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:130035867459fbb920d74202_93060733%%*/
+/*%%SmartyHeaderCode:134903926659fcc5c3c2b039_47125402%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2c446f160bf25ad3e3cf3c50d3f41c4c238008dd' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\albums\\view_album.tpl',
-      1 => 1509579414,
+      1 => 1509670564,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '130035867459fbb920d74202_93060733',
+  'nocache_hash' => '134903926659fcc5c3c2b039_47125402',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbb920dcc283_28554727',
+  'unifunc' => 'content_59fcc5c3c9c2f8_05822951',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbb920dcc283_28554727')) {
-function content_59fbb920dcc283_28554727 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fcc5c3c9c2f8_05822951')) {
+function content_59fcc5c3c9c2f8_05822951 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '130035867459fbb920d74202_93060733';
+$_smarty_tpl->properties['nocache_hash'] = '134903926659fcc5c3c2b039_47125402';
 ?>
 <html lang="en">
 
@@ -74,7 +74,7 @@ $_smarty_tpl->properties['nocache_hash'] = '130035867459fbb920d74202_93060733';
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td><a href="../songs/view_song.html">Headstrong</a></td>
+                    <td><a href="../songs/view.php">Headstrong</a></td>
 
                     <td>00:30:00</td>
                     <td><a  data-toggle="modal" data-target="#remove-song" href = "#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>

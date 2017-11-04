@@ -5,7 +5,9 @@ require_once "../../../../private_html/config.inc.php";
 $successArray=array();
 $populateArray=array();
 $modal = "";
-echo test1;
+$error = false;
+$display = false;
+
 if ($_POST == null){
 
 }
@@ -23,14 +25,19 @@ if (isset($_POST)){
 
         }
     }
-    if($_POST["artist_name"]!=null || $_POST["popular_song"] !=null || $_POST["number_songs"] !=null || $_POST["number_albums"] !=null){
+    if ($_POST["album_name"] != null || $_POST["number_songs"] != null || $_POST["play_time"] != null || $_POST["release_date"] != null) {
         $modal = "data-modalpost = 'active'";
-
-
+        $error = true;
+    }
+    if ($_POST["album_name"] != null && $_POST["number_songs"] != null && $_POST["play_time"] != null && $_POST["release_date"] != null) {
+        $modal = "data-modalpost = 'active'";
+        $error = false;
+        $display = true;
     }
 
 }
-echo test2;
+$smarty->assign("error", $error);
+$smarty->assign("display", $display);
 $smarty->assign('pageTarget', "view_artist");
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
@@ -38,5 +45,5 @@ $smarty->assign('modal', $modal);
 
 
 $smarty->display("artists/view_artist.tpl");
-echo test3;
+
 ?>

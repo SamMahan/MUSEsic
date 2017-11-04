@@ -13,7 +13,8 @@
 Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
 $local = true;
-error_reporting(E_ERROR);
+error_reporting(E_ALL);
+ini_set('max_execution_time', 300);
 
 /**
  * Compose the URL that originated this script. This function was procured from
@@ -68,7 +69,7 @@ define('SMARTY_ROOT', PUBLIC_PATH . "Smarty".DIRECTORY_SEPARATOR);
 define('SMARTY_TEMPLATES', PUBLIC_PATH . 'templates/');
 define('SMARTY', SMARTY_ROOT . "libs". DIRECTORY_SEPARATOR ."Smarty.class.php");
 
-echo "1";
+
 /*
  * The following has been added to resolve the problem of relying on the system's timezone settings.
  */

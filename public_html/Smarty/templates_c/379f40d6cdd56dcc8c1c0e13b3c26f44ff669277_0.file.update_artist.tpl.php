@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<?php /* Smarty version 3.1.27, created on 2017-11-02 20:49:35
+<?php /* Smarty version 3.1.27, created on 2017-11-03 03:38:55
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\update_artist.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:111826692059fbbd1f223132_95936832%%*/
-=======
-<?php /* Smarty version 3.1.27, created on 2017-11-02 20:38:57
-         compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\update_artist.tpl" */ ?>
-<?php
-/*%%SmartyHeaderCode:56166229559fbbaa1df3595_39021350%%*/
->>>>>>> 7992d1c964b7ee83d15eaf2f9a624f6089e74d79
+/*%%SmartyHeaderCode:136708773359fc1d0f7f5031_83569359%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -16,12 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '379f40d6cdd56dcc8c1c0e13b3c26f44ff669277' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\modals\\update_artist.tpl',
-<<<<<<< HEAD
-      1 => 1509670044,
+      1 => 1509670047,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '111826692059fbbd1f223132_95936832',
+  'nocache_hash' => '136708773359fc1d0f7f5031_83569359',
   'variables' => 
   array (
     'successArray' => 0,
@@ -29,29 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbbd1f249e25_10116649',
+  'unifunc' => 'content_59fc1d0f835a04_50401124',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbbd1f249e25_10116649')) {
-function content_59fbbd1f249e25_10116649 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fc1d0f835a04_50401124')) {
+function content_59fc1d0f835a04_50401124 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '111826692059fbbd1f223132_95936832';
-=======
-      1 => 1509664879,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '56166229559fbbaa1df3595_39021350',
-  'has_nocache_code' => false,
-  'version' => '3.1.27',
-  'unifunc' => 'content_59fbbaa1dfb883_53592377',
-),false);
-/*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbbaa1dfb883_53592377')) {
-function content_59fbbaa1dfb883_53592377 ($_smarty_tpl) {
-
-$_smarty_tpl->properties['nocache_hash'] = '56166229559fbbaa1df3595_39021350';
->>>>>>> 7992d1c964b7ee83d15eaf2f9a624f6089e74d79
+$_smarty_tpl->properties['nocache_hash'] = '136708773359fc1d0f7f5031_83569359';
 ?>
 <div class="modal fade" id="update_artist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

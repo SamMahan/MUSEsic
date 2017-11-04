@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 20:13:34
+<?php /* Smarty version 3.1.27, created on 2017-11-03 15:40:39
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\modals\update_artist.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:163541403359fbb4ae58d040_94237530%%*/
+/*%%SmartyHeaderCode:47751653959fcc637588354_23666955%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -13,7 +13,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '163541403359fbb4ae58d040_94237530',
+  'nocache_hash' => '47751653959fcc637588354_23666955',
   'variables' => 
   array (
     'successArray' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbb4ae5b98b0_60215972',
+  'unifunc' => 'content_59fcc6375a0cb9_42006924',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbb4ae5b98b0_60215972')) {
-function content_59fbb4ae5b98b0_60215972 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fcc6375a0cb9_42006924')) {
+function content_59fcc6375a0cb9_42006924 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '163541403359fbb4ae58d040_94237530';
+$_smarty_tpl->properties['nocache_hash'] = '47751653959fcc637588354_23666955';
 ?>
 <div class="modal fade" id="update_artist" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 21:30:45
+<?php /* Smarty version 3.1.27, created on 2017-11-03 03:38:03
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\componants\navbar.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:72992903559fbc6c538b085_13540750%%*/
+/*%%SmartyHeaderCode:116550367659fc1cdb59de57_95541927%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '17e797bdbe2d46899d77e89ddc88969a1065b007' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\componants\\navbar.tpl',
-      1 => 1509670047,
+      1 => 1509694671,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '72992903559fbc6c538b085_13540750',
+  'nocache_hash' => '116550367659fc1cdb59de57_95541927',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbc6c53ddec6_41025274',
+  'unifunc' => 'content_59fc1cdb5ecf90_93932419',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbc6c53ddec6_41025274')) {
-function content_59fbc6c53ddec6_41025274 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fc1cdb5ecf90_93932419')) {
+function content_59fc1cdb5ecf90_93932419 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '72992903559fbc6c538b085_13540750';
+$_smarty_tpl->properties['nocache_hash'] = '116550367659fc1cdb59de57_95541927';
 ?>
 
     <nav class="navbar navbar-default">
@@ -35,7 +35,8 @@ $_smarty_tpl->properties['nocache_hash'] = '72992903559fbc6c538b085_13540750';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand " href="#">MUSEsic</a>
+                <a class="navbar-brand " href="<?php echo @constant('WEB_URL');?>
+/controllers/Logic/visitor/registration.php">MUSEsic</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 19:07:32
+<?php /* Smarty version 3.1.27, created on 2017-11-03 03:36:30
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\user\profile.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:15817947759fba534ec75d8_86896348%%*/
+/*%%SmartyHeaderCode:13854529859fc1c7e1cef09_19027141%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '08ad8f9f9305da6d13a84d0b3605c1831188ac4c' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\user\\profile.tpl',
-      1 => 1509482734,
+      1 => 1509673313,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '15817947759fba534ec75d8_86896348',
+  'nocache_hash' => '13854529859fc1c7e1cef09_19027141',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fba5350b7286_17442243',
+  'unifunc' => 'content_59fc1c7e2ab321_40643853',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fba5350b7286_17442243')) {
-function content_59fba5350b7286_17442243 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fc1c7e2ab321_40643853')) {
+function content_59fc1c7e2ab321_40643853 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '15817947759fba534ec75d8_86896348';
+$_smarty_tpl->properties['nocache_hash'] = '13854529859fc1c7e1cef09_19027141';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -377,15 +377,15 @@ $_smarty_tpl->properties['nocache_hash'] = '15817947759fba534ec75d8_86896348';
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Isacc</td>
-                </tr>
-                <tr>
-                    <td>3</td>
                     <td>Donavin</td>
                 </tr>
                 <tr>
+                    <td>3</td>
+                    <td>Isacccc...Smells</td>
+                </tr>
+                <tr>
                     <td>4</td>
-                    <td>---</td>
+                    <td>Gooooooooooooooood</td>
                 </tr>
                 <tr>
                     <td>5</td>
