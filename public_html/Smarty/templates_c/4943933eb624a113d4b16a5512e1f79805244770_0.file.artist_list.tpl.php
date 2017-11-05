@@ -1,33 +1,35 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-03 03:38:55
-         compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\artists\artist_list.tpl" */ ?>
+<?php /* Smarty version 3.1.27, created on 2017-11-04 21:13:00
+         compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\artists\artist_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:42926682359fc1d0f65b254_92553538%%*/
+/*%%SmartyHeaderCode:117961475759fe659cf0c800_18289699%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'a34e0740371484b2b31a4f759033a56f4a2cc7d4' => 
+    '4943933eb624a113d4b16a5512e1f79805244770' => 
     array (
-      0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\artists\\artist_list.tpl',
-      1 => 1509690951,
+      0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\artists\\artist_list.tpl',
+      1 => 1509841278,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '42926682359fc1d0f65b254_92553538',
+  'nocache_hash' => '117961475759fe659cf0c800_18289699',
   'variables' => 
   array (
     'listOfArtists' => 0,
     'value' => 0,
+    'error' => 0,
+    'display' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fc1d0f73d324_02390192',
+  'unifunc' => 'content_59fe659d007ae2_32101307',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fc1d0f73d324_02390192')) {
-function content_59fc1d0f73d324_02390192 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fe659d007ae2_32101307')) {
+function content_59fe659d007ae2_32101307 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '42926682359fc1d0f65b254_92553538';
+$_smarty_tpl->properties['nocache_hash'] = '117961475759fe659cf0c800_18289699';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,6 +103,29 @@ $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
                 <a href="#" data-target="#add_artist" data-toggle="modal"><button class="btn btn-info">Add Artist</button></a>
             </div>
         </div>
+
+        <?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+        <?php if (($_smarty_tpl->tpl_vars['error']->value == true)) {?>
+            <?php echo '<script'; ?>
+>
+                $(document).ready(function(){
+                    $("#add_artist").modal();
+                });
+            <?php echo '</script'; ?>
+>
+        <?php }?>
+
+        <?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
+            <?php echo '<script'; ?>
+>
+                $(document).ready(function(){
+                    $("#submit").modal();
+                });
+            <?php echo '</script'; ?>
+>
+        <?php }?>
 
 </body>
 </html><?php }

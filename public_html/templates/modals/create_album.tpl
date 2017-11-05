@@ -16,7 +16,7 @@
                         <div class="form-group {$successArray[0]}">
                             <label class="col-md-4 control-label" for="album_name">Album Name:</label>
                             <div class="col-md-4">
-                                <input id="album_name" name="album_name" type="text" class="form-control input-md" {$populateArray[0]}>
+                                <input required = "required" id="album_name" name="album_name" type="text" class="form-control input-md" {$populateArray[0]}>
 
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                         <div class="form-group {$successArray[1]}">
                             <label class="col-md-4 control-label" for="number_songs">Number of Song:</label>
                             <div class="col-md-4">
-                                <input id="number_songs" name="number_songs" type="text" class="form-control input-md" {$populateArray[1]}>
+                                <input required = "required" id="number_songs" name="number_songs" type="text" class="form-control input-md" {$populateArray[1]}>
 
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         <div class="form-group {$successArray[2]}">
                             <label class="col-md-4 control-label" for="play_time">Total Play Time:</label>
                             <div class="col-md-4">
-                                <input id="play_time" name="play_time" type="text" class="form-control input-md" {$populateArray[2]}>
+                                <input required = "required" id="play_time" name="play_time" type="text" class="form-control input-md" {$populateArray[2]}>
 
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                         <div class="form-group {$successArray[3]}">
                             <label class="col-md-4 control-label" for="number_albums">Release Date:</label>
                             <div class="col-md-4">
-                                <input id="release_date" name="release_date" type="text" class="form-control input-md" {$populateArray[3]}>
+                                <input required = "required" id="release_date" name="release_date" type="text" class="form-control input-md" {$populateArray[3]}>
 
                             </div>
                         </div>

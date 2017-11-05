@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-03 15:49:24
+<?php /* Smarty version 3.1.27, created on 2017-11-04 21:32:44
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\modals\update_album.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:51355482859fcc84473fc12_56683376%%*/
+/*%%SmartyHeaderCode:102713029759fe6a3c1dce27_97734433%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8f853969cb471f97a61dc5c82bef46f15f46ed14' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\modals\\update_album.tpl',
-      1 => 1509738370,
+      1 => 1509845562,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '51355482859fcc84473fc12_56683376',
+  'nocache_hash' => '102713029759fe6a3c1dce27_97734433',
   'variables' => 
   array (
     'successArray' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fcc844749bb1_70661763',
+  'unifunc' => 'content_59fe6a3c20c540_34092982',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fcc844749bb1_70661763')) {
-function content_59fcc844749bb1_70661763 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fe6a3c20c540_34092982')) {
+function content_59fe6a3c20c540_34092982 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '51355482859fcc84473fc12_56683376';
+$_smarty_tpl->properties['nocache_hash'] = '102713029759fe6a3c1dce27_97734433';
 ?>
 
 <div class="modal fade" id="update_album" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -42,7 +42,7 @@ $_smarty_tpl->properties['nocache_hash'] = '51355482859fcc84473fc12_56683376';
             <div class="modal-body">
 
                 <form class="form-horizontal" method="post" action="<?php echo @constant('WEB_PATH');?>
-view_artist.php">
+view_album.php">
                     <fieldset>
 
                         <!-- Text input-->
@@ -50,7 +50,7 @@ view_artist.php">
 ">
                             <label class="col-md-4 control-label" for="album_name">Album Name:</label>
                             <div class="col-md-4">
-                                <input id="album_name" name="album_name" type="text" placeholder="old name" class="form-control input-md" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[0];?>
+                                <input required = "required" id="album_name" name="album_name" type="text" placeholder="old name" class="form-control input-md" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[0];?>
 >
 
                             </div>
@@ -61,7 +61,7 @@ view_artist.php">
 ">
                             <label class="col-md-4 control-label" for="number_songs">Number of Song:</label>
                             <div class="col-md-4">
-                                <input id="number_songs" name="number_songs" type="text" placeholder="old song number" class="form-control input-md" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[1];?>
+                                <input required = "required" id="number_songs" name="number_songs" type="text" placeholder="old song number" class="form-control input-md" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[1];?>
 >
 
                             </div>
@@ -72,7 +72,7 @@ view_artist.php">
 ">
                             <label class="col-md-4 control-label" for="play_time">Total Play Time:</label>
                             <div class="col-md-4">
-                                <input id="play_time" name="play_time" type="text" placeholder="old time" class="form-control input-md" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[2];?>
+                                <input required = "required" id="play_time" name="play_time" type="text" placeholder="old time" class="form-control input-md" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[2];?>
 >
 
                             </div>
@@ -83,7 +83,7 @@ view_artist.php">
 ">
                             <label class="col-md-4 control-label" for="number_albums">Release Date:</label>
                             <div class="col-md-4">
-                                <input id="release_date" name="release_date" type="text" placeholder="old date" class="form-control input-md" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[3];?>
+                                <input required = "required" id="release_date" name="release_date" type="text" placeholder="old date" class="form-control input-md" <?php echo $_smarty_tpl->tpl_vars['populateArray']->value[3];?>
 >
 
                             </div>

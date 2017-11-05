@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-02 20:49:59
+<?php /* Smarty version 3.1.27, created on 2017-11-04 21:45:14
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\songs\new.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:159200617359fbbd37bc7062_38664785%%*/
+/*%%SmartyHeaderCode:45803262659fe6d2a3f2940_03270202%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,25 +9,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'af0a0322b66c4d27841023bc107fa9661ed2607a' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\songs\\new.tpl',
-      1 => 1509669924,
+      1 => 1509846312,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '159200617359fbbd37bc7062_38664785',
+  'nocache_hash' => '45803262659fe6d2a3f2940_03270202',
   'variables' => 
   array (
     'successArray' => 0,
     'populateArray' => 0,
+    'display' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fbbd37c0da81_70669659',
+  'unifunc' => 'content_59fe6d2a42da64_69322328',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fbbd37c0da81_70669659')) {
-function content_59fbbd37c0da81_70669659 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fe6d2a42da64_69322328')) {
+function content_59fe6d2a42da64_69322328 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '159200617359fbbd37bc7062_38664785';
+$_smarty_tpl->properties['nocache_hash'] = '45803262659fe6d2a3f2940_03270202';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -103,6 +104,18 @@ list.php">Cancel</a>
 
 </div>
 
+<?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+<?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
+    <?php echo '<script'; ?>
+>
+        $(document).ready(function(){
+            $("#submit").modal();
+        });
+    <?php echo '</script'; ?>
+>
+<?php }?>
 <!-- Latest compiled and minified JavaScript -->
 <?php echo '<script'; ?>
  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"

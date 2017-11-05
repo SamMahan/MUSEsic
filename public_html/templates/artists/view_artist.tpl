@@ -16,11 +16,11 @@
 {include file = "componants/navbar.tpl"}
 {include file = "modals/update_artist.tpl"}
 
-<!-- <div class="row">
+<div class="row">
      <div class="col-lg-11"></div>
      <div class="col-lg-1">
          <a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-info">Update Artist</button></a>
-     </div> -->
+     </div>
 
 
 <div class="container-fluid">
@@ -80,9 +80,7 @@
         <td>10/20/06</td>
         <td>
             <button type="button" class="btn btn-danger">Remove</button>
-            <a href="#" data-target="#update_album" data-toggle="modal">
-                <button class="btn btn-default">Update</button>
-            </a></td>
+        </td>
     </tr>
     <tr>
         <td>2</td>
@@ -92,9 +90,7 @@
         <td>10/20/06</td>
         <td>
             <button type="button" class="btn btn-danger">Remove</button>
-            <a href="#" data-target="#update_album" data-toggle="modal">
-                <button class="btn btn-default">Update</button>
-            </a></td>
+        </td>
     </tr>
     <tr>
         <td>3</td>
@@ -104,9 +100,7 @@
         <td>10/20/06</td>
         <td>
             <button type="button" class="btn btn-danger">Remove</button>
-            <a href="#" data-target="#update_album" data-toggle="modal">
-                <button class="btn btn-default">Update</button>
-            </a></td>
+        </td>
     </tr>
 </table>
 
@@ -256,13 +250,13 @@
     </div>
 </div>
 
-{include file = "modals/update_album.tpl"}
+{include file = "modals/update_artist.tpl"}
 {include file = "modals/submit.tpl"}
 
 {if ($error == true)}
     <script>
         $(document).ready(function(){
-            $("#update_album").modal();
+            $("#update_artist").modal();
         });
     </script>
 {/if}

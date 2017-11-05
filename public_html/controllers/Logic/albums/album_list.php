@@ -8,15 +8,15 @@ $error = false;
 $display = false;
 
 if ($_POST == null){
-for($i=0; $i<12; $i++){
+/*for($i=0; $i<12; $i++){
     array_push($successArray, "");
     array_push($populateArray, "placeholder='enter info'");
-}
+}*/
 
 
 }
 
-if (isset($_POST)) {
+if (isset($_POST["album_name"])) {
     foreach ($_POST as $key => $value) {
         if ($value === "") {
             array_push($successArray, "has-warning");
@@ -35,15 +35,25 @@ if (isset($_POST)) {
         $modal = "data-modalpost = 'active'";
         $error = false;
         $display = true;
+        $successArray = new SplFixedArray(10);
+        $populateArray = new SplFixedArray(10);
+
+
     }
+} else{
+    $successArray= new SplFixedArray(10);
+    $populateArray=new SplFixedArray(10);
+
 }
 $listOfAlbums= getAlbums();
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
 $smarty->assign("listOfAlbums", $listOfAlbums);
 $smarty->assign('pageTarget', "album_list");
+
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
+
 $smarty->assign('modal', $modal);
 
 $smarty->display("albums/album_list.tpl");

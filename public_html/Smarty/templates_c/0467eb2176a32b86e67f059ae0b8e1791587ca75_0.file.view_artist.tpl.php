@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-03 15:51:01
+<?php /* Smarty version 3.1.27, created on 2017-11-04 21:04:43
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\artists\view_artist.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:181993661559fcc8a5e654c6_27011575%%*/
+/*%%SmartyHeaderCode:135992431159fe63ab4e8c60_38046263%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0467eb2176a32b86e67f059ae0b8e1791587ca75' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\artists\\view_artist.tpl',
-      1 => 1509738660,
+      1 => 1509843881,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '181993661559fcc8a5e654c6_27011575',
+  'nocache_hash' => '135992431159fe63ab4e8c60_38046263',
   'variables' => 
   array (
     'error' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fcc8a5ea1826_56023433',
+  'unifunc' => 'content_59fe63ab52b167_29000196',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fcc8a5ea1826_56023433')) {
-function content_59fcc8a5ea1826_56023433 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fe63ab52b167_29000196')) {
+function content_59fe63ab52b167_29000196 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '181993661559fcc8a5e654c6_27011575';
+$_smarty_tpl->properties['nocache_hash'] = '135992431159fe63ab4e8c60_38046263';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,11 +52,11 @@ $_smarty_tpl->properties['nocache_hash'] = '181993661559fcc8a5e654c6_27011575';
 ?>
 
 
-<!-- <div class="row">
+<div class="row">
      <div class="col-lg-11"></div>
      <div class="col-lg-1">
          <a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-info">Update Artist</button></a>
-     </div> -->
+     </div>
 
 
 <div class="container-fluid">
@@ -118,9 +118,7 @@ $_smarty_tpl->properties['nocache_hash'] = '181993661559fcc8a5e654c6_27011575';
         <td>10/20/06</td>
         <td>
             <button type="button" class="btn btn-danger">Remove</button>
-            <a href="#" data-target="#update_album" data-toggle="modal">
-                <button class="btn btn-default">Update</button>
-            </a></td>
+        </td>
     </tr>
     <tr>
         <td>2</td>
@@ -130,9 +128,7 @@ $_smarty_tpl->properties['nocache_hash'] = '181993661559fcc8a5e654c6_27011575';
         <td>10/20/06</td>
         <td>
             <button type="button" class="btn btn-danger">Remove</button>
-            <a href="#" data-target="#update_album" data-toggle="modal">
-                <button class="btn btn-default">Update</button>
-            </a></td>
+        </td>
     </tr>
     <tr>
         <td>3</td>
@@ -142,9 +138,7 @@ $_smarty_tpl->properties['nocache_hash'] = '181993661559fcc8a5e654c6_27011575';
         <td>10/20/06</td>
         <td>
             <button type="button" class="btn btn-danger">Remove</button>
-            <a href="#" data-target="#update_album" data-toggle="modal">
-                <button class="btn btn-default">Update</button>
-            </a></td>
+        </td>
     </tr>
 </table>
 
@@ -296,7 +290,7 @@ $_smarty_tpl->properties['nocache_hash'] = '181993661559fcc8a5e654c6_27011575';
     </div>
 </div>
 
-<?php echo $_smarty_tpl->getSubTemplate ("modals/update_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+<?php echo $_smarty_tpl->getSubTemplate ("modals/update_artist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
 <?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
@@ -307,7 +301,7 @@ $_smarty_tpl->properties['nocache_hash'] = '181993661559fcc8a5e654c6_27011575';
     <?php echo '<script'; ?>
 >
         $(document).ready(function(){
-            $("#update_album").modal();
+            $("#update_artist").modal();
         });
     <?php echo '</script'; ?>
 >

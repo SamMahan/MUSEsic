@@ -16,7 +16,7 @@
                         <div class="form-group {$successArray[0]}" >
                             <label class="col-md-4 control-label" for="artist_name">Artist Name:</label>
                             <div class="col-md-4">
-                                <input id="artist_name" name="artist_name" type="text" placeholder="name" class="form-control input-md" {$populateArray[0]}>
+                                <input required = "required" id="artist_name" name="artist_name" type="text" placeholder="name" class="form-control input-md" {$populateArray[0]}>
 
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                         <div class="form-group {$successArray[1]}" >
                             <label class="col-md-4 control-label" for="popular_song">Most Popular Song:</label>
                             <div class="col-md-4">
-                                <input id="popular_song" name="popular_song" type="text" placeholder="song name" class="form-control input-md" {$populateArray[1]}>
+                                <input required = "required" id="popular_song" name="popular_song" type="text" placeholder="song name" class="form-control input-md" {$populateArray[1]}>
 
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         <div class="form-group {$successArray[2]}" >
                             <label class="col-md-4 control-label" for="number_songs">Number of Songs:</label>
                             <div class="col-md-4">
-                                <input id="number_songs" name="number_songs" type="text" placeholder="number" class="form-control input-md" {$populateArray[2]}>
+                                <input required = "required" id="number_songs" name="number_songs" type="text" placeholder="number" class="form-control input-md" {$populateArray[2]}>
 
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                         <div class="form-group {$successArray[3]}" >
                             <label class="col-md-4 control-label" for="number_albums">Number of Albums:</label>
                             <div class="col-md-4">
-                                <input id="number_albums" name="number_albums" type="text" placeholder="number" class="form-control input-md" {$populateArray[3]}>
+                                <input required = "required" id="number_albums" name="number_albums" type="text" placeholder="number" class="form-control input-md" {$populateArray[3]}>
 
                             </div>
                         </div>

@@ -5,11 +5,13 @@ require_once "../../../../private_html/config.inc.php";
 $successArray=array();
 $populateArray=array();
 $modal = "";
+$display = false;
+
 if ($_POST == null){
 
 }
 
-if (isset($_POST)){
+if (isset($_POST["title"])){
     foreach($_POST as $key=>$value){
         if($value===""){
             array_push($successArray, "has-warning");
@@ -24,22 +26,25 @@ if (isset($_POST)){
     }
     if($_POST["title"]!=null || $_POST["artist_name"] !=null || $_POST["genre"] !=null){
         $modal = "data-modalpost = 'active'";
-        /*$albumfk = "";
-        //create select statement, selecting Album_ID from album where Album_Name = $_POST[Album_Name]
-        $q = "INSERT INTO songs (Title, Artist_FK, ) Values (:t, :alfk,)";
-
-        $statement = $pdo->prepare($q);
-        $statement->prepare(":t", $_POST["title"]);
-        $statement->prepare(":alfk", $albumfk );
-
-
-
-        //echo $statement->execute();*/
 
     }
 
-}
+    if($_POST["title"]!=null && $_POST["artist_name"] !=null && $_POST["genre"] !=null){
+        $modal = "data-modalpost = 'active'";
+        $successArray= new SplFixedArray(10);
+        $populateArray=new SplFixedArray(10);
+        $display = true;
 
+    }
+
+
+}
+else{
+    $successArray= new SplFixedArray(10);
+    $populateArray=new SplFixedArray(10);
+
+}
+$smarty->assign("display", $display);
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
 $smarty->assign('modal', $modal);

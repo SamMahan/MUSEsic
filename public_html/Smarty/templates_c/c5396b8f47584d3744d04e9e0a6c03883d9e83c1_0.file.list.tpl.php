@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-03 15:57:41
+<?php /* Smarty version 3.1.27, created on 2017-11-04 21:33:11
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\songs\list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:194229312859fcca35052819_05737066%%*/
+/*%%SmartyHeaderCode:53520075359fe6a57505bd3_44684803%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -13,7 +13,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '194229312859fcca35052819_05737066',
+  'nocache_hash' => '53520075359fe6a57505bd3_44684803',
   'variables' => 
   array (
     'listOfSongs' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fcca3508d7c7_64519627',
+  'unifunc' => 'content_59fe6a57544cc5_21015855',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fcca3508d7c7_64519627')) {
-function content_59fcca3508d7c7_64519627 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fe6a57544cc5_21015855')) {
+function content_59fe6a57544cc5_21015855 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '194229312859fcca35052819_05737066';
+$_smarty_tpl->properties['nocache_hash'] = '53520075359fe6a57505bd3_44684803';
 ?>
 <!DOCTYPE html>
 <html lang="en">

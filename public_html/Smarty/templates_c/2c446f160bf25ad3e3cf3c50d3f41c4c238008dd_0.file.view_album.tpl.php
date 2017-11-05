@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-03 15:38:43
+<?php /* Smarty version 3.1.27, created on 2017-11-04 21:19:55
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\albums\view_album.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:134903926659fcc5c3c2b039_47125402%%*/
+/*%%SmartyHeaderCode:182952472659fe673ba8bc41_04681137%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2c446f160bf25ad3e3cf3c50d3f41c4c238008dd' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\albums\\view_album.tpl',
-      1 => 1509670564,
+      1 => 1509843902,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '134903926659fcc5c3c2b039_47125402',
+  'nocache_hash' => '182952472659fe673ba8bc41_04681137',
+  'variables' => 
+  array (
+    'error' => 0,
+    'display' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fcc5c3c9c2f8_05822951',
+  'unifunc' => 'content_59fe673baccbe5_61739572',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fcc5c3c9c2f8_05822951')) {
-function content_59fcc5c3c9c2f8_05822951 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_59fe673baccbe5_61739572')) {
+function content_59fe673baccbe5_61739572 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '134903926659fcc5c3c2b039_47125402';
+$_smarty_tpl->properties['nocache_hash'] = '182952472659fe673ba8bc41_04681137';
 ?>
 <html lang="en">
 
@@ -42,12 +47,18 @@ $_smarty_tpl->properties['nocache_hash'] = '134903926659fcc5c3c2b039_47125402';
    <?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
+   <?php echo $_smarty_tpl->getSubTemplate ("modals/update_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+
    
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-11"></div>
             <div class="col-lg-1">
-                <!--<a href="update.html" class="btn btn-info">Update Album</a>-->
+                <a href="#" data-target="#update_album" data-toggle="modal">
+                    <button class="btn btn-info">Update Album</button>
+                </a>
             </div>
         </div>
 
@@ -233,7 +244,35 @@ $_smarty_tpl->properties['nocache_hash'] = '134903926659fcc5c3c2b039_47125402';
                 </form>
             </div>
         </div>
-        
+
+
+   <?php echo $_smarty_tpl->getSubTemplate ("modals/update_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+
+   <?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+   <?php if (($_smarty_tpl->tpl_vars['error']->value == true)) {?>
+       <?php echo '<script'; ?>
+>
+           $(document).ready(function(){
+               $("#update_album").modal();
+           });
+       <?php echo '</script'; ?>
+>
+   <?php }?>
+
+   <?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
+       <?php echo '<script'; ?>
+>
+           $(document).ready(function(){
+               $("#submit").modal();
+           });
+       <?php echo '</script'; ?>
+>
+   <?php }?>
+
 </body>
 
 </html><?php }

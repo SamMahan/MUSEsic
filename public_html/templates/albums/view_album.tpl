@@ -13,12 +13,16 @@
 <body>
 
    {include file = "componants/navbar.tpl"}
+   {include file = "modals/update_album.tpl"}
+
    
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-11"></div>
             <div class="col-lg-1">
-                <!--<a href="update.html" class="btn btn-info">Update Album</a>-->
+                <a href="#" data-target="#update_album" data-toggle="modal">
+                    <button class="btn btn-info">Update Album</button>
+                </a>
             </div>
         </div>
 
@@ -204,7 +208,27 @@
                 </form>
             </div>
         </div>
-        
+
+
+   {include file = "modals/update_album.tpl"}
+
+   {include file = "modals/submit.tpl"}
+   {if ($error == true)}
+       <script>
+           $(document).ready(function(){
+               $("#update_album").modal();
+           });
+       </script>
+   {/if}
+
+   {if ($display == true)}
+       <script>
+           $(document).ready(function(){
+               $("#submit").modal();
+           });
+       </script>
+   {/if}
+
 </body>
 
 </html>

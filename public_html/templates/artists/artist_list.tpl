@@ -45,5 +45,22 @@
             </div>
         </div>
 
+        {include file = "modals/submit.tpl"}
+        {if ($error == true)}
+            <script>
+                $(document).ready(function(){
+                    $("#add_artist").modal();
+                });
+            </script>
+        {/if}
+
+        {if ($display == true)}
+            <script>
+                $(document).ready(function(){
+                    $("#submit").modal();
+                });
+            </script>
+        {/if}
+
 </body>
 </html>
