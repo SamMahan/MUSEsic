@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-03 13:48:46
+<?php /* Smarty version 3.1.27, created on 2017-11-08 16:26:30
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/songs/list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:31240795659fcabfe2f6855_70673442%%*/
+/*%%SmartyHeaderCode:12045259355a0376866d49f8_77635892%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '54e24d91ef45307ed7ea4c50b00b425426b0c9af' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/songs/list.tpl',
-      1 => 1509729398,
+      1 => 1510176328,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '31240795659fcabfe2f6855_70673442',
+  'nocache_hash' => '12045259355a0376866d49f8_77635892',
   'variables' => 
   array (
     'listOfSongs' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fcabfe4529e7_05991155',
+  'unifunc' => 'content_5a03768673b984_34545497',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fcabfe4529e7_05991155')) {
-function content_59fcabfe4529e7_05991155 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a03768673b984_34545497')) {
+function content_5a03768673b984_34545497 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '31240795659fcabfe2f6855_70673442';
+$_smarty_tpl->properties['nocache_hash'] = '12045259355a0376866d49f8_77635892';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +67,6 @@ $_smarty_tpl->properties['nocache_hash'] = '31240795659fcabfe2f6855_70673442';
                 <th>Album</th>
                 <th>Time</th>
                 <th></th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -95,6 +94,7 @@ view.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value["Song_ID"];?>
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['value']->value["Length"];?>
 </td>
+                <td><a href="#" data-target="#delete_song" data-toggle="modal"><button class="btn btn-danger">Delete</button></a></td>
             </tr>
         <?php
 $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
@@ -192,86 +192,6 @@ $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
             </div>
         </div>
     </div>
-    <!--<div class="list col-md-11 col-sm-12">
-        <div class="titles col-md-4">
-            <ul class="songul">
-                <li class="section">Title</li>
-                <li><a href="view.php">Head Strong</a></li>
-                <li>Somebody That I Used To Know</li>
-                <li>The Sound Of Silence</li>
-                <li>Stacy's Mom</li>
-                <li>Stereo Hearts</li>
-                <li>Stitches</li>
-                <li>Summer Vibe</li>
-                <li>Sweet Caroline</li>
-                <li>Thinking Out Loud</li>
-                <li>This Is Gospel</li>
-            </ul>
-        </div>
-
-        <div class="artist col-md-3">
-            <ul class="songul">
-                <li class="section">Artist</li>
-                <li>Trapet</li>
-                <li>Walk Off the Earth</li>
-                <li>Disturbed</li>
-                <li>Bowling For Soup</li>
-                <li>Gym Class Heroes</li>
-                <li>Shawn Mendes</li>
-                <li>Walk Off the Earth</li>
-                <li>Neil Diamond</li>
-                <li>Ed Sheeran</li>
-                <li>Panic! At The Disco</li>
-            </ul>
-        </div>
-
-        <div class="album col-md-3">
-            <ul class="songul">
-                <li class="section">Album</li>
-                <li>Fun</li>
-                <li>R.E.V.O.</li>
-                <li>Immortalized</li>
-                <li>I've Never Done Anything Like This</li>
-                <li>The Papercut Chronicles II</li>
-                <li>Handwritten</li>
-                <li>R.E.V.O</li>
-                <li>In My Lifetime</li>
-                <li>x</li>
-                <li>Too Weird To Live, Too Rare To Die!</li>
-            </ul>
-        </div>
-
-        <div class="time col-md-1">
-            <ul class="songul">
-                <li class="section">Time</li>
-                <li>4:46</li>
-                <li>4:08</li>
-                <li>4:08</li>
-                <li>3:13</li>
-                <li>3:31</li>
-                <li>3:27</li>
-                <li>3:06</li>
-                <li>3:22</li>
-                <li>4:42</li>
-                <li>3:07</li>
-            </ul>
-        </div>
-
-        <div class="col-md-1">
-            <ul class="buttonul">
-                <li><a href="#" class="btn btn-danger">Delete</a></li>
-                <li><a href="#" class="btn btn-danger">Delete</a></li>
-                <li><a href="#" class="btn btn-danger">Delete</a></li>
-                <li><a href="#" class="btn btn-danger">Delete</a></li>
-                <li><a href="#" class="btn btn-danger">Delete</a></li>
-                <li><a href="#" class="btn btn-danger">Delete</a></li>
-                <li><a href="#" class="btn btn-danger">Delete</a></li>
-                <li><a href="#" class="btn btn-danger">Delete</a></li>
-                <li><a href="#" class="btn btn-danger">Delete</a></li>
-                <li><a href="#" class="btn btn-danger">Delete</a></li>
-            </ul>
-        </div> -->
-
 
 </div>
 
