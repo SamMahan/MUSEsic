@@ -45,54 +45,12 @@
 
     </table>
     </div>
+    {include file="modals/create_song.tpl"}
 
+    <a href="#" data-target="#create_song" data-toggle="modal"><button class="btn btn-success">Add Song</button></a>
+    {include file="modals/add_to_album.tpl"}
 
-
-    <a href="new.php" class="btn btn-success">+Add Song</a>
-    <div class="modal" id="add-to-album">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">choose album</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            <tr>
-                                <td>1</td>
-                                <td>album-name</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>album-name</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>album-name</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="modal-footer">
-
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="add-to-playlist">
+    <div class="modal" id="add_to_playlist">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-08 16:26:09
+<?php /* Smarty version 3.1.27, created on 2017-11-09 18:27:51
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:14417884385a037671978be2_91135826%%*/
+/*%%SmartyHeaderCode:19550713365a04e477d94d16_81083441%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '956c6b27dfe102c6e6c318612c8a137629f600f5' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl',
-      1 => 1510175773,
+      1 => 1510267224,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14417884385a037671978be2_91135826',
+  'nocache_hash' => '19550713365a04e477d94d16_81083441',
   'variables' => 
   array (
     'listOfAlbums' => 0,
@@ -23,13 +23,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a037671b8c022_21547776',
+  'unifunc' => 'content_5a04e477f3a1f8_47224893',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a037671b8c022_21547776')) {
-function content_5a037671b8c022_21547776 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a04e477f3a1f8_47224893')) {
+function content_5a04e477f3a1f8_47224893 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '14417884385a037671978be2_91135826';
+$_smarty_tpl->properties['nocache_hash'] = '19550713365a04e477d94d16_81083441';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -107,9 +107,9 @@ $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
 <?php echo $_smarty_tpl->getSubTemplate ("modals/create_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
-
 <?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
+
 
 <?php if (($_smarty_tpl->tpl_vars['error']->value == true)) {?>
     <?php echo '<script'; ?>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-08 16:26:30
+<?php /* Smarty version 3.1.27, created on 2017-11-09 18:32:54
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/songs/list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:12045259355a0376866d49f8_77635892%%*/
+/*%%SmartyHeaderCode:20711359955a04e5a67cf443_29750077%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '54e24d91ef45307ed7ea4c50b00b425426b0c9af' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/songs/list.tpl',
-      1 => 1510176328,
+      1 => 1510270370,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12045259355a0376866d49f8_77635892',
+  'nocache_hash' => '20711359955a04e5a67cf443_29750077',
   'variables' => 
   array (
     'listOfSongs' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a03768673b984_34545497',
+  'unifunc' => 'content_5a04e5a6837154_05854398',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a03768673b984_34545497')) {
-function content_5a03768673b984_34545497 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a04e5a6837154_05854398')) {
+function content_5a04e5a6837154_05854398 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '12045259355a0376866d49f8_77635892';
+$_smarty_tpl->properties['nocache_hash'] = '20711359955a04e5a67cf443_29750077';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -103,54 +103,16 @@ $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
 
     </table>
     </div>
+    <?php echo $_smarty_tpl->getSubTemplate ("modals/create_song.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
 
 
-
-    <a href="new.php" class="btn btn-success">+Add Song</a>
-    <div class="modal" id="add-to-album">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">choose album</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            <tr>
-                                <td>1</td>
-                                <td>album-name</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>album-name</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>album-name</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="modal-footer">
+    <a href="#" data-target="#create_song" data-toggle="modal"><button class="btn btn-success">Add Song</button></a>
+    <?php echo $_smarty_tpl->getSubTemplate ("modals/add_to_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
 
 
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" id="add-to-playlist">
+    <div class="modal" id="add_to_playlist">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

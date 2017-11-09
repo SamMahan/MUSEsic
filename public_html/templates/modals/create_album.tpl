@@ -50,7 +50,7 @@
                     </fieldset>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-success">Save Changes</button>
+                        <button type="submit" class="btn btn-success">Save Album</button>
                     </div>
                 </form>
 

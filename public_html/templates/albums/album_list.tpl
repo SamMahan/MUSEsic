@@ -48,8 +48,8 @@
 </div>
 
 {include file = "modals/create_album.tpl"}
-
 {include file = "modals/submit.tpl"}
+
 {if ($error == true)}
     <script>
         $(document).ready(function(){

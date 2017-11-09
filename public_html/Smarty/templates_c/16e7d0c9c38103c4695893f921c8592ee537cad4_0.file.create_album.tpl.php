@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-08 16:26:09
+<?php /* Smarty version 3.1.27, created on 2017-11-09 18:27:52
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/modals/create_album.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:5929393945a037671c15032_97111598%%*/
+/*%%SmartyHeaderCode:11162389535a04e47802fc79_47832107%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '16e7d0c9c38103c4695893f921c8592ee537cad4' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/modals/create_album.tpl',
-      1 => 1510174120,
+      1 => 1510269518,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5929393945a037671c15032_97111598',
+  'nocache_hash' => '11162389535a04e47802fc79_47832107',
   'variables' => 
   array (
     'successArray' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a037671c24c41_65036580',
+  'unifunc' => 'content_5a04e47804ba09_61109612',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a037671c24c41_65036580')) {
-function content_5a037671c24c41_65036580 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a04e47804ba09_61109612')) {
+function content_5a04e47804ba09_61109612 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '5929393945a037671c15032_97111598';
+$_smarty_tpl->properties['nocache_hash'] = '11162389535a04e47802fc79_47832107';
 ?>
 <div class="modal fade" id="create_album" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -90,7 +90,7 @@ album_list.php">
                     </fieldset>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-success">Save Changes</button>
+                        <button type="submit" class="btn btn-success">Save Album</button>
                     </div>
                 </form>
 
