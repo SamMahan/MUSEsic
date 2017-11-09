@@ -24,11 +24,11 @@
                 {foreach $listOfArtists as $key => $value}
                     <tr>
 
-                        <td> <a href="{$smarty.const.WEB_PATH}view_artist.php?key={$value["Artist_Name"]}">{$value["Artist_Name"]}</a></td>
+                        <td> <a href="{$smarty.const.WEB_PATH}view_artist.php?key={$value["Artist_ID"]}">{$value["Artist_Name"]}</a></td>
                         <td>--</td>
                         <td>--</td>
                         <td>--</td>
-                        <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+                        <td><a href="#" data-target="#delete_artist" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                     </tr>
                 {/foreach}
             </table>
@@ -36,7 +36,7 @@
 
         {include file = "modals/add_artist.tpl"}
         {include file = "modals/update_artist.tpl"}
-        {include file = "modals/delete_general.tpl"}
+        {include file = "modals/delete_artist.tpl"}
 
         <div class="row">
             <div class="col-lg-11"></div>

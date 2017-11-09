@@ -1,3 +1,34 @@
+<?php /* Smarty version 3.1.27, created on 2017-11-08 16:26:30
+         compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/songs/list.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:12045259355a0376866d49f8_77635892%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '54e24d91ef45307ed7ea4c50b00b425426b0c9af' => 
+    array (
+      0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/songs/list.tpl',
+      1 => 1510176328,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '12045259355a0376866d49f8_77635892',
+  'variables' => 
+  array (
+    'listOfSongs' => 0,
+    'value' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_5a03768673b984_34545497',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_5a03768673b984_34545497')) {
+function content_5a03768673b984_34545497 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '12045259355a0376866d49f8_77635892';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,16 +38,23 @@
         @import "../../assets/css/song_list.css";
     </style>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+    <?php echo '<script'; ?>
+ src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"><?php echo '</script'; ?>
+>
 
-    {$smarty.const.RESOURCES}
+    <?php echo @constant('RESOURCES');?>
+
     
 </head>
 
 <body>
 
-{include file = "componants/navbar.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 
 <div class="container">
     <div class="row">
@@ -32,16 +70,36 @@
             </tr>
         </thead>
         <tbody>
-        {foreach $listOfSongs as $key => $value}
+        <?php
+$_from = $_smarty_tpl->tpl_vars['listOfSongs']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$_smarty_tpl->tpl_vars['value'] = new Smarty_Variable;
+$_smarty_tpl->tpl_vars['value']->_loop = false;
+$_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['value']->value) {
+$_smarty_tpl->tpl_vars['value']->_loop = true;
+$foreach_value_Sav = $_smarty_tpl->tpl_vars['value'];
+?>
             <tr>
 
-                <td> <a href="{$smarty.const.WEB_PATH}view.php?key={$value["Song_ID"]}">{$value["Title"]}</a></td>
-                <td>{$value["Artist_FK"]}</td>
-                <td>{$value["Album_FK"]}</td>
-                <td>{$value["Length"]}</td>
+                <td> <a href="<?php echo @constant('WEB_PATH');?>
+view.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value["Song_ID"];?>
+"><?php echo $_smarty_tpl->tpl_vars['value']->value["Title"];?>
+</a></td>
+                <td><?php echo $_smarty_tpl->tpl_vars['value']->value["Artist_FK"];?>
+</td>
+                <td><?php echo $_smarty_tpl->tpl_vars['value']->value["Album_FK"];?>
+</td>
+                <td><?php echo $_smarty_tpl->tpl_vars['value']->value["Length"];?>
+</td>
                 <td><a href="#" data-target="#delete_song" data-toggle="modal"><button class="btn btn-danger">Delete</button></a></td>
             </tr>
-        {/foreach}
+        <?php
+$_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
+}
+?>
 
     </table>
     </div>
@@ -140,4 +198,6 @@
 
 </body>
 
-</html>
+</html><?php }
+}
+?>

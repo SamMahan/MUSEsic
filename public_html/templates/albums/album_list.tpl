@@ -12,7 +12,7 @@
 
 {include file = "modals/update_album.tpl"}
 
-{include file = "modals/delete_general.tpl"}
+{include file = "modals/delete_album.tpl"}
 
 
 <table class="table">
@@ -29,11 +29,11 @@
 
     {foreach $listOfAlbums as $key => $value}
         <tr>
-            <td><a href="{$smarty.const.WEB_PATH}view_album.php?key={$value["Album_Name"]}">{$value["Album_Name"]}</a></td>
+            <td><a href="{$smarty.const.WEB_PATH}view_album.php?key={$value["Album_ID"]}">{$value["Album_Name"]}</a></td>
             <td>--</td>
             <td>--</td>
             <td>--</td>
-            <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><!--<a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a>--></td>
+            <td><a href="#" data-target="#delete_album" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><!--<a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a>--></td>
         </tr>
     {/foreach}
 
