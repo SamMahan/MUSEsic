@@ -5,13 +5,13 @@
 registration page -->
 <head>
   
-    <!-- begin global header test -->
-    {$smarty.const.RESOURCES}
+    <!-- begin global header test
+    $smarty.const.RESOURCES} -->
     
 </head>
 
 <body class = "visitor">
-    {include file = "componants/navbar.tpl"}
+   <!-- include file = "componants/navbar.tpl"} -->
     <div class="container">
 
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -28,7 +28,7 @@ registration page -->
                 <h3>easy to use, one-stop source for your entertainment</h3>
             </div>
             <div class="well col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <form class ="user_form user_registration" type="text" method="post" action="registration.php">
+                <!--<form id = "user-registration" class ="user_form user_registration" type="text" method="post" action="registration.php">
                     <fieldset>
                         <div class='col-lg-12 . {$successArray[0]}'>
                             <label for="first_name">First Name</label>
@@ -62,11 +62,11 @@ registration page -->
             </div>
         </div>
     </div>
-    <div class="modal" {$modal} id="login">
+    <div class="modal" {$loginModalActive} id="login">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button  type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title">Welcome back!</h4>
                 </div>
                 <div class="modal-body">

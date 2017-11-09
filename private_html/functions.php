@@ -197,6 +197,7 @@ function getAlbums() {
     return $list_of_albums;
 
 }
+/* used to populate the camelot database with a small list of songs. no longer in use now that they have been added
 global $pdo;
 $statement = $pdo->prepare("INSERT INTO genre (Genre_Name) VALUES ('Rrock'); INSERT INTO album (Album_Name, Genre_FK) VALUES('TestAlbum', 1);
 INSERT INTO song (Title, Album_FK) VALUES ('test-song', 3);
@@ -206,9 +207,9 @@ INSERT INTO song (Title, Album_FK) VALUES ('test-song4', 3);");
 if($statement->execute()){
     echo "got it!";
 }else{
-    echo"statements failed";
+    echo"";
 }
-
+*/
 
 
  ?>
