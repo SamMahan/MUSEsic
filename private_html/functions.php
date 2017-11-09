@@ -205,7 +205,7 @@ INSERT INTO song (Title, Album_FK) VALUES ('test-song3', 3);
 INSERT INTO song (Title, Album_FK) VALUES ('test-song4', 3);");
 if($statement->execute()){
     echo "got it!";
-}else{
+} else{
     echo"statements failed";
 }
 
