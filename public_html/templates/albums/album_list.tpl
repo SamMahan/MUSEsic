@@ -29,7 +29,7 @@
 
     {foreach $listOfAlbums as $key => $value}
         <tr>
-            <td><a href="{$smarty.const.WEB_PATH}view_album.php?key={$value["Album_Name"]}">{$value["Album_Name"]}</a></td>
+            <td><a href="{$smarty.const.WEB_PATH}view_album.php?key={$value["Album_ID"]}">{$value["Album_Name"]}</a></td>
             <td>--</td>
             <td>--</td>
             <td>--</td>

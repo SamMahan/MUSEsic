@@ -1,10 +1,11 @@
 
 $(document).ready(function() {
     function getForm(form) {
-        if (form.hasClass("user_registration")) {
-            registrationCheck(form);
+        var form1 = form;
+        if (form1.prop("id") == "user-registration") {
+            simpleCheck(form);
         } else if (form.hasClass("user_login")) {
-            loginCheck();
+            passwordCheck();
         } else if (form.hasclass("user_settings")) {
 
         }
@@ -13,11 +14,14 @@ $(document).ready(function() {
 
 
     $('form').change(function() {
-        registrationCheck($(this));
+        getForm($(this));
+    });
+    $('close-modal').click(function(){
+        this.parent(".modal").removeAttr("style");
     });
 
 
-    function registrationCheck(form) {
+    function simpleCheck(form) {
         var requiresConfirm = false;
         form.find("input").each(function () {
             if ($(this).attr("name") == "confirm-password") {

@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
 <?php
+
 require_once "../../../../private_html/config.inc.php";
+
 $successArray=array();
 $populateArray=array();
 $lsuccessArray = array();
 $lpopulateArray = array();
+$loginComplete;
+$registerComplete;
 $loginSuccess;
+$registerSuccess;
+$loginModalActivate = "";
 
 
 
 
 
-if ($_POST == null){
 
-}
 if ($_POST != null){
     if(isset($_POST["first_name"])) {
-        $registerSuccess = true;
+        $registerComplete = true;
         foreach ($_POST as $key => $value) {
 
             if ($value === "") {
                 array_push($successArray, "has-warning");
-            $registerSuccess = false;
+            $registerComplete = false;
                 array_push($populateArray, "this has nothing");
 
             } elseif ($value != "") {
@@ -31,12 +35,13 @@ if ($_POST != null){
 
             }
         }
-    }else{
-        $loginSuccess = true;
+    }if(isset($_POST['login-email'])){
+        $loginComplete = true;
+        $loginModalActive = "style = 'display:block'";
         foreach ($_POST as $key => $value) {
             if ($value === "") {
                 array_push($lsuccessArray, "has-warning");
-                $loginSuccess = false;
+                $loginComplete = false;
                 array_push($lpopulateArray, "this has nothing");
 
             } elseif ($value != "") {
@@ -48,34 +53,42 @@ if ($_POST != null){
         }
     }
 }
-
-
-if($_POST["login-email"]!=null || $_POST["login-password"] !=null){
-    $modal = "data-modalpost = 'active'";
-}
-if($registerSuccess == true && $_POST["password"] == $_POST['confirm-password']){
+//if form complete, sends and checks it against database
+if($registerComplete == true && $_POST["password"] == $_POST['confirm-password']){
     echo  $_POST["password"]." ".$_POST['confirm-password'];
-    register($_POST["password"], $_POST['first_name'], $_POST['last_name'], $_POST['email'], false);
+    $registerSuccess = register($_POST["password"], $_POST['first_name'], $_POST['last_name'], $_POST['email'], false);
+    if($registerSuccess != false){
+        $successArray = SplFixedArray(10);
+        $populateArray = SplFixedArray(10);
+    }else{
+
+    }
 
 }
-if($loginSuccess === true){
-        if(login($_POST['login-email'], $_POST['login-password']) == true){
+//if login form complete
+if($loginComplete === true){
+    $loginSuccess = login($_POST['login-email'], $_POST['login-password']);
+        if($loginSuccess!= false){
+            $loginModalActive = "";
         header("Location:".WEB_URL."/controllers/Logic/user/home.php");
+        $loginModalActive ="";
+        $lsuccessArray = SplFixedArray(10);
+        $lpopulateArray = SplFixedArray(10);
     }else{
-        echo "nologin";
+
     }
 }
-echo "logic passed";
+echo "assignments begining";
 
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
 $smarty->assign("lsuccessArray", $lsuccessArray);
 $smarty->assign("lpopulateArray", $lpopulateArray);
 $smarty->assign('modal', $modal);
-echo "assignments passed";
+$smarty->assign("loginModalActive", $loginModalActive);
+echo "assigns done";
+$smarty->display("visitor/registration.tpl") == false;
 
-$smarty->display("visitor/registration.tpl");
-echo "display happened";
 
 ?>
 

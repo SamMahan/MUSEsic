@@ -24,7 +24,7 @@
                 {foreach $listOfArtists as $key => $value}
                     <tr>
 
-                        <td> <a href="{$smarty.const.WEB_PATH}view_artist.php?key={$value["Artist_Name"]}">{$value["Artist_Name"]}</a></td>
+                        <td> <a href="{$smarty.const.WEB_PATH}view_artist.php?key={$value["Artist_ID"]}">{$value["Artist_Name"]}</a></td>
                         <td>--</td>
                         <td>--</td>
                         <td>--</td>
