@@ -36,7 +36,7 @@ if (isset($_POST["song_name"])) {
     $populateArray=new SplFixedArray(10);
 
 }
-$listOfAlbums= getSongs();
+$listOfSongs = getSongs();
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
 $smarty->assign("listOfSongs", $listOfSongs);
