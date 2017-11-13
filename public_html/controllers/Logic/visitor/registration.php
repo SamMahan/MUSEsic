@@ -78,7 +78,7 @@ if($loginComplete === true){
 
     }
 }
-echo "assignments begining";
+
 
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
@@ -86,7 +86,7 @@ $smarty->assign("lsuccessArray", $lsuccessArray);
 $smarty->assign("lpopulateArray", $lpopulateArray);
 $smarty->assign('modal', $modal);
 $smarty->assign("loginModalActive", $loginModalActive);
-echo "assigns done";
+
 $smarty->display("visitor/registration.tpl") == false;
 
 
