@@ -33,7 +33,7 @@ $password = DB_PASSWORD;
      *     "mysql:dbname=name;host=localhost"
      *     where "name" is the name of the database
      */
-    $dsn = "mysql:" . "dbname=" . DB_NAME . ";" . "host=camelot.cs.messiah.edu";
+    $dsn = "mysql:" . "dbname=" . DB_NAME . ";" . "host=localhost";
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 } catch (PDOException $e) {
