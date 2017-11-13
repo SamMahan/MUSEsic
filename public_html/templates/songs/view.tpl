@@ -4,6 +4,7 @@
   
     <style type="text/css" media="all">@import "../../assets/css/view_song.css";</style>
     <link href="../../assets/css/bootswatch.css" type="text/css" rel="stylesheet"/>
+    <title>View Song</title>
     
     {$smarty.const.RESOURCES}
     

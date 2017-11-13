@@ -5,6 +5,7 @@
     <style type="text/css" media="all">
         @import "../../assets/css/view_artist.css";
     </style>
+    <title>View Album</title>
     
     {$smarty.const.RESOURCES}
     
