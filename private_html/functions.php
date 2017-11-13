@@ -193,5 +193,29 @@ if($statement->execute()){
 }
 */
 
+function timeToSeconds($time) { // TEMPORARY
+
+    $time = explode(":", $time);
+    $total = $time[0] * 60 + $time[1];
+
+    return $total;
+
+}
+
+function addSong($title, $length) {
+
+    global $pdo;
+
+    $sql = "INSERT INTO Song (Title, Length) VALUES(:t,:l)";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(":t", $title);
+    $stmt->bindParam(":l", timeToSeconds($length));
+
+    $stmt->execute();
+
+
+}
 
  ?>

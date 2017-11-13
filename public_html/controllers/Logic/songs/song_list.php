@@ -29,12 +29,16 @@ if (isset($_POST["song_name"])) {
         $successArray = new SplFixedArray(10);
         $populateArray = new SplFixedArray(10);
 
+     if(addSong($_POST["song_name"], $_POST["length"]) != false){
+         echo "database query works";
+     }else{
+         echo " database broken";
+     }
 
     }
-} else{
+} else {
     $successArray= new SplFixedArray(10);
     $populateArray=new SplFixedArray(10);
-
 }
 $listOfSongs = getSongs();
 $smarty->assign("error", $error);
@@ -48,5 +52,7 @@ $smarty->assign("populateArray", $populateArray);
 $smarty->assign('modal', $modal);
 
 $smarty->display("songs/list.tpl");
+
+
 
 ?>
