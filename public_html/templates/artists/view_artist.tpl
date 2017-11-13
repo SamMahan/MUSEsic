@@ -220,9 +220,7 @@
             Submit your own review!
         </h2>
         <form>
-                    <textarea name="review" rows="8" cols="70">
-                        Submit your own review here for all to see!
-                    </textarea>
+                    <textarea name="review" rows="8" cols="70" placeholder="Submit your own review here for all to see!"></textarea>
             <div class="form-group ">
                 <label for="star_rating">
                     How many stars do you give this artist?
@@ -245,7 +243,7 @@
                     </option>
                 </select>
             </div>
-            <input type="submit" value="Submit"/>
+            <input type="submit" value="Submit" class="btn btn-success"/>
         </form>
     </div>
 </div>
