@@ -202,16 +202,20 @@ function timeToSeconds($time) { // TEMPORARY
 
 }
 
-function addSong($title, $length) {
+function addSong($title, $length, $artist_id, $album_id) {
 
     global $pdo;
 
-    $sql = "INSERT INTO Song (Title, Length) VALUES(:t,:l)";
+    $sql = "INSERT INTO Song (Title, Length, Artist_FK, Album_FK) VALUES(:t,:l,:ar,:al)";
 
     $stmt = $pdo->prepare($sql);
 
+    $length = timeToSeconds($length);
+
     $stmt->bindParam(":t", $title);
-    $stmt->bindParam(":l", timeToSeconds($length));
+    $stmt->bindParam(":l", $length);
+    $stmt->bindParam(":ar", $artist_id);
+    $stmt->bindParam(":al", $album_id);
 
     $stmt->execute();
 
