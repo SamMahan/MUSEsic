@@ -215,6 +215,7 @@ function addSong($title, $length) {
 
     $stmt->execute();
 
+    return true;
 
 }
 
