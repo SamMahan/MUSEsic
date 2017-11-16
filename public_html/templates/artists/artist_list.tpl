@@ -12,8 +12,8 @@
 
     <div class="container">
         
-        <div class="list col-md-11 col-sm-12">
-            <table class = "table">
+        <div class="row">
+            <table class = "table tblData">
                 <tr>
                     <th>Artist</th>
                     <th>Most Popular Song</th>
@@ -38,12 +38,7 @@
         {include file = "modals/update_artist.tpl"}
         {include file = "modals/delete_artist.tpl"}
 
-        <div class="row">
-            <div class="col-lg-11"></div>
-            <div class="col-lg-1">
-                <a href="#" data-target="#add_artist" data-toggle="modal"><button class="btn btn-info">Add Artist</button></a>
-            </div>
-        </div>
+        <a href="#" data-target="#add_artist" data-toggle="modal"><button class="btn btn-info">Add Artist</button></a>
 
         {include file = "modals/submit.tpl"}
         {if ($error == true)}
@@ -61,6 +56,6 @@
                 });
             </script>
         {/if}
-
+    </div>
 </body>
 </html>

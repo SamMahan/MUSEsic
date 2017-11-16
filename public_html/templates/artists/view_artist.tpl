@@ -219,10 +219,17 @@
         <h2>
             Submit your own review!
         </h2>
+<<<<<<< HEAD
+        <form method="post" action="{$smarty.const.WEB_PATH}view_artist.php">
+            <fieldset>
+                <div class="form-group">
+                    <label for="text_review">Write A Review</label>
+                    <textarea class="form-control" id="text_review" rows="3" name="review" required="required"></textarea>
+                </div>
+=======
         <form>
-                    <textarea name="review" rows="8" cols="70">
-                        Submit your own review here for all to see!
-                    </textarea>
+                    <textarea name="review" rows="8" cols="70" placeholder="Submit your own review here for all to see!"></textarea>
+>>>>>>> 249adff879bfabd88087b5320f2e5846f6762590
             <div class="form-group ">
                 <label for="star_rating">
                     How many stars do you give this artist?
@@ -245,7 +252,12 @@
                     </option>
                 </select>
             </div>
-            <input type="submit" value="Submit"/>
+<<<<<<< HEAD
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+            </fieldset>
+=======
+            <input type="submit" value="Submit" class="btn btn-success"/>
+>>>>>>> 249adff879bfabd88087b5320f2e5846f6762590
         </form>
     </div>
 </div>

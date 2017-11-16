@@ -12,9 +12,14 @@
 
 Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
+if (!ini_get('display_errors')) {
+    ini_set('display_errors', '1');
+}
 $local = true;
 error_reporting(E_ALL);
+
 ini_set('max_execution_time', 300);
+ini_set("allow_url_include",1);
 
 /**
  * Compose the URL that originated this script. This function was procured from
@@ -39,7 +44,7 @@ function webRoot() {
      * http://{server}/SymPRM/ therefore, we need to treat it the same as a localhost
      * version. Therefore, the if statement has been commented out.
      */
-    //if (strpos($url_origin, "localhost") !== false) {
+   // if (strpos($url_origin, "localhost") !== false) {
     $ending = strpos($url_origin, "/", $ending + 1);
     //}
     return substr($url_origin, 0, $ending + 1);
@@ -53,28 +58,45 @@ function webRoot() {
 $tmp = explode(DIRECTORY_SEPARATOR, __DIR__);
 unset($tmp[count($tmp) - 1]);
 define('BASE_PATH', implode(DIRECTORY_SEPARATOR, $tmp) . DIRECTORY_SEPARATOR);
-
+/*
 define('PUBLIC_PATH', BASE_PATH . "public_html".DIRECTORY_SEPARATOR);
 define('WEB_URL', webRoot()."public_html");
+//*/
+
+define('PUBLIC_PATH', BASE_PATH . 'public_html/');
+define('WEB_URL', webRoot()."public_html".DIRECTORY_SEPARATOR);
+//*/
 
 #
 # Set PHP configuration options
-define('CLASS_ROOT', BASE_PATH . 'public_html/class/');
+define('CLASS_ROOT', BASE_PATH . 'private_html/class/');
 #
 # Set common constants
-define('PRIVATE_PATH', BASE_PATH . 'private_html/');
+define('PRIVATE_PATH', BASE_PATH . 'private_html'.DIRECTORY_SEPARATOR);
 #
 # Set Smarty constants
 define('SMARTY_ROOT', PUBLIC_PATH . "Smarty".DIRECTORY_SEPARATOR);
 define('SMARTY_TEMPLATES', PUBLIC_PATH . 'templates/');
 define('SMARTY', SMARTY_ROOT . "libs". DIRECTORY_SEPARATOR ."Smarty.class.php");
 
-
 /*
  * The following has been added to resolve the problem of relying on the system's timezone settings.
  */
 date_default_timezone_set('America/New_York');
 
+
+
+/* reference error checking
+echo BASE_PATH."</br>".
+    PUBLIC_PATH."</br>".
+    WEB_URL."</br>".
+    CLASS_ROOT."</br>".
+    PRIVATE_PATH."</br>".
+    SMARTY_ROOT."</br>".
+    SMARTY_TEMPLATES."</br>".
+    SMARTY."</br>".
+    __DIR__;
+// */
 # Define the Smarty template/presentation framework.
 /* ------------------------------------------------------------------------------------
  * This application uses Smarty, a template/presentation framework which can be
@@ -89,13 +111,15 @@ $smarty->setCacheDir(SMARTY_ROOT . 'cache');
 $smarty->setConfigDir(SMARTY_ROOT . 'configs');
 $smarty->assign('WEB_URL', WEB_URL);
 
-function myAutoload($class) {
-    require CLASS_ROOT . $class . '.class.php';
-}
-
 require_once "constants.php";
 require_once "dbconfig.php";
 require_once "functions.php";
 
+function myAutoload($class) {
+    require CLASS_ROOT . $class . '.class.php';
+}
+
+
 spl_autoload_register('myAutoload');
 
+?>

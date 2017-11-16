@@ -4,6 +4,7 @@
   
     <style type="text/css" media="all">@import "../../assets/css/view_song.css";</style>
     <link href="../../assets/css/bootswatch.css" type="text/css" rel="stylesheet"/>
+    <title>View Song</title>
     
     {$smarty.const.RESOURCES}
     
@@ -150,9 +151,7 @@
                 Submit your own review!
             </h2>
             <form>
-                    <textarea name="review" rows="8" cols="70">
-                        Submit your own review here for all to see!
-                    </textarea>
+                    <textarea name="review" rows="8" cols="70" placeholder="Submit your own review here for all to see!"></textarea>
                 <div class="form-group ">
                     <label for="star_rating">
                         How many stars do you give this song?
@@ -175,7 +174,7 @@
                         </option>
                     </select>
                 </div>
-                <input type="submit" value="Submit"/>
+                <input type="submit" value="Submit" class="btn btn-success"/>
             </form>
         </div>
     </div>

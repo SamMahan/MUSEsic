@@ -26,7 +26,7 @@
         <img src="../../../assets/Images/NoProfilePic.jpg" height="300"/>
     </div>
     <div class="col-lg-offset-3">
-        <h3 id="userName">Matthew Bromley</h3>
+        <h3 id="userName">{$user->First_Name} {$user->Last_Name}</h3>
         <div class="col-lg-offset-1">
             <a id="userNameLink" href="settings.php" id="editLink">Edit Profile</a>
         </div>
@@ -45,7 +45,7 @@
     <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade active in" id="AboutMe">
             <h2>Name</h2>
-            <p class="info">Matthew Bromley</p>
+            <p class="info">{$user->First_Name} {$user->Last_Name}</p>
             <br>
 
             <h2>Birthday</h2>
@@ -330,7 +330,8 @@
                 </tr>
                 </tbody>
             </table>
-            <a href="#" class="btn btn-success" data-target="#create-playlist" data-toggle="modal">+Create New Playlist</a>
+            {include file = "modals/create_playlist.tpl"}
+            <a href="#" class="btn btn-success" data-target="#create_playlist" data-toggle="modal">+Create New Playlist</a>
         </div>
 
         <div class="tab-pane fade" id="Friends">
@@ -431,42 +432,13 @@
     </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--Modal-->
-    <div class="modal" id="create-playlist">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Create Playlist</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label class="control-label" for="inputDefault">Name</label>
-                        <input class="form-control" id="inputDefault" type="text">
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button class="btn-success">Create</button>
-                    <button class="bth-danger">cancel</button>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+{include file = "modals/submit.tpl"}
+{if ($display == true)}
+    <script>
+        $(document).ready(function(){
+            $("#submit").modal();
+        });
+    </script>
+{/if}
 </body>
 </html>

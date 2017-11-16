@@ -1,23 +1,14 @@
 <?PHP
-
 require_once "../../../../private_html/config.inc.php";
+
 $successArray=array();
 $populateArray=array();
 $modal = "";
 $error = false;
 $display = false;
 
-if ($_POST == null){
-/*for($i=0; $i<12; $i++){
-    array_push($successArray, "");
-    array_push($populateArray, "placeholder='enter info'");
-}*/
-
-
-}
-
 if (isset($_POST["album_name"])) {
-    foreach ($_POST as $key => $value) {
+    foreach ($_POST as $key=>$value) {
         if ($value === "") {
             array_push($successArray, "has-warning");
             array_push($populateArray, "placeholder='**Information Required**'");
@@ -38,6 +29,7 @@ if (isset($_POST["album_name"])) {
         $successArray = new SplFixedArray(10);
         $populateArray = new SplFixedArray(10);
 
+        addAlbum($_POST["album_name"]);
 
     }
 } else{

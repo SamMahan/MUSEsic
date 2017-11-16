@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-03 13:48:47
+<?php /* Smarty version 3.1.27, created on 2017-11-16 17:13:32
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/artists/artist_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:10281515859fcabffd7ea82_62292847%%*/
+/*%%SmartyHeaderCode:11516678625a0e0d8c90f381_47746442%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,25 +9,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e9788eba43e6d5addf738aea063c9b0a3c6a6f7b' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/artists/artist_list.tpl',
-      1 => 1509729398,
+      1 => 1510870303,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10281515859fcabffd7ea82_62292847',
+  'nocache_hash' => '11516678625a0e0d8c90f381_47746442',
   'variables' => 
   array (
     'listOfArtists' => 0,
     'value' => 0,
+    'error' => 0,
+    'display' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fcabffde4d34_74119620',
+  'unifunc' => 'content_5a0e0d8c99ae23_39965945',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fcabffde4d34_74119620')) {
-function content_59fcabffde4d34_74119620 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0e0d8c99ae23_39965945')) {
+function content_5a0e0d8c99ae23_39965945 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '10281515859fcabffd7ea82_62292847';
+$_smarty_tpl->properties['nocache_hash'] = '11516678625a0e0d8c90f381_47746442';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,8 +48,8 @@ $_smarty_tpl->properties['nocache_hash'] = '10281515859fcabffd7ea82_62292847';
 
     <div class="container">
         
-        <div class="list col-md-11 col-sm-12">
-            <table class = "table">
+        <div class="row">
+            <table class = "table tblData">
                 <tr>
                     <th>Artist</th>
                     <th>Most Popular Song</th>
@@ -70,13 +72,13 @@ $foreach_value_Sav = $_smarty_tpl->tpl_vars['value'];
                     <tr>
 
                         <td> <a href="<?php echo @constant('WEB_PATH');?>
-view_artist.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value["Artist_Name"];?>
+view_artist.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value["Artist_ID"];?>
 "><?php echo $_smarty_tpl->tpl_vars['value']->value["Artist_Name"];?>
 </a></td>
                         <td>--</td>
                         <td>--</td>
                         <td>--</td>
-                        <td><a href="#" data-target="#delete_general" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+                        <td><a href="#" data-target="#delete_artist" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                     </tr>
                 <?php
 $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
@@ -91,17 +93,35 @@ $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
         <?php echo $_smarty_tpl->getSubTemplate ("modals/update_artist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
-        <?php echo $_smarty_tpl->getSubTemplate ("modals/delete_general.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+        <?php echo $_smarty_tpl->getSubTemplate ("modals/delete_artist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
 
-        <div class="row">
-            <div class="col-lg-11"></div>
-            <div class="col-lg-1">
-                <a href="#" data-target="#add_artist" data-toggle="modal"><button class="btn btn-info">Add Artist</button></a>
-            </div>
-        </div>
+        <a href="#" data-target="#add_artist" data-toggle="modal"><button class="btn btn-info">Add Artist</button></a>
 
+        <?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+        <?php if (($_smarty_tpl->tpl_vars['error']->value == true)) {?>
+            <?php echo '<script'; ?>
+>
+                $(document).ready(function(){
+                    $("#add_artist").modal();
+                });
+            <?php echo '</script'; ?>
+>
+        <?php }?>
+
+        <?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
+            <?php echo '<script'; ?>
+>
+                $(document).ready(function(){
+                    $("#submit").modal();
+                });
+            <?php echo '</script'; ?>
+>
+        <?php }?>
+    </div>
 </body>
 </html><?php }
 }

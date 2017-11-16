@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-03 13:19:36
+<?php /* Smarty version 3.1.27, created on 2017-11-16 17:08:50
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/user/profile.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:772385459fca528ee5e95_39881973%%*/
+/*%%SmartyHeaderCode:16656451505a0e0c7241c459_87195322%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e9ebcd27fa01326a8a05f34a472607a3bc2a1e3a' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/user/profile.tpl',
-      1 => 1509729398,
+      1 => 1510853657,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '772385459fca528ee5e95_39881973',
+  'nocache_hash' => '16656451505a0e0c7241c459_87195322',
+  'variables' => 
+  array (
+    'user' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fca528f388c0_41388879',
+  'unifunc' => 'content_5a0e0c7246c460_44217205',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fca528f388c0_41388879')) {
-function content_59fca528f388c0_41388879 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0e0c7246c460_44217205')) {
+function content_5a0e0c7246c460_44217205 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '772385459fca528ee5e95_39881973';
+$_smarty_tpl->properties['nocache_hash'] = '16656451505a0e0c7241c459_87195322';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +59,9 @@ $_smarty_tpl->properties['nocache_hash'] = '772385459fca528ee5e95_39881973';
         <img src="../../../assets/Images/NoProfilePic.jpg" height="300"/>
     </div>
     <div class="col-lg-offset-3">
-        <h3 id="userName">Matthew Bromley</h3>
+        <h3 id="userName"><?php echo $_smarty_tpl->tpl_vars['user']->value->First_Name;?>
+ <?php echo $_smarty_tpl->tpl_vars['user']->value->Last_Name;?>
+</h3>
         <div class="col-lg-offset-1">
             <a id="userNameLink" href="settings.php" id="editLink">Edit Profile</a>
         </div>
@@ -74,7 +80,9 @@ $_smarty_tpl->properties['nocache_hash'] = '772385459fca528ee5e95_39881973';
     <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade active in" id="AboutMe">
             <h2>Name</h2>
-            <p class="info">Matthew Bromley</p>
+            <p class="info"><?php echo $_smarty_tpl->tpl_vars['user']->value->First_Name;?>
+ <?php echo $_smarty_tpl->tpl_vars['user']->value->Last_Name;?>
+</p>
             <br>
 
             <h2>Birthday</h2>

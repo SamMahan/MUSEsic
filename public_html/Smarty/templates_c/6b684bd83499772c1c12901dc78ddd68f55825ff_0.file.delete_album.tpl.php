@@ -1,28 +1,28 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-16 16:14:13
-         compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/modals/delete_album.tpl" */ ?>
+<?php /* Smarty version 3.1.27, created on 2017-11-13 16:21:44
+         compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\modals\delete_album.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:12562748585a0dffa5a20033_98293845%%*/
+/*%%SmartyHeaderCode:11914342595a0a0ce8a3a277_22490688%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '524077bd7c803401de9697efcccbb5997fbaede3' => 
+    '6b684bd83499772c1c12901dc78ddd68f55825ff' => 
     array (
-      0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/modals/delete_album.tpl',
-      1 => 1510175701,
+      0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\modals\\delete_album.tpl',
+      1 => 1510607406,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12562748585a0dffa5a20033_98293845',
+  'nocache_hash' => '11914342595a0a0ce8a3a277_22490688',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0dffa5a24f76_43249590',
+  'unifunc' => 'content_5a0a0ce8a4c069_64976729',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0dffa5a24f76_43249590')) {
-function content_5a0dffa5a24f76_43249590 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0a0ce8a4c069_64976729')) {
+function content_5a0a0ce8a4c069_64976729 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '12562748585a0dffa5a20033_98293845';
+$_smarty_tpl->properties['nocache_hash'] = '11914342595a0a0ce8a3a277_22490688';
 ?>
 <div class="modal" id="delete_album">
     <div class="modal-dialog">

@@ -3,25 +3,10 @@ require_once "dbconfig.php";
 //takes in a name parameter
 //send back a list of users from the query
 function selectUsers($name){
-    $query = "SELECT * FROM user WHERE First_Name like ':n%'";
 
-    $db_name = DB_NAME;
-    $username = DB_USER;
-    $password = DB_PASSWORD;
+    global $pdo;
 
-    try {
-        /* PDO Syntax
-         * new PDO( dsn, username, password )
-         * dsn = Data Source Name ... for MySQL:
-         *     "mysql:dbname=name;host=localhost"
-         *     where "name" is the name of the database
-         */
-        $dsn = "mysql:" . "dbname=" . DB_NAME . ";" . "host=localhost";
-        $pdo = new PDO($dsn, $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-    } catch (PDOException $e) {
-        echo 'ERROR: ' . $e->getMessage();
-    }
+    $query = "SELECT * FROM User WHERE First_Name like ':n%'";
 
     $statement = $pdo->prepare($query);
     $statement->bindparam(":n", $name);
@@ -34,7 +19,7 @@ function selectUsers($name){
 
 function getSongs() {
     global $pdo;
-    $query = "SELECT * FROM song";
+    $query = "SELECT * FROM Song";
 
     $statement = $pdo->prepare($query);
     $statement->execute();
@@ -46,9 +31,10 @@ function getSongs() {
     return $list_of_songs;
 
 }
+/*<<<<<<< HEAD
 function register($password, $firstName, $lastName, $email, $isAdmin = false){
     global $pdo;
-    $q = "INSERT INTO User (Password, First_Name, Last_Name, Email, Is_Admin)
+    $q = "INSERT INTO user (Password, First_Name, Last_Name, Email, Is_Admin)
       VALUES(:p,:fn,:ln,:e,:ia)";
 echo $password.$firstName.$lastName.$email.$isAdmin;
     // $st = $pdo;
@@ -81,31 +67,16 @@ function login($email, $password){
     }else{
         return false;
     }
+=======
+>>>>>>> 249adff879bfabd88087b5320f2e5846f6762590*/
 
-}
 function getSongById($songKeyVal) {
-    $query = "SELECT * FROM song WHERE Song_ID like ':n%'";
 
-    $db_name = DB_NAME;
-    $username = DB_USER;
-    $password = DB_PASSWORD;
-
-    try {
-        /* PDO Syntax
-         * new PDO( dsn, username, password )
-         * dsn = Data Source Name ... for MySQL:
-         *     "mysql:dbname=name;host=localhost"
-         *     where "name" is the name of the database
-         */
-        $dsn = "mysql:" . "dbname=" . DB_NAME . ";" . "host=localhost";
-        $pdo = new PDO($dsn, $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-    } catch (PDOException $e) {
-        echo 'ERROR: ' . $e->getMessage();
-    }
+    global $pdo;
+    $query = "SELECT * FROM Song WHERE Song_ID like ':n%'";
 
     $statement = $pdo->prepare($query);
-    $statement->bindparam(":n", $songKeyVal);
+    $statement->bindParam(":n", $songKeyVal);
     $statement->execute();
 
     while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
@@ -117,26 +88,10 @@ function getSongById($songKeyVal) {
 }
 
 function getArtists() {
-    $query = "SELECT * FROM artist";
 
-    $db_name = DB_NAME;
-    $username = DB_USER;
-    $password = DB_PASSWORD;
+    global $pdo;
 
-    try {
-        /* PDO Syntax
-         * new PDO( dsn, username, password )
-         * dsn = Data Source Name ... for MySQL:
-         *     "mysql:dbname=name;host=localhost"
-         *     where "name" is the name of the database
-         */
-        $dsn = "mysql:" . "dbname=" . DB_NAME . ";" . "host=localhost";
-        $pdo = new PDO($dsn, $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-    } catch (PDOException $e) {
-        echo 'ERROR: ' . $e->getMessage();
-    }
-
+    $query = "SELECT * FROM Artist";
     $statement = $pdo->prepare($query);
     $statement->execute();
 
@@ -149,25 +104,9 @@ function getArtists() {
 }
 
 function getAlbums() {
-    $query = "SELECT * FROM album";
+    $query = "SELECT * FROM Album";
 
-    $db_name = DB_NAME;
-    $username = DB_USER;
-    $password = DB_PASSWORD;
-
-    try {
-        /* PDO Syntax
-         * new PDO( dsn, username, password )
-         * dsn = Data Source Name ... for MySQL:
-         *     "mysql:dbname=name;host=localhost"
-         *     where "name" is the name of the database
-         */
-        $dsn = "mysql:" . "dbname=" . DB_NAME . ";" . "host=localhost";
-        $pdo = new PDO($dsn, $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-    } catch (PDOException $e) {
-        echo 'ERROR: ' . $e->getMessage();
-    }
+    global $pdo;
 
     $statement = $pdo->prepare($query);
     $statement->execute();
@@ -179,19 +118,132 @@ function getAlbums() {
     return $list_of_albums;
 
 }
-/* used to populate the camelot database with a small list of songs. no longer in use now that they have been added
-global $pdo;
-$statement = $pdo->prepare("INSERT INTO genre (Genre_Name) VALUES ('Rrock'); INSERT INTO album (Album_Name, Genre_FK) VALUES('TestAlbum', 1);
-INSERT INTO song (Title, Album_FK) VALUES ('test-song', 3);
-INSERT INTO song (Title, Album_FK) VALUES ('test-song2', 3);
-INSERT INTO song (Title, Album_FK) VALUES ('test-song3', 3);
-INSERT INTO song (Title, Album_FK) VALUES ('test-song4', 3);");
-if($statement->execute()){
-    echo "got it!";
-}else{
-    echo"";
+
+
+function timeToSeconds($time) { // TEMPORARY
+
+    $time = explode(":", $time);
+    $total = $time[0] * 60 + $time[1];
+
+    return $total;
+
 }
-*/
 
+function timetoStandard($time) {
 
- ?>
+    $mins = floor($time / 60);
+    $secs = $time % 60;
+
+    $timearray = array($mins, $secs);
+
+    return implode(":", $timearray);
+}
+
+function addSong($title, $length, $artist_name, $album_name) {
+
+    global $pdo;
+
+    $length = timeToSeconds($length);
+
+    $sql2 = "SELECT Artist_ID FROM Artist WHERE Artist_Name = :arn";
+    $stmt2 = $pdo->prepare($sql2);
+    $stmt2->bindParam(":arn", $artist_name);
+    $stmt2->execute();
+    $artist = $stmt2->fetch(PDO::FETCH_ASSOC);
+    $artist_id = $artist["Artist_ID"];
+
+    $sql3 = "SELECT Album_ID FROM Album WHERE Album_Name = :aln";
+    $stmt3 = $pdo->prepare($sql3);
+    $stmt3->bindParam(":aln", $album_name);
+    $stmt3->execute();
+    $album = $stmt3->fetch(PDO::FETCH_ASSOC);
+    $album_id = $album["Album_ID"];
+
+    $sql = "INSERT INTO Song (Title, Length, Artist_FK, Album_FK) VALUES(:t,:l,:ar,:al)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(":t", $title);
+    $stmt->bindParam(":l", $length);
+    $stmt->bindParam(":ar", $artist_id);
+    $stmt->bindParam(":al", $album_id);
+
+    $stmt->execute();
+
+    return true;
+
+}
+
+function getSongArtist($artist_id) {
+
+    global $pdo;
+
+    $sql = "SELECT Artist_Name FROM Artist WHERE Artist_ID = :aid";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(":aid", $artist_id);
+
+    $stmt->execute();
+
+    $artist = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $artist["Artist_Name"];
+
+}
+
+function getSongAlbum($album_id) {
+
+    global $pdo;
+
+    $sql = "SELECT Album_Name FROM Album WHERE Album_ID = :aid";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(":aid", $album_id);
+
+    $stmt->execute();
+
+    $album = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $album["Album_Name"];
+
+}
+
+function addArtist($artist) {
+
+    global $pdo;
+
+    $sql = "INSERT INTO Artist (Artist_Name) VALUES (:an)";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(":an", $artist);
+
+    $stmt->execute();
+
+    return true;
+}
+
+function addAlbum($album) {
+
+    global $pdo;
+
+    $sql = "INSERT INTO Album (Album_Name, Genre_FK) VALUES (:an,5)";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(":an", $album);
+
+    $stmt->execute();
+
+    return true;
+}
+
+function sessioncheck(){
+
+    if(isset($_SESSION['user'])){
+        return $_SESSION['user'];
+    }
+    header("Location:".WEB_URL."/controllers/Logic/visitor/registration.php");
+
+    return false;
+}

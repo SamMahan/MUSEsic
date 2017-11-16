@@ -7,13 +7,9 @@ $modal = "";
 $error = false;
 $display = false;
 
-if ($_POST == null){
-
-}
-
 if (isset($_POST["artist_name"])){
-    foreach($_POST as $key=>$value){
-        if($value==="") {
+    foreach ($_POST as $key=>$value){
+        if ($value === "") {
             array_push($successArray, "has-warning");
             array_push($populateArray, "placeholder='**Information Required**'");
         }
@@ -36,6 +32,8 @@ if (isset($_POST["artist_name"])){
         $display = true;
         $successArray= new SplFixedArray(10);
         $populateArray=new SplFixedArray(10);
+
+        addArtist($_POST["artist_name"]);
 
     }
 

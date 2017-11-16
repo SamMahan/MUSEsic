@@ -59,4 +59,3 @@ $smarty->assign('modal', $modal);
 
 $smarty->display("albums/view_album.tpl");
 ?>
-?>

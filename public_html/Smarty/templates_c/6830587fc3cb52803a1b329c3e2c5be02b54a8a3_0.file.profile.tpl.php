@@ -1,9 +1,40 @@
+<?php /* Smarty version 3.1.27, created on 2017-11-15 20:05:32
+         compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\user\profile.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:5934983665a0ce45c4e5685_22328266%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '6830587fc3cb52803a1b329c3e2c5be02b54a8a3' => 
+    array (
+      0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\user\\profile.tpl',
+      1 => 1510794325,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '5934983665a0ce45c4e5685_22328266',
+  'variables' => 
+  array (
+    'display' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_5a0ce45c53bc91_13233012',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_5a0ce45c53bc91_13233012')) {
+function content_5a0ce45c53bc91_13233012 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '5934983665a0ce45c4e5685_22328266';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>ViewProfile</title>
-    {$smarty.const.RESOURCES}
+    <?php echo @constant('RESOURCES');?>
+
 
    <!-- <style>
         #userName {
@@ -18,7 +49,9 @@
 </head>
 <body>
 
-{include file="componants/navbar.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 
 
 <div class="col-lg-3">
@@ -26,7 +59,7 @@
         <img src="../../../assets/Images/NoProfilePic.jpg" height="300"/>
     </div>
     <div class="col-lg-offset-3">
-        <h3 id="userName">{$user->First_Name} {$user->Last_Name}</h3>
+        <h3 id="userName">Matthew Bromley</h3>
         <div class="col-lg-offset-1">
             <a id="userNameLink" href="settings.php" id="editLink">Edit Profile</a>
         </div>
@@ -45,7 +78,7 @@
     <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade active in" id="AboutMe">
             <h2>Name</h2>
-            <p class="info">{$user->First_Name} {$user->Last_Name}</p>
+            <p class="info">Matthew Bromley</p>
             <br>
 
             <h2>Birthday</h2>
@@ -330,7 +363,9 @@
                 </tr>
                 </tbody>
             </table>
-            {include file = "modals/create_playlist.tpl"}
+            <?php echo $_smarty_tpl->getSubTemplate ("modals/create_playlist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
             <a href="#" class="btn btn-success" data-target="#create_playlist" data-toggle="modal">+Create New Playlist</a>
         </div>
 
@@ -432,13 +467,19 @@
     </div>
 
 </div>
-{include file = "modals/submit.tpl"}
-{if ($display == true)}
-    <script>
+<?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+<?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
+    <?php echo '<script'; ?>
+>
         $(document).ready(function(){
             $("#submit").modal();
         });
-    </script>
-{/if}
+    <?php echo '</script'; ?>
+>
+<?php }?>
 </body>
-</html>
+</html><?php }
+}
+?>

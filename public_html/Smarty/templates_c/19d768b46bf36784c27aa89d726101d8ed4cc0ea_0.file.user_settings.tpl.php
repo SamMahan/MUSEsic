@@ -1,21 +1,58 @@
+<?php /* Smarty version 3.1.27, created on 2017-11-15 20:23:04
+         compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\user\user_settings.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:10551197155a0ce878a90464_28712526%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '19d768b46bf36784c27aa89d726101d8ed4cc0ea' => 
+    array (
+      0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\user\\user_settings.tpl',
+      1 => 1510795367,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '10551197155a0ce878a90464_28712526',
+  'variables' => 
+  array (
+    'successArray' => 0,
+    'display' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_5a0ce878ad6198_39044051',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_5a0ce878ad6198_39044051')) {
+function content_5a0ce878ad6198_39044051 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '10551197155a0ce878a90464_28712526';
+?>
 
 
 
 
-{$smarty.const.RESOURCES}
+<?php echo @constant('RESOURCES');?>
 
 
 
 
-{include file = "componants/navbar.tpl"}
-{include file = "modals/change_password.tpl"}
+
+<?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+<?php echo $_smarty_tpl->getSubTemplate ("modals/change_password.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 
     <div class="container">
         <div class="row justify-content-center">
 
 
             <div class="well col-lg 5">
-                <form class="form-horizontal user_form user_settings" method="post" action="{$smarty.const.WEB_PATH}settings.php">
+                <form class="form-horizontal user_form user_settings" method="post" action="<?php echo @constant('WEB_PATH');?>
+settings.php">
                     <fieldset>
                         <legend>Edit Profile</legend>
                         <div class="row justify-content-center">
@@ -27,17 +64,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-lg-7 {$successArray[0]}">
+                        <div class="form-group col-lg-7 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[0];?>
+">
                             <label class="control-label" for="first_name">First Name</label>
                             <input name="first_name" class="form-control" id="first_name" type="text" required="required">
                         </div>
 
-                        <div class="form-group col-lg-7 {$successArray[1]}">
+                        <div class="form-group col-lg-7 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[1];?>
+">
                             <label class="control-label" for="last_name">Last Name</label>
                             <input name="last_name" class="form-control" id="last_name" type="text" required="required">
                         </div>
 
-                        <div class="form-group col-lg-7 {$successArray[2]}">
+                        <div class="form-group col-lg-7 <?php echo $_smarty_tpl->tpl_vars['successArray']->value[2];?>
+">
                             <label class="control-label" for="email">E-mail</label>
                             <input name="email" class="form-control" id="email" type="text" required="required">
                         </div>
@@ -79,12 +119,19 @@
         </div>
     </div>
 
-{include file = "modals/submit.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
 
-{if ($display == true)}
-    <script>
+
+<?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
+    <?php echo '<script'; ?>
+>
         $(document).ready(function(){
             $("#submit").modal();
         });
-    </script>
-{/if}
+    <?php echo '</script'; ?>
+>
+<?php }
+}
+}
+?>

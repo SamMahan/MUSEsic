@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-04 21:04:43
+<?php /* Smarty version 3.1.27, created on 2017-11-15 19:28:03
          compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\artists\view_artist.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:135992431159fe63ab4e8c60_38046263%%*/
+/*%%SmartyHeaderCode:1117896465a0cdb937d2909_83381371%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0467eb2176a32b86e67f059ae0b8e1791587ca75' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\artists\\view_artist.tpl',
-      1 => 1509843881,
+      1 => 1510792081,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '135992431159fe63ab4e8c60_38046263',
+  'nocache_hash' => '1117896465a0cdb937d2909_83381371',
   'variables' => 
   array (
     'error' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_59fe63ab52b167_29000196',
+  'unifunc' => 'content_5a0cdb9381f5f5_81603201',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_59fe63ab52b167_29000196')) {
-function content_59fe63ab52b167_29000196 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0cdb9381f5f5_81603201')) {
+function content_5a0cdb9381f5f5_81603201 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '135992431159fe63ab4e8c60_38046263';
+$_smarty_tpl->properties['nocache_hash'] = '1117896465a0cdb937d2909_83381371';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -259,10 +259,13 @@ $_smarty_tpl->properties['nocache_hash'] = '135992431159fe63ab4e8c60_38046263';
         <h2>
             Submit your own review!
         </h2>
-        <form>
-                    <textarea name="review" rows="8" cols="70">
-                        Submit your own review here for all to see!
-                    </textarea>
+        <form method="post" action="<?php echo @constant('WEB_PATH');?>
+view_artist.php">
+            <fieldset>
+                <div class="form-group">
+                    <label for="text_review">Write A Review</label>
+                    <textarea class="form-control" id="text_review" rows="3" name="review" required="required"></textarea>
+                </div>
             <div class="form-group ">
                 <label for="star_rating">
                     How many stars do you give this artist?
@@ -285,7 +288,8 @@ $_smarty_tpl->properties['nocache_hash'] = '135992431159fe63ab4e8c60_38046263';
                     </option>
                 </select>
             </div>
-            <input type="submit" value="Submit"/>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+            </fieldset>
         </form>
     </div>
 </div>
