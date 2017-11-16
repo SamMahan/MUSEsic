@@ -227,7 +227,6 @@
                 </div>
 
         <form>
-                    <textarea name="review" rows="8" cols="70" placeholder="Submit your own review here for all to see!"></textarea>
 
             <div class="form-group ">
                 <label for="star_rating">
