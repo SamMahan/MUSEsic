@@ -26,7 +26,7 @@
         <img src="../../../assets/Images/NoProfilePic.jpg" height="300"/>
     </div>
     <div class="col-lg-offset-3">
-        <h3 id="userName">Matthew Bromley</h3>
+        <h3 id="userName">{$user->First_Name} {$user->Last_Name}</h3>
         <div class="col-lg-offset-1">
             <a id="userNameLink" href="settings.php" id="editLink">Edit Profile</a>
         </div>
@@ -45,7 +45,7 @@
     <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade active in" id="AboutMe">
             <h2>Name</h2>
-            <p class="info">Matthew Bromley</p>
+            <p class="info">{$user->First_Name} {$user->Last_Name}</p>
             <br>
 
             <h2>Birthday</h2>

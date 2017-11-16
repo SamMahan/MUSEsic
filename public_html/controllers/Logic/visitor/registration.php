@@ -8,11 +8,11 @@ $successArray=array();
 $populateArray=array();
 $lsuccessArray = array();
 $lpopulateArray = array();
-$loginComplete;
-$registerComplete;
-$loginSuccess;
+$loginComplete = false;
+$registerComplete = false;
+$loginSuccess = false;
 $registerSuccess;
-$loginModalActivate = "";
+$loginModalActive = "";
 
 
 
@@ -55,22 +55,25 @@ if ($_POST != null){
 }
 //if form complete, sends and checks it against database
 if($registerComplete == true && $_POST["password"] == $_POST['confirm-password']){
-    echo  $_POST["password"]." ".$_POST['confirm-password'];
-    $registerSuccess = register($_POST["password"], $_POST['first_name'], $_POST['last_name'], $_POST['email'], false);
+    echo  $_POST["password"]." ".$_POST['confirm-password'] . "this is the registration page";
+    $registerSuccess = User::create($_POST['first_name'], $_POST['last_name'],$_POST["password"], $_POST['email'], false);
     if($registerSuccess != false){
-        $successArray = SplFixedArray(10);
-        $populateArray = SplFixedArray(10);
+        $successArray = Array(10);
+        $populateArray = Array(10);
+        $_SESSION['user'] = $registerSuccess->User_ID;
+        header("Location:".WEB_URL."controllers/Logic/user/home.php");
     }else{
+
 
     }
 
 }
 //if login form complete
 if($loginComplete === true){
-    $loginSuccess = login($_POST['login-email'], $_POST['login-password']);
+    $loginSuccess = User::login($_POST['login-email'], $_POST['login-password']);
         if($loginSuccess!= false){
             $loginModalActive = "";
-        header("Location:".WEB_URL."/controllers/Logic/user/home.php");
+        header("Location:".WEB_URL."controllers/Logic/user/home.php");
         $loginModalActive ="";
         $lsuccessArray = SplFixedArray(10);
         $lpopulateArray = SplFixedArray(10);
@@ -84,10 +87,10 @@ $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
 $smarty->assign("lsuccessArray", $lsuccessArray);
 $smarty->assign("lpopulateArray", $lpopulateArray);
-$smarty->assign('modal', $modal);
+//$smarty->assign('modal', $modal);
 $smarty->assign("loginModalActive", $loginModalActive);
 
-$smarty->display("visitor/registration.tpl") == false;
+$smarty->display("visitor/registration.tpl");
 
 
 ?>

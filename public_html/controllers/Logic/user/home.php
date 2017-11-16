@@ -1,8 +1,12 @@
 <?PHP
 
 
-require_once "../../../../private_html/config.inc.php";
+    require_once "../../../../private_html/config.inc.php";
+    $userId = sessioncheck();
 
-$smarty->display("user/profile.tpl");
+        $user = new User($userId);
+        $smarty->assign("user", $user);
+        $smarty->display("user/profile.tpl");
+
 
 ?>

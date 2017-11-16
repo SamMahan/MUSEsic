@@ -16,7 +16,7 @@ if (!ini_get('display_errors')) {
     ini_set('display_errors', '1');
 }
 $local = true;
-error_reporting(E_ERROR);
+error_reporting(E_ALL);
 
 ini_set('max_execution_time', 300);
 ini_set("allow_url_include",1);
@@ -64,12 +64,12 @@ define('WEB_URL', webRoot()."public_html");
 //*/
 
 define('PUBLIC_PATH', BASE_PATH . 'public_html/');
-define('WEB_URL', webRoot().DIRECTORY_SEPARATOR."public_html".DIRECTORY_SEPARATOR);
+define('WEB_URL', webRoot()."public_html".DIRECTORY_SEPARATOR);
 //*/
 
 #
 # Set PHP configuration options
-define('CLASS_ROOT', BASE_PATH . 'public_html/class/');
+define('CLASS_ROOT', BASE_PATH . 'private_html/class/');
 #
 # Set common constants
 define('PRIVATE_PATH', BASE_PATH . 'private_html'.DIRECTORY_SEPARATOR);

@@ -46,43 +46,7 @@ function getSongs() {
     return $list_of_songs;
 
 }
-function register($password, $firstName, $lastName, $email, $isAdmin = false){
-    global $pdo;
-    $q = "INSERT INTO User (Password, First_Name, Last_Name, Email, Is_Admin)
-      VALUES(:p,:fn,:ln,:e,:ia)";
-echo $password.$firstName.$lastName.$email.$isAdmin;
-    // $st = $pdo;
-    $st = $pdo->prepare($q);
-    $st->bindParam(":p", $password);
-    $st->bindParam(":fn", $firstName);
-    $st->bindParam(":ln", $lastName);
-    $st->bindParam(":e", $email);
-    $st->bindParam(":ia", $isAdmin);
-    if($st->execute() == true){
-        echo "true!!";
-    }else{
-        echo "nope!";
-    }
-}
-function login($email, $password){
-    global $pdo;
-    $q = "SELECT First_Name FROM user WHERE Email = :e AND Password = :p";
 
-    // $st = $pdo;
-    $st = $pdo->prepare($q);
-    $st->bindParam(":p", $password);
-
-    $st->bindParam(":e", $email);
-
-    $st->execute();
-    $row = $st->fetch(PDO::FETCH_ASSOC);
-    if(isset($row['First_Name'])){
-        return true;
-    }else{
-        return false;
-    }
-
-}
 function getSongById($songKeyVal) {
     $query = "SELECT * FROM song WHERE Song_ID like ':n%'";
 
@@ -206,7 +170,7 @@ function addSong($title, $length) {
 
     global $pdo;
 
-    $sql = "INSERT INTO Song (Title, Length) VALUES(:t,:l)";
+    $sql = "INSERT INTO Song.class (Title, Length) VALUES(:t,:l)";
 
     $stmt = $pdo->prepare($sql);
 
@@ -215,6 +179,13 @@ function addSong($title, $length) {
 
     $stmt->execute();
 
+
+}
+function sessioncheck(){
+    if(isset($_SESSION['user'])){
+        return $_SESSION['user'];
+    }
+    header("Location:".WEB_URL."/controllers/Logic/user/home.php");
 
 }
 

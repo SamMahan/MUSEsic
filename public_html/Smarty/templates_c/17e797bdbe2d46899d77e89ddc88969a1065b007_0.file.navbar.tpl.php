@@ -1,28 +1,28 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-13 17:05:21
+<?php /* Smarty version 3.1.27, created on 2017-11-13 17:20:44
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\componants\navbar.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:5108185285a0a172126c211_49016116%%*/
+/*%%SmartyHeaderCode:1567019475a0a1abc224181_28616505%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'ba53b27fdfce81e0935fd3b5a637e7cad34bc837' => 
+    '17e797bdbe2d46899d77e89ddc88969a1065b007' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\componants\\navbar.tpl',
       1 => 1510609564,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5108185285a0a172126c211_49016116',
+  'nocache_hash' => '1567019475a0a1abc224181_28616505',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0a17212daa08_23151265',
+  'unifunc' => 'content_5a0a1abc230494_81217447',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0a17212daa08_23151265')) {
-function content_5a0a17212daa08_23151265 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0a1abc230494_81217447')) {
+function content_5a0a1abc230494_81217447 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '5108185285a0a172126c211_49016116';
+$_smarty_tpl->properties['nocache_hash'] = '1567019475a0a1abc224181_28616505';
 ?>
 
     <nav class="navbar navbar-default">

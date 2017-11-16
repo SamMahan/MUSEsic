@@ -1,9 +1,40 @@
+<?php /* Smarty version 3.1.27, created on 2017-11-16 10:19:23
+         compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\user\profile.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:14284675965a0dac7b21f418_75334298%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '08ad8f9f9305da6d13a84d0b3605c1831188ac4c' => 
+    array (
+      0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\user\\profile.tpl',
+      1 => 1510845554,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '14284675965a0dac7b21f418_75334298',
+  'variables' => 
+  array (
+    'user' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_5a0dac7b2b4d75_28642089',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_5a0dac7b2b4d75_28642089')) {
+function content_5a0dac7b2b4d75_28642089 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '14284675965a0dac7b21f418_75334298';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>ViewProfile</title>
-    {$smarty.const.RESOURCES}
+    <?php echo @constant('RESOURCES');?>
+
 
    <!-- <style>
         #userName {
@@ -18,7 +49,9 @@
 </head>
 <body>
 
-{include file="componants/navbar.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 
 
 <div class="col-lg-3">
@@ -26,7 +59,9 @@
         <img src="../../../assets/Images/NoProfilePic.jpg" height="300"/>
     </div>
     <div class="col-lg-offset-3">
-        <h3 id="userName">{$user->First_Name} {$user->Last_Name}</h3>
+        <h3 id="userName"><?php echo $_smarty_tpl->tpl_vars['user']->value->First_Name;?>
+ <?php echo $_smarty_tpl->tpl_vars['user']->value->Last_Name;?>
+</h3>
         <div class="col-lg-offset-1">
             <a id="userNameLink" href="settings.php" id="editLink">Edit Profile</a>
         </div>
@@ -45,7 +80,9 @@
     <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade active in" id="AboutMe">
             <h2>Name</h2>
-            <p class="info">{$user->First_Name} {$user->Last_Name}</p>
+            <p class="info"><?php echo $_smarty_tpl->tpl_vars['user']->value->First_Name;?>
+ <?php echo $_smarty_tpl->tpl_vars['user']->value->Last_Name;?>
+</p>
             <br>
 
             <h2>Birthday</h2>
@@ -469,4 +506,6 @@
     </div>
 
 </body>
-</html>
+</html><?php }
+}
+?>
