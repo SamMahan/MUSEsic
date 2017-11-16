@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-09 18:27:51
+<?php /* Smarty version 3.1.27, created on 2017-11-16 16:14:13
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:19550713365a04e477d94d16_81083441%%*/
+/*%%SmartyHeaderCode:19646641615a0dffa59869a9_16096941%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '956c6b27dfe102c6e6c318612c8a137629f600f5' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl',
-      1 => 1510267224,
+      1 => 1510271236,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19550713365a04e477d94d16_81083441',
+  'nocache_hash' => '19646641615a0dffa59869a9_16096941',
   'variables' => 
   array (
     'listOfAlbums' => 0,
@@ -23,13 +23,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a04e477f3a1f8_47224893',
+  'unifunc' => 'content_5a0dffa59f3584_18921123',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a04e477f3a1f8_47224893')) {
-function content_5a04e477f3a1f8_47224893 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0dffa59f3584_18921123')) {
+function content_5a0dffa59f3584_18921123 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '19550713365a04e477d94d16_81083441';
+$_smarty_tpl->properties['nocache_hash'] = '19646641615a0dffa59869a9_16096941';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +81,7 @@ $foreach_value_Sav = $_smarty_tpl->tpl_vars['value'];
 ?>
         <tr>
             <td><a href="<?php echo @constant('WEB_PATH');?>
-view_album.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value["Album_Name"];?>
+view_album.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value["Album_ID"];?>
 "><?php echo $_smarty_tpl->tpl_vars['value']->value["Album_Name"];?>
 </a></td>
             <td>--</td>

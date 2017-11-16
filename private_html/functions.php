@@ -91,21 +91,35 @@ function timeToSeconds($time) { // TEMPORARY
 
 }
 
+function timetoStandard($time) {
+
+    $mins = floor($time / 60);
+    $secs = $time % 60;
+
+    $timearray = array($mins, $secs);
+
+    return implode(":", $timearray);
+}
+
 function addSong($title, $length, $artist_name, $album_name) {
 
     global $pdo;
 
     $length = timeToSeconds($length);
 
-    $sql2 = "SELECT Artist_ID FROM Artist WHERE Artist_Name = ':arn'";
+    $sql2 = "SELECT Artist_ID FROM Artist WHERE Artist_Name = :arn";
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->bindParam(":arn", $artist_name);
-    $artist_id = $stmt2->execute();
+    $stmt2->execute();
+    $artist = $stmt2->fetch(PDO::FETCH_ASSOC);
+    $artist_id = $artist["Artist_ID"];
 
-    $sql3 = "SELECT Album_ID FROM Album WHERE Album_Name = ':aln'";
+    $sql3 = "SELECT Album_ID FROM Album WHERE Album_Name = :aln";
     $stmt3 = $pdo->prepare($sql3);
     $stmt3->bindParam(":aln", $album_name);
-    $album_id = $stmt3->execute();
+    $stmt3->execute();
+    $album = $stmt3->fetch(PDO::FETCH_ASSOC);
+    $album_id = $album["Album_ID"];
 
     $sql = "INSERT INTO Song (Title, Length, Artist_FK, Album_FK) VALUES(:t,:l,:ar,:al)";
     $stmt = $pdo->prepare($sql);
@@ -120,6 +134,42 @@ function addSong($title, $length, $artist_name, $album_name) {
 
 }
 
+function getSongArtist($artist_id) {
+
+    global $pdo;
+
+    $sql = "SELECT Artist_Name FROM Artist WHERE Artist_ID = :aid";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(":aid", $artist_id);
+
+    $stmt->execute();
+
+    $artist = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $artist["Artist_Name"];
+
+}
+
+function getSongAlbum($album_id) {
+
+    global $pdo;
+
+    $sql = "SELECT Album_Name FROM Album WHERE Album_ID = :aid";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(":aid", $album_id);
+
+    $stmt->execute();
+
+    $album = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $album["Album_Name"];
+
+}
+
 function addArtist($artist) {
 
     global $pdo;
@@ -129,6 +179,21 @@ function addArtist($artist) {
     $stmt = $pdo->prepare($sql);
 
     $stmt->bindParam(":an", $artist);
+
+    $stmt->execute();
+
+    return true;
+}
+
+function addAlbum($album) {
+
+    global $pdo;
+
+    $sql = "INSERT INTO Album (Album_Name, Genre_FK) VALUES (:an,5)";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(":an", $album);
 
     $stmt->execute();
 

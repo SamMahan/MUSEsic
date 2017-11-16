@@ -17,6 +17,7 @@
 <body>
 
 {include file = "componants/navbar.tpl"}
+{include file = "modals/delete_song.tpl"}
 
 <div class="container">
     <div class="row">
@@ -36,9 +37,9 @@
             <tr>
 
                 <td> <a href="{$smarty.const.WEB_PATH}view.php?key={$value["Song_ID"]}">{$value["Title"]}</a></td>
-                <td>{$value["Artist_FK"]}</td>
-                <td>{$value["Album_FK"]}</td>
-                <td>{$value["Length"]}</td>
+                <td>{getSongArtist($value["Artist_FK"])}</td>
+                <td>{getSongAlbum($value["Album_FK"])}</td>
+                <td>{timeToStandard($value["Length"])}</td>
                 <td><a href="#" data-target="#delete_song" data-toggle="modal"><button class="btn btn-danger">Delete</button></a></td>
             </tr>
         {/foreach}
