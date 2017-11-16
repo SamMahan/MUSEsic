@@ -188,6 +188,22 @@ function addSong($title, $length, $artist_id, $album_id) {
     return true;
 
 }
+
+function addArtist($artist) {
+
+    global $pdo;
+
+    $sql = "INSERT INTO Artist (Artist_Name) VALUES (:an)";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(":an", $artist);
+
+    $stmt->execute();
+
+    return true;
+}
+
 function sessioncheck(){
     if(isset($_SESSION['user'])){
         return $_SESSION['user'];
