@@ -111,13 +111,14 @@ $smarty->setCacheDir(SMARTY_ROOT . 'cache');
 $smarty->setConfigDir(SMARTY_ROOT . 'configs');
 $smarty->assign('WEB_URL', WEB_URL);
 
+require_once "constants.php";
+require_once "dbconfig.php";
+require_once "functions.php";
+
 function myAutoload($class) {
     require CLASS_ROOT . $class . '.class.php';
 }
 
-require_once "constants.php";
-require_once "dbconfig.php";
-require_once "functions.php";
 
 spl_autoload_register('myAutoload');
 
