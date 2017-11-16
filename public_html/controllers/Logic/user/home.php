@@ -1,5 +1,5 @@
 <?PHP
-
+session_start();
 
     require_once "../../../../private_html/config.inc.php";
     $userId = sessioncheck();

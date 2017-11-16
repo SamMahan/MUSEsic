@@ -18,20 +18,23 @@ $loginModalActive = "";
 
 
 
-
+echo "start";
 if ($_POST != null){
     if(isset($_POST["first_name"])) {
+        echo"2nd start";
         $registerComplete = true;
         foreach ($_POST as $key => $value) {
 
             if ($value === "") {
                 array_push($successArray, "has-warning");
             $registerComplete = false;
+            echo "bad register";
                 array_push($populateArray, "this has nothing");
 
             } elseif ($value != "") {
                 array_push($successArray, "has-success");
                 array_push($populateArray, "value=" . $value);
+                echo "good register";
 
             }
         }
@@ -49,17 +52,19 @@ if ($_POST != null){
                 array_push($lpopulateArray, "value=" . $value);
 
 
+
             }
         }
     }
 }
+
 //if form complete, sends and checks it against database
+
+echo "THIS IS REGISTER".$registerComplete;
 if($registerComplete == true && $_POST["password"] == $_POST['confirm-password']){
-    echo  $_POST["password"]." ".$_POST['confirm-password'] . "this is the registration page";
+    echo "this is the registration page";
     $registerSuccess = User::create($_POST['first_name'], $_POST['last_name'],$_POST["password"], $_POST['email'], false);
     if($registerSuccess != false){
-        $successArray = Array(10);
-        $populateArray = Array(10);
         $_SESSION['user'] = $registerSuccess->User_ID;
         header("Location:".WEB_URL."controllers/Logic/user/home.php");
     }else{

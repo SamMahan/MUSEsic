@@ -114,9 +114,9 @@ class User
         $st->bindParam(":p", $Password);
         $st->bindParam(":e", $Email);
         $st->bindParam(":ia", $IsAdmin);
-        $st->execute();
+        echo $st->execute();
         if($User = new User($pdo->lastInsertId ())){
-            echo "true!!";
+            echo "true";
             return $User;
         }else{
             echo "login failure";
