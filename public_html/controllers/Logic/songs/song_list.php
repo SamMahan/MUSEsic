@@ -29,11 +29,7 @@ if (isset($_POST["song_name"])) {
         $successArray = new SplFixedArray(10);
         $populateArray = new SplFixedArray(10);
 
-     if(addSong($_POST["song_name"], $_POST["length"], $_POST["artist"], $_POST["album"]) != false){
-         echo "database query works";
-     }else{
-         echo " database broken";
-     }
+     addSong($_POST["song_name"], $_POST["length"], $_POST["artist"], $_POST["album"]);
 
     }
 } else {
