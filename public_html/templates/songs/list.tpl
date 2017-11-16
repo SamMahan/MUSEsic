@@ -48,7 +48,7 @@
     </div>
     {include file="modals/create_song.tpl"}
 
-    <a href="#" data-target="#create_song" data-toggle="modal"><button class="btn btn-success">Add Song</button></a>
+    <a href="#" data-target="#create_song" data-toggle="modal"><button class="btn btn-info">Add Song</button></a>
     {include file="modals/add_to_album.tpl"}
 
     <div class="modal" id="add_to_playlist">

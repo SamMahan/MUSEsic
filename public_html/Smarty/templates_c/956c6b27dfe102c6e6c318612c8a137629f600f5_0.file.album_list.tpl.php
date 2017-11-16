@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-16 16:14:13
+<?php /* Smarty version 3.1.27, created on 2017-11-16 17:13:40
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:19646641615a0dffa59869a9_16096941%%*/
+/*%%SmartyHeaderCode:4123347275a0e0d94132b99_05697038%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '956c6b27dfe102c6e6c318612c8a137629f600f5' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/albums/album_list.tpl',
-      1 => 1510271236,
+      1 => 1510870404,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19646641615a0dffa59869a9_16096941',
+  'nocache_hash' => '4123347275a0e0d94132b99_05697038',
   'variables' => 
   array (
     'listOfAlbums' => 0,
@@ -23,13 +23,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0dffa59f3584_18921123',
+  'unifunc' => 'content_5a0e0d941b5484_71858018',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0dffa59f3584_18921123')) {
-function content_5a0dffa59f3584_18921123 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0e0d941b5484_71858018')) {
+function content_5a0e0d941b5484_71858018 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '19646641615a0dffa59869a9_16096941';
+$_smarty_tpl->properties['nocache_hash'] = '4123347275a0e0d94132b99_05697038';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,20 +54,21 @@ $_smarty_tpl->properties['nocache_hash'] = '19646641615a0dffa59869a9_16096941';
 ?>
 
 
+<div class="container">
+    <div class="row">
+        <table class="table tblData">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Artist Name</th>
+                    <th>Number of Songs</th>
+                    <th>Total Play Time</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Artist Name</th>
-        <th>Number of Songs</th>
-        <th>Total Play Time</th>
-        <th></th>
-    </tr>
-    </thead>
-    <tbody>
-
-    <?php
+            <?php
 $_from = $_smarty_tpl->tpl_vars['listOfAlbums']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
@@ -79,59 +80,56 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['value']->_loop = true;
 $foreach_value_Sav = $_smarty_tpl->tpl_vars['value'];
 ?>
-        <tr>
-            <td><a href="<?php echo @constant('WEB_PATH');?>
+                <tr>
+                    <td><a href="<?php echo @constant('WEB_PATH');?>
 view_album.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value["Album_ID"];?>
 "><?php echo $_smarty_tpl->tpl_vars['value']->value["Album_Name"];?>
 </a></td>
-            <td>--</td>
-            <td>--</td>
-            <td>--</td>
-            <td><a href="#" data-target="#delete_album" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><!--<a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a>--></td>
-        </tr>
-    <?php
+                    <td>--</td>
+                    <td>--</td>
+                    <td>--</td>
+                    <td><a href="#" data-target="#delete_album" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><!--<a href="#" data-target="#update_album" data-toggle="modal"><button class="btn btn-default">Update</button></a>--></td>
+                </tr>
+            <?php
 $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
 }
 ?>
 
-    </tbody>
-</table>
-
-<div class="row">
-    <div class="col-lg-11"></div>
-    <div class="col-lg-1">
-        <a href="#" data-target="#create_album" data-toggle="modal"><button class="btn btn-info">Add Album</button></a>
+            </tbody>
+        </table>
     </div>
+
+    <a href="#" data-target="#create_album" data-toggle="modal"><button class="btn btn-info">Add Album</button></a>
+
+    <?php echo $_smarty_tpl->getSubTemplate ("modals/create_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+    <?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+
+    <?php if (($_smarty_tpl->tpl_vars['error']->value == true)) {?>
+        <?php echo '<script'; ?>
+>
+            $(document).ready(function(){
+                $("#create_album").modal();
+            });
+        <?php echo '</script'; ?>
+>
+    <?php }?>
+
+    <?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
+        <?php echo '<script'; ?>
+>
+            $(document).ready(function(){
+                $("#submit").modal();
+            });
+        <?php echo '</script'; ?>
+>
+    <?php }?>
 </div>
-
-<?php echo $_smarty_tpl->getSubTemplate ("modals/create_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
-?>
-
-<?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
-?>
-
-
-<?php if (($_smarty_tpl->tpl_vars['error']->value == true)) {?>
-    <?php echo '<script'; ?>
->
-        $(document).ready(function(){
-            $("#create_album").modal();
-        });
-    <?php echo '</script'; ?>
->
-<?php }?>
-
-<?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
-    <?php echo '<script'; ?>
->
-        $(document).ready(function(){
-            $("#submit").modal();
-        });
-    <?php echo '</script'; ?>
->
-<?php }?>
-
 </body>
+</html>
 <?php }
 }
 ?>
