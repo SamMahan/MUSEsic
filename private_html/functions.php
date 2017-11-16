@@ -31,44 +31,7 @@ function getSongs() {
     return $list_of_songs;
 
 }
-/*<<<<<<< HEAD
-function register($password, $firstName, $lastName, $email, $isAdmin = false){
-    global $pdo;
-    $q = "INSERT INTO user (Password, First_Name, Last_Name, Email, Is_Admin)
-      VALUES(:p,:fn,:ln,:e,:ia)";
-echo $password.$firstName.$lastName.$email.$isAdmin;
-    // $st = $pdo;
-    $st = $pdo->prepare($q);
-    $st->bindParam(":p", $password);
-    $st->bindParam(":fn", $firstName);
-    $st->bindParam(":ln", $lastName);
-    $st->bindParam(":e", $email);
-    $st->bindParam(":ia", $isAdmin);
-    if($st->execute() == true){
-        echo "true!!";
-    }else{
-        echo "nope!";
-    }
-}
-function login($email, $password){
-    global $pdo;
-    $q = "SELECT First_Name FROM user WHERE Email = :e AND Password = :p";
 
-    // $st = $pdo;
-    $st = $pdo->prepare($q);
-    $st->bindParam(":p", $password);
-
-    $st->bindParam(":e", $email);
-
-    $st->execute();
-    $row = $st->fetch(PDO::FETCH_ASSOC);
-    if(isset($row['First_Name'])){
-        return true;
-    }else{
-        return false;
-    }
-=======
->>>>>>> 249adff879bfabd88087b5320f2e5846f6762590*/
 
 function getSongById($songKeyVal) {
 
@@ -127,6 +90,7 @@ function timeToSeconds($time) { // TEMPORARY
 
     return $total;
 
+
 }
 
 function timetoStandard($time) {
@@ -171,6 +135,7 @@ function addSong($title, $length, $artist_name, $album_name) {
     return true;
 
 }
+
 
 function getSongArtist($artist_id) {
 

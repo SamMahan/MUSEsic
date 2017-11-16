@@ -1,6 +1,6 @@
 <?PHP
 
-<<<<<<< HEAD
+
 require_once "../../../../private_html/config.inc.php";
 $successArray=array();
 $populateArray=array();
@@ -35,16 +35,16 @@ if (isset($_POST["playlist_name"])) {
 } else{
     $successArray= new SplFixedArray(10);
     $populateArray=new SplFixedArray(10);
-=======
 
-    require_once "../../../../private_html/config.inc.php";
+
+
     $userId = sessioncheck();
 
         $user = new User($userId);
         $smarty->assign("user", $user);
         $smarty->display("user/profile.tpl");
 
->>>>>>> 249adff879bfabd88087b5320f2e5846f6762590
+
 
 }
 $smarty->assign("error", $error);
