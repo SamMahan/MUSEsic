@@ -156,29 +156,35 @@
                 <h2>
                     Submit your own review!
                 </h2>
-                <form>
-                    <textarea name="review" rows="8" cols="70" placeholder="Submit your own review here for all to see!"></textarea>
+
+                <form method="post" action="{$smarty.const.WEB_PATH}view_album.php">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="text_review">Write A Review</label>
+                            <textarea class="form-control" id="text_review" rows="3" name="review" required="required"></textarea>
+                        </div>
+
                     <div class="form-group ">
                         <label for="star_rating">
                         How many stars do you give this artist?
                     </label>
                         <select class="select form-control" id="star_rating" name="star_rating">
-                        <option value="One Star">
-                            One Star
-                        </option>
-                        <option value="Two Stars">
-                            Two Stars
-                        </option>
-                        <option value="Three Stars">
-                            Three Stars
-                        </option>
-                        <option value="Four Stars">
-                            Four Stars
-                        </option>
-                        <option value="Five Stars">
-                            Five Stars
-                        </option>
-                    </select>
+                            <option value="One Star">
+                                One Star
+                            </option>
+                            <option value="Two Stars">
+                                Two Stars
+                            </option>
+                            <option value="Three Stars">
+                                Three Stars
+                            </option>
+                            <option value="Four Stars">
+                                Four Stars
+                            </option>
+                            <option value="Five Stars">
+                                Five Stars
+                            </option>
+                        </select>
                     </div>
                     <input type="submit" value="Submit" class="btn btn-success" />
                 </form>
@@ -189,6 +195,7 @@
    {include file = "modals/update_album.tpl"}
 
    {include file = "modals/submit.tpl"}
+
    {if ($error == true)}
        <script>
            $(document).ready(function(){

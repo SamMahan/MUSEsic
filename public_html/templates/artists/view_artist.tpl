@@ -226,8 +226,6 @@
                     <textarea class="form-control" id="text_review" rows="3" name="review" required="required"></textarea>
                 </div>
 
-        <form>
-
             <div class="form-group ">
                 <label for="star_rating">
                     How many stars do you give this artist?
@@ -258,6 +256,7 @@
 </div>
 
 {include file = "modals/update_artist.tpl"}
+
 {include file = "modals/submit.tpl"}
 
 {if ($error == true)}
@@ -277,4 +276,5 @@
 {/if}
 
 </body>
+
 </html>

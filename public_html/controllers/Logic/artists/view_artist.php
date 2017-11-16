@@ -62,8 +62,10 @@ else{
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
 $smarty->assign('pageTarget', "view_album");
+
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
+
 $smarty->assign('modal', $modal);
 
 
