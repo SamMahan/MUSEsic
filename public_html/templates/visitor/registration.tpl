@@ -84,7 +84,7 @@ registration page -->
                         <button type="submit" class="btn btn-primary">Login</button>
                         
                     </form>
-                    <a href ="../../../Controllers/Logic/User/home.php"><button >temp login access</button></a>
+                    <a href ="../../../Controllers/Logic/user/home.php"><button >temp login access</button></a>
                 </div>
 
                 <div class="modal-footer">

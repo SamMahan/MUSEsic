@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-16 17:08:50
+<?php /* Smarty version 3.1.27, created on 2017-11-16 17:53:14
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/user/profile.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:16656451505a0e0c7241c459_87195322%%*/
+/*%%SmartyHeaderCode:4035187355a0e16da54cce6_59631035%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,24 +9,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e9ebcd27fa01326a8a05f34a472607a3bc2a1e3a' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/user/profile.tpl',
-      1 => 1510853657,
+      1 => 1510872750,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '16656451505a0e0c7241c459_87195322',
+  'nocache_hash' => '4035187355a0e16da54cce6_59631035',
   'variables' => 
   array (
     'user' => 0,
+    'display' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0e0c7246c460_44217205',
+  'unifunc' => 'content_5a0e16da5b9b25_75600093',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0e0c7246c460_44217205')) {
-function content_5a0e0c7246c460_44217205 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0e16da5b9b25_75600093')) {
+function content_5a0e16da5b9b25_75600093 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '16656451505a0e0c7241c459_87195322';
+$_smarty_tpl->properties['nocache_hash'] = '4035187355a0e16da54cce6_59631035';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -367,7 +368,10 @@ $_smarty_tpl->properties['nocache_hash'] = '16656451505a0e0c7241c459_87195322';
                 </tr>
                 </tbody>
             </table>
-            <a href="#" class="btn btn-success" data-target="#create-playlist" data-toggle="modal">+Create New Playlist</a>
+            <?php echo $_smarty_tpl->getSubTemplate ("modals/create_playlist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+            <a href="#" class="btn btn-success" data-target="#create_playlist" data-toggle="modal">+Create New Playlist</a>
         </div>
 
         <div class="tab-pane fade" id="Friends">
@@ -468,43 +472,18 @@ $_smarty_tpl->properties['nocache_hash'] = '16656451505a0e0c7241c459_87195322';
     </div>
 
 </div>
+<?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
 
-
-
-
-
-
-
-
-
-
-
-
-    <!--Modal-->
-    <div class="modal" id="create-playlist">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Create Playlist</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label class="control-label" for="inputDefault">Name</label>
-                        <input class="form-control" id="inputDefault" type="text">
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button class="btn-success">Create</button>
-                    <button class="bth-danger">cancel</button>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+<?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
+    <?php echo '<script'; ?>
+>
+        $(document).ready(function(){
+            $("#submit").modal();
+        });
+    <?php echo '</script'; ?>
+>
+<?php }?>
 </body>
 </html><?php }
 }

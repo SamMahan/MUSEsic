@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-16 12:40:26
+<?php /* Smarty version 3.1.27, created on 2017-11-16 17:52:41
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/visitor/registration.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:5751312555a0dcd8aa307d5_98908590%%*/
+/*%%SmartyHeaderCode:5567012775a0e16b9dd34d6_21820575%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ec79e91751f442e712fdc50aae18c7c8837a60ea' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/visitor/registration.tpl',
-      1 => 1510853657,
+      1 => 1510872750,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '5751312555a0dcd8aa307d5_98908590',
+  'nocache_hash' => '5567012775a0e16b9dd34d6_21820575',
   'variables' => 
   array (
     'successArray' => 0,
@@ -24,13 +24,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0dcd8ac120c0_84111255',
+  'unifunc' => 'content_5a0e16b9e348c4_98985430',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0dcd8ac120c0_84111255')) {
-function content_5a0dcd8ac120c0_84111255 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0e16b9e348c4_98985430')) {
+function content_5a0e16b9e348c4_98985430 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '5751312555a0dcd8aa307d5_98908590';
+$_smarty_tpl->properties['nocache_hash'] = '5567012775a0e16b9dd34d6_21820575';
 ?>
 <!DOCTYPE html>
 <html>
@@ -136,7 +136,7 @@ registration page -->
                         <button type="submit" class="btn btn-primary">Login</button>
                         
                     </form>
-                    <a href ="../../../Controllers/Logic/User/home.php"><button >temp login access</button></a>
+                    <a href ="../../../Controllers/Logic/user/home.php"><button >temp login access</button></a>
                 </div>
 
                 <div class="modal-footer">

@@ -40,6 +40,21 @@ if (isset($_POST["artist_name"])){
     }
 }
 
+if (isset($_POST["review"])) {
+    if ($_POST["review"] != null) {
+        $modal = "data-modalpost = 'active'";
+        $error = true;
+
+    }
+    if ($_POST["review"] != null) {
+        $modal = "data-modalpost = 'active'";
+        $error = false;
+        $display = true;
+        $successArray = new SplFixedArray(10);
+        $populateArray = new SplFixedArray(10);
+    }
+}
+
 else{
     $successArray= new SplFixedArray(10);
     $populateArray=new SplFixedArray(10);

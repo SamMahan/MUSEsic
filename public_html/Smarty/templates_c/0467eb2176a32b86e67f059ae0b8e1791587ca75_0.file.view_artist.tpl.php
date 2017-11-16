@@ -1,3 +1,34 @@
+<?php /* Smarty version 3.1.27, created on 2017-11-15 19:28:03
+         compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\artists\view_artist.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:1117896465a0cdb937d2909_83381371%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0467eb2176a32b86e67f059ae0b8e1791587ca75' => 
+    array (
+      0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\artists\\view_artist.tpl',
+      1 => 1510792081,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1117896465a0cdb937d2909_83381371',
+  'variables' => 
+  array (
+    'error' => 0,
+    'display' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_5a0cdb9381f5f5_81603201',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_5a0cdb9381f5f5_81603201')) {
+function content_5a0cdb9381f5f5_81603201 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '1117896465a0cdb937d2909_83381371';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +37,20 @@
     <title>View Artist</title>
 
 
-    {$smarty.const.RESOURCES}
+    <?php echo @constant('RESOURCES');?>
+
 
 </head>
 
 <body>
 
 
-{include file = "componants/navbar.tpl"}
-{include file = "modals/update_artist.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+<?php echo $_smarty_tpl->getSubTemplate ("modals/update_artist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 
 <div class="row">
      <div class="col-lg-11"></div>
@@ -58,7 +94,9 @@
     </div>
 </div>
 
-{include file = "modals/update_album.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("modals/update_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 <!--added by Samuel Mahan to include popular albums in the artist table-->
 <table class="table">
     <thead>
@@ -106,7 +144,9 @@
 
 
 
-{include file = "modals/add_album.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("modals/add_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 <div class="row">
     <div class="col-lg-11"></div>
     <div class="col-lg-1">
@@ -219,16 +259,13 @@
         <h2>
             Submit your own review!
         </h2>
-        <form method="post" action="{$smarty.const.WEB_PATH}view_artist.php">
+        <form method="post" action="<?php echo @constant('WEB_PATH');?>
+view_artist.php">
             <fieldset>
                 <div class="form-group">
                     <label for="text_review">Write A Review</label>
                     <textarea class="form-control" id="text_review" rows="3" name="review" required="required"></textarea>
                 </div>
-
-        <form>
-                    <textarea name="review" rows="8" cols="70" placeholder="Submit your own review here for all to see!"></textarea>
-
             <div class="form-group ">
                 <label for="star_rating">
                     How many stars do you give this artist?
@@ -251,31 +288,41 @@
                     </option>
                 </select>
             </div>
-  <input type="submit" value="Submit" class="btn btn-success"/>
-
-
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+            </fieldset>
         </form>
     </div>
 </div>
 
-{include file = "modals/update_artist.tpl"}
-{include file = "modals/submit.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("modals/update_artist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
 
-{if ($error == true)}
-    <script>
+<?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+
+<?php if (($_smarty_tpl->tpl_vars['error']->value == true)) {?>
+    <?php echo '<script'; ?>
+>
         $(document).ready(function(){
             $("#update_artist").modal();
         });
-    </script>
-{/if}
+    <?php echo '</script'; ?>
+>
+<?php }?>
 
-{if ($display == true)}
-    <script>
+<?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
+    <?php echo '<script'; ?>
+>
         $(document).ready(function(){
             $("#submit").modal();
         });
-    </script>
-{/if}
+    <?php echo '</script'; ?>
+>
+<?php }?>
 
 </body>
 </html>
+<?php }
+}
+?>

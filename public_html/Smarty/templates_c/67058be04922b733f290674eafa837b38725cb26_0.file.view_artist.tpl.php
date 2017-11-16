@@ -1,3 +1,34 @@
+<?php /* Smarty version 3.1.27, created on 2017-11-16 17:54:33
+         compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/artists/view_artist.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:18174135995a0e1729622736_77830052%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '67058be04922b733f290674eafa837b38725cb26' => 
+    array (
+      0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/artists/view_artist.tpl',
+      1 => 1510872750,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '18174135995a0e1729622736_77830052',
+  'variables' => 
+  array (
+    'error' => 0,
+    'display' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_5a0e1729693a15_08389101',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_5a0e1729693a15_08389101')) {
+function content_5a0e1729693a15_08389101 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '18174135995a0e1729622736_77830052';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +37,20 @@
     <title>View Artist</title>
 
 
-    {$smarty.const.RESOURCES}
+    <?php echo @constant('RESOURCES');?>
+
 
 </head>
 
 <body>
 
 
-{include file = "componants/navbar.tpl"}
-{include file = "modals/update_artist.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+<?php echo $_smarty_tpl->getSubTemplate ("modals/update_artist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 
 <div class="row">
      <div class="col-lg-11"></div>
@@ -58,7 +94,9 @@
     </div>
 </div>
 
-{include file = "modals/update_album.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("modals/update_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 <!--added by Samuel Mahan to include popular albums in the artist table-->
 <table class="table">
     <thead>
@@ -106,7 +144,9 @@
 
 
 
-{include file = "modals/add_album.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("modals/add_album.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
 <div class="row">
     <div class="col-lg-11"></div>
     <div class="col-lg-1">
@@ -219,7 +259,8 @@
         <h2>
             Submit your own review!
         </h2>
-        <form method="post" action="{$smarty.const.WEB_PATH}view_artist.php">
+        <form method="post" action="<?php echo @constant('WEB_PATH');?>
+view_artist.php">
             <fieldset>
                 <div class="form-group">
                     <label for="text_review">Write A Review</label>
@@ -258,24 +299,35 @@
     </div>
 </div>
 
-{include file = "modals/update_artist.tpl"}
-{include file = "modals/submit.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("modals/update_artist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
 
-{if ($error == true)}
-    <script>
+<?php echo $_smarty_tpl->getSubTemplate ("modals/submit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+?>
+
+
+<?php if (($_smarty_tpl->tpl_vars['error']->value == true)) {?>
+    <?php echo '<script'; ?>
+>
         $(document).ready(function(){
             $("#update_artist").modal();
         });
-    </script>
-{/if}
+    <?php echo '</script'; ?>
+>
+<?php }?>
 
-{if ($display == true)}
-    <script>
+<?php if (($_smarty_tpl->tpl_vars['display']->value == true)) {?>
+    <?php echo '<script'; ?>
+>
         $(document).ready(function(){
             $("#submit").modal();
         });
-    </script>
-{/if}
+    <?php echo '</script'; ?>
+>
+<?php }?>
 
 </body>
 </html>
+<?php }
+}
+?>

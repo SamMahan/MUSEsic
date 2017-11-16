@@ -32,6 +32,7 @@ function getSongs() {
 
 }
 
+
 function getSongById($songKeyVal) {
 
     global $pdo;
@@ -89,6 +90,7 @@ function timeToSeconds($time) { // TEMPORARY
 
     return $total;
 
+
 }
 
 function timetoStandard($time) {
@@ -133,6 +135,7 @@ function addSong($title, $length, $artist_name, $album_name) {
     return true;
 
 }
+
 
 function getSongArtist($artist_id) {
 
