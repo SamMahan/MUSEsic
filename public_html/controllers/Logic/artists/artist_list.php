@@ -37,6 +37,8 @@ if (isset($_POST["artist_name"])){
         $successArray= new SplFixedArray(10);
         $populateArray=new SplFixedArray(10);
 
+        addArtist($_POST["artist_name"]);
+
     }
 
 

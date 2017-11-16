@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-15 13:40:35
+<?php /* Smarty version 3.1.27, created on 2017-11-16 12:40:26
          compiled from "/Applications/MAMP/htdocs/MUSEsic/public_html/templates/visitor/registration.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:3045489605a0c8a23e1ede4_80592218%%*/
+/*%%SmartyHeaderCode:5751312555a0dcd8aa307d5_98908590%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ec79e91751f442e712fdc50aae18c7c8837a60ea' => 
     array (
       0 => '/Applications/MAMP/htdocs/MUSEsic/public_html/templates/visitor/registration.tpl',
-      1 => 1510610246,
+      1 => 1510853657,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3045489605a0c8a23e1ede4_80592218',
+  'nocache_hash' => '5751312555a0dcd8aa307d5_98908590',
   'variables' => 
   array (
     'successArray' => 0,
@@ -24,13 +24,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0c8a24067966_11895434',
+  'unifunc' => 'content_5a0dcd8ac120c0_84111255',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0c8a24067966_11895434')) {
-function content_5a0c8a24067966_11895434 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0dcd8ac120c0_84111255')) {
+function content_5a0dcd8ac120c0_84111255 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '3045489605a0c8a23e1ede4_80592218';
+$_smarty_tpl->properties['nocache_hash'] = '5751312555a0dcd8aa307d5_98908590';
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,7 +46,7 @@ registration page -->
 </head>
 
 <body class = "visitor">
-   <?php echo $_smarty_tpl->getSubTemplate ("Componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+   <?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
     <div class="container">
