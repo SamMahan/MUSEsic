@@ -192,7 +192,7 @@ function sessioncheck(){
     if(isset($_SESSION['user'])){
         return $_SESSION['user'];
     }
-    header("Location:".WEB_URL."/controllers/Logic/user/home.php");
+    header("Location:".WEB_URL."/controllers/Logic/visitor/registration.php");
 
 }
 

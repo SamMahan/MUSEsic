@@ -106,7 +106,7 @@ class User
     public static function create($First_Name, $Last_Name, $Password, $Email, $IsAdmin = false){
         global $pdo;
         echo "got to create";
-        $q = "Insert INTO musesicDB.user (First_Name, Last_Name, Password, Email, Is_Admin)
+        $q = "Insert INTO musesicDB.User (First_Name, Last_Name, Password, Email, Is_Admin)
           VALUES(:fn, :ln, :p, :e, :ia)";
         $st = $pdo->prepare($q);
         $st->bindParam(":fn", $First_Name);
@@ -125,8 +125,8 @@ class User
     }
     public static function login($email, $password){
         global $pdo;
-        $q = "SELECT First_Name FROM user WHERE Email = :e AND Password = :p";
-
+        $q = "SELECT First_Name FROM User WHERE Email = :e AND Password = :p";
+        echo "logging in...";
         // $st = $pdo;
         $st = $pdo->prepare($q);
         $st->bindParam(":p", $password);
@@ -134,10 +134,13 @@ class User
         $st->bindParam(":e", $email);
 
         $st->execute();
+
         $row = $st->fetch(PDO::FETCH_ASSOC);
-        if(isset($row['First_Name'])){
+        if(isset($row['User_ID'])){
+            echo "id found";
             return new User($row['User_ID']);
         }else{
+            echo $row;
             return false;
         }
 

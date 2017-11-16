@@ -9,16 +9,18 @@ error_reporting(E_ALL);
    ------------------------------------------------------------------------------- */
 #
 # Set database constants
-
+/*
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 define('DB_NAME', 'musesicDB');
+define('DB_ADDRESS', "localhost");
 // */
 
-/*
-define('DB_USER', 'musesicweb');
-define('DB_PASSWORD', 'inspir3');
+
+define('DB_USER', 'musesic');
+define('DB_PASSWORD', 'flu3lik3');
 define('DB_NAME', 'musesicDB');
+define('DB_ADDRESS', "camelot.cs.messiah.edu");
 // */
 #
 #  Begin the session
@@ -37,7 +39,7 @@ $password = DB_PASSWORD;
      *     "mysql:dbname=name;host=localhost"
      *     where "name" is the name of the database
      */
-    $dsn = "mysql:" . "dbname=" . DB_NAME . ";" . "host=localhost";
+    $dsn = "mysql:" . "dbname=" . DB_NAME . ";" . "host=".DB_ADDRESS;
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 } catch (PDOException $e) {
