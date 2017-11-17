@@ -35,6 +35,7 @@ function getSongs() {
 
 function getSongById($songKeyVal) {
 
+    $song = array();
     global $pdo;
     $query = "SELECT * FROM Song WHERE Song_ID like ':n%'";
 
