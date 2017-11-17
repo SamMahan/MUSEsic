@@ -12,14 +12,14 @@ error_reporting(E_ALL);
    ------------------------------------------------------------------------------- */
 #
 # Set database constants
-/*
+
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 define('DB_NAME', 'musesicDB');
 define('DB_ADDRESS', "localhost");
 // */
 
-
+/*
 define('DB_USER', 'musesic');
 define('DB_PASSWORD', 'flu3lik3');
 define('DB_NAME', 'musesicDB');
