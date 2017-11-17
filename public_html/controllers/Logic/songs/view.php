@@ -1,7 +1,7 @@
 <?PHP
 
 require_once "../../../../private_html/config.inc.php";
-
+$user = sessioncheck();
 $successArray=array();
 $populateArray=array();
 $modal = "";
@@ -32,7 +32,7 @@ $smarty->assign('pageTarget', "list");
 
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
-
+$smarty->assign("user",$user);
 $smarty->assign('modal', $modal);
 
 $smarty->display("songs/view.tpl");

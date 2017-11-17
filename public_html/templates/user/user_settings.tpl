@@ -27,19 +27,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group col-lg-7 {$successArray[0]}">
-                            <label class="control-label" for="first_name">First Name</label>
-                            <input name="first_name" class="form-control" id="first_name" type="text" required="required">
-                        </div>
-
                         <div class="form-group col-lg-7 {$successArray[1]}">
-                            <label class="control-label" for="last_name">Last Name</label>
-                            <input name="last_name" class="form-control" id="last_name" type="text" required="required">
+                            <label class="control-label" for="first_name">First Name</label>
+                            <input name="first_name" class="form-control" id="first_name" type="text"{$populateArray[1]} >
                         </div>
 
                         <div class="form-group col-lg-7 {$successArray[2]}">
+                            <label class="control-label" for="last_name">Last Name</label>
+                            <input name="last_name" class="form-control" id="last_name" type="text"{$populateArray[2]} >
+                        </div>
+
+                        <div class="form-group col-lg-7 {$successArray[3]}">
                             <label class="control-label" for="email">E-mail</label>
-                            <input name="email" class="form-control" id="email" type="text" required="required">
+                            <input name="email" class="form-control" id="email" type="text"{$populateArray[3]}>
                         </div>
 
                         <div class="form-group col-lg-7">
@@ -80,7 +80,13 @@
     </div>
 
 {include file = "modals/submit.tpl"}
-
+{if $changePasswordError == true}
+    <script>
+        $(document).ready(function(){
+            $("#change_password").modal();
+        });
+    </script>
+{/if}
 {if ($display == true)}
     <script>
         $(document).ready(function(){

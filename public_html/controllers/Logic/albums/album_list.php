@@ -1,6 +1,6 @@
 <?PHP
 require_once "../../../../private_html/config.inc.php";
-
+$user = sessioncheck();
 $successArray=array();
 $populateArray=array();
 $modal = "";
@@ -38,6 +38,7 @@ if (isset($_POST["album_name"])) {
 
 }
 $listOfAlbums= getAlbums();
+$smarty->assign("user",$user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
 $smarty->assign("listOfAlbums", $listOfAlbums);

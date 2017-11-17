@@ -29,17 +29,24 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+
+                {if !isset($user)}
+
                 <ul class="nav navbar-nav navbar-right">
                     <li><a data-toggle="modal" data-target="#login" href="#">Login</a></li>
                 </ul>
+
+                {else}
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
                 <img src="../../../assets/Images/NoProfilePic.jpg" height="40"/>
-                <a href="../user/home.php">Matthew Bromley</a>
+                <a href="../user/home.php">{$user->First_Name} {$user->Last_Name}</a>
+
+                {/if}
             </div>
         </div>
     </nav>

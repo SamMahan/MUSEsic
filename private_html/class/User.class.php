@@ -19,22 +19,14 @@ class User
 
 
     public function __construct($Id){
-        global $pdo;
 
-        $q  = 'SELECT * FROM User WHERE User_ID = :id';
+       $row = self::get($Id);
+       if($row != null) {
+           foreach ($row as $colName => $value) {
+               $this->__set($colName, $value);
 
-        $st = $pdo->prepare($q);
-
-        //$st->bindParam(":id", $Id);
-
-
-        $row = $st->fetch(PDO::FETCH_ASSOC);
-
-
-       // $row = self::get($Id);
-        foreach($row as $colName =>$value){
-            $this->__set($colName, $value);
-        }
+           }
+       }
     }
     public function __get($colName){
         if(property_exists('User', $colName)){
@@ -44,9 +36,9 @@ class User
     }
     public function __set($colName, $value){
         if(property_exists("User", $colName)){
-            if ($colName == "User_ID" || $colName == "Password" || $colName == "Salt" ) {
-                return false;
-            }
+           if($value!= null) {
+               $this->$colName = $value;
+           }
         }
         return false;
     }
@@ -62,11 +54,11 @@ class User
             if($st->rowcount() == 1) {
                 $row = $st->fetch(PDO::FETCH_ASSOC);
                 return $row;
-                echo $row;
+
             }
         }
         return false;
-        echo "from user class";
+
     }
 
 
@@ -79,30 +71,51 @@ class User
         $pholderKeys = array();
         $colKeys = array();
         $inputs = array();
+        $setString[] = array();
+        $inputString = null;
         foreach($values as $key =>$value) {
-
-            //create unique number designation for each value
-            $pholderKeys[] = ":".$key;
-            $colKeys[] = $key;
+            if($value != "" && $value != null) {
+                //create unique number designation for each value
+                $pholderKeys[] = ":" . $key;
+                $colKeys[] = $key;
+                $finalValues[] = $value;
+                $setString[]="$key = :$key";
+            }
 
         }
+        $inputString = implode(",",$setString);
+        $inputString = substr($inputString, 6);
         $columnString = implode(",",$colKeys);
-        $placeholderString = ":".implode(",", $pholderKeys);
+        $placeholderString = implode(",", $pholderKeys);
+        //echo $placeholderString."->".$columnString;
+    //    echo "     ".implode(",",$pholderKeys);
+    //    echo "     ".implode(",",$colKeys);
+        //echo"     setstring->$inputString";
 
-        $q = "UPDATE User SET ($columnString) VALUES ($placeholderString) WHERE User_ID = :id";
+        $q = "UPDATE musesicDB.User SET $inputString WHERE User_ID = :id";
         //counter
         $i = 0;
         $st = $pdo->prepare($q);
         foreach($values as $key=>$value){
-            $st = $pdo->bindParam($pholderKeys[i], $colKeys[i]);
-            $i = $i+1;
+            if($value != "" && $value != null) {
+                $st->bindParam($pholderKeys[$i], $finalValues[$i]);
+                $i = $i + 1;
+            }
         }
+        $st->bindParam(":id", $this->User_ID);
         return $st->execute();
         
     }
 
     /** end of public functions  */
-
+    /** creates a new user object from inputs and insterts them into the database
+     * @param $First_Name
+     * @param $Last_Name
+     * @param $Password
+     * @param $Email
+     * @param bool $IsAdmin
+     * @return bool|User
+     */
     public static function create($First_Name, $Last_Name, $Password, $Email, $IsAdmin = false){
         global $pdo;
         echo "got to create";
@@ -115,17 +128,24 @@ class User
         $st->bindParam(":e", $Email);
         $st->bindParam(":ia", $IsAdmin);
         echo $st->execute();
-        if($User = new User($pdo->lastInsertId ())){
-            echo "true";
+        $Id = $pdo->lastInsertId();
+        if($User = new User($Id)){
+
             return $User;
         }else{
-            echo "login failure";
+            echo "register failure";
             return false;
         }
     }
+
+    /**
+     * @param $email
+     * @param $password
+     * @return bool|User
+     */
     public static function login($email, $password){
         global $pdo;
-        $q = "SELECT First_Name FROM User WHERE Email = :e AND Password = :p";
+        $q = "SELECT * FROM musesicDB.User WHERE Email = :e AND Password = :p";
         echo "logging in...";
         // $st = $pdo;
         $st = $pdo->prepare($q);
@@ -134,7 +154,7 @@ class User
         $st->bindParam(":e", $email);
 
         $st->execute();
-
+        echo "execute done";
         $row = $st->fetch(PDO::FETCH_ASSOC);
         if(isset($row['User_ID'])){
             echo "id found";

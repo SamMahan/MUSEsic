@@ -12,14 +12,15 @@
 
 Copied and pasted from what Dr.Weaver gave us by Samuel Mahan
 */
-if (!ini_get('display_errors')) {
-    ini_set('display_errors', '1');
-}
-$local = true;
-error_reporting(E_ALL);
 
-ini_set('max_execution_time', 300);
-ini_set("allow_url_include",1);
+if (!ini_get('display_errors')) {
+    ini_set('display_errors', '0');
+}
+// */
+$local = false;
+error_reporting(0);
+
+
 
 /**
  * Compose the URL that originated this script. This function was procured from

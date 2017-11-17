@@ -23,6 +23,10 @@ registration page -->
                 <h3>easy to use, one-stop source for your entertainment</h3>
             </div>
             <div class="well col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                {if $registerComplete!=false}
+                    {$errorMessage}
+                {/if}
+
                 <form id = "user-registration" class ="user_form user_registration" type="text" method="post" action="registration.php">
                     <fieldset>
                         <div class='col-lg-12 . {$successArray[0]}'>
@@ -57,7 +61,15 @@ registration page -->
             </div>
         </div>
     </div>
-    <div class="modal" {$loginModalActive} id="login">
+    <div class="modal {$loginModal}"  id="login">
+        {if $loginModal == "in"}
+            <script>
+                $(document).ready(function(){
+                    $("#login").modal();
+                });
+            </script>
+
+        {/if}
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -65,6 +77,7 @@ registration page -->
                     <h4 class="modal-title">Welcome back!</h4>
                 </div>
                 <div class="modal-body">
+                    {$errorMessage}
                     <form class = "user_form" type = "text" method="post" action="registration.php">
                         <fieldset>
                             <div class='col-lg-12 {$lsuccessArray[0]}'>

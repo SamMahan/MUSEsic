@@ -1,6 +1,7 @@
 <?PHP
 
 require_once "../../../../private_html/config.inc.php";
+$user = sessioncheck();
 
 $successArray=array();
 $populateArray=array();
@@ -47,6 +48,6 @@ $smarty->assign("display", $display);
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
 $smarty->assign('modal', $modal);
-
+$smarty->assign("user",$user);
 $smarty->display("songs/update.tpl");
 ?>

@@ -1,7 +1,10 @@
 <?PHP
-session_start();
+
 
 require_once "../../../../private_html/config.inc.php";
+
+$user = sessioncheck();
+echo "this is the UserId, $user->User_ID";
 $successArray=array();
 $populateArray=array();
 $modal = "";
@@ -38,15 +41,15 @@ if (isset($_POST["playlist_name"])) {
 
 
 
-    $userId = sessioncheck();
 
-        $user = new User($userId);
-        $smarty->assign("user", $user);
-        $smarty->display("user/profile.tpl");
+
+
+
 
 
 
 }
+$smarty->assign("user", $user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
 

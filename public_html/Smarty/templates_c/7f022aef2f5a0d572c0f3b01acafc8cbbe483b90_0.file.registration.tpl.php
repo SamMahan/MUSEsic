@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-13 17:20:44
+<?php /* Smarty version 3.1.27, created on 2017-11-17 09:16:34
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\visitor\registration.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:14685289245a0a1abc123a49_10801568%%*/
+/*%%SmartyHeaderCode:14290132655a0eef42d22968_74501485%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,28 +9,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7f022aef2f5a0d572c0f3b01acafc8cbbe483b90' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\visitor\\registration.tpl',
-      1 => 1510611300,
+      1 => 1510928169,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14685289245a0a1abc123a49_10801568',
+  'nocache_hash' => '14290132655a0eef42d22968_74501485',
   'variables' => 
   array (
+    'registerComplete' => 0,
+    'errorMessage' => 0,
     'successArray' => 0,
     'populateArray' => 0,
-    'loginModalActive' => 0,
+    'loginModal' => 0,
     'lsuccessArray' => 0,
     'lpopulateArray' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0a1abc1f0b20_07263085',
+  'unifunc' => 'content_5a0eef42dc46a9_21269861',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0a1abc1f0b20_07263085')) {
-function content_5a0a1abc1f0b20_07263085 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0eef42dc46a9_21269861')) {
+function content_5a0eef42dc46a9_21269861 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '14685289245a0a1abc123a49_10801568';
+$_smarty_tpl->properties['nocache_hash'] = '14290132655a0eef42d22968_74501485';
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,11 +51,6 @@ registration page -->
    <?php echo $_smarty_tpl->getSubTemplate ("componants/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
 ?>
 
-    <div class="container">
-
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-
-    </div>
 
     <div class="container">
         <div class="row">
@@ -65,6 +62,11 @@ registration page -->
                 <h3>easy to use, one-stop source for your entertainment</h3>
             </div>
             <div class="well col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <?php if ($_smarty_tpl->tpl_vars['registerComplete']->value != false) {?>
+                    <?php echo $_smarty_tpl->tpl_vars['errorMessage']->value;?>
+
+                <?php }?>
+
                 <form id = "user-registration" class ="user_form user_registration" type="text" method="post" action="registration.php">
                     <fieldset>
                         <div class='col-lg-12 . <?php echo $_smarty_tpl->tpl_vars['successArray']->value[0];?>
@@ -109,8 +111,18 @@ registration page -->
             </div>
         </div>
     </div>
-    <div class="modal" <?php echo $_smarty_tpl->tpl_vars['loginModalActive']->value;?>
- id="login">
+    <div class="modal <?php echo $_smarty_tpl->tpl_vars['loginModal']->value;?>
+"  id="login">
+        <?php if ($_smarty_tpl->tpl_vars['loginModal']->value == "in") {?>
+            <?php echo '<script'; ?>
+>
+                $(document).ready(function(){
+                    $("#login").modal();
+                });
+            <?php echo '</script'; ?>
+>
+
+        <?php }?>
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -118,6 +130,8 @@ registration page -->
                     <h4 class="modal-title">Welcome back!</h4>
                 </div>
                 <div class="modal-body">
+                    <?php echo $_smarty_tpl->tpl_vars['errorMessage']->value;?>
+
                     <form class = "user_form" type = "text" method="post" action="registration.php">
                         <fieldset>
                             <div class='col-lg-12 <?php echo $_smarty_tpl->tpl_vars['lsuccessArray']->value[0];?>
@@ -136,7 +150,7 @@ registration page -->
                         <button type="submit" class="btn btn-primary">Login</button>
                         
                     </form>
-                    <a href ="../../../Controllers/Logic/User/home.php"><button >temp login access</button></a>
+                    <a href ="../../../Controllers/Logic/user/home.php"><button >temp login access</button></a>
                 </div>
 
                 <div class="modal-footer">

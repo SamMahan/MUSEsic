@@ -27,7 +27,10 @@
     </div>
     <div class="col-lg-offset-3">
         <h3 id="userName">{$user->First_Name} {$user->Last_Name}</h3>
-        <div class="col-lg-offset-1">
+        <div class="col-lg-6">
+            <a  href="#" >{$user->Email}</a>
+        </div>
+        <div class="col-lg-offset-1 col-lg-6">
             <a id="userNameLink" href="settings.php" id="editLink">Edit Profile</a>
         </div>
     </div>

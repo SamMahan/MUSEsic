@@ -1,3 +1,33 @@
+<?php /* Smarty version 3.1.27, created on 2017-11-17 08:51:12
+         compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\change_password.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:14281963805a0ee950da08b9_29032636%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'e73cd14a99bcbce0882a92d3730cf187b626662a' => 
+    array (
+      0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\modals\\change_password.tpl',
+      1 => 1510926417,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '14281963805a0ee950da08b9_29032636',
+  'variables' => 
+  array (
+    'changePasswordMessage' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_5a0ee950da87d5_10857236',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_5a0ee950da87d5_10857236')) {
+function content_5a0ee950da87d5_10857236 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '14281963805a0ee950da08b9_29032636';
+?>
 <div class="modal fade" id="change_password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -7,8 +37,10 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-                <form class="form-horizontal" method="post" action="{$smarty.const.WEB_PATH}settings.php">
-                    {$changePasswordMessage};
+                <form class="form-horizontal" method="post" action="<?php echo @constant('WEB_PATH');?>
+settings.php">
+                    <?php echo $_smarty_tpl->tpl_vars['changePasswordMessage']->value;?>
+;
                     <fieldset>
                         <div class="col-lg-12">
                             <label for="old_password">Old Password</label>
@@ -36,3 +68,6 @@
 
 
 
+<?php }
+}
+?>

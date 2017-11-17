@@ -1,6 +1,6 @@
 <?PHP
 require_once "../../../../private_html/config.inc.php";
-
+$user = $sessioncheck();
 $successArray=array();
 $populateArray=array();
 $modal = "";
@@ -44,6 +44,7 @@ if (isset($_POST["artist_name"])){
 }
 
 $listOfArtists= getArtists();
+$smarty->assign("user",$user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
 $smarty->assign("successArray", $successArray);

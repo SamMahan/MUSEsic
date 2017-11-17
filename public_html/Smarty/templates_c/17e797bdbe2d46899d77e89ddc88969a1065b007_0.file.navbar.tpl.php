@@ -1,53 +1,32 @@
-<<<<<<< HEAD:public_html/Smarty/templates_c/5828574a30239720544e78cde95316d01024a7a2_0.file.navbar.tpl.php
-<?php /* Smarty version 3.1.27, created on 2017-11-13 16:19:42
-         compiled from "C:\MAMP\htdocs\Group Final\MUSEsic\public_html\templates\componants\navbar.tpl" */ ?>
-<?php
-/*%%SmartyHeaderCode:4161583455a0a0c6e46f701_24731896%%*/
-=======
-<?php /* Smarty version 3.1.27, created on 2017-11-13 17:20:44
+<?php /* Smarty version 3.1.27, created on 2017-11-17 09:30:53
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\componants\navbar.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1567019475a0a1abc224181_28616505%%*/
->>>>>>> 249adff879bfabd88087b5320f2e5846f6762590:public_html/Smarty/templates_c/17e797bdbe2d46899d77e89ddc88969a1065b007_0.file.navbar.tpl.php
+/*%%SmartyHeaderCode:20131124675a0ef29dcbe596_65581915%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '17e797bdbe2d46899d77e89ddc88969a1065b007' => 
     array (
-<<<<<<< HEAD:public_html/Smarty/templates_c/5828574a30239720544e78cde95316d01024a7a2_0.file.navbar.tpl.php
-      0 => 'C:\\MAMP\\htdocs\\Group Final\\MUSEsic\\public_html\\templates\\componants\\navbar.tpl',
-      1 => 1510607406,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '4161583455a0a0c6e46f701_24731896',
-  'has_nocache_code' => false,
-  'version' => '3.1.27',
-  'unifunc' => 'content_5a0a0c6e487191_88222524',
-),false);
-/*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0a0c6e487191_88222524')) {
-function content_5a0a0c6e487191_88222524 ($_smarty_tpl) {
-
-$_smarty_tpl->properties['nocache_hash'] = '4161583455a0a0c6e46f701_24731896';
-=======
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\componants\\navbar.tpl',
-      1 => 1510609564,
+      1 => 1510929050,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1567019475a0a1abc224181_28616505',
+  'nocache_hash' => '20131124675a0ef29dcbe596_65581915',
+  'variables' => 
+  array (
+    'user' => 0,
+  ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0a1abc230494_81217447',
+  'unifunc' => 'content_5a0ef29dd0ca00_25598221',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0a1abc230494_81217447')) {
-function content_5a0a1abc230494_81217447 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a0ef29dd0ca00_25598221')) {
+function content_5a0ef29dd0ca00_25598221 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1567019475a0a1abc224181_28616505';
->>>>>>> 249adff879bfabd88087b5320f2e5846f6762590:public_html/Smarty/templates_c/17e797bdbe2d46899d77e89ddc88969a1065b007_0.file.navbar.tpl.php
+$_smarty_tpl->properties['nocache_hash'] = '20131124675a0ef29dcbe596_65581915';
 ?>
 
     <nav class="navbar navbar-default">
@@ -81,17 +60,26 @@ $_smarty_tpl->properties['nocache_hash'] = '1567019475a0a1abc224181_28616505';
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+
+                <?php if (!isset($_smarty_tpl->tpl_vars['user']->value)) {?>
+
                 <ul class="nav navbar-nav navbar-right">
                     <li><a data-toggle="modal" data-target="#login" href="#">Login</a></li>
                 </ul>
+
+                <?php } else { ?>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
                 <img src="../../../assets/Images/NoProfilePic.jpg" height="40"/>
-                <a href="../user/home.php">Matthew Bromley</a>
+                <a href="../user/home.php"><?php echo $_smarty_tpl->tpl_vars['user']->value->First_Name;?>
+ <?php echo $_smarty_tpl->tpl_vars['user']->value->Last_Name;?>
+</a>
+
+                <?php }?>
             </div>
         </div>
     </nav>

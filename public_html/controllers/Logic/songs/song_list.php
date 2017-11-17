@@ -1,6 +1,8 @@
 <?PHP
 
 require_once "../../../../private_html/config.inc.php";
+$user = sessioncheck();
+
 $successArray=array();
 $populateArray=array();
 $modal = "";
@@ -37,6 +39,7 @@ if (isset($_POST["song_name"])) {
     $populateArray=new SplFixedArray(10);
 }
 $listOfSongs = getSongs();
+$smarty->assign("user",$user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
 $smarty->assign("listOfSongs", $listOfSongs);

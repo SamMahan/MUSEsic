@@ -205,10 +205,26 @@ function addAlbum($album) {
 
 function sessioncheck(){
 
-    if(isset($_SESSION['user'])){
-        return $_SESSION['user'];
+    if(empty($_SESSION['user'])){
+        header("Location:".WEB_URL."/controllers/Logic/visitor/registration.php");
     }
-    header("Location:".WEB_URL."/controllers/Logic/visitor/registration.php");
+    $id = $_SESSION['user'];
+    $user = new User($id);
+    return $user;
 
-    return false;
+    //return false;
+}
+function createSession($Id){
+    if (empty($_SESSION['user'])){
+
+        $_SESSION['user'] = $Id;
+    }else{
+        unset($_SESSION['user']);
+        $_SESSION['user'] = $Id;
+    }
+}
+function logout(){
+    if(!empty($_SESSION['user'])) {
+        unset($_SESSION['user']);
+    }
 }

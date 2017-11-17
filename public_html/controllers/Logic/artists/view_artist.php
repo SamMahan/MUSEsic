@@ -1,7 +1,7 @@
 <?PHP
 
 require_once "../../../../private_html/config.inc.php";
-
+$user = sessioncheck();
 $successArray=array();
 $populateArray=array();
 $modal = "";
@@ -59,6 +59,7 @@ else{
     $successArray= new SplFixedArray(10);
     $populateArray=new SplFixedArray(10);
 }
+$smarty->assign("user",$user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
 $smarty->assign('pageTarget', "view_album");

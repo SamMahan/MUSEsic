@@ -3,7 +3,7 @@
 <?php
 
 require_once "../../../../private_html/config.inc.php";
-
+logout();
 $successArray=array();
 $populateArray=array();
 $lsuccessArray = array();
@@ -11,30 +11,31 @@ $lpopulateArray = array();
 $loginComplete = false;
 $registerComplete = false;
 $loginSuccess = false;
-$registerSuccess;
-$loginModalActive = "";
+$registerSuccess = null;
+$loginModal = "";
+
+$errorMessage = "";
 
 
 
 
-
-echo "start";
+//echo "start";
 if ($_POST != null){
     if(isset($_POST["first_name"])) {
-        echo"2nd start";
+
         $registerComplete = true;
         foreach ($_POST as $key => $value) {
 
             if ($value === "") {
                 array_push($successArray, "has-warning");
             $registerComplete = false;
-            echo "bad register";
+
                 array_push($populateArray, "this has nothing");
 
             } elseif ($value != "") {
                 array_push($successArray, "has-success");
                 array_push($populateArray, "value=" . $value);
-                echo "good register";
+
 
             }
         }
@@ -60,30 +61,51 @@ if ($_POST != null){
 
 //if form complete, sends and checks it against database
 
-echo "THIS IS REGISTER".$registerComplete;
-if($registerComplete == true && $_POST["password"] == $_POST['confirm-password']){
-    echo "this is the registration page";
-    $registerSuccess = User::create($_POST['first_name'], $_POST['last_name'],$_POST["password"], $_POST['email'], false);
-    if($registerSuccess != false){
-        $_SESSION['user'] = $registerSuccess->User_ID;
-        header("Location:".WEB_URL."controllers/Logic/user/home.php");
+
+if($registerComplete == true){
+    if($_POST["password"] == $_POST['confirm-password']) {
+       // echo "this is the registration page";
+        $registerSuccess = User::create($_POST['first_name'], $_POST['last_name'], $_POST["password"], $_POST['email'], false);
+        if ($registerSuccess != false) {
+            if (empty($_SESSION['user'])) {
+                $userId = $registerSuccess->$User_ID;
+                $_SESSION['user'] = $registerSuccess->User_ID;
+            } else {
+                unset($_SESSION['user']);
+                $userId = $registerSuccess->User_ID;
+                $_SESSION['user'] = $registerSuccess->User_ID;
+            }
+
+            header("Location:" . WEB_URL . "controllers/Logic/user/home.php");
+        } else {
+
+
+        }
+        //if passwords do not match
     }else{
-
-
-    }
+        $errorMessage = "password must match confirm password";
+        $successArray[3] = $successArray[4] = "has-warning";
+        $populateArray[3] = $populateArray[4] = "";
 
 }
+
+}
+
+
 //if login form complete
 if($loginComplete === true){
     $loginSuccess = User::login($_POST['login-email'], $_POST['login-password']);
         if($loginSuccess!= false){
+           // echo "the login was successful";
+            createSession($loginSuccess->User_ID);
             $loginModalActive = "";
-        header("Location:".WEB_URL."controllers/Logic/user/home.php");
-        $loginModalActive ="";
-        $lsuccessArray = SplFixedArray(10);
-        $lpopulateArray = SplFixedArray(10);
-    }else{
+            header("Location:".WEB_URL."controllers/Logic/user/home.php");
 
+    }else{
+    $loginModal = "in";
+    $errorMessage = "invalid credentials";
+    $lsuccessArray = array("has-warning", "has-warning");
+    $lpopulateArray = array();
     }
 }
 
@@ -92,8 +114,11 @@ $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
 $smarty->assign("lsuccessArray", $lsuccessArray);
 $smarty->assign("lpopulateArray", $lpopulateArray);
+$smarty->assign("errorMessage", $errorMessage);
+$smarty->assign("registerSuccess", $registerSuccess);
+$smarty->assign("registerComplete", $registerComplete);
 //$smarty->assign('modal', $modal);
-$smarty->assign("loginModalActive", $loginModalActive);
+$smarty->assign("loginModal", $loginModal);
 
 $smarty->display("visitor/registration.tpl");
 
