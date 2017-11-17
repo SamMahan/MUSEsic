@@ -150,8 +150,14 @@
             <h2>
                 Submit your own review!
             </h2>
-            <form>
-                    <textarea name="review" rows="8" cols="70" placeholder="Submit your own review here for all to see!"></textarea>
+
+            <form method="post" action="{$smarty.const.WEB_PATH}view.php">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="text_review">Write A Review</label>
+                        <textarea class="form-control" id="text_review" rows="3" name="review" required="required"></textarea>
+                    </div>
+
                 <div class="form-group ">
                     <label for="star_rating">
                         How many stars do you give this song?
@@ -178,6 +184,26 @@
             </form>
         </div>
     </div>
+
+    {include file = "modals/update_artist.tpl"}
+
+    {include file = "modals/submit.tpl"}
+
+    {if ($error == true)}
+        <script>
+            $(document).ready(function(){
+                $("#update_artist").modal();
+            });
+        </script>
+    {/if}
+
+    {if ($display == true)}
+        <script>
+            $(document).ready(function(){
+                $("#submit").modal();
+            });
+        </script>
+    {/if}
 
 </div>
 

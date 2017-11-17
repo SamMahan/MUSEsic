@@ -12,11 +12,6 @@ registration page -->
 
 <body class = "visitor">
    {include file = "componants/navbar.tpl"}
-    <div class="container">
-
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-
-    </div>
 
     <div class="container">
         <div class="row">
