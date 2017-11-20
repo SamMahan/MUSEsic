@@ -2,6 +2,7 @@
 
 require_once "../../../../private_html/config.inc.php";
 
+$user = sessioncheck();
 $successArray=array();
 $populateArray=array();
 $modal = "";
@@ -65,6 +66,7 @@ else{
 }
 
 $listOfAlbums= getAlbums();
+$smarty->assign("user",$user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
 $smarty->assign("listOfAlbums", $listOfAlbums);

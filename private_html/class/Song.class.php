@@ -7,6 +7,7 @@
  */
 
 class Song
+
 {
     public function __construct($Id){
         $row = self::get($Id);
@@ -78,16 +79,19 @@ class Song
      * @param $
      * @return bool
      */
-    public static function create($){
+    public static function create($Title, $Length, $Artist_id, $Album_id){
         global $pdo;
 
-        $q = "Insert INTO User (First_Name, Last_Name, Password, Email)
-          VALUES(:fn, :ln, :p, :e)";
-        $st = $pdo->prepare($q);
-        $st->bindParam(":fn", $First_Name);
-        $st->bindParam(":ln", $Last_Name);
-        $st->bindParam(":p", $Password);
-        $st->bindParam(":e", $Email);
-        return $st->execute();
+        $sql = "INSERT INTO Song (Title, Length, Artist_FK, Album_FK) VALUES(:t,:l,:ar,:al)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":t", $Title);
+        $stmt->bindParam(":l", $Length);
+        $stmt->bindParam(":ar", $Artist_id);
+        $stmt->bindParam(":al", $Album_id);
+        $stmt->execute();
+        if($stmt->fetch(PDO::FETCH_ASSOC)){
+            $song = new Song($stmt['Song_ID']);
+            return $song;
+        }
     }
 }
