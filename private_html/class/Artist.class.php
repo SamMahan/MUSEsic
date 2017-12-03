@@ -7,7 +7,10 @@
  */
 
 class Artist
+//$artist = new Artist($id);
+//$artist->Artist_Name
 {
+    private $Artist_ID;
     private $Artist_Name;
     private $Artist_Biography;
 
@@ -25,16 +28,14 @@ class Artist
     }
     public function __set($colName, $value){
         if(property_exists($colName)){
-            if ($colName == "User_ID" || $colName == "Password" || $colName == "Salt" ) {
-                return false;
-            }
+            $this->$colName = $value;
         }
         return false;
     }
     public function get($Id){
         global $pdo;
 
-        $q  = "SELECT * FROM User WHERE User_ID = :id";
+        $q  = "SELECT * FROM Artist WHERE Artist_ID = :id";
 
         $st = $pdo->prepare($q);
 

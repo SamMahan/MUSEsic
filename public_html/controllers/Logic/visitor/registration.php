@@ -76,7 +76,7 @@ if($registerComplete == true){
                 $_SESSION['user'] = $registerSuccess->User_ID;
             }
 
-            header("Location:" . WEB_URL . "controllers/Logic/user/home.php");
+            header("Location:" . WEB_URL . "controllers/logic/user/home.php");
         } else {
 
 
@@ -99,7 +99,7 @@ if($loginComplete === true){
            // echo "the login was successful";
             createSession($loginSuccess->User_ID);
             $loginModalActive = "";
-            header("Location:".WEB_URL."controllers/Logic/user/home.php");
+            header("Location:".WEB_URL."controllers/logic/user/home.php");
 
     }else{
     $loginModal = "in";
