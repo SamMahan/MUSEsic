@@ -2,34 +2,29 @@
 /**
  * Created by PhpStorm.
  * User: sfmah
+ * Date: 12/3/2017
+ * Time: 4:40 PM
+ */
+<?php
+/**
+ * Created by PhpStorm.
+ * User: sfmah
  * Date: 11/13/2017
  * Time: 5:17 PM
  */
 
-class Song
+class Review
 {
-public $Song_ID;
-public $Title;
-public $Artist_FK;
-public $Song_URL;
-public $Album_FK;
-
-    /**
-     * @todo Create ImageLink and SongLink in the database song table
-     */
-    //to be populated with file objects
-public $ImageFile;
-public $SongFile;
+    private $Review_ID;
+    private $Comment;
+    private $Stars;
+    private $Timestamp;
+    private $User_FK;
 
     public function __construct($Id){
         $row = self::get($Id);
         foreach($row as $colName =>$value){
-            if(colName == "Image_FK"){
-                $value = new File($value);
-            }
-            if(colName == "Song_FK"){
-                $value = new File($value);
-            }
+
             $this->__set($colName, $value);
         }
     }
@@ -50,7 +45,7 @@ public $SongFile;
     public function get($Id){
         global $pdo;
 
-        $q  = "SELECT * FROM Song WHERE Song_ID= :id";
+        $q  = "SELECT * FROM Review WHERE Review_ID= :id";
 
         $st = $pdo->prepare($q);
 
@@ -91,9 +86,7 @@ public $SongFile;
         return $st->execute();
 
     }
-    public function setReview($Review){
-        setVal(array(""))
-    }
+
 
     /** end of public functions  */
     /**donovan, you can
@@ -104,26 +97,27 @@ public $SongFile;
      * @param $Song_Link the link to the uploaded song file on the server not necessary,
      * @return bool
      */
-    public static function create($Title, $Artist_id, $Album_id, $Pic_Link = null, $Song_Link = null){
+    public static function create($Comment, $Stars, $Timestamp, ){
         global $pdo;
 
-        $sql = "INSERT INTO Song (Title, Length, Artist_FK, Album_FK, Song_File_FK) VALUES(:t,:l,:ar,:al,:sfk)";
+        $sql = "INSERT INTO Review (Comment, Stars, Timestamp, User_FK) VALUES(:c, :s, :t, :u)";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(":t", $Title);
-        $stmt->bindParam(":ar", $Artist_id);
-        $stmt->bindParam(":al", $Album_id);
+        $stmt->bindParam(":c", $Title);
+        $stmt->bindParam(":s", $Artist_id);
+        $stmt->bindParam(":t", $Album_id);
+        $stmt->bindParam(":u", $Album_id);
 
 
 
-            $song = new Song($stmt['Song_ID']);
-            if($Pic_Link) {
-                $image = SongFactory::addImageFile($Pic_Link);
-                $stmt->bindparam(":sfk", $image->File_ID);
-            }
-            if($Song_Link){
-                $song = SongFactory::addSongFile($Pic_Link);
-                $stmt->bindparam(":sfk", $song->File_ID);
-            }
+        $song = new Song($stmt['Song_ID']);
+        if($Pic_Link) {
+            $image = SongFactory::addImageFile($Pic_Link);
+            $stmt->bindparam(":sfk", $image->File_ID);
+        }
+        if($Song_Link){
+            $song = SongFactory::addSongFile($Pic_Link);
+            $stmt->bindparam(":sfk", $song->File_ID);
+        }
         $stmt->execute();
         if($stmt->fetch(PDO::FETCH_ASSOC)){
             return $song;
@@ -132,12 +126,11 @@ public $SongFile;
 }
 class SongFactory
 {
-public static function addImageFile($File){
-    $file = ImageFile::create($File);
-    return $file;
-}
-public static function addSongFile($File){
-    $file = SongFile::create($File );
-    return $file;
-}
-}
+    public static function addImageFile($File){
+        $file = ImageFile::create($File);
+        return $file;
+    }
+    public static function addSongFile($File){
+        $file = SongFile::create($File );
+        return $file;
+    }

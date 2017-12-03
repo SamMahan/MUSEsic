@@ -34,7 +34,7 @@ class Artist
     public function get($Id){
         global $pdo;
 
-        $q  = "SELECT * FROM User WHERE User_ID = :id";
+        $q  = "SELECT * FROM Artist WHERE Artist_ID= :id";
 
         $st = $pdo->prepare($q);
 

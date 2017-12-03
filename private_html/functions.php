@@ -2,6 +2,11 @@
 require_once "dbconfig.php";
 //takes in a name parameter
 //send back a list of users from the query
+function getDateTime()
+{
+    $dt = date('Y-m-d H:i:s');
+    return $dt;
+}
 function selectUsers($name){
 
     global $pdo;
@@ -226,6 +231,13 @@ function createSession($Id){
 }
 function logout(){
     if(!empty($_SESSION['user'])) {
-        unset($_SESSION['user']);
+        $_SESSION = array();
     }
+}
+/**
+ * @return randomly generated token string to be used to identify files or other things in out database
+ */
+function generateToken(){
+     $token = uniqid("",true);
+     return token;
 }
