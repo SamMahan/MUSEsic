@@ -24,8 +24,7 @@
             var id = this.attr("data-songid");
             $("#confirm-delete-song").click(function() {
 
-                //perform ajax request
-
+                
 
             });
             $("#cancel").click(function() {
