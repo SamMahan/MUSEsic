@@ -45,8 +45,9 @@
                     </form>
                 <img src="../../../assets/Images/NoProfilePic.jpg" height="40"/>
                 <a href="../user/home.php">{$user->First_Name} {$user->Last_Name}</a>
-
+                <div id="global-meta" display="hidden" data-userid = "{$user->User_ID}"></div>
                 {/if}
             </div>
         </div>
+
     </nav>

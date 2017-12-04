@@ -5,7 +5,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Create Playlist</h4>
             </div>
-            <form method="post" action="{$smarty.const.WEB_PATH}home.php">
+            <form>
                 <fieldset>
                     <div class="modal-body">
                         <div class="form-group">
