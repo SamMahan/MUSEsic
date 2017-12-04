@@ -2,34 +2,29 @@
 /**
  * Created by PhpStorm.
  * User: sfmah
+ * Date: 12/3/2017
+ * Time: 4:40 PM
+ */
+<?php
+/**
+ * Created by PhpStorm.
+ * User: sfmah
  * Date: 11/13/2017
  * Time: 5:17 PM
  */
 
-class Song
+class Review
 {
-public $Song_ID;
-public $Title;
-public $Artist_FK;
-public $Song_URL;
-public $Album_FK;
-
-    /**
-     * @todo Create ImageLink and SongLink in the database song table
-     */
-    //to be populated with file objects
-public $ImageFile;
-public $SongFile;
+    private $Review_ID;
+    private $Comment;
+    private $Stars;
+    private $Timestamp;
+    private $User_FK;
 
     public function __construct($Id){
         $row = self::get($Id);
         foreach($row as $colName =>$value){
-            if(colName == "Image_FK"){
-                $value = new File($value);
-            }
-            if(colName == "Song_FK"){
-                $value = new File($value);
-            }
+
             $this->__set($colName, $value);
         }
     }
@@ -50,7 +45,7 @@ public $SongFile;
     public function get($Id){
         global $pdo;
 
-        $q  = "SELECT * FROM Song WHERE Song_ID= :id";
+        $q  = "SELECT * FROM Review WHERE Review_ID= :id";
 
         $st = $pdo->prepare($q);
 
@@ -91,12 +86,19 @@ public $SongFile;
         return $st->execute();
 
     }
-    public function setReview($Review){
-        setVal(array(""))
-    }
+
 
     /** end of public functions  */
-    /**donovan, you can
+    private static function getRelationshipTable($string){
+        switch($string){
+            case "Song":
+                return "Song_Review";
+            case "Artist":
+                return"Artist_Review";
+        }
+        return false;
+    }
+    /**
      * @param $Title the song title
      * @param $Artist_id the FK of the artist to which the song it attributed
      * @param $Album_id the FK of the Album to which the song is attrubuted
@@ -104,40 +106,43 @@ public $SongFile;
      * @param $Song_Link the link to the uploaded song file on the server not necessary,
      * @return bool
      */
-    public static function create($Title, $Artist_id, $Album_id, $Pic_Link = null, $Song_Link = null){
+    public static function create($Comment, $Stars, $Timestamp, $User_FK, $Entity_FK, $From_Type){
+        global $pdo;
+        if ($tbl = getTable($FromType))
+        $sql = "INSERT INTO Review (Comment, Stars, Timestamp, User_FK) VALUES(:c, :s, :t, :u)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":c", $Comment);
+        $stmt->bindParam(":s", $Stars);
+        $stmt->bindParam(":t", $Timestamp);
+        $stmt->bindParam(":u", $User_FK);
+
+        $stmt->execute();
+
+        if($row  = $stmt->fetch(PDO::FETCH_ASSOC)){
+            addToSong($Song_FK, )
+            return new Review($row["Review_ID"]);
+        }
+
+    }
+
+
+
+}
+class ReviewFactory
+{
+    /**adds to the song Review File
+     * @param $Song_FK
+     * @param $Review_FK
+     */
+    private static function addToRelationshipTable($Song_FK,$Review_FK, $Table ){
         global $pdo;
 
-        $sql = "INSERT INTO Song (Title, Length, Artist_FK, Album_FK, Song_File_FK) VALUES(:t,:l,:ar,:al,:sfk)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(":t", $Title);
-        $stmt->bindParam(":ar", $Artist_id);
-        $stmt->bindParam(":al", $Album_id);
+        $q = "INSERT INTO :tbl (Song_FK, Review_FK) VALUES(:sfk, rfk)";
+        $st = $pdo->prepare($sql);
+        $st->bindparam(:tbl", $Table)
+        $st->bindparam("sfk",$Song_FK);
+        $st->bindparam("rfk",$Review_FK);
 
-
-
-            $song = new Song($stmt['Song_ID']);
-            if($Pic_Link) {
-                $image = SongFactory::addImageFile($Pic_Link);
-                $stmt->bindparam(":sfk", $image->File_ID);
-            }
-            if($Song_Link){
-                $song = SongFactory::addSongFile($Pic_Link);
-                $stmt->bindparam(":sfk", $song->File_ID);
-            }
-        $stmt->execute();
-        if($stmt->fetch(PDO::FETCH_ASSOC)){
-            return $song;
-        }
     }
-}
-class SongFactory
-{
-public static function addImageFile($File){
-    $file = ImageFile::create($File);
-    return $file;
-}
-public static function addSongFile($File){
-    $file = SongFile::create($File );
-    return $file;
-}
+    
 }

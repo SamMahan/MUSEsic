@@ -17,14 +17,11 @@ class User
     private $Email;
     private $IsAdmin;
 
-
     public function __construct($Id){
-
        $row = self::get($Id);
        if($row != null) {
            foreach ($row as $colName => $value) {
                $this->__set($colName, $value);
-
            }
        }
     }
@@ -44,11 +41,9 @@ class User
     }
     public function get($Id){
         global $pdo;
-
         $q  = 'SELECT * FROM User WHERE User_ID = :id';
 
         $st = $pdo->prepare($q);
-
         $st->bindParam(":id", $Id);
         if($st->execute() != null){
             if($st->rowcount() == 1) {
@@ -73,6 +68,7 @@ class User
         $inputs = array();
         $setString[] = array();
         $inputString = null;
+        //takes in each key/value pair and formats them individually for placement in bindparam
         foreach($values as $key =>$value) {
             if($value != "" && $value != null) {
                 //create unique number designation for each value
@@ -87,11 +83,6 @@ class User
         $inputString = substr($inputString, 6);
         $columnString = implode(",",$colKeys);
         $placeholderString = implode(",", $pholderKeys);
-        //echo $placeholderString."->".$columnString;
-    //    echo "     ".implode(",",$pholderKeys);
-    //    echo "     ".implode(",",$colKeys);
-        //echo"     setstring->$inputString";
-
         $q = "UPDATE musesicDB.User SET $inputString WHERE User_ID = :id";
         //counter
         $i = 0;
@@ -130,14 +121,12 @@ class User
         echo $st->execute();
         $Id = $pdo->lastInsertId();
         if($User = new User($Id)){
-
             return $User;
         }else{
             echo "register failure";
             return false;
         }
     }
-
     /**
      * @param $email
      * @param $password

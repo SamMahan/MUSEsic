@@ -10,10 +10,27 @@
             </div>
             <div class="modal-footer">
 
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-default" id="cancel" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id = "confirm-delete-song">Delete</button>
 
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $("#delete-song-button").click(function() {
+            var id = this.attr("data-songid");
+            $("#confirm-delete-song").click(function() {
+
+                
+
+            });
+            $("#cancel").click(function() {
+
+
+            });
+        });
+    });
+</script>
