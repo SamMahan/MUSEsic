@@ -39,15 +39,6 @@ if (isset($_POST["playlist_name"])) {
     $successArray= new SplFixedArray(10);
     $populateArray=new SplFixedArray(10);
 
-
-
-
-
-
-
-
-
-
 }
 $smarty->assign("user", $user);
 $smarty->assign("error", $error);

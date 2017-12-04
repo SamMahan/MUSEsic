@@ -40,7 +40,7 @@
                 <td>{getSongArtist($value["Artist_FK"])}</td>
                 <td>{getSongAlbum($value["Album_FK"])}</td>
                 <td>{timeToStandard($value["Length"])}</td>
-                <td><a href="#" data-target="#delete_song" data-toggle="modal"><button class="btn btn-danger">Delete</button></a></td>
+                <td><a href="#" data-target="#delete_song" id = "delete-song-button" data-songid = "{$value["Song_ID"]}" data-toggle="modal"><button class="btn btn-danger">Delete</button></a></td>
             </tr>
         {/foreach}
 
