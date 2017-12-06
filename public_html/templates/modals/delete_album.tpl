@@ -7,6 +7,18 @@
             </div>
             <div class="modal-body">
                 <p>Deleting this album will delete these songs:</p>
+                {foreach $listOfArtists as $key => $value}
+                    <li>
+
+                    </li>
+
+                        <td> <a href="{$smarty.const.WEB_PATH}view_artist.php?key={$value["Artist_ID"]}">{$value["Artist_Name"]}</a></td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td><a href="#" data-target="#delete_artist" id="delete-artist-button" data-artistid="{$value["Artist_ID"]}" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+                    </tr>
+                {/foreach}
             </div>
             <div class="modal-footer">
 
