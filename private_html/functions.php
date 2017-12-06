@@ -63,7 +63,7 @@ function getArtists() {
     $query = "SELECT * FROM Artist";
     $statement = $pdo->prepare($query);
     $statement->execute();
-
+    $list_of_artists = null;
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){
         $list_of_artists[] = $row;
     }
