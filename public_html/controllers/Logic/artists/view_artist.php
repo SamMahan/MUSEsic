@@ -1,16 +1,13 @@
 <?PHP
 
 require_once "../../../../private_html/config.inc.php";
+
 $user = sessioncheck();
-$successArray=array();
-$populateArray=array();
+$successArray = array();
+$populateArray = array();
 $modal = "";
 $error = false;
 $display = false;
-
-if ($_POST == null){
-
-}
 
 if (isset($_POST["artist_name"])){
     foreach($_POST as $key=>$value){
@@ -53,12 +50,11 @@ if (isset($_POST["review"])) {
         $successArray = new SplFixedArray(10);
         $populateArray = new SplFixedArray(10);
     }
-}
-
-else{
+} else{
     $successArray= new SplFixedArray(10);
     $populateArray=new SplFixedArray(10);
 }
+
 $smarty->assign("user",$user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);

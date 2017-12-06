@@ -3,6 +3,7 @@
 <?php
 
 require_once "../../../../private_html/config.inc.php";
+
 logout();
 $successArray=array();
 $populateArray=array();
@@ -16,10 +17,6 @@ $loginModal = "";
 
 $errorMessage = "";
 
-
-
-
-//echo "start";
 if ($_POST != null){
     if(isset($_POST["first_name"])) {
 
@@ -60,8 +57,6 @@ if ($_POST != null){
 }
 
 //if form complete, sends and checks it against database
-
-
 if($registerComplete == true){
     if($_POST["password"] == $_POST['confirm-password']) {
        // echo "this is the registration page";
@@ -86,17 +81,13 @@ if($registerComplete == true){
         $errorMessage = "password must match confirm password";
         $successArray[3] = $successArray[4] = "has-warning";
         $populateArray[3] = $populateArray[4] = "";
-
+    }
 }
-
-}
-
 
 //if login form complete
 if($loginComplete === true){
     $loginSuccess = User::login($_POST['login-email'], $_POST['login-password']);
         if($loginSuccess!= false){
-           // echo "the login was successful";
             createSession($loginSuccess->User_ID);
             $loginModalActive = "";
             header("Location:".WEB_URL."controllers/logic/user/home.php");
@@ -108,7 +99,6 @@ if($loginComplete === true){
     $lpopulateArray = array();
     }
 }
-
 
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
@@ -122,12 +112,4 @@ $smarty->assign("loginModal", $loginModal);
 
 $smarty->display("visitor/registration.tpl");
 
-
 ?>
-
-
-
-<!-- Created by Samuel Mahan
-9/20/17
-registration page -->
-
