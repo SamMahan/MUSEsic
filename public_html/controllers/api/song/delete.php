@@ -6,11 +6,21 @@
  * Time: 1:26 PM
  */
 
-$data = json_decode($_Post["data"]);
+$data = json_decode($_POST["data"]);
+$response = 0;
+$user = sessioncheck();
+
+if(!$user){
+    $response = 1;
+    http_response_code(405);
+    echo json_encode($response);
+}
 
 $song = new Song($data->id);
-$result = "there was an error, but at least you hit the api endpoint ;)";
-if($song->deleteSong()){
-    $result = "song deleted!";
+$response = $song->Title;
+if(!$song->deleteSong()){
+    $response = 0;
 }
-echo json_encode($result);
+
+http_response_code(200);
+echo json_encode($response);

@@ -17,20 +17,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function(){
-        $("#delete-song-button").click(function() {
-            var id = this.attr("data-songid");
-            $("#confirm-delete-song").click(function() {
-
-
-
-            });
-            $("#cancel").click(function() {
-
-
-            });
-        });
-    });
-</script>
