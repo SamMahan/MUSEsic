@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    $("#delete-song-button").click(function() {
-        var id = this.attr("data-songid");
-        $("#confirm-delete-song").click(function() {
+    $("#delete-album-button").click(function() {
+        var id = this.attr("data-albumid");
+        $("#confirm-delete-album").click(function() {
 
             $.ajax({
-                url: "../../../controllers/api/song/delete.php",
+                url: "../../../controllers/api/album/delete_album.php",
                 type: "post",
                 data: id,
                 dataType: 'json',
