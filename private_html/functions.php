@@ -28,6 +28,7 @@ function getSongs() {
 
     $statement = $pdo->prepare($query);
     $statement->execute();
+    $list_of_songs = null;
 
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){
         $list_of_songs[] = $row;
@@ -79,6 +80,7 @@ function getAlbums() {
 
     $statement = $pdo->prepare($query);
     $statement->execute();
+    $list_of_albums = null;
 
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){
         $list_of_albums[] = $row;
