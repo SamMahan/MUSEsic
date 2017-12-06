@@ -83,13 +83,15 @@ class Artist
     public static function create($Artist_Name, $Artist_Biography){
         global $pdo;
 
-        $q = "Insert INTO User (Artist_Name, Artist_Biography)
-          VALUES(:an, :ab)";
+        $q = "Insert INTO User (Artist_Name)
+          VALUES(:an)";
         $st = $pdo->prepare($q);
         $st->bindParam(":an", $Artist_Name);
-        $st->bindParam(":ab", $Artist_Biography);
+        //$st->bindParam(":ab", $Artist_Biography);
 
 
-        return $st->execute();
+        if($st->execute())
+            return new Artist($pdo->lastInsertId());
+
     }
 }
