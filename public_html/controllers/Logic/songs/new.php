@@ -1,10 +1,10 @@
 <?PHP
 
 require_once "../../../../private_html/config.inc.php";
-$user = sessioncheck();
 
-$successArray=array();
-$populateArray=array();
+$user = sessioncheck();
+$successArray = array();
+$populateArray = array();
 $modal = "";
 $display = false;
 
@@ -45,6 +45,7 @@ else{
     $populateArray=new SplFixedArray(10);
 
 }
+
 $smarty->assign("display", $display);
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);

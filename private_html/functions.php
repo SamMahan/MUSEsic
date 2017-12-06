@@ -54,7 +54,6 @@ function getSongById($songKeyVal) {
     }
 
     return $song;
-
 }
 
 function getArtists() {
@@ -70,7 +69,23 @@ function getArtists() {
     }
 
     return $list_of_artists;
+}
 
+function getArtistById($artistKeyVal) {
+
+    $artist = array();
+    global $pdo;
+    $query = "SELECT * FROM Song WHERE Song_ID like ':n%'";
+
+    $statement = $pdo->prepare($query);
+    $statement->bindParam(":n", $artistKeyVal);
+    $statement->execute();
+
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        $artist[] = $row;
+    }
+
+    return $artist;
 }
 
 function getAlbums() {
@@ -87,9 +102,24 @@ function getAlbums() {
     }
 
     return $list_of_albums;
-
 }
 
+function getAlbumById($albumKeyVal) {
+
+    $album = array();
+    global $pdo;
+    $query = "SELECT * FROM Song WHERE Song_ID like ':n%'";
+
+    $statement = $pdo->prepare($query);
+    $statement->bindParam(":n", $albumKeyVal);
+    $statement->execute();
+
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        $album[] = $row;
+    }
+
+    return $album;
+}
 
 function timeToSeconds($time) { // TEMPORARY
 
@@ -200,7 +230,7 @@ function addAlbum($album) {
 
     global $pdo;
 
-    $sql = "INSERT INTO Album (Album_Name, Genre_FK) VALUES (:an,5)";
+    $sql = "INSERT INTO Album (Album_Name, Genre_FK) VALUES (:an,1)";
 
     $stmt = $pdo->prepare($sql);
 

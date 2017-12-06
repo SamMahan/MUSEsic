@@ -1,9 +1,10 @@
 <?PHP
 
 require_once "../../../../private_html/config.inc.php";
+
 $user = sessioncheck();
-$successArray=array();
-$populateArray=array();
+$successArray = array();
+$populateArray = array();
 $modal = "";
 $error = false;
 $display = false;
