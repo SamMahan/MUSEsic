@@ -241,10 +241,11 @@ function addAlbum($album) {
     return true;
 }
 
-function sessioncheck(){
+function sessioncheck($returnusers = true){
 
     if(empty($_SESSION['user'])){
         header("Location:".WEB_URL."/controllers/Logic/visitor/registration.php");
+        return false;
     }
     $id = $_SESSION['user'];
     $user = new User($id);
