@@ -6,6 +6,8 @@
  * Time: 5:06 PM
  */
 
+//todo make getArtist()
+
 class Album
 
 {
@@ -88,7 +90,6 @@ class Album
 
         if($st->execute())
             return new Artist($pdo->lastInsertId());
-
     }
 
     public function getSongs() {
