@@ -9,6 +9,9 @@
 class Playlist
 //$artist = new Artist($id);
 //$artist->Artist_Name
+    /**
+     * @todo make a function() **function description
+     */
 {
     private $Playlist_ID;
     private $Playlist_Name;
@@ -110,15 +113,16 @@ class Playlist
      * @return bool|Playlist
      */
 
-    public static function create($Playlist_Name)
+    public static function create($Playlist_Name,$User_ID )
     {
+        global $pdo;
         $q = "INSERT INTO musesicdb.playlist (Playlist_Name) Values(:p)";
 
         $st = $pdo->prepare($q);
         $st->bindParam(":p", $Playlist_Name);
         if ($st->execute()) {
+            PlaylistFactory::addUserPlaylist($pdo->lastInsertId(), $User_ID);
             return new Playlist($pdo->lastInsertId());
-
         }
         return false;
     }
@@ -129,6 +133,15 @@ class PlaylistFactory{
         $q = "DELETE FROM playlist WHERE Playlist_ID = :id";
         $st = $pdo->prepare($q);
         $st->bindparam(":id", $Id);
+        return $st->execute();
+    }
+
+    public static function addUserPlaylist($User_ID, $Playlist_ID){
+        global $pdo;
+        $q = "INSERT INTO user_playlist (User_FK, Playlist_FK) VALUES(:uid, :pid)";
+        $st = $pdo->prepare($q);
+        $st->bindparam(":uid", $User_ID);
+        $st->bindparam(":pid", $Playlist_ID);
         return $st->execute();
     }
 
