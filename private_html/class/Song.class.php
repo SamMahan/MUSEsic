@@ -92,7 +92,7 @@ public $SongFile;
 
     }
     public function setReview($Review){
-        setVal(array(""))
+        setVal(array(""));
     }
 
     /** end of public functions  */
@@ -104,10 +104,10 @@ public $SongFile;
      * @param $Song_Link the link to the uploaded song file on the server not necessary,
      * @return bool
      */
-    public static function create($Title, $Artist_id, $Album_id, $Pic_Link = null, $Song_Link = null){
+    public static function create($Title, $Album_id, $Pic_Link = null, $Song_Link = null){
         global $pdo;
 
-        $sql = "INSERT INTO Song (Title, Length, Artist_FK, Album_FK, Song_File_FK) VALUES(:t,:l,:ar,:al,:sfk)";
+        $sql = "INSERT INTO Song (Title, Artist_FK, Album_FK) VALUES(:t,:ar,:al)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(":t", $Title);
         $stmt->bindParam(":ar", $Artist_id);
@@ -115,23 +115,30 @@ public $SongFile;
 
 
 
-            $song = new Song($stmt['Song_ID']);
+
             if($Pic_Link) {
                 $image = SongFactory::addImageFile($Pic_Link);
                 $stmt->bindparam(":sfk", $image->File_ID);
             }
             if($Song_Link){
-                $song = SongFactory::addSongFile($Pic_Link);
+                $song = SongFactory::addSongFile($Song_Link);
                 $stmt->bindparam(":sfk", $song->File_ID);
             }
         $stmt->execute();
-        if($stmt->fetch(PDO::FETCH_ASSOC)){
-            return $song;
+        if($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            return new Song($row['Song_ID']);
         }
     }
 }
 class SongFactory
 {
+    public static function deleteSong($Id){
+        global $pdo;
+        $q = "DELETE FROM song WHERE Song_ID = :id";
+        $st = $pdo->prepare($q);
+        $st->bindparam(":id", $Id);
+        return $st->execute();
+    }
 public static function addImageFile($File){
     $file = ImageFile::create($File);
     return $file;
