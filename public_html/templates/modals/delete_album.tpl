@@ -7,6 +7,13 @@
             </div>
             <div class="modal-body">
                 <p>Deleting this album will delete these songs:</p>
+                $album = new Album;
+                $listOfSongs = $album->getongs();
+                {foreach $listOfSongs as $key => $value}
+                    <li>
+                        {$value->Title}
+                    </li>
+                {/foreach}
             </div>
             <div class="modal-footer">
 

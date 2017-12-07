@@ -89,7 +89,7 @@ function getArtistById($artistKeyVal) {
 }
 
 function getAlbums() {
-    $query = "SELECT * FROM Album";
+    $query = "SELECT * FROM Album.class";
 
     global $pdo;
 
@@ -154,7 +154,7 @@ function addSong($title, $length, $artist_name, $album_name) {
     $artist = $stmt2->fetch(PDO::FETCH_ASSOC);
     $artist_id = $artist["Artist_ID"];
 
-    $sql3 = "SELECT Album_ID FROM Album WHERE Album_Name = :aln";
+    $sql3 = "SELECT Album_ID FROM Album.class WHERE Album_Name = :aln";
     $stmt3 = $pdo->prepare($sql3);
     $stmt3->bindParam(":aln", $album_name);
     $stmt3->execute();
@@ -197,7 +197,7 @@ function getSongAlbum($album_id) {
 
     global $pdo;
 
-    $sql = "SELECT Album_Name FROM Album WHERE Album_ID = :aid";
+    $sql = "SELECT Album_Name FROM Album.class WHERE Album_ID = :aid";
 
     $stmt = $pdo->prepare($sql);
 
@@ -230,7 +230,7 @@ function addAlbum($album) {
 
     global $pdo;
 
-    $sql = "INSERT INTO Album (Album_Name, Genre_FK) VALUES (:an,1)";
+    $sql = "INSERT INTO Album.class (Album_Name, Genre_FK) VALUES (:an,1)";
 
     $stmt = $pdo->prepare($sql);
 
