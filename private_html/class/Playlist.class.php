@@ -66,6 +66,7 @@ class Playlist
         PlaylistFacroty::delete($this->Playlist_ID);
     }
 
+
     /** end public functions */
     //takes in an array of values. if those values are valid column names, it updates the columns automatically
     //adapts to any array size, can be used for one or all values
@@ -155,6 +156,7 @@ class PlaylistFactory{
      */
     public static function getRelations($Playlist_ID , $From_Type,$Entity_ID = null){
         global $pdo;
+
        if(!$Table = Playlist::getRelationshipTable($From_Type)){return false;       }
        $q = "SELECT $From_Type"."_ID From $From_Type INNER JOIN $Table ON $From_Type"."_ID =$From_Type"."_FK INNER JOIN
         playlist on Playlist_ID = Playlist_FK WHERE Playlist_ID = :pi";
@@ -178,6 +180,23 @@ class PlaylistFactory{
     }
     public static function getPlaylistSongs($Playlist_ID){
         PlaylistFactory::getRelations($Playlist_ID, "Songs");
+    }
+
+    public static function getUserPlaylists($User_ID){
+        global $pdo;
+        $q = "SELECT Playlist_ID FROM User_Playlist INNER JOIN Playlist ON Playlist_ID = Playlist_FK INNER JOIN User ON
+          User_ID = User_FK WHERE User_ID = :id";
+        $st = $pdo->prepare($q);
+        $st->bindparam(":uid", $User_ID);
+
+        if($st->execute()){
+            $array = array();
+            while($row = $st->fetch(PDO::FETCH_ASSOC)){
+                $array[] = new Playlist($row['Playlist_ID']);
+            }
+            return $array;
+        }
+        return false;
     }
 }
 
