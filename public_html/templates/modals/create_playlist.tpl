@@ -5,7 +5,9 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Create Playlist</h4>
             </div>
-            <form>
+                <form>
+
+
                 <fieldset>
                     <div class="modal-body">
                         <div class="form-group">
@@ -24,11 +26,11 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-success">Create</button>
+                        <button class="btn btn-success" id="create_playlist_submit" type="submit">Create</button>
                         <button id="new-playlist" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                     </div>
                 </fieldset>
-            </form>
+                </form>
         </div>
     </div>
 </div>

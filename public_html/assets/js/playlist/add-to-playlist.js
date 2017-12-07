@@ -1,6 +1,6 @@
-$(document).onload(function(){
-
-    $("#new-playlist").click(function(){
+$(document).ready(function(){
+    $("#create_playlist_submit").click(function(){
+       // e.preventDefault();
         //populates info with information from the html file
         //meant too work with create_playlist.tpl
         var info = {
@@ -10,9 +10,10 @@ $(document).onload(function(){
             User_FK: $("#global-meta").attr("data-userid")
         };
         var data = JSON.stringify(info);
+        alert(info);
         //formulates request using var info
         $.ajax({
-            url:"../api/playlists/post.php",
+            url:"../../api/playlist/post.php",
             type: "POST",
             data:"data=" + data,
             type:"json",
@@ -24,7 +25,6 @@ $(document).onload(function(){
             }
         });
 
-
-
     });
 });
+

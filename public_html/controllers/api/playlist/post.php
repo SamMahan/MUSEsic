@@ -12,5 +12,5 @@ $data = json_decode($_POST["data"]);
 
 
 http_response_code(200);
-echo json_encode($data);
+echo json_encode("this is a string");
 
