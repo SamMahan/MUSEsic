@@ -26,7 +26,7 @@
 <div class="container-fluid">
     <div class="artistpic col-md-5 col-md-offset-1">
         <img src="../../../assets/Images/artistpicture.jpg" alt="artist picture" height="auto" width="auto">
-        <h2>The Piano Guys</h2>
+        <h2>{$artist["Artist_Name"]}</h2>
         <h4>Added By: User</h4>
     </div>
 
