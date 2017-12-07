@@ -1,6 +1,20 @@
 $(document).ready(function(){
     $("#delete-artist-button").click(function() {
         var id = this.attr("data-artistid");
+
+        $.ajax({
+            url: "../../../controllers/api/artist/get_songs.php",
+            type: "post",
+            data: id,
+            dataType: 'json',
+            success: function(response) {
+                $('#artist-song-response').prepend(response);
+            },
+            error: function() {
+                alert("Your request could not be processed at this time.")
+            }
+        });
+
         $("#confirm-delete-artist").click(function() {
 
             $.ajax({

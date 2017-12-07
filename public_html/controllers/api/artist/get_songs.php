@@ -1,11 +1,10 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: sfmah
- * Date: 12/4/2017
- * Time: 1:26 PM
+ * User: Dono
+ * Date: 12/7/17
+ * Time: 6:36 PM
  */
-
 $data = json_decode($_POST["data"]);
 $response = 0;
 $user = sessioncheck();
@@ -17,8 +16,15 @@ if(!$user){
 }
 
 $artist = new Artist($data->id);
-$response = $artist->Title;
-if(!$artist->delete()){
+$list = $artist->getSongs();
+
+$songlist = "<ul>";
+foreach($list as $key=>$value) {
+    $songlist = $songlist . "<li>" . $value->Song_Name . "</li>";
+}
+$response = $songlist . "</ul>";
+
+if(!$artist->getSongs()){
     $response = 0;
 }
 

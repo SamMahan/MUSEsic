@@ -113,4 +113,28 @@ class Artist
         }
         return false;
     }
+
+    public function delete() {
+        global $pdo;
+
+        $success = False;
+
+        $sql = "DELETE FROM Song WHERE Artist_FK = :aid";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":aid", $this->Artist_ID);
+
+
+        $sql2 = "DELETE FROM Artist WHERE Artist_ID = :aid";
+        $stmt2 = $pdo->prepare($sql2);
+        $stmt2->bindParam(":aid", $this->Artist_ID);
+        if ($stmt->execute()){
+            $success = True;
+            if ($stmt2->execute()){
+                $success = True;
+            } else {
+                $success = False;
+            }
+        }
+        return $success;
+    }
 }
