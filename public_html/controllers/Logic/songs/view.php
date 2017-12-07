@@ -1,12 +1,14 @@
 <?PHP
 
 require_once "../../../../private_html/config.inc.php";
+
 $user = sessioncheck();
-$successArray=array();
-$populateArray=array();
+$successArray = array();
+$populateArray = array();
 $modal = "";
 $error = false;
 $display = false;
+$key = $_GET["key"];
 
 if (isset($_POST["review"])) {
     if ($_POST["review"] != null) {
@@ -23,8 +25,7 @@ if (isset($_POST["review"])) {
     }
 }
 
-$songKey = $_GET["key"];
-$songArray = getSongById($songKey);
+$songArray = getSongById($key);
 $smarty->assign("songArray", $songArray);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);

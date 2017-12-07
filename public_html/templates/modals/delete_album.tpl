@@ -6,12 +6,19 @@
                 <h4 class="modal-title">Delete</h4>
             </div>
             <div class="modal-body">
-                <p>Are you sure you want to delete this album?</p>
+                <p>Deleting this album will delete these songs:</p>
+                $album = new Album;
+                $listOfSongs = $album->getongs();
+                {foreach $listOfSongs as $key => $value}
+                    <li>
+                        {$value->Title}
+                    </li>
+                {/foreach}
             </div>
             <div class="modal-footer">
 
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-danger" id="confirm-delete-album">Delete</button>
 
             </div>
         </div>

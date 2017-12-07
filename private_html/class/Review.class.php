@@ -5,13 +5,7 @@
  * Date: 12/3/2017
  * Time: 4:40 PM
  */
-<?php
-/**
- * Created by PhpStorm.
- * User: sfmah
- * Date: 11/13/2017
- * Time: 5:17 PM
- */
+
 
 class Review
 {
@@ -101,14 +95,14 @@ class Review
     /**
      * @param $Title the song title
      * @param $Artist_id the FK of the artist to which the song it attributed
-     * @param $Album_id the FK of the Album to which the song is attrubuted
+     * @param $Album_id the FK of the Album.class to which the song is attrubuted
      * @param $Pic_link the link to the uploaded picture file on the server optional, place null if not available
      * @param $Song_Link the link to the uploaded song file on the server not necessary,
      * @return bool
      */
     public static function create($Comment, $Stars, $Timestamp, $User_FK, $Entity_FK, $From_Type){
         global $pdo;
-        if ($tbl = getTable($FromType))
+
         $sql = "INSERT INTO Review (Comment, Stars, Timestamp, User_FK) VALUES(:c, :s, :t, :u)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(":c", $Comment);
@@ -119,7 +113,7 @@ class Review
         $stmt->execute();
 
         if($row  = $stmt->fetch(PDO::FETCH_ASSOC)){
-            addToSong($Song_FK, )
+           ReviewFactory:addToRelationshipTable($Entity_FK, $pdo->lastInsertId(), $From_Type);
             return new Review($row["Review_ID"]);
         }
 
@@ -130,19 +124,22 @@ class Review
 }
 class ReviewFactory
 {
-    /**adds to the song Review File
-     * @param $Song_FK
+    /**adds a link between an entity (song, album, artist) nd a review in the apporopriate table
+     * @param $Entity_FK
      * @param $Review_FK
      */
-    private static function addToRelationshipTable($Song_FK,$Review_FK, $Table ){
+    public static function addToRelationshipTable($Entity_FK, $Review_FK, $Table)
+    {
         global $pdo;
-
-        $q = "INSERT INTO :tbl (Song_FK, Review_FK) VALUES(:sfk, rfk)";
-        $st = $pdo->prepare($sql);
-        $st->bindparam(:tbl", $Table)
-        $st->bindparam("sfk",$Song_FK);
-        $st->bindparam("rfk",$Review_FK);
-
+        //tbl is the relationship table
+        if ($tbl = getTable($Table))
+            $q = "INSERT INTO $tbl (" . $Table . "_FK, Review_FK) VALUES(:sfk, rfk)";
+        $st = $pdo->prepare($q);
+        $st->bindparam(":sfk", $Entity_FK);
+        $st->bindparam(":rfk", $Review_FK);
+        if ($st->execute()) {
+            return true;
+        }
+        return false;
     }
-    
 }

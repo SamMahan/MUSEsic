@@ -6,9 +6,11 @@
  */
 class MP3File
 {
+
     protected $filename;
     public function __construct($filename)
     {
+        echo "this is MP3file";
         $this->filename = $filename;
     }
 

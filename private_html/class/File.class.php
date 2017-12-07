@@ -8,26 +8,36 @@
 
 class File
 {
-    private $File_ID;
-    private $Link;
-    private $Created;
-    private $Created_By;
-    private $Modified;
-    private $Modified_By;
+    protected $File_ID;
+    protected $Link;
+    protected $Created;
+    protected $Created_By;
+    protected $Modified;
+    protected $Modified_By;
    //private $Length;
     private $Extension;
 
     public function __construct($Id){
         $row = self::get($Id);
-        foreach($row as $colName =>$value){
-            $this->__set($colName, $value);
+        if(!$row) {
+            return false;
         }
+            foreach ($row as $colName => $value) {
+                $this->__set($colName, $value);
+            }
+
     }
     public function __get($colName){
-        if(property_exists($colName)){
+        if(property_exists("File",$colName)){
             return $this->$colName;
 
         }
+    }
+    public function __set($colName, $value){
+        if(property_exists("File",$colName)){
+            $this->$colName = $value;
+        }
+        return false;
     }
 
     public function get($Id){
@@ -41,8 +51,10 @@ class File
         if($st->execute() != null){
             if($st->rowcount() == 1) {
                 $row = $st->fetch(PDO::FETCH_ASSOC);
+                return $row;
             }
         }
+        return false;
     }
     /** end public functions */
 
@@ -57,27 +69,32 @@ class File
      * @return file object
      */
     //$_FILES['userfile']['tmp_name'] is how you get the file from the client side
-    public static function create($File){
+    public static function create($File, $From, $Type){
         global $pdo;
-        $user = checksession();
+        $user = sessioncheck();
+
+        $id = $user->User_ID;
         $created = getDateTime();
-        if (checkIntegrity($File, $Type) && $user != false) {
+        if ( $user instanceof User) {
             $token = generateToken();
             $ext = pathinfo($File, PATHINFO_EXTENSION);
+            echo "EXT: $ext";
             $name = pathinfo($File, PATHINFO_BASENAME);
-            $uploadDirectory = FILE_PATH . "$From/$Type/";
-            $link = $uploadDirectory."$token.$name.$ext";
+
+            echo": Basename: $name";
+            $uploadDirectory = FILE_PATH . $From.DIRECTORY_SEPARATOR.$Type.DIRECTORY_SEPARATOR;
+            $link = $uploadDirectory."$token.$name";
 
 
 
-            $q = 'INSERT INTO file (Link, Created, CreatedBy, Length) VALUES (:li, :c, :cb, :le)';
-            $st = new $pdo->prepare($q);
+            $q = 'INSERT INTO file (Link, Created, CreatedBy) VALUES (:li, :c, :cb)';
+            $st = $pdo->prepare($q);
             $st->bindparam(":li", $link);
             $st->bindparam(":c", $created);
-            $st->bindparam(":cb", $user->User_ID);
+            $st->bindparam(":cb",$id);
            // $st->bindparam(":le",$length);
             if($st->execute()) {
-                move_uploaded_file($File, $uploadDirectory);
+                move_uploaded_file($File, $link);
                 return new File($pdo->lastInsertId());
             }else{
                 return false;

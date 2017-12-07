@@ -3,21 +3,12 @@
 require_once "../../../../private_html/config.inc.php";
 
 $user = sessioncheck();
-$successArray=array();
-$populateArray=array();
+$successArray = array();
+$populateArray = array();
 $modal = "";
 $error = false;
 $display = false;
-
-if ($_POST == null){
-    /*for($i=0; $i<12; $i++){
-        array_push($successArray, "");
-        array_push($populateArray, "placeholder='enter info'");
-    }*/
-
-
-}
-
+$key = $_GET['key'];
 if (isset($_POST["album_name"])) {
     foreach ($_POST as $key => $value) {
         if ($value === "") {
@@ -33,6 +24,7 @@ if (isset($_POST["album_name"])) {
         $modal = "data-modalpost = 'active'";
         $error = true;
     }
+
     if ($_POST["album_name"] != null && $_POST["number_songs"] != null && $_POST["play_time"] != null && $_POST["release_date"] != null) {
         $modal = "data-modalpost = 'active'";
         $error = false;
@@ -62,10 +54,11 @@ if (isset($_POST["review"])) {
 else{
     $successArray= new SplFixedArray(10);
     $populateArray=new SplFixedArray(10);
-
 }
 
-$listOfAlbums= getAlbums();
+$listOfAlbums = getAlbums();
+$album = getAlbumById($key);
+$smarty->assign("album",$album);
 $smarty->assign("user",$user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);

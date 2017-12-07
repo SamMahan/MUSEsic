@@ -42,7 +42,7 @@
                             <input name="email" class="form-control" id="email" type="text"{$populateArray[3]}>
                         </div>
 
-                        <div class="form-group col-lg-7">
+                       <!-- <div class="form-group col-lg-7">
                             <label class="control-label" for="Birthday">Birthday</label>
                             <input name="birthday" class="form-control" id="Birthday" type="text">
                         </div>
@@ -55,7 +55,7 @@
                         <div class="form-group col-lg-7">
                             <label class="control-label" for="FavoriteArtist">Favorite Artist</label>
                             <input name="favorite_artist" class="form-control" id="FavoriteArtist" type="text">
-                        </div>
+                        </div>-->
 
 
                         <div id="buttons" class="col-lg-10">

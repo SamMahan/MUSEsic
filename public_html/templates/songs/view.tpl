@@ -25,7 +25,7 @@
         <img src="../../../assets/Images/songpicture.jpg" alt="song picture" height="auto"
              width="auto">
         <h2>Title</h2>
-        <!--<h2>{$songArray["Title"]}</h2>-->
+        <h2>{$songArray["Title"]}</h2>
         <!--<h4>{$songArray['']}</h4>-->
         <h4>Added By: User</h4>
     </div>

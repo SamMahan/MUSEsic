@@ -36,7 +36,7 @@ class Artist
         global $pdo;
 
 
-        $q  = "SELECT * FROM Artist WHERE Artist_ID= :id";
+        $q  = "SELECT * FROM Artist WHERE Artist_ID = :id";
 
         $st = $pdo->prepare($q);
 
@@ -93,5 +93,24 @@ class Artist
         if($st->execute())
             return new Artist($pdo->lastInsertId());
 
+    }
+
+    public function getSongs() {
+        global $pdo;
+
+        $sql = "SELECT Song_ID FROM Song INNER JOIN Artist ON Artist_ID = Artist_FK WHERE Artist_ID = :aid";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":aid", $this->Artist_ID);
+
+        $songs = array();
+
+        if($stmt->execute()) {
+            $row = $stmt->fetch(FETCH::ASSOC);
+            foreach ($row as $key=>$value) {
+                $songs[] = new Song($value);
+            }
+            return $songs;
+        }
+        return false;
     }
 }

@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
 
-                <form class="form-horizontal" method="post" action="{$smarty.const.WEB_PATH}song_list.php">
+                <form class="form-horizontal" method="post"enctype = "multipart/form-data" action="{$smarty.const.WEB_PATH}song_list.php">
                     <fieldset>
 
                         <!-- Text input-->
@@ -52,7 +52,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="song_upload">Upload Song:</label>
                             <div class="col-md-4">
-                                <input id="fileUpload" name="song_upload" class="song_upload input-md" type="file">
+                                <input id="song_upload" name="song_upload" class="song_upload input-md" type="file">
                             </div>
                         </div>
                     </fieldset>
