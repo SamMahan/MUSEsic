@@ -63,7 +63,7 @@ public $SongFile;
     }
 
     public function delete(){
-        SongFactory::delete($this->Song_ID);
+        return SongFactory::delete($this->Song_ID);
     }
 
     /** end public functions */
