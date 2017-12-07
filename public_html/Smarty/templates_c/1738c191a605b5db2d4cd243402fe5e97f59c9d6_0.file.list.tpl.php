@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-17 00:09:54
+<?php /* Smarty version 3.1.27, created on 2017-12-05 13:16:27
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\songs\list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:17961483315a0e6f22022d64_99264082%%*/
+/*%%SmartyHeaderCode:20356731295a26e27b134129_65113616%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1738c191a605b5db2d4cd243402fe5e97f59c9d6' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\songs\\list.tpl',
-      1 => 1510870860,
+      1 => 1512411935,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17961483315a0e6f22022d64_99264082',
+  'nocache_hash' => '20356731295a26e27b134129_65113616',
   'variables' => 
   array (
     'listOfSongs' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0e6f221befd9_49084778',
+  'unifunc' => 'content_5a26e27b3372e4_67174882',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0e6f221befd9_49084778')) {
-function content_5a0e6f221befd9_49084778 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a26e27b3372e4_67174882')) {
+function content_5a26e27b3372e4_67174882 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '17961483315a0e6f22022d64_99264082';
+$_smarty_tpl->properties['nocache_hash'] = '20356731295a26e27b134129_65113616';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -97,7 +97,8 @@ view.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value["Song_ID"];?>
 </td>
                 <td><?php echo timeToStandard($_smarty_tpl->tpl_vars['value']->value["Length"]);?>
 </td>
-                <td><a href="#" data-target="#delete_song" data-toggle="modal"><button class="btn btn-danger">Delete</button></a></td>
+                <td><a href="#" data-target="#delete_song" id = "delete-song-button" data-songid = "<?php echo $_smarty_tpl->tpl_vars['value']->value["Song_ID"];?>
+" data-toggle="modal"><button class="btn btn-danger">Delete</button></a></td>
             </tr>
         <?php
 $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;

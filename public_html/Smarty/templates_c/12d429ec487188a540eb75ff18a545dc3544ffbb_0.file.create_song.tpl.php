@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-17 00:09:54
+<?php /* Smarty version 3.1.27, created on 2017-12-07 09:43:54
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\create_song.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:15027891915a0e6f2245b195_31886665%%*/
+/*%%SmartyHeaderCode:10242758965a2953aa120ba3_88472482%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '12d429ec487188a540eb75ff18a545dc3544ffbb' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\modals\\create_song.tpl',
-      1 => 1510609565,
+      1 => 1512657826,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '15027891915a0e6f2245b195_31886665',
+  'nocache_hash' => '10242758965a2953aa120ba3_88472482',
   'variables' => 
   array (
     'successArray' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0e6f224c8f96_28086540',
+  'unifunc' => 'content_5a2953aa393de9_20863750',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0e6f224c8f96_28086540')) {
-function content_5a0e6f224c8f96_28086540 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a2953aa393de9_20863750')) {
+function content_5a2953aa393de9_20863750 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '15027891915a0e6f2245b195_31886665';
+$_smarty_tpl->properties['nocache_hash'] = '10242758965a2953aa120ba3_88472482';
 ?>
 <div class="modal fade" id="create_song" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -40,7 +40,7 @@ $_smarty_tpl->properties['nocache_hash'] = '15027891915a0e6f2245b195_31886665';
             </div>
             <div class="modal-body">
 
-                <form class="form-horizontal" method="post" action="<?php echo @constant('WEB_PATH');?>
+                <form class="form-horizontal" method="post"enctype = "multipart/form-data" action="<?php echo @constant('WEB_PATH');?>
 song_list.php">
                     <fieldset>
 
@@ -92,7 +92,7 @@ song_list.php">
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="song_upload">Upload Song:</label>
                             <div class="col-md-4">
-                                <input id="fileUpload" name="song_upload" class="song_upload input-md" type="file">
+                                <input id="song_upload" name="song_upload" class="song_upload input-md" type="file">
                             </div>
                         </div>
                     </fieldset>

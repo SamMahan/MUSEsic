@@ -272,5 +272,5 @@ function logout(){
  */
 function generateToken(){
      $token = uniqid("",true);
-     return token;
+     return $token;
 }

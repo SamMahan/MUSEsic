@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-17 09:30:53
+<?php /* Smarty version 3.1.27, created on 2017-12-05 13:14:46
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\componants\navbar.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:20131124675a0ef29dcbe596_65581915%%*/
+/*%%SmartyHeaderCode:17623405265a26e2162bdea5_25639281%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,24 +9,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '17e797bdbe2d46899d77e89ddc88969a1065b007' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\componants\\navbar.tpl',
-      1 => 1510929050,
+      1 => 1512412746,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20131124675a0ef29dcbe596_65581915',
+  'nocache_hash' => '17623405265a26e2162bdea5_25639281',
   'variables' => 
   array (
     'user' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0ef29dd0ca00_25598221',
+  'unifunc' => 'content_5a26e2164f8b65_42638505',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0ef29dd0ca00_25598221')) {
-function content_5a0ef29dd0ca00_25598221 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a26e2164f8b65_42638505')) {
+function content_5a26e2164f8b65_42638505 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '20131124675a0ef29dcbe596_65581915';
+$_smarty_tpl->properties['nocache_hash'] = '17623405265a26e2162bdea5_25639281';
 ?>
 
     <nav class="navbar navbar-default">
@@ -78,10 +78,12 @@ $_smarty_tpl->properties['nocache_hash'] = '20131124675a0ef29dcbe596_65581915';
                 <a href="../user/home.php"><?php echo $_smarty_tpl->tpl_vars['user']->value->First_Name;?>
  <?php echo $_smarty_tpl->tpl_vars['user']->value->Last_Name;?>
 </a>
-
+                <div id="global-meta" display="hidden" data-userid = "<?php echo $_smarty_tpl->tpl_vars['user']->value->User_ID;?>
+"></div>
                 <?php }?>
             </div>
         </div>
+
     </nav>
 <?php }
 }

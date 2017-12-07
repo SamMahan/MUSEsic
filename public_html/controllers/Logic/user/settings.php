@@ -13,18 +13,14 @@ $display = false;
 $changePasswordMessage = "";
 $changePasswordError  =false;
 
-if (isset($_POST["first_name"])) {
-    foreach ($_POST as $key => $value) {
-        if ($value == "") {
-            array_push($successArray, "has-warning");
-            array_push($populateArray, "placeholder='**no informaton entered. no changes.**'");
-        } elseif ($value != "") {
 
-            array_push($successArray, "has-success");
-            array_push($populateArray, "value='$value'");
 
-        }
-    }
+array_push($populateArray, $user->First_Name);
+array_push($populateArray, $user->Last_Name);
+array_push($populateArray, $user->Email);
+
+
+
     if ($_POST["first_name"] != null || $_POST["last_name"] != null || $_POST["email"] != null) {
         $modal = "data-modalpost = 'active'";
         $error = false;
@@ -34,22 +30,8 @@ if (isset($_POST["first_name"])) {
         $user->Last_Name = $_POST["last_name"];
         $user->Email = $_POST["email"];
     }
-    if ($_POST["first_name"] != null && $_POST["last_name"] != null && $_POST["email"] != null) {
-        $modal = "data-modalpost = 'active'";
-        $error = false;
-        $display = true;
-        $successArray = new SplFixedArray(10);
-        $populateArray = new SplFixedArray(10);
 
 
-    }
-}
-
-else{
-    $successArray= new SplFixedArray(10);
-    $populateArray=new SplFixedArray(10);
-
-}
 
     if (isset($_POST['old_password'])){
         if($user->Password == $_POST['old_password']){
