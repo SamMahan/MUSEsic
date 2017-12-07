@@ -6,8 +6,6 @@ require_once "../../../../private_html/config.inc.php";
 
 logout();
 
-//logout();
-
 $successArray=array();
 $populateArray=array();
 $lsuccessArray = array();

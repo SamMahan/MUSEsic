@@ -43,14 +43,14 @@ function getSongById($songKeyVal) {
 
     $song = array();
     global $pdo;
-    $query = "SELECT * FROM Song WHERE Song_ID like ':n%'";
+    $query = "SELECT * FROM Song WHERE Song_ID :n%";
 
     $statement = $pdo->prepare($query);
     $statement->bindParam(":n", $songKeyVal);
     $statement->execute();
 
     while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $song[] = $row;
+        $song = $row;
     }
 
     return $song;
@@ -75,14 +75,14 @@ function getArtistById($artistKeyVal) {
 
     $artist = array();
     global $pdo;
-    $query = "SELECT * FROM Song WHERE Song_ID like ':n%'";
+    $query = "SELECT * FROM Artist WHERE Artist_ID :n%";
 
     $statement = $pdo->prepare($query);
     $statement->bindParam(":n", $artistKeyVal);
     $statement->execute();
 
     while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $artist[] = $row;
+        $artist = $row;
     }
 
     return $artist;
@@ -108,14 +108,14 @@ function getAlbumById($albumKeyVal) {
 
     $album = array();
     global $pdo;
-    $query = "SELECT * FROM Song WHERE Song_ID like ':n%'";
+    $query = "SELECT * FROM Album WHERE Album_ID = :n";
 
     $statement = $pdo->prepare($query);
     $statement->bindParam(":n", $albumKeyVal);
     $statement->execute();
 
     while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $album[] = $row;
+        $album = $row;
     }
 
     return $album;

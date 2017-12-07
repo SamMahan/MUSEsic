@@ -8,7 +8,7 @@ $populateArray = array();
 $modal = "";
 $error = false;
 $display = false;
-
+$key = $_GET['key'];
 if (isset($_POST["album_name"])) {
     foreach ($_POST as $key => $value) {
         if ($value === "") {
@@ -57,6 +57,8 @@ else{
 }
 
 $listOfAlbums = getAlbums();
+$album = getAlbumById($key);
+$smarty->assign("album",$album);
 $smarty->assign("user",$user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
