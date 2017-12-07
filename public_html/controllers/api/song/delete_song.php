@@ -18,7 +18,7 @@ if(!$user){
 
 $song = new Song($data->id);
 $response = $song->Title;
-if(!$song->deleteSong()){
+if(!$song->delete()){
     $response = 0;
 }
 

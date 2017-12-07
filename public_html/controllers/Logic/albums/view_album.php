@@ -9,6 +9,7 @@ $modal = "";
 $error = false;
 $display = false;
 $key = $_GET['key'];
+
 if (isset($_POST["album_name"])) {
     foreach ($_POST as $key => $value) {
         if ($value === "") {

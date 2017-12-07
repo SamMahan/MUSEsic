@@ -8,10 +8,11 @@ $populateArray = array();
 $modal = "";
 $error = false;
 $display = false;
+$key = $_GET['key'];
 
 if (isset($_POST["artist_name"])){
     foreach($_POST as $key=>$value){
-        if($value==="") {
+        if($value === "") {
             array_push($successArray, "has-warning");
             array_push($populateArray, "placeholder='**Information Required**'");
         }
@@ -51,10 +52,14 @@ if (isset($_POST["review"])) {
         $populateArray = new SplFixedArray(10);
     }
 } else{
-    $successArray= new SplFixedArray(10);
-    $populateArray=new SplFixedArray(10);
+    $successArray = new SplFixedArray(10);
+    $populateArray = new SplFixedArray(10);
 }
 
+$listOfArtists = getArtists();
+$artist = getArtistById($key);
+$smarty->assign("artist", $artist);
+$smarty->assign("listOfArtists", $listOfArtists);
 $smarty->assign("user",$user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);

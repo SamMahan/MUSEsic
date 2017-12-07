@@ -1,12 +1,18 @@
 <?php
 require_once "dbconfig.php";
-//takes in a name parameter
-//send back a list of users from the query
+
+//todo make songGetAuthor($key)
+//todo make albumGetAuthor($key)
+//todo make artistGetAuthor($key)
+
 function getDateTime()
 {
     $dt = date('Y-m-d H:i:s');
     return $dt;
 }
+
+//takes in a name parameter
+//send back a list of users from the query
 function selectUsers($name){
 
     global $pdo;
@@ -43,7 +49,7 @@ function getSongById($songKeyVal) {
 
     $song = array();
     global $pdo;
-    $query = "SELECT * FROM Song WHERE Song_ID :n%";
+    $query = "SELECT * FROM Song WHERE Song_ID = :n";
 
     $statement = $pdo->prepare($query);
     $statement->bindParam(":n", $songKeyVal);
@@ -75,7 +81,7 @@ function getArtistById($artistKeyVal) {
 
     $artist = array();
     global $pdo;
-    $query = "SELECT * FROM Artist WHERE Artist_ID :n%";
+    $query = "SELECT * FROM Artist WHERE Artist_ID = :n";
 
     $statement = $pdo->prepare($query);
     $statement->bindParam(":n", $artistKeyVal);

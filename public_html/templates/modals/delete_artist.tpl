@@ -7,15 +7,9 @@
             </div>
             <div class="modal-body">
                 <p>Deleting this artist will delete these songs:</p>
-                <ul>
-                $album = new Album;
-                $listOfSongs = $album->getSongs();
-                {foreach $listOfSongs as $key => $value}
-                    <li>
-                        {$value->Title}
-                    </li>
-                {/foreach}
-                </ul>
+                <div id="artist-song-response">
+
+                </div>
             </div>
             <div class="modal-footer">
 

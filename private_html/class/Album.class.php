@@ -6,6 +6,8 @@
  * Time: 5:06 PM
  */
 
+//todo make getArtist()
+
 class Album
 
 {
@@ -88,7 +90,6 @@ class Album
 
         if($st->execute())
             return new Artist($pdo->lastInsertId());
-
     }
 
     public function getSongs() {
@@ -108,5 +109,29 @@ class Album
             return $songs;
         }
         return false;
+    }
+
+    public function delete() {
+        global $pdo;
+
+        $success = False;
+
+        $sql = "DELETE FROM Song WHERE Album_FK = :aid";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":aid", $this->Album_ID);
+
+
+        $sql2 = "DELETE FROM Album WHERE Album_ID = :aid";
+        $stmt2 = $pdo->prepare($sql2);
+        $stmt2->bindParam(":aid", $this->Album_ID);
+        if ($stmt->execute()){
+            $success = True;
+            if ($stmt2->execute()){
+                $success = True;
+            } else {
+                $success = False;
+            }
+        }
+        return $success;
     }
 }
