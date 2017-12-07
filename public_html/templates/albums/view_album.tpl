@@ -34,6 +34,7 @@
             <div class="artistpic col-lg-3 col-lg-offset-4">
                 <img src="../../assets/Images/artistpicture.jpg" alt="artist picture" height="auto" width="auto">
                 <h2>The Piano Guys(album)</h2>
+                <h2>{$album["Album_Name"]}</h2>
                 <h4>The Piano Guys</h4>
                 <h4>Added By: User</h4>
             </div>

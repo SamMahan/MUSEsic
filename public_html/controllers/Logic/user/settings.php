@@ -1,8 +1,10 @@
 <?PHP
+
 require_once "../../../../private_html/config.inc.php";
+
 $user = sessioncheck();
-$successArray=array();
-$populateArray=array();
+$successArray = array();
+$populateArray = array();
 $modal = "";
 $error = false;
 $display = false;
@@ -11,19 +13,9 @@ $display = false;
 $changePasswordMessage = "";
 $changePasswordError  =false;
 
-if ($_POST == null){
-    /*for($i=0; $i<12; $i++){
-        array_push($successArray, "");
-        array_push($populateArray, "placeholder='enter info'");
-    }*/
-
-
-}
-
 if (isset($_POST["first_name"])) {
     foreach ($_POST as $key => $value) {
         if ($value == "") {
-            //echo "$key->$value";
             array_push($successArray, "has-warning");
             array_push($populateArray, "placeholder='**no informaton entered. no changes.**'");
         } elseif ($value != "") {
@@ -62,11 +54,9 @@ else{
     if (isset($_POST['old_password'])){
         if($user->Password == $_POST['old_password']){
 
-      //  echo "olspasswordset";
         if ($_POST['new_password'] == $_POST['confirm_password']) {
             $valueSet = array("Password" => $_POST["confirm_password"]);
             $user->setVal($valueSet);
-         //   echo "password success";
             $display = true;
             $modal = "data-modalpost = 'active'";
             $successArray = new SplFixedArray(10);
@@ -74,18 +64,13 @@ else{
         } else {
             $changePasswordError = true;
             $changePasswordMessage = "passwords do not match!";
-        //    echo "password not match";
         }
     }
         else{
             $changePasswordError = true;
             $changePasswordMessage = "old password is incorrect!";
-       //     echo "password incorrect";
         }
 }
-
-
-
 
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);

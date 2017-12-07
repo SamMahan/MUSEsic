@@ -1,8 +1,8 @@
 <?PHP
 require_once "../../../../private_html/config.inc.php";
 $user = sessioncheck();
-$successArray=array();
-$populateArray=array();
+$successArray = array();
+$populateArray = array();
 $modal = "";
 $error = false;
 $display = false;
@@ -15,13 +15,14 @@ if (isset($_POST["album_name"])) {
         } elseif ($value != "") {
             array_push($successArray, "has-success");
             array_push($populateArray, "value='$value'");
-
         }
     }
+
     if ($_POST["album_name"] != null || $_POST["number_songs"] != null || $_POST["play_time"] != null || $_POST["release_date"] != null) {
         $modal = "data-modalpost = 'active'";
         $error = true;
     }
+
     if ($_POST["album_name"] != null && $_POST["number_songs"] != null && $_POST["play_time"] != null && $_POST["release_date"] != null) {
         $modal = "data-modalpost = 'active'";
         $error = false;
@@ -30,13 +31,13 @@ if (isset($_POST["album_name"])) {
         $populateArray = new SplFixedArray(10);
 
         addAlbum($_POST["album_name"]);
-
     }
 } else{
     $successArray= new SplFixedArray(10);
     $populateArray=new SplFixedArray(10);
 
 }
+
 $listOfAlbums= getAlbums();
 $smarty->assign("user",$user);
 $smarty->assign("error", $error);

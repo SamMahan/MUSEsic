@@ -6,13 +6,11 @@
  * Time: 5:06 PM
  */
 
-class Artist
-//$artist = new Artist($id);
-//$artist->Artist_Name
+class Album
+
 {
-    private $Artist_ID;
-    private $Artist_Name;
-    private $Artist_Biography;
+    private $Album_ID;
+    private $Album_Name;
 
     public function __construct($Id){
         $row = self::get($Id);
@@ -36,7 +34,7 @@ class Artist
         global $pdo;
 
 
-        $q  = "SELECT * FROM Artist WHERE Artist_ID = :id";
+        $q  = "SELECT * FROM Album WHERE Album_ID = :id";
 
         $st = $pdo->prepare($q);
 
@@ -53,6 +51,7 @@ class Artist
     //adapts to any array size, can be used for one or all values
     public function setVal($values){
         global $pdo;
+
         $pholderKeys = array();
         $colKeys = array();
         $inputs = array();
@@ -80,15 +79,12 @@ class Artist
 
     /** end of public functions  */
 
-    public static function create($Artist_Name, $Artist_Biography){
+    public static function create($Album_Name){
         global $pdo;
 
-        $q = "Insert INTO User (Artist_Name)
-          VALUES(:an)";
+        $q = "Insert INTO User (Album_Name) VALUES(:an)";
         $st = $pdo->prepare($q);
-        $st->bindParam(":an", $Artist_Name);
-        //$st->bindParam(":ab", $Artist_Biography);
-
+        $st->bindParam(":an", $Album_Name);
 
         if($st->execute())
             return new Artist($pdo->lastInsertId());
@@ -98,9 +94,9 @@ class Artist
     public function getSongs() {
         global $pdo;
 
-        $sql = "SELECT Song_ID FROM Song INNER JOIN Artist ON Artist_ID = Artist_FK WHERE Artist_ID = :aid";
+        $sql = "SELECT Song_ID FROM Song INNER JOIN Album ON Album_ID = Album_FK WHERE Album_ID = :aid";
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(":aid", $this->Artist_ID);
+        $stmt->bindParam(":aid", $this->Album_ID);
 
         $songs = array();
 

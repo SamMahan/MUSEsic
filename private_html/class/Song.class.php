@@ -99,7 +99,7 @@ public $SongFile;
     /**donovan, you can
      * @param $Title the song title
      * @param $Artist_id the FK of the artist to which the song it attributed
-     * @param $Album_id the FK of the Album to which the song is attrubuted
+     * @param $Album_id the FK of the Album.class to which the song is attrubuted
      * @param $Pic_link the link to the uploaded picture file on the server optional, place null if not available
      * @param $Song_Link the link to the uploaded song file on the server not necessary,
      * @return bool

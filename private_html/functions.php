@@ -28,6 +28,7 @@ function getSongs() {
 
     $statement = $pdo->prepare($query);
     $statement->execute();
+    $list_of_songs = null;
 
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){
         $list_of_songs[] = $row;
@@ -42,18 +43,17 @@ function getSongById($songKeyVal) {
 
     $song = array();
     global $pdo;
-    $query = "SELECT * FROM Song WHERE Song_ID like ':n%'";
+    $query = "SELECT * FROM Song WHERE Song_ID :n%";
 
     $statement = $pdo->prepare($query);
     $statement->bindParam(":n", $songKeyVal);
     $statement->execute();
 
     while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $song[] = $row;
+        $song = $row;
     }
 
     return $song;
-
 }
 
 function getArtists() {
@@ -69,25 +69,57 @@ function getArtists() {
     }
 
     return $list_of_artists;
+}
 
+function getArtistById($artistKeyVal) {
+
+    $artist = array();
+    global $pdo;
+    $query = "SELECT * FROM Artist WHERE Artist_ID :n%";
+
+    $statement = $pdo->prepare($query);
+    $statement->bindParam(":n", $artistKeyVal);
+    $statement->execute();
+
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        $artist = $row;
+    }
+
+    return $artist;
 }
 
 function getAlbums() {
-    $query = "SELECT * FROM Album";
+    $query = "SELECT * FROM Album.class";
 
     global $pdo;
 
     $statement = $pdo->prepare($query);
     $statement->execute();
+    $list_of_albums = null;
 
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){
         $list_of_albums[] = $row;
     }
 
     return $list_of_albums;
-
 }
 
+function getAlbumById($albumKeyVal) {
+
+    $album = array();
+    global $pdo;
+    $query = "SELECT * FROM Album WHERE Album_ID = :n";
+
+    $statement = $pdo->prepare($query);
+    $statement->bindParam(":n", $albumKeyVal);
+    $statement->execute();
+
+    while($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        $album = $row;
+    }
+
+    return $album;
+}
 
 function timeToSeconds($time) { // TEMPORARY
 
@@ -122,7 +154,7 @@ function addSong($title, $length, $artist_name, $album_name) {
     $artist = $stmt2->fetch(PDO::FETCH_ASSOC);
     $artist_id = $artist["Artist_ID"];
 
-    $sql3 = "SELECT Album_ID FROM Album WHERE Album_Name = :aln";
+    $sql3 = "SELECT Album_ID FROM Album.class WHERE Album_Name = :aln";
     $stmt3 = $pdo->prepare($sql3);
     $stmt3->bindParam(":aln", $album_name);
     $stmt3->execute();
@@ -165,7 +197,7 @@ function getSongAlbum($album_id) {
 
     global $pdo;
 
-    $sql = "SELECT Album_Name FROM Album WHERE Album_ID = :aid";
+    $sql = "SELECT Album_Name FROM Album.class WHERE Album_ID = :aid";
 
     $stmt = $pdo->prepare($sql);
 
@@ -198,7 +230,7 @@ function addAlbum($album) {
 
     global $pdo;
 
-    $sql = "INSERT INTO Album (Album_Name, Genre_FK) VALUES (:an,5)";
+    $sql = "INSERT INTO Album.class (Album_Name, Genre_FK) VALUES (:an,1)";
 
     $stmt = $pdo->prepare($sql);
 
@@ -209,10 +241,11 @@ function addAlbum($album) {
     return true;
 }
 
-function sessioncheck(){
+function sessioncheck($returnusers = true){
 
     if(empty($_SESSION['user'])){
         header("Location:".WEB_URL."/controllers/Logic/visitor/registration.php");
+        return false;
     }
     $id = $_SESSION['user'];
     $user = new User($id);
