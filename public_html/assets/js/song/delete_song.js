@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(".delete-song-button").click(function() {
-
+        var button = $(this);
         var song_id2 = $(this).data("songid");
         var info = {
             song_id: song_id2
@@ -17,7 +17,7 @@ $(document).ready(function() {
                     alert ("Please sign in to access this function.")
                 } else {
                     alert("Successfully deleted " + response + ".");
-                    $(this).parent("tr").hide();
+                    button.parent("td").parent("tr").hide();
                 }
             },
             error: function() {

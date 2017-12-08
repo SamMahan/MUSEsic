@@ -157,11 +157,11 @@ public $SongFile;
         $description = "";
         $binddes = "";
         if($Description){
-            $description = "Description,";
+            $description = ",Description,";
             $binddes = ",:d";
 
         }
-        $sql = "INSERT INTO Song (CreatedBy, Artist_FK, Album_FK, Title, $description) VALUES(:cb, :ar, :al, :t, $binddes".")";
+        $sql = "INSERT INTO Song (CreatedBy, Artist_FK, Album_FK, Title $description) VALUES(:cb, :ar, :al, :t $binddes".")";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(":t", $Title);
         $stmt->bindParam(":ar", $Artist_id);
