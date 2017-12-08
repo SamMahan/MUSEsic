@@ -24,21 +24,11 @@
         <img src="../../../assets/Images/songpicture.jpg" alt="song picture" height='auto'
              width='auto'>
         <h2>{$songArray["Title"]}</h2>
-        <h4>Added By: {$author->First_Name}</h4>
+        <h4>Added By: {$userid->First_Name}</h4>
     </div>
 
     <div class="info col-md-5">
-        <p>"Headstrong" is the debut single from the band Trapt and the
-            lead single from their 2002 self-titled debut album. It reached
-            No. 1 on the Billboard Mainstream Rock (1 week on July 26, 2003)
-            and Modern Rock (5 weeks on May 31, 2003) charts and No. 16 on
-            the Billboard Hot 100, as well as No. 1 on the singles recurrent
-            charts. It crossed over to mainstream pop radio, peaking at No.
-            4 on Billboard Mainstream Top 40. The song also won two
-            Billboard Music Awards in 2003 for "Best Modern Rock Track" and
-            "Best Rock Track". It was featured on the video game Karaoke
-            Revolution Party. It was written by Chris Taylor Brown, Pete
-            Charell, Simon Ormandy, Jeffrey Unbankes.
+        <p>{$songArray["Description"]}
         </p>
     </div>
 

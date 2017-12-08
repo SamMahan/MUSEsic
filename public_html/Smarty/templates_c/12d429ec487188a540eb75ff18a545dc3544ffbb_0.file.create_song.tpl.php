@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-12-07 21:46:41
+<?php /* Smarty version 3.1.27, created on 2017-12-08 03:29:57
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\create_song.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:2497247335a29fd111aaba6_76293704%%*/
+/*%%SmartyHeaderCode:10234437875a2a4d8585b599_18529126%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '12d429ec487188a540eb75ff18a545dc3544ffbb' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\modals\\create_song.tpl',
-      1 => 1512685981,
+      1 => 1512686076,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2497247335a29fd111aaba6_76293704',
+  'nocache_hash' => '10234437875a2a4d8585b599_18529126',
   'variables' => 
   array (
     'successArray' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a29fd1125d2f3_43638730',
+  'unifunc' => 'content_5a2a4d85867c80_92909241',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a29fd1125d2f3_43638730')) {
-function content_5a29fd1125d2f3_43638730 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a2a4d85867c80_92909241')) {
+function content_5a2a4d85867c80_92909241 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '2497247335a29fd111aaba6_76293704';
+$_smarty_tpl->properties['nocache_hash'] = '10234437875a2a4d8585b599_18529126';
 ?>
 <div class="modal fade" id="create_song" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

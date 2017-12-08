@@ -8,7 +8,6 @@
 
 require_once "../../../../private_html/config.inc.php";
 
-//$data = json_decode($_POST["data"]);
 $response = 0;
 $user = sessioncheck();
 

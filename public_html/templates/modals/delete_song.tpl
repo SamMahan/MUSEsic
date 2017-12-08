@@ -12,7 +12,7 @@
 
 
                 <button type="button" class="btn btn-default" id="cancel" data-dismiss="modal">Cancel</button>
-                <a href="#" class="deleting_song" id="confirm_delete_song" data-song_id=""><button type="button" class="btn btn-danger">Delete</button></a>
+                <a href="#" class="deleting_song" id="confirm_delete_song"><button type="button" class="btn btn-danger">Delete</button></a>
 
             </div>
         </div>

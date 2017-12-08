@@ -72,7 +72,7 @@ class Album
         $id = $this->Album_ID;
         //$q = "SELECT Artist_ID FROM Artist INNER JOIN Artist ON Album_ID = Album_FK WHERE Artist_ID = :id";
 
-        $q = "SELECT Artist_ID FROM Album INNER JOIN Album ON Artist_ID = Artist_FK WHERE Album_ID = :id";
+        $q = "SELECT Artist_ID FROM Artist INNER JOIN Song ON Artist_ID = Artist_FK INNER JOIN Album ON Album_ID = Album_FK WHERE Album_ID = :id";
 
         $st = $pdo->prepare($q);
         $st->bindParam(":id", $id);
@@ -118,7 +118,7 @@ class Album
 
     /** end of public functions  */
 
-    public static function create($Album_Name){
+    public static function create($Album_Name, $Genre = 1){
         global $pdo;
         $user = sessioncheck();
         $id = $user->User_ID;
@@ -126,7 +126,7 @@ class Album
         $st = $pdo->prepare($q);
         $st->bindParam(":an", $Album_Name);
         $st->bindParam(":cb", $id);
-        $st->bindParam(":gfk", $Genre_FK);
+        $st->bindParam(":gfk", $Genre);
 
 
         if($st->execute())
@@ -134,6 +134,7 @@ class Album
     }
 
     public function getSongs() {
+
         global $pdo;
 
         $sql = "SELECT Song_ID FROM Song INNER JOIN Album ON Album_ID = Album_FK WHERE Album_ID = :aid";
@@ -143,10 +144,13 @@ class Album
         $songs = array();
 
         if($stmt->execute()) {
-            $row = $stmt->fetch(FETCH::ASSOC);
-            foreach ($row as $key=>$value) {
-                $songs[] = new Song($value);
+
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                echo $row['Song_ID']."SongId";
+                $songs[] = $row['Song_ID'];
+                echo $row['Song_ID'];
             }
+
             return $songs;
         }
         return false;

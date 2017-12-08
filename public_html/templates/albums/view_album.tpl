@@ -33,9 +33,8 @@
         <div class="row">
             <div class="artistpic col-lg-3 col-lg-offset-4">
                 <img src="../../assets/Images/artistpicture.jpg" alt="artist picture" height="auto" width="auto">
-                <h2>The Piano Guys(album)</h2>
-                <h2>{$album["Album_Name"]}</h2>
-                <h4>The Piano Guys</h4>
+                <h2>{$album->Album_Name}</h2>
+                <h4>{$artist->Artist_Name}</h4>
                 <h4>Added By: {$userid->First_Name}</h4>
             </div>
         </div>
@@ -50,26 +49,19 @@
                 </tr>
             </thead>
             <tbody>
+            {assign var = "i" value = "1"}
+            {foreach $songs as $key =>$value}
                 <tr>
-                    <td>1</td>
-                    <td>{$songs["Title"]}</td>
+                    <td>{$i}</td>
+                    <td>{$value->Title}</td>
 
-                    <td>00:30:00</td>
+                    <td>{$value->Song_File_FK->Length}</td>
                     <td><a  data-toggle="modal" data-target="#remove-song" href = "#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
                     <td></td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>My Second song</td>
-                    <td>00:24:00</td>
-                    <td><a  data-toggle="modal" data-target="#remove-song" href = "#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>My third song</td>
-                    <td>00:24:00</td>
-                    <td><a  data-toggle="modal" data-target="#remove-song" href = "#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                </tr>
+                {$i = $i + 1}
+            {/foreach}
+
             </tbody>
         </table>
     </div>

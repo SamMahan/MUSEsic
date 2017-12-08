@@ -58,12 +58,12 @@ if (isset($_POST["review"])) {
 
 $artistObj = new Artist($key);
 
-$albums = $artistObj->getAlbums();
+//$albums = new album($artistObj->getAlbums());
 $listOfArtists = getArtists();
 $artist = new Artist($key);
 $userid = $artistObj->CreatedBy;
 $author = new User($userid);
-$smarty->assign("albums", $albums);
+//$smarty->assign("albums", $albums);
 $smarty->assign("author", $author);
 $smarty->assign("artist", $artist);
 $smarty->assign("listOfArtists", $listOfArtists);

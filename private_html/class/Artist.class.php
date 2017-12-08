@@ -59,7 +59,7 @@ class Artist
         global $pdo;
 
         $id = $this->Artist_ID;
-        $q = "SELECT Album_ID FROM ALBUM INNER JOIN Album ON Artist_ID = Artist_FK WHERE Album_ID = :id";
+        $q = "SELECT Album_ID FROM Album INNER JOIN Song ON Album_ID = Album_FK INNER JOIN Artist ON Artist_ID = Artist_FK WHERE Album_ID = :id";
         $st = $pdo->prepare($q);
         $st->bindParam(":id", $id);
 
@@ -71,6 +71,24 @@ class Artist
 
         }
 
+    }
+    public function getSongs() {
+        global $pdo;
+
+        $sql = "SELECT Song_ID FROM Song INNER JOIN Artist ON Artist_ID = Artist_FK WHERE Artist_ID = :aid";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":aid", $this->Artist_ID);
+
+        $songs = array();
+
+        if($stmt->execute()) {
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            foreach ($row as $key=>$value) {
+                $songs[] = new Song($value);
+            }
+            return $songs;
+        }
+        return false;
     }
 
     /** end public functions */
@@ -122,24 +140,7 @@ class Artist
 
     }
 
-    public function getSongs() {
-        global $pdo;
 
-        $sql = "SELECT Song_ID FROM Song INNER JOIN Artist ON Artist_ID = Artist_FK WHERE Artist_ID = :aid";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(":aid", $this->Artist_ID);
-
-        $songs = array();
-
-        if($stmt->execute()) {
-            $row = $stmt->fetch(FETCH::ASSOC);
-            foreach ($row as $key=>$value) {
-                $songs[] = new Song($value);
-            }
-            return $songs;
-        }
-        return false;
-    }
 
     public function delete() {
         global $pdo;

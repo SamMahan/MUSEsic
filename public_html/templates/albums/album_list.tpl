@@ -31,7 +31,7 @@
                     <td>--</td>
                     <td>--</td>
                     <td>--</td>
-                    <td><a href="#" data-target="#delete_album" id="delete-album-button" data-albumid="{$value["Album_ID"]}" data-toggle="modal"><button class="btn btn-danger">Delete</button></a></td>
+                    <td><a href="#" data-target="#delete_album" class="delete-album-button" data-albumid="{$value["Album_ID"]}"><button class="btn btn-danger">Delete</button></a></td>
                 </tr>
             {/foreach}
 
