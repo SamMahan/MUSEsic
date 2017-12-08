@@ -56,8 +56,12 @@ if (isset($_POST["review"])) {
     $populateArray = new SplFixedArray(10);
 }
 
+$artistObj = new Artist($key);
+
 $listOfArtists = getArtists();
 $artist = getArtistById($key);
+$author = new User($artistObj->CreatedBy);
+$smarty->assign("author", $author);
 $smarty->assign("artist", $artist);
 $smarty->assign("listOfArtists", $listOfArtists);
 $smarty->assign("user",$user);

@@ -22,8 +22,7 @@
         <img src="../../../assets/Images/songpicture.jpg" alt="song picture" height='auto'
              width='auto'>
         <h2>{$songArray["Title"]}</h2>
-        <!--<h4>{$songArray['']}</h4>-->
-        <h4>Added By: User</h4>
+        <h4>Added By: {$author->First_Name}</h4>
     </div>
 
     <div class="info col-md-5">
