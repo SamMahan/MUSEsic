@@ -113,13 +113,14 @@ class Album
 
     /** end of public functions  */
 
-    public static function create($Album_Name){
+    public static function create($Album_Name, $Genre_FK = 1){
         global $pdo;
         $user = sessioncheck();
-        $q = "Insert INTO User (Album_Name, CreatedBy) VALUES(:an, :cb)";
+        $q = "Insert INTO User (Album_Name, CreatedBy, Genre_FK) VALUES(:an, :cb, :gfk)";
         $st = $pdo->prepare($q);
         $st->bindParam(":an", $Album_Name);
         $st->bindParam(":cb", $user->User_ID);
+        $st->bindParam(":gfk", $Genre_FK);
 
         if($st->execute())
             return new Artist($pdo->lastInsertId());
