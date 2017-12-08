@@ -6,7 +6,10 @@
  * Time: 5:06 PM
  */
 
-//todo getAlbums($key) DONE
+
+//todo getAlbums($key)
+//todo make artistGetAuthor($key)
+
 
 class Artist
 //$artist = new Artist($id);

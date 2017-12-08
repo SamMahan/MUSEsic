@@ -6,6 +6,8 @@
  * Time: 5:17 PM
  */
 
+//todo make songGetAuthor($key)
+
 class Song
 {
 public $Song_ID;

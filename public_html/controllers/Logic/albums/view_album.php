@@ -59,6 +59,8 @@ else{
 
 $listOfAlbums = getAlbums();
 $album = getAlbumById($key);
+$songs = $album.getSongs();
+$smarty->assign("songs",$songs);
 $smarty->assign("album",$album);
 $smarty->assign("user",$user);
 $smarty->assign("error", $error);

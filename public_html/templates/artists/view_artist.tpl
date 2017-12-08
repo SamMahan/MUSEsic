@@ -41,9 +41,6 @@
         </p>
     </div>
 
-    <div class="">
-
-    </div>
 </div>
 
 <div class="row justify-content-center">
@@ -63,41 +60,21 @@
         <th>Name</th>
         <th>Number of Songs</th>
         <th>Total Play Time</th>
-        <th>Release-date</th>
-        <th></th>
     </tr>
     </thead>
     <tbody>
+    {foreach $listOfAlbums as $key => $value}
     <tr>
         <td>1</td>
         <td><a href="../albums/album-home.php">First Album</a></td>
         <td>10</td>
         <td>00:30:00</td>
-        <td>10/20/06</td>
+        <td></td>
         <td>
             <button type="button" class="btn btn-danger">Remove</button>
         </td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>My Second Playlist</td>
-        <td>7</td>
-        <td>00:24:00</td>
-        <td>10/20/06</td>
-        <td>
-            <button type="button" class="btn btn-danger">Remove</button>
-        </td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>---</td>
-        <td>---</td>
-        <td>---</td>
-        <td>10/20/06</td>
-        <td>
-            <button type="button" class="btn btn-danger">Remove</button>
-        </td>
-    </tr>
+    {/foreach}
 </table>
 
 

@@ -52,7 +52,7 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td><a href="../songs/view.php">Headstrong</a></td>
+                    <td>{$songs["Title"]}</td>
 
                     <td>00:30:00</td>
                     <td><a  data-toggle="modal" data-target="#remove-song" href = "#"><i class="fa fa-trash" aria-hidden="true"></i></a></td>

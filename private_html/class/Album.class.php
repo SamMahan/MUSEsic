@@ -6,7 +6,9 @@
  * Time: 5:06 PM
  */
 
-//todo make getArtist($key) DONE
+
+//todo make getArtist($key)
+//todo make artistGetAlbum($key)
 
 class Album
 
