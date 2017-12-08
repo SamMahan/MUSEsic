@@ -84,7 +84,7 @@ class Album
             }
         }
     }
-$val = array(Album_Name=>$_POST['Album_Name'], )
+
     /** end public functions */
     //takes in an array of values. if those values are valid column names, it updates the columns automatically
     //adapts to any array size, can be used for one or all values

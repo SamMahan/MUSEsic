@@ -80,29 +80,61 @@ public $SongFile;
      * */
     public function setVal($values){
         global $pdo;
+        $user = sessioncheck();
+        $id = $this->Song_ID;
         $pholderKeys = array();
         $colKeys = array();
         $inputs = array();
         foreach($values as $key =>$value) {
 
             //create unique number designation for each value
-            $pholderKeys[] = ":".$key;
+            $pholderKeys[] = (":".$key);
             $colKeys[] = $key;
+            $string[] ="$key = :$key";
+
 
         }
         $columnString = implode(",",$colKeys);
-        $placeholderString = ":".implode(",", $pholderKeys);
+        $placeholderString = implode(",", $pholderKeys);
+        $stringString = implode(',', $string);
 
-        $q = "UPDATE User SET ($columnString) VALUES ($placeholderString) WHERE User_ID = :id";
+        $q = "UPDATE Song SET $stringString WHERE Song_ID = :id";
         //counter
         $i = 0;
         $st = $pdo->prepare($q);
         foreach($values as $key=>$value){
-            $st->bindParam($pholderKeys[i], $colKeys[i]);
+            $st->bindParam($pholderKeys[$i], $colKeys[$i]);
             $i = $i+1;
         }
-        return $st->execute();
+        $st->bindParam(":id", $id);
+        if( $st->execute()){
+            echo"good change";
+            return true;
+        }
 
+    }
+    public function updateTitle($Title){
+        global $pdo;
+        $id = $this->Song_ID;
+        $sql = "UPDATE Song SET Title = :t WHERE Song_ID = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindparam(":t", $Title);
+        $stmt->bindparam(":id", $id);
+        $stmt->execute();
+        $this->Title = $Title;
+
+    }
+    public function updateDescription($Description)
+    {
+        global $pdo;
+        $id = $this->Song_ID;
+        $sql = "UPDATE Song SET Description = :d WHERE Song_ID = :id";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindparam(":d", $Description);
+        $stmt->bindparam(":id", $id);
+        $stmt->execute();
+        $this->Description = $Description;
+        //echo  $this->Description;
     }
     public function setReview($Review){
         setVal(array(""));

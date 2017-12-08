@@ -44,16 +44,23 @@ else{
     $successArray= new SplFixedArray(10);
     $populateArray=new SplFixedArray(10);
 }
-
-$song_id = $_GET["key"];
-$song = new Song($song_id);
-$artist = new Artist($song->Artist_FK);
-$album = new Album($song->Album_FK);
-
+if(isset($_GET['key'])) {
+    $song_id = $_GET["key"];
+    $song = new Song($song_id);
+    $artist = new Artist($song->Artist_FK);
+    $album = new Album($song->Album_FK);
+}
 
 if(isset($_POST["title"])){
     $update = array("Title"=>$_POST["title"], "Description"=>$_POST["description"]);
-    $song->setVal($update);
+    //echo $_POST["song_id"];
+    $song = new Song($_POST["song_id"]);
+    $artist = new Artist($song->Artist_FK);
+    $album = new Album($song->Album_FK);
+    $song->updateTitle($_POST['title']);
+   // echo $_POST['description'];
+    $song->updateDescription($_POST['description']);
+
 }
 
 
