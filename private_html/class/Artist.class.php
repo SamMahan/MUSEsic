@@ -59,7 +59,7 @@ class Artist
         global $pdo;
 
         $id = $this->Artist_ID;
-        $q = "SELECT Album_ID FROM ALBUM INNER JOIN Album ON Artist_ID = Artist_FK WHERE Album_ID = :id";
+        $q = "SELECT Album_ID FROM Album INNER JOIN Song ON Album_ID = Album_FK INNER JOIN Artist ON Artist_ID = Artist_FK WHERE Album_ID = :id";
         $st = $pdo->prepare($q);
         $st->bindParam(":id", $id);
 
