@@ -5,14 +5,16 @@
     <style media="all">@import "../../assets/css/view_song.css";</style>
     <link href="../../assets/css/bootswatch.css" type="text/css" rel="stylesheet"/>
     <title>View Song</title>
-    
     {$smarty.const.RESOURCES}
+</head>
+    
+
 
 {include file = "componants/navbar.tpl"}
 
 <div class="col-lg-11"></div>
 <div class="col-lg-1">
-    <a href="update.php" class="btn btn-info">Update Song</a>
+    <a href="update.php?key={$songArray["Song_ID"]}" class="btn btn-info">Update Song</a>
 </div>
 
 
