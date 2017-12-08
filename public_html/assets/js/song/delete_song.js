@@ -33,11 +33,11 @@
     }); */
 
 $(document).on("click", ".delete_this_song", function() {
-    var song_id = $(this).data(song_id);
-    $(".deleting_song #confirm-delete-song").val(song_id);
+    var song_id = $(this).data('song_id');
+    $(".deleting_song #confirm-delete-song").setAttribute('song_id', song_id);
 
     $(document).on("click", ".deleting_song", function() {
-        var song_id2 = $(this).value();
+        var song_id2 = $(this).getAttribute('song_id');
 
         $.ajax({
             url: "../../../controllers/api/song/delete_song.php",
