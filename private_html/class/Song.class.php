@@ -26,7 +26,6 @@ public $ImageFile;
 public $SongFile;
 
     public function __construct($Id){
-        $row = self::get($Id);
         if($row = self::get($Id));
         foreach($row as $colName =>$value){
             if($colName == "Image_FK" && $colName!= null){
@@ -116,7 +115,9 @@ public $SongFile;
         global $pdo;
         $user = sessioncheck();
         $descripton = "";
+
         $id = $user->User_ID;
+
         $binddes = "";
         if($Description){
             $description = ",".$Description.",";

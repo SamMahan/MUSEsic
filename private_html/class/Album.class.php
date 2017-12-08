@@ -16,6 +16,7 @@ class Album
     private $Album_ID;
     private $Album_Name;
     private $CreatedBy;
+    private $Genre_FK;
 
     public function __construct($Id){
         $row = self::get($Id);
@@ -50,12 +51,29 @@ class Album
             }
         }
     }
+    public function getGenre(){
+        global $pdo;
+
+        $id = $this->Album_ID;
+        $q = "SELECT Genre_Name FROM genre INNER JOIN Album ON Genre_ID = Genre_FK WHERE Album_ID = :aid";
+        $st = $pdo->prepare($q);
+        $st->bindParam(":aid", $this->Album_ID);
+
+        if($st->execute()){
+            while($row = $st->fetch(PDO::FETCH_ASSOC)){
+                return $row;
+            }
+        }
+    }
 
     public function getArtist(){
         global $pdo;
 
         $id = $this->Album_ID;
         $q = "SELECT Artist_ID FROM Artist INNER JOIN Artist ON Album_ID = Album_FK WHERE Artist_ID = :id";
+
+        $q = "SELECT Artist_ID FROM Album INNER JOIN Album ON Artist_ID = Artist_FK WHERE Album_ID = :id";
+
         $st = $pdo->prepare($q);
         $st->bindParam(":id", $id);
 
@@ -109,6 +127,13 @@ class Album
         $st = $pdo->prepare($q);
         $st->bindParam(":an", $Album_Name);
         $st->bindParam(":cb", $id);
+
+        $q = "Insert INTO User (Album_Name, CreatedBy, Genre_FK) VALUES(:an, :cb, :gfk)";
+        $st = $pdo->prepare($q);
+        $st->bindParam(":an", $Album_Name);
+        $st->bindParam(":cb", $user->User_ID);
+        $st->bindParam(":gfk", $Genre_FK);
+
 
         if($st->execute())
             return new Album($pdo->lastInsertId());
