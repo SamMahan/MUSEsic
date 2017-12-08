@@ -22,7 +22,7 @@ if (isset($_POST["artist_name"])){
 
         }
     }
-    if($_POST["artist_name"]!=null || $_POST["popular_song"] !=null || $_POST["number_songs"] !=null || $_POST["number_albums"] !=null){
+    if($_POST["artist_name"] !=null || $_POST["popular_song"] !=null || $_POST["number_songs"] !=null || $_POST["number_albums"] !=null){
         $modal = "data-modalpost = 'active'";
         $error = true;
 
@@ -35,17 +35,17 @@ if (isset($_POST["artist_name"])){
         $successArray= new SplFixedArray(10);
         $populateArray=new SplFixedArray(10);
 
-        addArtist($_POST["artist_name"]);
+        Artist::create($_POST["artist_name"]);
 
     }
 
 
 }else{
-    $successArray= new SplFixedArray(10);
-    $populateArray=new SplFixedArray(10);
+    $successArray = new SplFixedArray(10);
+    $populateArray = new SplFixedArray(10);
 }
 
-$listOfArtists= getArtists();
+$listOfArtists = getArtists();
 $smarty->assign("user",$user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);

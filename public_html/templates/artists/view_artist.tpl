@@ -22,7 +22,7 @@
 <div class="container-fluid">
     <div class="artistpic col-md-5 col-md-offset-1">
         <img src="../../../assets/Images/artistpicture.jpg" alt="artist picture" height="auto" width="auto">
-        <h2>{$artist["Artist_Name"]}</h2>
+        <h2>{$artist->Artist_Name}</h2>
         <h4>Added By: {$author->First_Name}</h4>
     </div>
 
@@ -63,7 +63,7 @@
     </tr>
     </thead>
     <tbody>
-    {foreach $listOfAlbums as $key => $value}
+    <!--{foreach $albums as $key => $value}-->
     <tr>
         <td>1</td>
         <td><a href="../albums/album-home.php">First Album</a></td>
@@ -74,7 +74,7 @@
             <button type="button" class="btn btn-danger">Remove</button>
         </td>
     </tr>
-    {/foreach}
+    <!--{/foreach}-->
 </table>
 
 

@@ -37,7 +37,7 @@
                 </ul>
 
                 {else}
-                    <form class="navbar-form navbar-left" role="search">
+                    <form class="navbar-form navbar-left" role="search" method="post">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search">
                         </div>

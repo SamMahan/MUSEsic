@@ -22,7 +22,7 @@ class Artist
 
     public function __construct($Id){
         $row = self::get($Id);
-        foreach($row as $colName =>$value){
+        foreach($row as $colName=>$value){
             $this->__set($colName, $value);
         }
     }
@@ -50,11 +50,14 @@ class Artist
         if($st->execute() != null){
             if($st->rowcount() == 1) {
                 $row = $st->fetch(PDO::FETCH_ASSOC);
+                return $row;
             }
         }
     }
 
     public function getAlbums(){
+        global $pdo;
+
         $id = $this->Artist_ID;
         $q = "SELECT Album_ID FROM ALBUM INNER JOIN Album ON Artist_ID = Artist_FK WHERE Album_ID = :id";
         $st = $pdo->prepare($q);
@@ -62,7 +65,8 @@ class Artist
 
         if($st->execute()){
             while($row = $st->fetch(PDO::FETCH_ASSOC)){
-                return new Album($row['Album_ID']);
+                $album = new Album($row['Album_ID']);
+                return $album;
             }
 
         }
@@ -101,14 +105,15 @@ class Artist
 
     /** end of public functions  */
 
-    public static function create($Artist_Name, $Artist_Biography){
+    public static function create($Artist_Name, $Artist_Biography = null){
         global $pdo;
         $user = sessioncheck();
-        $q = "Insert INTO User (Artist_Name, CreatedBy)
+        $id = $user->User_ID;
+        $q = "Insert INTO Artist (Artist_Name, CreatedBy)
           VALUES(:an, :cb)";
         $st = $pdo->prepare($q);
         $st->bindParam(":an", $Artist_Name);
-        $st->bindParam(":an", $user->User_ID);
+        $st->bindParam(":cb", $id);
         //$st->bindParam(":ab", $Artist_Biography);
 
 
