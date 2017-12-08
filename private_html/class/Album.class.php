@@ -61,7 +61,7 @@ class Album
 
         if($st->execute()){
             while($row = $st->fetch(PDO::FETCH_ASSOC)){
-                return $row;
+                return $row['Genre_Name'];
             }
         }
     }
