@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-12-07 22:15:18
+<?php /* Smarty version 3.1.27, created on 2017-12-08 02:49:18
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\songs\list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:18711322175a2a03c62f57b0_99477122%%*/
+/*%%SmartyHeaderCode:6892039785a2a43feb444e0_32483953%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1738c191a605b5db2d4cd243402fe5e97f59c9d6' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\songs\\list.tpl',
-      1 => 1512702914,
+      1 => 1512718024,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18711322175a2a03c62f57b0_99477122',
+  'nocache_hash' => '6892039785a2a43feb444e0_32483953',
   'variables' => 
   array (
     'listOfSongs' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a2a03c63cbaa4_67667514',
+  'unifunc' => 'content_5a2a43feb87682_15542378',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a2a03c63cbaa4_67667514')) {
-function content_5a2a03c63cbaa4_67667514 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a2a43feb87682_15542378')) {
+function content_5a2a43feb87682_15542378 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '18711322175a2a03c62f57b0_99477122';
+$_smarty_tpl->properties['nocache_hash'] = '6892039785a2a43feb444e0_32483953';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,18 +88,21 @@ $foreach_value_Sav = $_smarty_tpl->tpl_vars['value'];
             <tr>
 
                 <td> <a href="<?php echo @constant('WEB_PATH');?>
-view.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value["Song_ID"];?>
-"><?php echo $_smarty_tpl->tpl_vars['value']->value["Title"];?>
+view.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value->Song_ID;?>
+"><?php echo $_smarty_tpl->tpl_vars['value']->value->Title;?>
 </a></td>
-                <td><?php echo getSongArtist($_smarty_tpl->tpl_vars['value']->value["Artist_FK"]);?>
+                <td><?php echo getSongArtist($_smarty_tpl->tpl_vars['value']->value->Artist_FK);?>
 </td>
-                <td><?php echo getSongAlbum($_smarty_tpl->tpl_vars['value']->value["Album_FK"]);?>
+                <td><?php echo getSongAlbum($_smarty_tpl->tpl_vars['value']->value->Album_FK);?>
 </td>
-                <td><?php echo timeToStandard($_smarty_tpl->tpl_vars['value']->value["Length"]);?>
+                <td><?php echo timeToStandard($_smarty_tpl->tpl_vars['value']->value->Length);?>
 </td>
-                <td><a href="#" data-target="#delete_song" id="delete-song-button" data-songid="<?php echo $_smarty_tpl->tpl_vars['value']->value["Song_ID"];?>
-" data-toggle="modal"><button class="btn btn-danger">Delete</button></a>
-                    <a href="#" class="btn btn-sm btn-primary" data-target="#add_to_playlist" data-toggle="modal">Add+</a>
+
+                <td><a href="#" data-target="#delete_song" class="delete-song-button" data-songid="<?php echo $_smarty_tpl->tpl_vars['value']->value->Song_ID;?>
+" ><button class="btn btn-danger">Delete</button> <div style = "display:hidden"><?php echo $_smarty_tpl->tpl_vars['value']->value->Song_ID;?>
+ </div></a>
+                    <a href="#" class="btn btn-sm btn-primary " data-target="#add_to_playlist" data-toggle="modal" data-songid="<?php echo $_smarty_tpl->tpl_vars['value']->value->Song_ID;?>
+" id="add_to">Add+</a>
                 </td>
             </tr>
         <?php
@@ -169,6 +172,7 @@ $_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
 
 </body>
 
-</html><?php }
+</html>
+<?php }
 }
 ?>

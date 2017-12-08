@@ -34,14 +34,19 @@
                     </div>
 
                     <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11">
-                        <label for="textArea" class="control-label">Uploader's Comments</label>
-                        <textarea class="form-control" rows="3" id="textArea"></textarea>
+                        <label for="textArea" class="control-label">Description</label>
+                        <textarea value="{$song->Description}" type = "text" class="form-control" rows="3" id="textArea" name="description">{$song->Description}</textarea>
                     </div>
 
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                        <a class="btn btn-default" href="{$smarty.const.WEB_PATH}view.php">Cancle</a>
+                        <a class="btn btn-default" href="{$smarty.const.WEB_PATH}view.php">Cancel</a>
                         <button type="submit" class="btn btn-default" id="upload">Update</button>
                     </div>
+
+                    <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8" >
+                        <input value="{$song->Song_ID}" class="form-control input-sm" id="inputSmall" type="text" name="song_id" style="display:none">
+                    </div>
+
                 </div>
 
             </fieldset>
