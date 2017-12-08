@@ -2,3 +2,4 @@
 .idea/workspace.xml
 .idea/workspace.xml
 public_html/Smarty/templates_c/
+public_html/templates/songs/list.tpl
