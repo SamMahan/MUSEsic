@@ -36,9 +36,7 @@ if (isset($_POST["artist_name"])){
         $populateArray=new SplFixedArray(10);
 
         Artist::create($_POST["artist_name"]);
-
     }
-
 
 }else{
     $successArray = new SplFixedArray(10);

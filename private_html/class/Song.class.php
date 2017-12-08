@@ -121,6 +121,9 @@ public $SongFile;
         global $pdo;
         $user = sessioncheck();
         $descripton = "";
+
+        $id = $user->User_ID;
+
         $binddes = "";
         if($Description){
             $description = ",".$Description.",";
@@ -132,7 +135,7 @@ public $SongFile;
         $stmt->bindParam(":t", $Title);
         $stmt->bindParam(":ar", $Artist_id);
         $stmt->bindParam(":al", $Album_id);
-        $stmt->bindParam(":cb", $user->User_ID);
+        $stmt->bindParam(":cb", $id);
         if($Description){
             $stmt->bindParam("::d", $Description);
         }

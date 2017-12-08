@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-12-08 01:45:24
+<?php /* Smarty version 3.1.27, created on 2017-12-07 20:58:05
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\componants\navbar.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:9141107925a2a3504a718e4_79445189%%*/
+/*%%SmartyHeaderCode:5321335545a29f1adc024a0_27942127%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,24 +9,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '17e797bdbe2d46899d77e89ddc88969a1065b007' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\componants\\navbar.tpl',
-      1 => 1512715035,
+      1 => 1512344929,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9141107925a2a3504a718e4_79445189',
+  'nocache_hash' => '5321335545a29f1adc024a0_27942127',
   'variables' => 
   array (
     'user' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a2a3504af8413_06846679',
+  'unifunc' => 'content_5a29f1adc7d548_09516846',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a2a3504af8413_06846679')) {
-function content_5a2a3504af8413_06846679 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a29f1adc7d548_09516846')) {
+function content_5a29f1adc7d548_09516846 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '9141107925a2a3504a718e4_79445189';
+$_smarty_tpl->properties['nocache_hash'] = '5321335545a29f1adc024a0_27942127';
 ?>
 
     <nav class="navbar navbar-default">
@@ -68,7 +68,7 @@ $_smarty_tpl->properties['nocache_hash'] = '9141107925a2a3504a718e4_79445189';
                 </ul>
 
                 <?php } else { ?>
-                    <form class="navbar-form navbar-left" role="search" method="post">
+                    <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search">
                         </div>
