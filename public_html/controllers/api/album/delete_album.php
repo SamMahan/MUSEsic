@@ -20,7 +20,7 @@ if(!$user){
 $album = new Album($_POST['album_id']);
 $songs = array();
 $songs = $album->getSongs();
-foreach($songs as $key =>$value){
+foreach($songs as $key => $value){
     $value->delete();
 }
 $response = $album->Title;
