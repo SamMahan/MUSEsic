@@ -48,6 +48,8 @@ else{
 $song_id = $_GET["key"];
 $song = new Song($song_id);
 $artist = new Artist($song->Artist_FK);
+$album = new Album($song->Album_FK);
+
 
 $smarty->assign("song", $song);
 $smarty->assign("artist", $artist);
