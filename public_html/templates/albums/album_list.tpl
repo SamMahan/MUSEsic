@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
+    <title>Album List</title>
     {$smarty.const.RESOURCES}
-
-
-</head>
-<body>
 
 {include file = "componants/navbar.tpl"}
 

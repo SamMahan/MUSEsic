@@ -8,11 +8,6 @@
 
     {$smarty.const.RESOURCES}
 
-</head>
-
-<body>
-
-
 {include file = "componants/navbar.tpl"}
 {include file = "modals/update_artist.tpl"}
 
@@ -21,6 +16,7 @@
      <div class="col-lg-1">
          <a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-info">Update Artist</button></a>
      </div>
+</div>
 
 
 <div class="container-fluid">
@@ -225,6 +221,7 @@
                     <label for="text_review">Write A Review</label>
                     <textarea class="form-control" id="text_review" rows="3" name="review" required="required"></textarea>
                 </div>
+            </fieldset>
 
             <div class="form-group ">
                 <label for="star_rating">
