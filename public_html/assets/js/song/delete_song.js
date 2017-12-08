@@ -32,17 +32,18 @@
         });
     }); */
 
-$(document).on("click", ".delete_this_song", function() {
-    var song_id = $(this).data('song_id');
-    $(".song_id_div #song_id").val(song_id);
-
-    $(document).on("click", ".deleting_song", function() {
-        var song_id2 = $(this).val();
-
+$(document).ready(function() {
+    $(".delete-song-button").click(function() {
+        var song_id = $(this).data("song_id");
+        $("#deleting_song .confirm_delete_song").setAttribute("data-song_id", song_id);
+    });
+    $(".confirm_delete_song").click(function() {
+        var song_id = $(this).data("song_id");
+        
         $.ajax({
             url: "../../../controllers/api/song/delete_song.php",
-            type: "POST",
-            data: song_id2,
+            type: "post",
+            data: song_id,
             success: function(response) {
                 if (response === 0) {
                     alert ("Could not delete" + response + ".");
@@ -56,5 +57,5 @@ $(document).on("click", ".delete_this_song", function() {
                 alert("Your request could not be processed at this time.")
             }
         });
-    });
+    })
 });
