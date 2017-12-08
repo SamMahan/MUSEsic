@@ -98,7 +98,7 @@ public $SongFile;
         $i = 0;
         $st = $pdo->prepare($q);
         foreach($values as $key=>$value){
-            $st = $pdo->bindParam($pholderKeys[i], $colKeys[i]);
+            $st->bindParam($pholderKeys[i], $colKeys[i]);
             $i = $i+1;
         }
         return $st->execute();
