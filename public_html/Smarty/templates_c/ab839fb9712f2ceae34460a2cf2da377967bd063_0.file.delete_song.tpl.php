@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-12-08 00:51:30
+<?php /* Smarty version 3.1.27, created on 2017-12-08 01:36:40
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\delete_song.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:14514230285a2a28622ef4e6_02846478%%*/
+/*%%SmartyHeaderCode:21340949355a2a32f8ac9e92_62209372%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ab839fb9712f2ceae34460a2cf2da377967bd063' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\modals\\delete_song.tpl',
-      1 => 1512712217,
+      1 => 1512714915,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14514230285a2a28622ef4e6_02846478',
+  'nocache_hash' => '21340949355a2a32f8ac9e92_62209372',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a2a28622f3206_23399089',
+  'unifunc' => 'content_5a2a32f8ad0212_40065829',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a2a28622f3206_23399089')) {
-function content_5a2a28622f3206_23399089 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a2a32f8ad0212_40065829')) {
+function content_5a2a32f8ad0212_40065829 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '14514230285a2a28622ef4e6_02846478';
+$_smarty_tpl->properties['nocache_hash'] = '21340949355a2a32f8ac9e92_62209372';
 ?>
 <div class="modal" id="delete_song" data-songid = "">
     <div class="modal-dialog">
@@ -38,7 +38,7 @@ $_smarty_tpl->properties['nocache_hash'] = '14514230285a2a28622ef4e6_02846478';
 
 
                 <button type="button" class="btn btn-default" id="cancel" data-dismiss="modal">Cancel</button>
-                <button type="button" class="deleting_song btn btn-danger" id="confirm-delete-song" value="">Delete</button>
+                <a href="#" class="deleting_song" id="confirm_delete_song" data-song_id=""><button type="button" class="btn btn-danger">Delete</button></a>
 
             </div>
         </div>

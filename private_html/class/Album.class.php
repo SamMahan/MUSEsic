@@ -16,6 +16,7 @@ class Album
     private $Album_ID;
     private $Album_Name;
     private $CreatedBy;
+    private $Genre_FK;
 
     public function __construct($Id){
         $row = self::get($Id);

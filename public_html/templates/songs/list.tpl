@@ -36,13 +36,13 @@
         {foreach $listOfSongs as $key => $value}
             <tr>
 
-                <td> <a href="{$smarty.const.WEB_PATH}view.php?key={$value["Song_ID"]}">{$value["Title"]}</a></td>
-                <td>{getSongArtist($value["Artist_FK"])}</td>
-                <td>{getSongAlbum($value["Album_FK"])}</td>
-                <td>{timeToStandard($value["Length"])}</td>
+                <td> <a href="{$smarty.const.WEB_PATH}view.php?key={$value->Song_ID}">{$value->Title}</a></td>
+                <td>{getSongArtist($value->Artist_FK)}</td>
+                <td>{getSongAlbum($value->Album_FK)}</td>
+                <td>{timeToStandard($value->Length)}</td>
 
-                <td><a href="#" data-target="#delete_song" id="delete-song-button" data-songid="{$value["Song_ID"]}" data-toggle="modal"><button class="btn btn-danger">Delete</button></a>
-                    <a href="#" class="btn btn-sm btn-primary" data-target="#add_to_playlist" data-toggle="modal" data-songid="{$value["Song_ID"]}" id="add_to">Add+</a>
+                <td><a href="#" data-target="#delete_song" class="delete-song-button" data-songid="{$value->Song_ID}" ><button class="btn btn-danger">Delete</button> <div style = "display:hidden">{$value->Song_ID} </div></a>
+                    <a href="#" class="btn btn-sm btn-primary " data-target="#add_to_playlist" data-toggle="modal" data-songid="{$value->Song_ID}" id="add_to">Add+</a>
                 </td>
             </tr>
         {/foreach}

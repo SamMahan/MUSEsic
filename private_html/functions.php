@@ -33,7 +33,7 @@ function getSongs() {
     $list_of_songs = null;
 
     while($row = $statement->fetch(PDO::FETCH_ASSOC)){
-        $list_of_songs[] = $row;
+        $list_of_songs[] = new Song($row['Song_ID']);
     }
 
     return $list_of_songs;
