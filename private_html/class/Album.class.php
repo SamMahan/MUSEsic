@@ -140,17 +140,17 @@ class Album
         $sql = "SELECT Song_ID FROM Song INNER JOIN Album ON Album_ID = Album_FK WHERE Album_ID = :aid";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(":aid", $this->Album_ID);
-        echo"beforearrayassign";
+
         $songs = array();
 
         if($stmt->execute()) {
-            echo"afterexecute";
+
             while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 echo $row['Song_ID']."SongId";
                 $songs[] = $row['Song_ID'];
                 echo $row['Song_ID'];
             }
-            echo"returning...";
+
             return $songs;
         }
         return false;
