@@ -35,11 +35,11 @@
 $(document).ready(function() {
     $(".delete-song-button").click(function() {
         var song_id = $(this).data("song_id");
-        $("#deleting_song .confirm_delete_song").setAttribute("data-song_id", song_id);
+        $(".confirm_delete_song").setAttribute("data-song_id", song_id);
     });
     $(".confirm_delete_song").click(function() {
         var song_id = $(this).data("song_id");
-        
+
         $.ajax({
             url: "../../../controllers/api/song/delete_song.php",
             type: "post",
