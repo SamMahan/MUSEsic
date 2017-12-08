@@ -34,10 +34,10 @@
 
 $(document).on("click", ".delete_this_song", function() {
     var song_id = $(this).data('song_id');
-    $(".deleting_song #confirm-delete-song").setAttribute('data-song_id', song_id);
+    $(".song_id_div #song_id").val(song_id);
 
     $(document).on("click", ".deleting_song", function() {
-        var song_id2 = $(this).getAttribute('data-song_id');
+        var song_id2 = $(this).val();
 
         $.ajax({
             url: "../../../controllers/api/song/delete_song.php",

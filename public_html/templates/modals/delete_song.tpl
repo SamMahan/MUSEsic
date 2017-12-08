@@ -14,6 +14,10 @@
                 <button type="button" class="btn btn-default" id="cancel" data-dismiss="modal">Cancel</button>
                 <a href="#" class="deleting_song" id="confirm_delete_song" data-song_id=""><button type="button" class="btn btn-danger">Delete</button></a>
 
+                <div class="song_id_div">
+                    <input type="text" name="song_id" id="song_id" value="" hidden="hidden" />
+                </div>
+
             </div>
         </div>
     </div>
