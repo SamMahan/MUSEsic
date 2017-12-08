@@ -41,7 +41,7 @@
                 <td>{getSongAlbum($value["Album_FK"])}</td>
                 <td>{timeToStandard($value["Length"])}</td>
 
-                <td><a href="#" data-target="#delete_song" id="delete-song-button" data-songid="{$value["Song_ID"]}" data-toggle="modal"><button class="btn btn-danger">Delete</button></a>
+                <td><a href="#" data-target="#delete_song" id="delete-song-button" class="delete_this_song" data-songid="{$value["Song_ID"]}" data-toggle="modal"><button class="btn btn-danger">Delete</button></a>
                     <a href="#" class="btn btn-sm btn-primary" data-target="#add_to_playlist" data-toggle="modal">Add+</a>
                 </td>
             </tr>
