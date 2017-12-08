@@ -70,7 +70,7 @@ class Album
         global $pdo;
 
         $id = $this->Album_ID;
-        $q = "SELECT Artist_ID FROM Artist INNER JOIN Artist ON Album_ID = Album_FK WHERE Artist_ID = :id";
+        //$q = "SELECT Artist_ID FROM Artist INNER JOIN Artist ON Album_ID = Album_FK WHERE Artist_ID = :id";
 
         $q = "SELECT Artist_ID FROM Album INNER JOIN Album ON Artist_ID = Artist_FK WHERE Album_ID = :id";
 
@@ -122,16 +122,10 @@ class Album
         global $pdo;
         $user = sessioncheck();
         $id = $user->User_ID;
-        $q = "Insert INTO Album (Album_Name, CreatedBy) 
-          VALUES(:an, :cb)";
+        $q = "Insert INTO Album (Album_Name, CreatedBy, Genre_FK) VALUES(:an, :cb, :gfk)";
         $st = $pdo->prepare($q);
         $st->bindParam(":an", $Album_Name);
         $st->bindParam(":cb", $id);
-
-        $q = "Insert INTO User (Album_Name, CreatedBy, Genre_FK) VALUES(:an, :cb, :gfk)";
-        $st = $pdo->prepare($q);
-        $st->bindParam(":an", $Album_Name);
-        $st->bindParam(":cb", $user->User_ID);
         $st->bindParam(":gfk", $Genre_FK);
 
 
