@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
   
-    <style type="text/css" media="all">@import "../../assets/css/view_song.css";</style>
+    <style media="all">@import "../../assets/css/view_song.css";</style>
     <link href="../../assets/css/bootswatch.css" type="text/css" rel="stylesheet"/>
     <title>View Song</title>
     
     {$smarty.const.RESOURCES}
-    
-</head>
-<body>
 
 {include file = "componants/navbar.tpl"}
 
@@ -22,8 +19,8 @@
 
 <div class="container-fluid">
     <div class="songpic col-md-5 col-md-offset-1">
-        <img src="../../../assets/Images/songpicture.jpg" alt="song picture" height="auto"
-             width="auto">
+        <img src="../../../assets/Images/songpicture.jpg" alt="song picture" height='auto'
+             width='auto'>
         <h2>{$songArray["Title"]}</h2>
         <!--<h4>{$songArray['']}</h4>-->
         <h4>Added By: User</h4>
@@ -157,6 +154,7 @@
                         <label for="text_review">Write A Review</label>
                         <textarea class="form-control" id="text_review" rows="3" name="review" required="required"></textarea>
                     </div>
+                </fieldset>
 
                 <div class="form-group ">
                     <label for="star_rating">
