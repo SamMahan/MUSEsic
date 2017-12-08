@@ -17,7 +17,7 @@ $(document).ready(function() {
                     alert ("Please sign in to access this function.")
                 } else {
                     alert("Successfully deleted " + response + ".");
-                    $(this).parent("tr").hide();
+                    $(this).parent("<tr>").hide();
                 }
             },
             error: function() {
