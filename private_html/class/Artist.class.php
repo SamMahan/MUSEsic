@@ -72,6 +72,24 @@ class Artist
         }
 
     }
+    public function getSongs() {
+        global $pdo;
+
+        $sql = "SELECT Song_ID FROM Song INNER JOIN Artist ON Artist_ID = Artist_FK WHERE Artist_ID = :aid";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":aid", $this->Artist_ID);
+
+        $songs = array();
+
+        if($stmt->execute()) {
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            foreach ($row as $key=>$value) {
+                $songs[] = new Song($value);
+            }
+            return $songs;
+        }
+        return false;
+    }
 
     /** end public functions */
     //takes in an array of values. if those values are valid column names, it updates the columns automatically
@@ -122,24 +140,7 @@ class Artist
 
     }
 
-    public function getSongs() {
-        global $pdo;
 
-        $sql = "SELECT Song_ID FROM Song INNER JOIN Artist ON Artist_ID = Artist_FK WHERE Artist_ID = :aid";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(":aid", $this->Artist_ID);
-
-        $songs = array();
-
-        if($stmt->execute()) {
-            $row = $stmt->fetch(FETCH::ASSOC);
-            foreach ($row as $key=>$value) {
-                $songs[] = new Song($value);
-            }
-            return $songs;
-        }
-        return false;
-    }
 
     public function delete() {
         global $pdo;
