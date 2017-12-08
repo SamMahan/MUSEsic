@@ -5,6 +5,9 @@
  * Date: 12/7/17
  * Time: 6:24 PM
  */
+
+require_once "../../../../private_html/config.inc.php";
+
 $data = json_decode($_POST["data"]);
 $response = 0;
 $user = sessioncheck();

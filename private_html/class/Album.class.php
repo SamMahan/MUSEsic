@@ -6,13 +6,16 @@
  * Time: 5:06 PM
  */
 
-//todo make getArtist()
+
+//todo make getArtist($key)
+//todo make artistGetAlbum($key)
 
 class Album
 
 {
     private $Album_ID;
     private $Album_Name;
+    private $CreatedBy;
 
     public function __construct($Id){
         $row = self::get($Id);
@@ -21,13 +24,13 @@ class Album
         }
     }
     public function __get($colName){
-        if(property_exists($colName)){
+        if(property_exists("Album",$colName)){
             return $this->$colName;
 
         }
     }
     public function __set($colName, $value){
-        if(property_exists($colName)){
+        if(property_exists("Album",$colName)){
             $this->$colName = $value;
         }
         return false;
@@ -46,6 +49,20 @@ class Album
                 $row = $st->fetch(PDO::FETCH_ASSOC);
             }
         }
+    }
+    public function getArtist(){
+        $id = $this->Album_ID;
+        $q = "SELECT Artist_ID FROM ALBUM INNER JOIN Album ON Artist_ID = Artist_FK WHERE Album_ID = :id";
+        $st = $pdo->prepare($q);
+        $st->bindParam(":id", $id);
+
+        if($st->execute()){
+            while($row = $st->fetch(PDO::FETCH_ASSOC)){
+                return new Artist($row['Album_ID']);
+            }
+
+        }
+
     }
 
     /** end public functions */
@@ -83,10 +100,11 @@ class Album
 
     public static function create($Album_Name){
         global $pdo;
-
-        $q = "Insert INTO User (Album_Name) VALUES(:an)";
+        $user = sessioncheck();
+        $q = "Insert INTO User (Album_Name, CreatedBy) VALUES(:an, :cb)";
         $st = $pdo->prepare($q);
         $st->bindParam(":an", $Album_Name);
+        $st->bindParam(":cb", $user->User_ID);
 
         if($st->execute())
             return new Artist($pdo->lastInsertId());
@@ -134,4 +152,9 @@ class Album
         }
         return $success;
     }
+    /** end of public functions */
+
+}
+class AlbumFactory{
+
 }

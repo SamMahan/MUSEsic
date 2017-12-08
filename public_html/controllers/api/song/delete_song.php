@@ -6,7 +6,9 @@
  * Time: 1:26 PM
  */
 
-$data = json_decode($_POST["data"]);
+require_once "../../../../private_html/config.inc.php";
+
+//$data = json_decode($_POST["data"]);
 $response = 0;
 $user = sessioncheck();
 
@@ -16,7 +18,7 @@ if(!$user){
     echo json_encode($response);
 }
 
-$song = new Song($data->id);
+$song = new Song($_POST['song_id']);
 $response = $song->Title;
 if(!$song->delete()){
     $response = 0;

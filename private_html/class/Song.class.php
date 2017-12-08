@@ -6,6 +6,8 @@
  * Time: 5:17 PM
  */
 
+//todo make songGetAuthor($key)
+
 class Song
 {
 public $Song_ID;
@@ -110,14 +112,14 @@ public $SongFile;
      */
     public static function create($Title, $Album_id, $Pic_Link = null, $Song_Link = null){
         global $pdo;
+        $user = sessioncheck();
 
-
-        $sql = "INSERT INTO Song (Title, Artist_FK, Album_FK) VALUES(:t,:ar,:al)";
+        $sql = "INSERT INTO Song (Title, Artist_FK, Album_FK, CreatedBy) VALUES(:t,:ar,:al, :cb)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(":t", $Title);
         $stmt->bindParam(":ar", $Artist_id);
         $stmt->bindParam(":al", $Album_id);
-
+        $stmt->bindParam(":cb", $user->User_ID);
         if($stmt->execute()) {
             $song = new Song($pdo->lastInsertId());
             if($Pic_Link) {

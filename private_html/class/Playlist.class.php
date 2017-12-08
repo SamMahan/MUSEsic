@@ -10,7 +10,6 @@ class Playlist
 //$artist = new Artist($id);
 //$artist->Artist_Name
     /**
-     * @todo make a function() **function description
      */
 {
     private $Playlist_ID;
@@ -191,7 +190,7 @@ class PlaylistFactory{
         $q = "SELECT Playlist_ID FROM User_Playlist INNER JOIN Playlist ON Playlist_ID = Playlist_FK INNER JOIN User ON
           User_ID = User_FK WHERE User_ID = :uid";
         $st = $pdo->prepare($q);
-        $st->bindparam(":uid", $User_ID);
+        $st->bindparam(":id", $User_ID);
 
         if($st->execute()){
             $array = array();
