@@ -17,6 +17,7 @@ public $Song_URL;
 public $Album_FK;
 public $Song_File_FK;
 private $Description;
+private $Created_By;
 
     /**
      * @todo Create ImageLink and SongLink in the database song table
@@ -70,8 +71,13 @@ public $SongFile;
     }
 
     /** end public functions */
-    //takes in an array of values. if those values are valid column names, it updates the columns automatically
-    //adapts to any array size, can be used for one or all values
+    /**
+     *
+     * array(Title=>"value for title", Desctiption=>"The description")
+     * works with anything in the song database
+     * takes in an array of values. if those values are valid column names, it updates the columns automatically
+     *adapts to any array size, can be used for one or all values
+     * */
     public function setVal($values){
         global $pdo;
         $pholderKeys = array();
@@ -92,7 +98,7 @@ public $SongFile;
         $i = 0;
         $st = $pdo->prepare($q);
         foreach($values as $key=>$value){
-            $st = $pdo->bindParam($pholderKeys[i], $colKeys[i]);
+            $st->bindParam($pholderKeys[i], $colKeys[i]);
             $i = $i+1;
         }
         return $st->execute();
@@ -115,6 +121,9 @@ public $SongFile;
         global $pdo;
         $user = sessioncheck();
         $descripton = "";
+
+        $id = $user->User_ID;
+
         $binddes = "";
         if($Description){
             $description = ",".$Description.",";
@@ -126,7 +135,7 @@ public $SongFile;
         $stmt->bindParam(":t", $Title);
         $stmt->bindParam(":ar", $Artist_id);
         $stmt->bindParam(":al", $Album_id);
-        $stmt->bindParam(":cb", $user->User_ID);
+        $stmt->bindParam(":cb", $id);
         if($Description){
             $stmt->bindParam("::d", $Description);
         }

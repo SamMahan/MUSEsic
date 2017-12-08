@@ -36,7 +36,7 @@
                 <h2>The Piano Guys(album)</h2>
                 <h2>{$album["Album_Name"]}</h2>
                 <h4>The Piano Guys</h4>
-                <h4>Added By: {$author->First_Name}</h4>
+                <h4>Added By: {$userid->First_Name}</h4>
             </div>
         </div>
         <table class="table">
