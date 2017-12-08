@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-17 09:39:35
+<?php /* Smarty version 3.1.27, created on 2017-12-07 21:46:12
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\user\user_settings.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:4545089195a0ef4a7651033_16593479%%*/
+/*%%SmartyHeaderCode:5902947615a29fcf44f3aa5_55863594%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cef534e916173f7d8bdc30ab4ecafb37f00fd0c9' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\user\\user_settings.tpl',
-      1 => 1510929570,
+      1 => 1512685981,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4545089195a0ef4a7651033_16593479',
+  'nocache_hash' => '5902947615a29fcf44f3aa5_55863594',
   'variables' => 
   array (
     'successArray' => 0,
@@ -23,13 +23,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0ef4a76cab30_15135128',
+  'unifunc' => 'content_5a29fcf45dede7_13284265',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0ef4a76cab30_15135128')) {
-function content_5a0ef4a76cab30_15135128 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a29fcf45dede7_13284265')) {
+function content_5a29fcf45dede7_13284265 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '4545089195a0ef4a7651033_16593479';
+$_smarty_tpl->properties['nocache_hash'] = '5902947615a29fcf44f3aa5_55863594';
 ?>
 
 
@@ -87,7 +87,7 @@ settings.php">
 >
                         </div>
 
-                        <div class="form-group col-lg-7">
+                       <!-- <div class="form-group col-lg-7">
                             <label class="control-label" for="Birthday">Birthday</label>
                             <input name="birthday" class="form-control" id="Birthday" type="text">
                         </div>
@@ -100,7 +100,7 @@ settings.php">
                         <div class="form-group col-lg-7">
                             <label class="control-label" for="FavoriteArtist">Favorite Artist</label>
                             <input name="favorite_artist" class="form-control" id="FavoriteArtist" type="text">
-                        </div>
+                        </div>-->
 
 
                         <div id="buttons" class="col-lg-10">

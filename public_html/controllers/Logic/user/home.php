@@ -40,7 +40,10 @@ if (isset($_POST["playlist_name"])) {
     $populateArray=new SplFixedArray(10);
 
 }
+
 $id = $user->User_ID;
+$list_of_playlists = $user->getPlaylists();
+$smarty->assign("list_of_playlists", $list_of_playlists);
 $smarty->assign("user", $user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);

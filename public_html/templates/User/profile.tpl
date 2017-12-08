@@ -211,126 +211,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><a href="../../../Controllers/Logic/playlists/playlist.php">My First Playlist</a></td>
-                    <td>10</td>
-                    <td>00:30:00</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>My Second Playlist</td>
-                    <td>7</td>
-                    <td>00:24:00</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>17</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>19</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
+                {$i = 1}
+                {foreach $list_of_playlists as $key => $value}
+                    <tr>
+                        <td>{$i}</td>
+                        <td><a href="../../logic/playlists/playlist.php?key={$value->Playlist_ID}">{$value->Playlist_Name}</td>
+                        <td>--</td>
+                    </tr>
+                    {$i = $i + 1}
+                {/foreach}
                 </tbody>
             </table>
             {include file = "modals/create_playlist.tpl"}

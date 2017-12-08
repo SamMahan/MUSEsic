@@ -14,7 +14,7 @@
 
     <div class="row">
         <h1>
-            My First Playlist
+            {$playlist->Playlist_Name}
             <a href="#" class="btn btn-success">Play All</a>
         </h1>
     </div>
@@ -31,108 +31,8 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>1</td>
-            <td>Headstrong</td>
-            <td>Traped</td>
-            <td>00:03:00</td>
-            <td>
-                <a href="#" class="btn btn-success">Play</a>
-                <a href="#" class="btn btn-danger">Remove</a>
-            </td>
 
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Song</td>
-            <td>Artist</td>
-            <td>00:03:00</td>
-            <td>
-                <a href="#" class="btn btn-success">Play</a>
-                <a href="#" class="btn btn-danger">Remove</a>
-            </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Song</td>
-            <td>Artist</td>
-            <td>00:03:00</td>
-            <td>
-                <a href="#" class="btn btn-success">Play</a>
-                <a href="#" class="btn btn-danger">Remove</a>
-            </td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Song</td>
-            <td>Artist</td>
-            <td>00:03:00</td>
-            <td>
-                <a href="#" class="btn btn-success">Play</a>
-                <a href="#" class="btn btn-danger">Remove</a>
-            </td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Song</td>
-            <td>Artist</td>
-            <td>00:03:00</td>
-            <td>
-                <a href="#" class="btn btn-success">Play</a>
-                <a href="#" class="btn btn-danger">Remove</a>
-            </td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Song</td>
-            <td>Artist</td>
-            <td>00:03:00</td>
-            <td>
-                <a href="#" class="btn btn-success">Play</a>
-                <a href="#" class="btn btn-danger">Remove</a>
-            </td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>Song</td>
-            <td>Artist</td>
-            <td>00:03:00</td>
-            <td>
-                <a href="#" class="btn btn-success">Play</a>
-                <a href="#" class="btn btn-danger">Remove</a>
-            </td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>Song</td>
-            <td>Artist</td>
-            <td>00:03:00</td>
-            <td>
-                <a href="#" class="btn btn-success">Play</a>
-                <a href="#" class="btn btn-danger">Remove</a>
-            </td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>Song</td>
-            <td>Artist</td>
-            <td>00:03:00</td>
-            <td>
-                <a href="#" class="btn btn-success">Play</a>
-                <a href="#" class="btn btn-danger">Remove</a>
-            </td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>Song</td>
-            <td>Artist</td>
-            <td>00:03:00</td>
-            <td>
-                <a href="#" class="btn btn-success">Play</a>
-                <a href="#" class="btn btn-danger">Remove</a>
-            </td>
-        </tr>
-    </tbody>
+        </tbody>
     </table>
     </div>
 

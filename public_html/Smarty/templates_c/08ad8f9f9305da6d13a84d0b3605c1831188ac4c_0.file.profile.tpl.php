@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-11-17 09:24:56
+<?php /* Smarty version 3.1.27, created on 2017-12-07 21:33:45
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\user\profile.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:6527787305a0ef1380cc049_24096654%%*/
+/*%%SmartyHeaderCode:8731047435a29fa09a08736_02344955%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,25 +9,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '08ad8f9f9305da6d13a84d0b3605c1831188ac4c' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\user\\profile.tpl',
-      1 => 1510928692,
+      1 => 1512700055,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6527787305a0ef1380cc049_24096654',
+  'nocache_hash' => '8731047435a29fa09a08736_02344955',
   'variables' => 
   array (
     'user' => 0,
+    'list_of_playlists' => 0,
+    'i' => 0,
+    'value' => 0,
     'display' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a0ef13814ec82_40944746',
+  'unifunc' => 'content_5a29fa09a8ea11_10301267',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a0ef13814ec82_40944746')) {
-function content_5a0ef13814ec82_40944746 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a29fa09a8ea11_10301267')) {
+function content_5a29fa09a8ea11_10301267 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '6527787305a0ef1380cc049_24096654';
+$_smarty_tpl->properties['nocache_hash'] = '8731047435a29fa09a08736_02344955';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -250,126 +253,32 @@ $_smarty_tpl->properties['nocache_hash'] = '6527787305a0ef1380cc049_24096654';
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><a href="../../../Controllers/Logic/playlists/playlist.php">My First Playlist</a></td>
-                    <td>10</td>
-                    <td>00:30:00</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>My Second Playlist</td>
-                    <td>7</td>
-                    <td>00:24:00</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>17</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>19</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>20</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
+                <?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable(1, null, 0);?>
+                <?php
+$_from = $_smarty_tpl->tpl_vars['list_of_playlists']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$_smarty_tpl->tpl_vars['value'] = new Smarty_Variable;
+$_smarty_tpl->tpl_vars['value']->_loop = false;
+$_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['value']->value) {
+$_smarty_tpl->tpl_vars['value']->_loop = true;
+$foreach_value_Sav = $_smarty_tpl->tpl_vars['value'];
+?>
+                    <tr>
+                        <td><?php echo $_smarty_tpl->tpl_vars['i']->value;?>
+</td>
+                        <td><a href="../../logic/playlists/playlist.php?key=<?php echo $_smarty_tpl->tpl_vars['value']->value->Playlist_ID;?>
+"><?php echo $_smarty_tpl->tpl_vars['value']->value->Playlist_Name;?>
+</td>
+                        <td>--</td>
+                    </tr>
+                    <?php $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable($_smarty_tpl->tpl_vars['i']->value+1, null, 0);?>
+                <?php
+$_smarty_tpl->tpl_vars['value'] = $foreach_value_Sav;
+}
+?>
                 </tbody>
             </table>
             <?php echo $_smarty_tpl->getSubTemplate ("modals/create_playlist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);

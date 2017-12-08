@@ -20,14 +20,16 @@ class Playlist
     public function __construct($Id)
     {
         $row = self::get($Id);
+
         foreach ($row as $colName => $value) {
+
             $this->__set($colName, $value);
         }
     }
 
     public function __get($colName)
     {
-        if (property_exists($colName)) {
+        if (property_exists("Playlist",$colName)) {
             return $this->$colName;
 
         }
@@ -35,7 +37,7 @@ class Playlist
 
     public function __set($colName, $value)
     {
-        if (property_exists($colName)) {
+        if (property_exists("Playlist",$colName)) {
             $this->$colName = $value;
         }
         return false;
@@ -45,7 +47,7 @@ class Playlist
     {
         global $pdo;
 
-
+        echo $Id."this is the ID   ";
         $q = "SELECT * FROM Playlist WHERE Playlist_ID= :id";
 
         $st = $pdo->prepare($q);
@@ -72,7 +74,7 @@ class Playlist
     //adapts to any array size, can be used for one or all values
     public static function setVal($values)
     {
-        global $pdo;
+
         $pholderKeys = array();
         $colKeys = array();
         $inputs = array();
@@ -114,16 +116,18 @@ class Playlist
      * @return bool|Playlist
      */
 
-    public static function create($Playlist_Name,$User_ID )
+    public static function create($Playlist_Name)
     {
         global $pdo;
+        $user = sessioncheck();
         $q = "INSERT INTO musesicdb.playlist (Playlist_Name) Values(:p)";
 
         $st = $pdo->prepare($q);
         $st->bindParam(":p", $Playlist_Name);
         if ($st->execute()) {
-            PlaylistFactory::addUserPlaylist($pdo->lastInsertId(), $User_ID);
-            return new Playlist($pdo->lastInsertId());
+            $insert = $pdo->lastInsertId();
+            PlaylistFactory::addUserPlaylist($user->User_ID, $insert);
+            return new Playlist($insert);
         }
         return false;
     }
@@ -185,7 +189,7 @@ class PlaylistFactory{
     public static function getUserPlaylists($User_ID){
         global $pdo;
         $q = "SELECT Playlist_ID FROM User_Playlist INNER JOIN Playlist ON Playlist_ID = Playlist_FK INNER JOIN User ON
-          User_ID = User_FK WHERE User_ID = :id";
+          User_ID = User_FK WHERE User_ID = :uid";
         $st = $pdo->prepare($q);
         $st->bindparam(":uid", $User_ID);
 

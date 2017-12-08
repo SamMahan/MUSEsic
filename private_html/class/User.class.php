@@ -56,7 +56,12 @@ class User
 
     }
 
-
+//write it here
+    public function getPlaylists(){
+        $playlists = array();
+        $playlists = PlaylistFactory::getUserPlaylists($this->User_ID);
+        return $playlists;
+    }
 
     /** end public functions */
     //takes in an array of values. if those values are valid column names, it updates the columns automatically
@@ -154,6 +159,7 @@ class User
         }
 
     }
+
 
 
 }

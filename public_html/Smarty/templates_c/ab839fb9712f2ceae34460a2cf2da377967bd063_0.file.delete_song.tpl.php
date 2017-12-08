@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2017-12-06 23:32:07
+<?php /* Smarty version 3.1.27, created on 2017-12-07 21:46:39
          compiled from "C:\MAMP\htdocs\MUSEsic\public_html\templates\modals\delete_song.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:21281859735a28c4479e2d34_23103694%%*/
+/*%%SmartyHeaderCode:9755691905a29fd0f6c7a39_35612994%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ab839fb9712f2ceae34460a2cf2da377967bd063' => 
     array (
       0 => 'C:\\MAMP\\htdocs\\MUSEsic\\public_html\\templates\\modals\\delete_song.tpl',
-      1 => 1512618248,
+      1 => 1512685981,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '21281859735a28c4479e2d34_23103694',
+  'nocache_hash' => '9755691905a29fd0f6c7a39_35612994',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5a28c447ba6152_87670775',
+  'unifunc' => 'content_5a29fd0f743be9_10339502',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5a28c447ba6152_87670775')) {
-function content_5a28c447ba6152_87670775 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5a29fd0f743be9_10339502')) {
+function content_5a29fd0f743be9_10339502 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '21281859735a28c4479e2d34_23103694';
+$_smarty_tpl->properties['nocache_hash'] = '9755691905a29fd0f6c7a39_35612994';
 ?>
 <div class="modal" id="delete_song">
     <div class="modal-dialog">

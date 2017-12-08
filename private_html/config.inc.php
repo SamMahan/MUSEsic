@@ -114,6 +114,7 @@ require_once "dbconfig.php";
 require_once "functions.php";
 
 function myAutoload($class) {
+    $class = str_replace( "Factory", "", $class);
     require CLASS_ROOT . $class . '.class.php';
 }
 
