@@ -51,6 +51,12 @@ $artist = new Artist($song->Artist_FK);
 $album = new Album($song->Album_FK);
 
 
+if(isset($_POST["title"])){
+    $update = array("Title"=>$_POST["title"], "Description"=>$_POST["description"]);
+    $song->setVal($update);
+}
+
+
 $smarty->assign("song", $song);
 $smarty->assign("artist", $artist);
 $smarty->assign("album", $album);

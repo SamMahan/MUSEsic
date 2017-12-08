@@ -34,8 +34,8 @@
                     </div>
 
                     <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11">
-                        <label for="textArea" class="control-label">Uploader's Comments</label>
-                        <textarea class="form-control" rows="3" id="textArea"></textarea>
+                        <label for="textArea" class="control-label">Description</label>
+                        <textarea value="{$song->Description}" class="form-control" rows="3" id="textArea" name="description"></textarea>
                     </div>
 
                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
