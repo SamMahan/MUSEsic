@@ -17,19 +17,20 @@
                     <h1>Update Song</h1>
                 </legend>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 {$successArray[0]}">
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                         <label class="control-label" for="inputLarge">Title</label>
-                        <input class="form-control input-lg" id="inputLarge" type="text" name="title" . {$populateArray[0]}>
+                        <input value="{$song->Title}" class="form-control input-lg" id="inputLarge" type="text" name="title">
                     </div>
 
-                    <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11 {$successArray[1]}" >
+
+                    <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11 " >
                         <label class="control-label" for="inputDefault">Artist</label>
-                        <input class="form-control" id="inputDefault" type="text" name="artist_name" . {$populateArray[1]}>
+                        <input value="{$artist->Artist_Name}" class="form-control" id="inputDefault" type="text" name="artist_name" >
                     </div>
 
-                    <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8 {$successArray[2]}" >
+                    <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8" >
                         <label class="control-label" for="inputSmall">Genre</label>
-                        <input class="form-control input-sm" id="inputSmall" type="text" name="genre" . {$populateArray[2]}>
+                        <input class="form-control input-sm" id="inputSmall" type="text" name="genre">
                     </div>
 
                     <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11">
@@ -45,6 +46,7 @@
 
             </fieldset>
         </form>
+
     </div>
 </div>
 {include file = "modals/submit.tpl"}

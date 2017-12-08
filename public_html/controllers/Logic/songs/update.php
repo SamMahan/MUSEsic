@@ -45,6 +45,12 @@ else{
     $populateArray=new SplFixedArray(10);
 }
 
+$song_id = $_GET["key"];
+$song = new Song($song_id);
+$artist = new Artist($song->Artist_FK);
+
+$smarty->assign("song", $song);
+$smarty->assign("artist", $artist);
 $smarty->assign("display", $display);
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
