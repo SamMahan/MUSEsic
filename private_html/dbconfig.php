@@ -27,6 +27,7 @@ define('DB_ADDRESS', "localhost");
 // */
 #
 #  Begin the session
+session_abort();
 session_start();
 #
 #  Connect to the database
