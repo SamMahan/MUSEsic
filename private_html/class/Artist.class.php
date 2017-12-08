@@ -27,13 +27,13 @@ class Artist
         }
     }
     public function __get($colName){
-        if(property_exists($colName)){
+        if(property_exists("Artist",$colName)){
             return $this->$colName;
 
         }
     }
     public function __set($colName, $value){
-        if(property_exists($colName)){
+        if(property_exists("Artist",$colName)){
             $this->$colName = $value;
         }
         return false;

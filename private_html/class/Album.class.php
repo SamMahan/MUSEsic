@@ -24,13 +24,13 @@ class Album
         }
     }
     public function __get($colName){
-        if(property_exists($colName)){
+        if(property_exists("Album",$colName)){
             return $this->$colName;
 
         }
     }
     public function __set($colName, $value){
-        if(property_exists($colName)){
+        if(property_exists("Album",$colName)){
             $this->$colName = $value;
         }
         return false;
