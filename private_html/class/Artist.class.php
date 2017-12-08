@@ -7,6 +7,7 @@
  */
 
 //todo getAlbums($key)
+//todo make artistGetAuthor($key)
 
 class Artist
 //$artist = new Artist($id);

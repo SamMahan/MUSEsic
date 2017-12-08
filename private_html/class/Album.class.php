@@ -7,6 +7,7 @@
  */
 
 //todo make getArtist($key)
+//todo make artistGetAlbum($key)
 
 class Album
 

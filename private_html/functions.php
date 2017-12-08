@@ -1,10 +1,6 @@
 <?php
 require_once "dbconfig.php";
 
-//todo make songGetAuthor($key)
-//todo make albumGetAuthor($key)
-//todo make artistGetAuthor($key)
-
 function getDateTime()
 {
     $dt = date('Y-m-d H:i:s');
@@ -41,9 +37,7 @@ function getSongs() {
     }
 
     return $list_of_songs;
-
 }
-
 
 function getSongById($songKeyVal) {
 
@@ -179,7 +173,6 @@ function addSong($title, $length, $artist_name, $album_name) {
     return true;
 
 }
-
 
 function getSongArtist($artist_id) {
 
