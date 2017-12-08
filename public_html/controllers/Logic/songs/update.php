@@ -53,6 +53,7 @@ $album = new Album($song->Album_FK);
 
 $smarty->assign("song", $song);
 $smarty->assign("artist", $artist);
+$smarty->assign("album", $album);
 $smarty->assign("display", $display);
 $smarty->assign("successArray", $successArray);
 $smarty->assign("populateArray", $populateArray);
