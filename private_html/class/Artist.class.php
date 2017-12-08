@@ -6,6 +6,8 @@
  * Time: 5:06 PM
  */
 
+//todo getAlbums($key)
+
 class Artist
 //$artist = new Artist($id);
 //$artist->Artist_Name
