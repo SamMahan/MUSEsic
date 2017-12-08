@@ -28,7 +28,7 @@
                         <td>--</td>
                         <td>--</td>
                         <td>--</td>
-                        <td><a href="#" data-target="#delete_artist" id="delete-artist-button" data-artistid="{$value["Artist_ID"]}" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
+                        <td><a href="#" data-target="#delete_artist" class="delete-artist-button" data-artistid="{$value["Artist_ID"]}" data-toggle="modal"><button class="btn btn-danger">Delete</button></a><a href="#" data-target="#update_artist" data-toggle="modal"><button class="btn btn-default">Update</button></a></td>
                     </tr>
                 {/foreach}
             </table>

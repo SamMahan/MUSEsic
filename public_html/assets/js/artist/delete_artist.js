@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#delete-artist-button").click(function() {
+    $(".delete-artist-button").click(function() {
         var button = $(this);
         var artist_id2 = $(this).data("artistid");
         var info = {
