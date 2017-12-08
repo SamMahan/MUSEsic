@@ -47,6 +47,7 @@ class Album
         if($st->execute() != null){
             if($st->rowcount() == 1) {
                 $row = $st->fetch(PDO::FETCH_ASSOC);
+                return $row;
             }
         }
     }
