@@ -19,6 +19,7 @@ $(document).ready(function(){
 
             success :function(response){
                 $("#create_playlist").modal('toggle');
+                window.location.reload();
             },
             error :function(request, error){
                 alert(request.status);
