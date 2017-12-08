@@ -8,7 +8,6 @@
 
 require_once "../../../../private_html/config.inc.php";
 
-$data = json_decode($_POST["data"]);
 $response = 0;
 $user = sessioncheck();
 
@@ -18,7 +17,12 @@ if(!$user){
     echo json_encode($response);
 }
 
-$artist = new Artist($data->id);
+$artist = new Artist($_POST['artist_id']);
+$songs = array();
+$songs = $artist->getSongs();
+foreach($songs as $key =>$value){
+    $value->delete();
+}
 $response = $artist->Title;
 if(!$artist->delete()){
     $response = 0;

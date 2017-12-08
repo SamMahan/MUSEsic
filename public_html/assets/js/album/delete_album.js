@@ -1,13 +1,13 @@
 $(document).ready(function(){
     $("#delete-album-button").click(function() {
         var button = $(this);
-        var song_id2 = $(this).data("albumid");
+        var album_id2 = $(this).data("albumid");
         var info = {
-            song_id: song_id2
+            album_id: album_id2
         };
 
         $.ajax({
-            url: "../../../controllers/api/album/get_songs.php",
+            url: "../../../controllers/api/album/delete_album.php",
             type: "post",
             data: info,
             success: function(response) {

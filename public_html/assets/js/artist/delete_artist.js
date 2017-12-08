@@ -1,13 +1,13 @@
 $(document).ready(function(){
     $("#delete-artist-button").click(function() {
         var button = $(this);
-        var song_id2 = $(this).data("artistid");
+        var artist_id2 = $(this).data("artistid");
         var info = {
-            song_id: song_id2
+            artist_id: artist_id2
         };
 
         $.ajax({
-            url: "../../../controllers/api/artist/get_songs.php",
+            url: "../../../controllers/api/artist/delete_artist.php",
             type: "post",
             data: info,
             success: function(response) {
