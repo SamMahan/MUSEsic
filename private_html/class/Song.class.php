@@ -17,6 +17,7 @@ public $Song_URL;
 public $Album_FK;
 public $Song_File_FK;
 private $Description;
+private $Created_By;
 
     /**
      * @todo Create ImageLink and SongLink in the database song table
@@ -70,8 +71,13 @@ public $SongFile;
     }
 
     /** end public functions */
-    //takes in an array of values. if those values are valid column names, it updates the columns automatically
-    //adapts to any array size, can be used for one or all values
+    /**
+     *
+     * array(Title=>"value for title", Desctiption=>"The description")
+     * works with anything in the song database
+     * takes in an array of values. if those values are valid column names, it updates the columns automatically
+     *adapts to any array size, can be used for one or all values
+     * */
     public function setVal($values){
         global $pdo;
         $pholderKeys = array();
