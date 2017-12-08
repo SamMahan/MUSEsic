@@ -30,7 +30,7 @@ if (isset($_POST["album_name"])) {
         $successArray = new SplFixedArray(10);
         $populateArray = new SplFixedArray(10);
 
-        addAlbum($_POST["album_name"]);
+        Album::create($_POST["album_name"]);
     }
 } else{
     $successArray= new SplFixedArray(10);
