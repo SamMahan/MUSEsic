@@ -30,7 +30,7 @@
 
                     <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8" >
                         <label class="control-label" for="inputSmall">Genre</label>
-                        <input class="form-control input-sm" id="inputSmall" type="text" name="genre">
+                        <input value="{$album->getGenre()}" class="form-control input-sm" id="inputSmall" type="text" name="genre">
                     </div>
 
                     <div class="form-group col-lg-11 col-md-11 col-sm-11 col-xs-11">
