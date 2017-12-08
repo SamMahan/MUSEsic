@@ -25,8 +25,11 @@ if (isset($_POST["review"])) {
     }
 }
 
-//$author = songGetAuthor($key);
+$songObj = new Song($key);
+
 $songArray = getSongById($key);
+$author = new User($songObj->CreatedBy);
+$smarty->assign("author", $author);
 $smarty->assign("songArray", $songArray);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);

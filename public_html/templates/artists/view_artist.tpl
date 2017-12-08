@@ -23,7 +23,7 @@
     <div class="artistpic col-md-5 col-md-offset-1">
         <img src="../../../assets/Images/artistpicture.jpg" alt="artist picture" height="auto" width="auto">
         <h2>{$artist["Artist_Name"]}</h2>
-        <h4>Added By: User</h4>
+        <h4>Added By: {$author->First_Name}</h4>
     </div>
 
     <div class="info col-md-5">

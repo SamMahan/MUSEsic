@@ -38,7 +38,6 @@ class Album
     public function get($Id){
         global $pdo;
 
-
         $q  = "SELECT * FROM Album WHERE Album_ID = :id";
 
         $st = $pdo->prepare($q);
@@ -51,6 +50,8 @@ class Album
         }
     }
     public function getArtist(){
+        global $pdo;
+
         $id = $this->Album_ID;
         $q = "SELECT Artist_ID FROM ALBUM INNER JOIN Album ON Artist_ID = Artist_FK WHERE Album_ID = :id";
         $st = $pdo->prepare($q);
@@ -60,9 +61,7 @@ class Album
             while($row = $st->fetch(PDO::FETCH_ASSOC)){
                 return new Artist($row['Album_ID']);
             }
-
         }
-
     }
 
     /** end public functions */

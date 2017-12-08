@@ -57,12 +57,16 @@ else{
     $populateArray=new SplFixedArray(10);
 }
 
+$albumObj = new Album($key);
+
+//$songs = $albumObj->getSongs();
 $listOfAlbums = getAlbums();
 $album = getAlbumById($key);
-$songs = $album.getSongs();
-$smarty->assign("songs",$songs);
-$smarty->assign("album",$album);
-$smarty->assign("user",$user);
+$author = new User($albumObj->CreatedBy);
+//$smarty->assign("songs", $songs);
+$smarty->assign("author", $author);
+$smarty->assign("album", $album);
+$smarty->assign("user", $user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);
 $smarty->assign("listOfAlbums", $listOfAlbums);
