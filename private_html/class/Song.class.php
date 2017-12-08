@@ -115,7 +115,7 @@ public $SongFile;
         global $pdo;
         $user = sessioncheck();
         $descripton = "";
-        $binddes = ""
+        $binddes = "";
         if($Description){
             $description = ",".$Description.",";
             $binddes = ",:d";
