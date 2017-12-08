@@ -41,7 +41,7 @@
                 <td>{getSongAlbum($value->Album_FK)}</td>
                 <td>{timeToStandard($value->Length)}</td>
 
-                <td><a href="#" data-target="#delete_song" class="delete-song-button" data-songid="{$value->Song_ID}" ><button class="btn btn-danger">Delete</button> <div style = "display:hidden">{$value->Song_ID} </div></a>
+                <td><a href="#" data-target="#delete_song" class="delete-song-button" data-songid="{$value->Song_ID}" ><button class="btn btn-danger">Delete</button></a>
                     <a href="#" class="btn btn-sm btn-primary " data-target="#add_to_playlist" data-toggle="modal" data-songid="{$value->Song_ID}" id="add_to">Add+</a>
                 </td>
             </tr>

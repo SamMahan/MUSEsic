@@ -17,7 +17,9 @@ $(document).ready(function() {
                     alert ("Please sign in to access this function.")
                 } else {
                     alert("Successfully deleted " + response + ".");
+
                     button.parent("td").parent("tr").hide();
+
                 }
             },
             error: function() {
