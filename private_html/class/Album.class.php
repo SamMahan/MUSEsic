@@ -55,9 +55,9 @@ class Album
         global $pdo;
 
         $id = $this->Album_ID;
-        $q = "SELECT Genre_Name FROM genre INNER JOIN Album ON Genre_ID = Genre_FK WHERE Album_ID = aid";
+        $q = "SELECT Genre_Name FROM genre INNER JOIN Album ON Genre_ID = Genre_FK WHERE Album_ID = :aid";
         $st = $pdo->prepare($q);
-        $st->bindParam(":gfk", $this->Album_ID);
+        $st->bindParam(":aid", $this->Album_ID);
 
         if($st->execute()){
             while($row = $st->fetch(PDO::FETCH_ASSOC)){
