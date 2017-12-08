@@ -56,16 +56,25 @@ else{
     $successArray= new SplFixedArray(10);
     $populateArray=new SplFixedArray(10);
 }
-
+$songObjects = array();
 $albumObj = new Album($key);
+echo"after albumobj";
+$songs = $albumObj->getSongs();
+echo"aftergetsongs";
+foreach($songs as $key=>$value){
+    $songObjects[] = new Song($value);
+}
 
-//$songs = $albumObj->getSongs();
+//$songs = new Song($albumObj->getSongs());
 $listOfAlbums = getAlbums();
-$album = getAlbumById($key);
+
 $userid = new User($albumObj->CreatedBy);
+$artist = $albumObj->getArtist();
 //$smarty->assign("songs", $songs);
+$smarty->assign("songs", $songObjects);
+$smarty->assign("artist", $artist);
 $smarty->assign("userid", $userid);
-$smarty->assign("album", $album);
+$smarty->assign("album", $albumObj);
 $smarty->assign("user", $user);
 $smarty->assign("error", $error);
 $smarty->assign("display", $display);

@@ -58,7 +58,7 @@ if (isset($_POST["review"])) {
 
 $artistObj = new Artist($key);
 
-$albums = $artistObj->getAlbums();
+$albums = new album($artistObj->getAlbums());
 $listOfArtists = getArtists();
 $artist = new Artist($key);
 $userid = $artistObj->CreatedBy;

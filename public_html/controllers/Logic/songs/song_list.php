@@ -31,7 +31,7 @@ if (isset($_POST["song_name"])) {
         $successArray = new SplFixedArray(10);
         $populateArray = new SplFixedArray(10);
 
-     Song::create($_POST["song_name"], $_POST["album"],null,null, $_FILES["song_upload"]["tmp_name"]);
+     Song::create($_POST["song_name"], $_POST['artist'],$_POST["album"],null,null, null);
         echo $_FILES["song_upload"]['tmp_name'];
     }
 } else {

@@ -17,7 +17,7 @@ public $Song_URL;
 public $Album_FK;
 public $Song_File_FK;
 private $Description;
-private $Created_By;
+private $CreatedBy;
 
     /**
      * @todo Create ImageLink and SongLink in the database song table
@@ -117,27 +117,26 @@ public $SongFile;
      * @param $Song_Link the link to the uploaded song file on the server not necessary,
      * @return bool
      */
-    public static function create($Title, $Album_id,$Description = null, $Pic_Link = null, $Song_Link = null){
+    public static function create($Title, $Artist_id, $Album_id,$Description = null, $Pic_Link = null, $Song_Link = null){
         global $pdo;
         $user = sessioncheck();
-        $descripton = "";
 
         $id = $user->User_ID;
-
+        $description = "";
         $binddes = "";
         if($Description){
-            $description = ",".$Description.",";
+            $description = "Description,";
             $binddes = ",:d";
 
         }
-        $sql = "INSERT INTO Song (Title, Artist_FK, Album_FK, $description CreatedBy) VALUES(:t,:ar,:al, :cb$binddes)";
+        $sql = "INSERT INTO Song (CreatedBy, Artist_FK, Album_FK, Title, $description) VALUES(:cb, :ar, :al, :t, $binddes".")";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(":t", $Title);
         $stmt->bindParam(":ar", $Artist_id);
         $stmt->bindParam(":al", $Album_id);
         $stmt->bindParam(":cb", $id);
         if($Description){
-            $stmt->bindParam("::d", $Description);
+            $stmt->bindParam(":d", $Description);
         }
         if($stmt->execute()) {
             $song = new Song($pdo->lastInsertId());
@@ -145,7 +144,7 @@ public $SongFile;
                 $image = SongFactory::addImageFile($Pic_Link, $song->Song_ID);
 
             }
-            if($Song_Link!= null){
+            if($Song_Link != null){
                 echo "attempting upload";
                 $song = SongFactory::addSongFile($Song_Link, $song->Song_ID);
 
