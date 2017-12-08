@@ -16,6 +16,7 @@ public $Artist_FK;
 public $Song_URL;
 public $Album_FK;
 public $Song_File_FK;
+private $Description;
 
     /**
      * @todo Create ImageLink and SongLink in the database song table
@@ -110,16 +111,25 @@ public $SongFile;
      * @param $Song_Link the link to the uploaded song file on the server not necessary,
      * @return bool
      */
-    public static function create($Title, $Album_id, $Pic_Link = null, $Song_Link = null){
+    public static function create($Title, $Album_id,$Description = null, $Pic_Link = null, $Song_Link = null){
         global $pdo;
         $user = sessioncheck();
+        $descripton = "";
+        $binddes = ""
+        if($Description){
+            $description = ",".$Description.",";
+            $binddes = ",:d";
 
-        $sql = "INSERT INTO Song (Title, Artist_FK, Album_FK, CreatedBy) VALUES(:t,:ar,:al, :cb)";
+        }
+        $sql = "INSERT INTO Song (Title, Artist_FK, Album_FK, $description CreatedBy) VALUES(:t,:ar,:al, :cb$binddes)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(":t", $Title);
         $stmt->bindParam(":ar", $Artist_id);
         $stmt->bindParam(":al", $Album_id);
         $stmt->bindParam(":cb", $user->User_ID);
+        if($Description){
+            $stmt->bindParam("::d", $Description);
+        }
         if($stmt->execute()) {
             $song = new Song($pdo->lastInsertId());
             if($Pic_Link) {
