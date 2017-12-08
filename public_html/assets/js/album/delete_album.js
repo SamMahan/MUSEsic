@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#delete-album-button").click(function() {
-
+        var button = $(this);
         var song_id2 = $(this).data("albumid");
         var info = {
             song_id: song_id2
@@ -17,6 +17,9 @@ $(document).ready(function(){
                     alert ("Please sign in to access this function.")
                 } else {
                     alert("Successfully deleted " + response + ".");
+
+                    button.parent("td").parent("tr").hide();
+
                 }
             },
             error: function() {
