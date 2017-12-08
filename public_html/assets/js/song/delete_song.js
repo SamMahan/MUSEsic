@@ -1,13 +1,17 @@
 $(document).ready(function(){
-    $("#delete-song-button").click(function() {
-        var id = this.attr("data-songid");
-        $("#confirm-delete-song").click(function() {
 
+    $(".delete-song-button").click(function() {
+        var var1 = this.child(button);
+        alert(var1);
+        $("#delete_song").prop("data-songid");
+
+    });
+        $("#confirm-delete-song").click(function() {
+            var song_id = $("#delete_song").attr("data-songid");
             $.ajax({
                 url: "../../../controllers/api/song/delete_song.php",
                 type: "post",
-                data: id,
-                dataType: 'json',
+                data: song_id,
                 success: function(response) {
                     if (response === 0) {
                         alert ("Could not delete" + response + ".");
@@ -27,4 +31,3 @@ $(document).ready(function(){
 
         });
     });
-});

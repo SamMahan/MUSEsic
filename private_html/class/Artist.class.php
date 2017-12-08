@@ -6,7 +6,7 @@
  * Time: 5:06 PM
  */
 
-//todo getAlbums($key)
+//todo getAlbums($key) DONE
 
 class Artist
 //$artist = new Artist($id);
@@ -15,6 +15,7 @@ class Artist
     private $Artist_ID;
     private $Artist_Name;
     private $Artist_Biography;
+    private $CreatedBy;
 
     public function __construct($Id){
         $row = self::get($Id);
@@ -48,6 +49,21 @@ class Artist
                 $row = $st->fetch(PDO::FETCH_ASSOC);
             }
         }
+    }
+
+    public function getAlbums(){
+        $id = $this->Artist_ID;
+        $q = "SELECT Album_ID FROM ALBUM INNER JOIN Album ON Artist_ID = Artist_FK WHERE Album_ID = :id";
+        $st = $pdo->prepare($q);
+        $st->bindParam(":id", $id);
+
+        if($st->execute()){
+            while($row = $st->fetch(PDO::FETCH_ASSOC)){
+                return new Album($row['Album_ID']);
+            }
+
+        }
+
     }
 
     /** end public functions */
@@ -84,11 +100,12 @@ class Artist
 
     public static function create($Artist_Name, $Artist_Biography){
         global $pdo;
-
-        $q = "Insert INTO User (Artist_Name)
-          VALUES(:an)";
+        $user = sessioncheck();
+        $q = "Insert INTO User (Artist_Name, CreatedBy)
+          VALUES(:an, :cb)";
         $st = $pdo->prepare($q);
         $st->bindParam(":an", $Artist_Name);
+        $st->bindParam(":an", $user->User_ID);
         //$st->bindParam(":ab", $Artist_Biography);
 
 

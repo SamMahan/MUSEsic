@@ -10,7 +10,6 @@ class Playlist
 //$artist = new Artist($id);
 //$artist->Artist_Name
     /**
-     * @todo make a function() **function description
      */
 {
     private $Playlist_ID;

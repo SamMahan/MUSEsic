@@ -15,12 +15,12 @@ define('RESOURCES', "
     <script src='../../../assets/js/modals.js'></script>
     <script src='../../../assets/js/navbar.js'></script>
     <script src='../../../assets/js/playlist/add-to-playlist.js'></script>
-    <script scr='../../../assets/js/album/delete_album.js'></script>
-    <script scr='../../../assets/js/artist/delete_artist.js'></script>
-    <script scr='../../../assets/js/song/delete_song.js'></script>
+    <script src='../../../assets/js/album/delete_album.js'></script>
+    <script src='../../../assets/js/artist/delete_artist.js'></script>
+    <script src='../../../assets/js/song/delete_song.js'></script>
 
    <!-- <script src='../../../assets/js/user/JQuery_3.2.1.js'></script> -->
-    <script src='../../../assets/js/user/user.js'></script>");
+    <script src='../../../assets/js/user/user.js'></script> ");
 define('FILE_PATH', PUBLIC_PATH."files/");
     
 

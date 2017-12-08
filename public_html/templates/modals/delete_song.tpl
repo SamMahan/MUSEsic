@@ -1,4 +1,4 @@
-<div class="modal" id="delete_song">
+<div class="modal" id="delete_song" data-songid = "">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -9,6 +9,7 @@
                 <p>Are you sure you want to delete this song?</p>
             </div>
             <div class="modal-footer">
+
 
                 <button type="button" class="btn btn-default" id="cancel" data-dismiss="modal">Cancel</button>
                 <button type="button" class="btn btn-danger" id="confirm-delete-song">Delete</button>
